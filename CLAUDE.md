@@ -40,6 +40,16 @@ When enriching a new game file:
 6. After enriching, update `games/index.md` status to "Enriched"
 7. After batch enrichments, update `mechanics/index.md`, `mechanics/categories.md`, and `knowledge/design-patterns.md` to reflect the expanded dataset
 
+## Board Game Design Skill
+
+A Claude Code skill (`board-game-design.skill`) is packaged in the repo root and installed at `~/.claude/skills/board-game-design/`. It provides three slash commands:
+
+- **`/design [concept]`** — Interactive design session: interviews the user or analyzes a provided concept, classifies archetype, suggests mechanics, finds comparable games, and can generate a design document
+- **`/design-critique <concept>`** — Analyzes a game concept against the knowledge base for strengths, gaps, and actionable recommendations
+- **`/design-mechanics [mechanic]`** — Deep-dives a mechanic: frequency tier, proven combinations, exemplar games, and application guidance
+
+The skill's `references/` directory contains a game index (all 100 games with archetype classifications), plus copies of the design patterns, mechanics taxonomy, and categories taxonomy. The `assets/` directory has a game design document template.
+
 ## Conventions
 
 - Game files are named `NN-slug.md` matching their BGG rank position

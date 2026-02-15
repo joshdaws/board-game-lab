@@ -35,6 +35,18 @@ About 20 rulebooks require manual download because their publishers use session-
 
 See `rulebooks/sources.md` for the full source URL list and known issues.
 
+## Design Skill
+
+The repository includes a Claude Code skill (`board-game-design.skill`) that turns the knowledge base into an interactive design tool. Install it to get three commands:
+
+| Command | Purpose |
+|---------|---------|
+| `/design [concept]` | Guided design session — interviews you about theme, weight, player count, then suggests archetypes, mechanics, and comparable games. Can generate a full design document. |
+| `/design-critique <concept>` | Analyze a game concept against proven patterns — identifies strengths, gaps, comparable games, and gives actionable recommendations. |
+| `/design-mechanics [mechanic]` | Explore a specific mechanic — frequency data, proven combinations, exemplar games, and integration guidance. |
+
+All recommendations are grounded in the 100-game dataset with specific citations.
+
 ## Game Analysis Format
 
 Each game file contains:
