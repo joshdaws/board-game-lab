@@ -1,7 +1,7 @@
 ---
 name: board-game-design
 description: |
-  Interactive board game design assistant powered by analysis of the BGG top 150 games.
+  Interactive board game design assistant powered by analysis of the BGG top 175 games.
   Three commands: /design for guided design sessions (interviews, mechanic suggestions,
   comparable games, document generation), /design-critique for analyzing game concepts
   against proven patterns, /design-mechanics for exploring mechanics and combinations.
@@ -13,18 +13,18 @@ description: |
 
 # Board Game Design Assistant
 
-AI-assisted board game design grounded in analysis of the 150 highest-ranked games on BoardGameGeek (February 2026). Every recommendation traces back to proven patterns from real, successful designs.
+AI-assisted board game design grounded in analysis of the 175 highest-ranked games on BoardGameGeek (February 2026). Every recommendation traces back to proven patterns from real, successful designs.
 
 ## Reference Files
 
 | File | When to Load | Contents |
 |------|-------------|----------|
-| `references/game-index.md` | **Always load first** | Rank, weight, archetype code, primary mechanics for all 150 games |
+| `references/game-index.md` | **Always load first** | Rank, weight, archetype code, primary mechanics for all 175 games |
 | `references/design-patterns.md` | Archetypes, mechanic combos, design insights | 15 insights, 12 proven combinations, 8 archetypes, weight distribution |
 | `references/mechanics-taxonomy.md` | Specific mechanics or frequency data | 116 unique mechanics with tiered frequency counts |
 | `references/categories-taxonomy.md` | Themes or categories | 61 unique categories with frequency counts |
 | `assets/game-design-document.md` | Generating a design document | Structured output template |
-| `games/NN-slug.md` | Deep-dive on specific games (max 3-5 per response) | 150 enriched files in the project root with theme integration, core loops, key design patterns |
+| `games/NN-slug.md` | Deep-dive on specific games (max 3-5 per response) | 175 enriched files in the project root with theme integration, core loops, key design patterns |
 
 ## `/design` — Interactive Design Session
 

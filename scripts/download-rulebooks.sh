@@ -15,13 +15,13 @@ RULEBOOKS_DIR="$REPO_DIR/rulebooks"
 
 FORCE=false
 RANGE_START=1
-RANGE_END=150
+RANGE_END=175
 
 for arg in "$@"; do
   case "$arg" in
     --force) FORCE=true ;;
     *[0-9]*)
-      if [[ "$RANGE_START" -eq 1 && "$RANGE_END" -eq 150 ]]; then
+      if [[ "$RANGE_START" -eq 1 && "$RANGE_END" -eq 175 ]]; then
         RANGE_START="$arg"
         RANGE_END="$arg"
       else
@@ -550,6 +550,83 @@ in_range 149 && download 149 "aeons-end-war-eternal" \
 
 in_range 150 && download 150 "twilight-imperium-3e" \
   "https://images-cdn.fantasyflightgames.com/ffg_content/Twilight%20Imperium%203/ti3rules.pdf"
+
+# --- Games #151-175 ---
+
+in_range 151 && download 151 "russian-railroads" \
+  "https://cdn.1j1ju.com/medias/1a/35/ab-russian-railroads-rulebook.pdf"
+
+in_range 152 && download 152 "vinhos-deluxe" \
+  "https://www.boardgamehelpers.com/Vinhos/Images/VDE_SV2016_2016-01-25_VL_LOW.pdf"
+
+in_range 153 && download 153 "rising-sun" \
+  "https://cdn.1j1ju.com/medias/2d/2c/5b-rising-sun-rulebook.pdf"
+
+in_range 154 && download 154 "forest-shuffle" \
+  "https://cdn.svc.asmodee.net/production-asmodeeca/uploads/2023/12/en_forrestshuffle.html_Forest_Shuffle_175_Rules_EN_WEB_230516.pdf"
+
+in_range 155 && download 155 "yokohama" \
+  "https://cdn.1j1ju.com/medias/00/9a/00-yokohama-rulebook.pdf"
+
+in_range 156 && download 156 "just-one" \
+  "https://cdn.1j1ju.com/medias/1f/0e/8f-just-one-rulebook.pdf"
+
+in_range 157 && download 157 "iss-vanguard" \
+  "https://www.awakenrealms.com/images/download/ISS_Vanguard/Rulebook/ISS_Rulebook_280x280mm_bleed3mm%20%5B48%20pages%5D_%5Bcorrected_17_04_2023%5D.pdf"
+
+in_range 158 && download 158 "forbidden-stars" \
+  "https://cdn.1j1ju.com/medias/df/bc/0b-forbidden-stars-rulebook.pdf"
+
+in_range 159 && download 159 "pandemic-iberia" \
+  "https://cdn.1j1ju.com/medias/f1/1a/18-pandemic-iberia-rulebook.pdf"
+
+in_range 160 && download 160 "clank-in-space" \
+  "https://cdn.1j1ju.com/medias/4e/e4/76-clank-in-space-rulebook.pdf"
+
+in_range 161 && download 161 "codenames" \
+  "https://cdn.1j1ju.com/medias/89/5e/99-codenames-rule.pdf"
+
+in_range 162 && download 162 "the-7th-continent" \
+  "https://cdn.1j1ju.com/medias/6c/95/a4-the-7th-continent-rulebook.pdf"
+
+in_range 163 && download 163 "tyrants-of-the-underdark" \
+  "https://cdn.1j1ju.com/medias/6c/f4/36-tyrants-of-the-underdark-board-game-rulebook.pdf"
+
+in_range 164 && download 164 "champions-of-midgard" \
+  "https://cdn.shopify.com/s/files/1/0669/3961/7510/files/ChampionsofMidgard_rulebook_english.pdf?v=1706297795"
+
+in_range 165 && download 165 "rajas-of-the-ganges" \
+  "https://cdn.1j1ju.com/medias/35/3a/f7-rajas-of-the-ganges-rulebook.pdf"
+
+in_range 166 && download 166 "magic-the-gathering" \
+  "https://cdn.1j1ju.com/medias/7c/b2/7b-magic-the-gathering-basic-rulebook.pdf"
+
+in_range 167 && download 167 "hadrians-wall" \
+  "https://cdn.1j1ju.com/medias/dd/c3/8a-hadrians-wall-rulebook.pdf"
+
+in_range 168 && note_manual 168 "planet-unknown" \
+  "Adam's Apple Games — BGG login required for rulebook PDF"
+
+in_range 169 && download 169 "roll-for-the-galaxy" \
+  "https://www.riograndegames.com/wp-content/uploads/2013/02/Roll-for-the-Galaxy-Rules.pdf"
+
+in_range 170 && download 170 "pandemic" \
+  "https://cdn.1j1ju.com/medias/c5/69/03-pandemic-rulebook.pdf"
+
+in_range 171 && download 171 "targi" \
+  "https://www.thamesandkosmos.com/manuals/full/691479_Targi%20Manual.pdf"
+
+in_range 172 && download 172 "parks" \
+  "https://cdn.1j1ju.com/medias/f9/b4/d6-parks-rulebook.pdf"
+
+in_range 173 && download 173 "star-realms" \
+  "https://cdn.1j1ju.com/medias/27/e1/a6-star-realms-rulebook.pdf"
+
+in_range 174 && download 174 "alchemists" \
+  "https://cdn.1j1ju.com/medias/ef/97/2b-alchemists-rulebook.pdf"
+
+in_range 175 && note_manual 175 "too-many-bones-undertow" \
+  "Chip Theory Games via Dropbox — https://www.chiptheorygames.com/support/"
 
 echo ""
 echo "========================================="

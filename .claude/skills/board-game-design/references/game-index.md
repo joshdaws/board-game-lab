@@ -1,4 +1,4 @@
-# Game Index — Top 150 BGG Games
+# Game Index — Top 175 BGG Games
 
 Quick-lookup table for finding comparable games by archetype, weight, and mechanics.
 Source: `games/NN-slug.md` (relative to project root)
@@ -168,18 +168,43 @@ Source: `games/NN-slug.md` (relative to project root)
 | 148 | Trajan | 3.63 | EB | Mancala, Set Collection, Area Majority |
 | 149 | Aeon's End: War Eternal | 2.92 | CC | Cooperative Game, Deck Construction, Hand Management |
 | 150 | Twilight Imperium (3rd Ed.) | 4.26 | AC | Area Majority, Voting, Variable Player Powers, Grid Movement |
+| 151 | Russian Railroads | 3.40 | EB | Worker Placement, Tech Tracks, End Game Bonuses |
+| 152 | Vinhos: Deluxe Edition | 3.99 | EB | Worker Placement, Area Majority, Variable Phase Order |
+| 153 | Rising Sun | 3.30 | AC | Area Majority, Alliances, Auction: Sealed Bid, Variable Player Powers |
+| 154 | Forest Shuffle | 2.22 | CT | Hand Management, Multi-Use Cards, Open Drafting, Layering |
+| 155 | Yokohama | 3.29 | EB | Worker Placement, Network/Route Building, Contracts, Set Collection |
+| 156 | Just One | 1.03 | CC | Communication Limits, Cooperative Game, Deduction |
+| 157 | ISS Vanguard | 3.66 | NC | Cooperative Game, Campaign, Narrative Choice, Dice Rolling |
+| 158 | Forbidden Stars | 3.84 | AC | Area Majority, Area Movement, Deck Building, Dice Rolling |
+| 159 | Pandemic: Iberia | 2.60 | CC | Action Points, Cooperative Game, Hand Management, Network Building |
+| 160 | Clank! In! Space! | 2.58 | CT | Deck Building, Press Your Luck, Point to Point Movement |
+| 161 | Codenames | 1.26 | CC | Communication Limits, Deduction, Team-Based Game |
+| 162 | The 7th Continent | 2.90 | NC | Cooperative Game, Map Addition, Narrative Choice, Hand Management |
+| 163 | Tyrants of the Underdark | 2.55 | CT | Area Majority, Deck Building, Open Drafting |
+| 164 | Champions of Midgard | 2.63 | EB | Worker Placement, Dice Rolling, Set Collection |
+| 165 | Rajas of the Ganges | 2.90 | EB | Worker Placement, Dice Workers, Network Building, Tile Placement |
+| 166 | Magic: The Gathering | 3.28 | CT | Hand Management, Deck Construction, Income, Interrupts |
+| 167 | Hadrian's Wall | 3.17 | EB | Paper-and-Pencil, Hand Management, Tech Tracks |
+| 168 | Planet Unknown | 2.25 | SP | Tile Placement, Pattern Building, Tech Trees, Simultaneous Action |
+| 169 | Roll for the Galaxy | 2.78 | EB | Dice Rolling, Simultaneous Action, Variable Phase Order, Dice Workers |
+| 170 | Pandemic | 2.39 | CC | Action Points, Cooperative Game, Hand Management, Set Collection |
+| 171 | Targi | 2.34 | EB | Worker Placement, Set Collection, Open Drafting |
+| 172 | PARKS | 2.12 | EB | Track Movement, Contracts, End Game Bonuses |
+| 173 | Star Realms | 1.91 | CT | Deck Building, Hand Management, Open Drafting |
+| 174 | Alchemists | 3.92 | EB | Deduction, Worker Placement, Action Drafting |
+| 175 | Too Many Bones: Undertow | 4.04 | NC | Cooperative Game, Dice Building, Tech Trees, Variable Player Powers |
 
 ## Archetype Counts
 
 | Archetype | Count | Weight Range |
 |-----------|------:|-------------|
-| Engine Builder (EB) | 46 | 1.95 – 4.40 |
-| Card Tableau (CT) | 25 | 1.36 – 3.89 |
-| Cooperative Crisis (CC) | 21 | 1.55 – 4.08 |
-| Asymmetric Conflict (AC) | 21 | 2.89 – 4.48 |
-| Narrative Campaign (NC) | 16 | 2.66 – 4.41 |
+| Engine Builder (EB) | 56 | 1.95 – 4.40 |
+| Card Tableau (CT) | 30 | 1.36 – 3.89 |
+| Cooperative Crisis (CC) | 25 | 1.03 – 4.08 |
+| Asymmetric Conflict (AC) | 23 | 2.89 – 4.48 |
+| Narrative Campaign (NC) | 19 | 2.66 – 4.41 |
 | Economic Simulation (ES) | 13 | 3.09 – 4.67 |
-| Spatial Puzzle (SP) | 10 | 1.60 – 3.97 |
+| Spatial Puzzle (SP) | 11 | 1.60 – 3.97 |
 | Dexterity Challenge (DC) | 1 | 1.22 |
 
 ## Finding Comparables

@@ -4,10 +4,10 @@ Download sources for all rulebook PDFs. Games #1-25 were sourced in earlier sess
 
 ## Status
 
-- **Valid PDFs:** 140 of 150
+- **Valid PDFs:** 163 of 175
 - **Invalid PDFs:** #16 Through the Ages (172K, not a valid PDF), #17 SETI (200K, not a valid PDF) — pre-existing issues
 - **Missing:** #92 Kingdom Death: Monster — publisher does not offer a free rulebook PDF
-- **Manual download:** #103 SCOUT, #111 Through the Ages 1st ed., #125 Wyrmspan (Dropbox), #140 LOTR: Fate of Fellowship (too new), #142 Galactic Cruise (too new), #145 Nucleum (Dropbox), #148 Trajan (BGG login)
+- **Manual download:** #103 SCOUT, #111 Through the Ages 1st ed., #125 Wyrmspan (Dropbox), #140 LOTR: Fate of Fellowship (too new), #142 Galactic Cruise (too new), #145 Nucleum (Dropbox), #148 Trajan (BGG login), #168 Planet Unknown (BGG login), #175 Too Many Bones: Undertow (Dropbox)
 
 ## Games #1-25 (Original Batch)
 
@@ -162,6 +162,36 @@ Sources not recorded. Downloaded in earlier sessions.
 | 148 | Trajan | BGG files section | **Manual download** — publisher has no public PDF |
 | 149 | Aeon's End: War Eternal | https://cdn.1j1ju.com/medias/9d/8f/d0-aeons-end-war-eternal-rulebook.pdf | 1j1ju mirror |
 | 150 | Twilight Imperium: Third Edition | https://images-cdn.fantasyflightgames.com/ffg_content/Twilight%20Imperium%203/ti3rules.pdf | FFG official |
+
+## Games #151-175
+
+| # | Game | Source URL | Notes |
+|---|------|-----------|-------|
+| 151 | Russian Railroads | https://cdn.1j1ju.com/medias/1a/35/ab-russian-railroads-rulebook.pdf | 1j1ju mirror |
+| 152 | Vinhos: Deluxe Edition | https://www.boardgamehelpers.com/Vinhos/Images/VDE_SV2016_2016-01-25_VL_LOW.pdf | boardgamehelpers.com (Special Vintage 2016) |
+| 153 | Rising Sun | https://cdn.1j1ju.com/medias/2d/2c/5b-rising-sun-rulebook.pdf | 1j1ju mirror |
+| 154 | Forest Shuffle | https://cdn.svc.asmodee.net/production-asmodeeca/uploads/2023/12/en_forrestshuffle.html_Forest_Shuffle_175_Rules_EN_WEB_230516.pdf | Asmodee CDN (Lookout Games) |
+| 155 | Yokohama | https://cdn.1j1ju.com/medias/00/9a/00-yokohama-rulebook.pdf | 1j1ju mirror |
+| 156 | Just One | https://cdn.1j1ju.com/medias/1f/0e/8f-just-one-rulebook.pdf | 1j1ju mirror |
+| 157 | ISS Vanguard | https://www.awakenrealms.com/images/download/ISS_Vanguard/Rulebook/ISS_Rulebook_280x280mm_bleed3mm%20%5B48%20pages%5D_%5Bcorrected_17_04_2023%5D.pdf | Awaken Realms official |
+| 158 | Forbidden Stars | https://cdn.1j1ju.com/medias/df/bc/0b-forbidden-stars-rulebook.pdf | 1j1ju mirror |
+| 159 | Pandemic: Iberia | https://cdn.1j1ju.com/medias/f1/1a/18-pandemic-iberia-rulebook.pdf | 1j1ju mirror |
+| 160 | Clank! In! Space! | https://cdn.1j1ju.com/medias/4e/e4/76-clank-in-space-rulebook.pdf | 1j1ju mirror |
+| 161 | Codenames | https://cdn.1j1ju.com/medias/89/5e/99-codenames-rule.pdf | 1j1ju mirror |
+| 162 | The 7th Continent | https://cdn.1j1ju.com/medias/6c/95/a4-the-7th-continent-rulebook.pdf | 1j1ju mirror |
+| 163 | Tyrants of the Underdark | https://cdn.1j1ju.com/medias/6c/f4/36-tyrants-of-the-underdark-board-game-rulebook.pdf | 1j1ju mirror |
+| 164 | Champions of Midgard | https://cdn.shopify.com/s/files/1/0669/3961/7510/files/ChampionsofMidgard_rulebook_english.pdf?v=1706297795 | Grey Fox Games (Shopify CDN) |
+| 165 | Rajas of the Ganges | https://cdn.1j1ju.com/medias/35/3a/f7-rajas-of-the-ganges-rulebook.pdf | 1j1ju mirror |
+| 166 | Magic: The Gathering | https://cdn.1j1ju.com/medias/7c/b2/7b-magic-the-gathering-basic-rulebook.pdf | 1j1ju mirror (Basic Rulebook) |
+| 167 | Hadrian's Wall | https://cdn.1j1ju.com/medias/dd/c3/8a-hadrians-wall-rulebook.pdf | 1j1ju mirror |
+| 168 | Planet Unknown | N/A | **Manual download** — BGG login required |
+| 169 | Roll for the Galaxy | https://www.riograndegames.com/wp-content/uploads/2013/02/Roll-for-the-Galaxy-Rules.pdf | Rio Grande Games official |
+| 170 | Pandemic | https://cdn.1j1ju.com/medias/c5/69/03-pandemic-rulebook.pdf | 1j1ju mirror |
+| 171 | Targi | https://www.thamesandkosmos.com/manuals/full/691479_Targi%20Manual.pdf | Thames & Kosmos official |
+| 172 | PARKS | https://cdn.1j1ju.com/medias/f9/b4/d6-parks-rulebook.pdf | 1j1ju mirror |
+| 173 | Star Realms | https://cdn.1j1ju.com/medias/27/e1/a6-star-realms-rulebook.pdf | 1j1ju mirror |
+| 174 | Alchemists | https://cdn.1j1ju.com/medias/ef/97/2b-alchemists-rulebook.pdf | 1j1ju mirror |
+| 175 | Too Many Bones: Undertow | Chip Theory Games via Dropbox | **Manual download** — https://www.chiptheorygames.com/support/ |
 
 ## Known Issues
 

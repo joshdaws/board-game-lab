@@ -1,4 +1,4 @@
-# Top 150 BGG Games - Research Index
+# Top 175 BGG Games - Research Index
 
 Games sourced from BoardGameGeek rankings (Feb 2026).
 
@@ -154,3 +154,28 @@ Games sourced from BoardGameGeek rankings (Feb 2026).
 | 148 | Trajan | 2011 | Enriched |
 | 149 | Aeon's End: War Eternal | 2017 | Enriched |
 | 150 | Twilight Imperium: Third Edition | 2005 | Enriched |
+| 151 | Russian Railroads | 2013 | Enriched |
+| 152 | Vinhos: Deluxe Edition | 2016 | Enriched |
+| 153 | Rising Sun | 2018 | Enriched |
+| 154 | Forest Shuffle | 2023 | Enriched |
+| 155 | Yokohama | 2016 | Enriched |
+| 156 | Just One | 2018 | Enriched |
+| 157 | ISS Vanguard | 2022 | Enriched |
+| 158 | Forbidden Stars | 2015 | Enriched |
+| 159 | Pandemic: Iberia | 2016 | Enriched |
+| 160 | Clank! In! Space! | 2017 | Enriched |
+| 161 | Codenames | 2015 | Enriched |
+| 162 | The 7th Continent | 2017 | Enriched |
+| 163 | Tyrants of the Underdark | 2016 | Enriched |
+| 164 | Champions of Midgard | 2015 | Enriched |
+| 165 | Rajas of the Ganges | 2017 | Enriched |
+| 166 | Magic: The Gathering | 1993 | Enriched |
+| 167 | Hadrian's Wall | 2021 | Enriched |
+| 168 | Planet Unknown | 2022 | Enriched |
+| 169 | Roll for the Galaxy | 2014 | Enriched |
+| 170 | Pandemic | 2008 | Enriched |
+| 171 | Targi | 2012 | Enriched |
+| 172 | PARKS | 2019 | Enriched |
+| 173 | Star Realms | 2014 | Enriched |
+| 174 | Alchemists | 2014 | Enriched |
+| 175 | Too Many Bones: Undertow | 2018 | Enriched |
