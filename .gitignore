@@ -1,3 +1,4 @@
 *.pdf
+*.skill
 node_modules/
 .env

@@ -37,7 +37,7 @@ See `rulebooks/sources.md` for the full source URL list and known issues.
 
 ## Design Skill
 
-The repository includes a Claude Code skill (`board-game-design.skill`) that turns the knowledge base into an interactive design tool. Install it to get three commands:
+The repository includes a Claude Code skill (`.claude/skills/board-game-design/`) that turns the knowledge base into an interactive design tool. It provides three commands:
 
 | Command | Purpose |
 |---------|---------|

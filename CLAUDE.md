@@ -42,7 +42,7 @@ When enriching a new game file:
 
 ## Board Game Design Skill
 
-A Claude Code skill (`board-game-design.skill`) is packaged in the repo root and installed at `~/.claude/skills/board-game-design/`. It provides three slash commands:
+A Claude Code skill lives at `.claude/skills/board-game-design/`. It provides three slash commands:
 
 - **`/design [concept]`** — Interactive design session: interviews the user or analyzes a provided concept, classifies archetype, suggests mechanics, finds comparable games, and can generate a design document
 - **`/design-critique <concept>`** — Analyzes a game concept against the knowledge base for strengths, gaps, and actionable recommendations
