@@ -74,7 +74,8 @@ hidden state:
 
 1. INVESTIGATOR PHASE — Each investigator takes a turn consisting of up to two
    actions, chosen from:
-   - Move (move up to 2 spaces; 1 space if a monster is in your current space)
+   - Move (move up to 2 spaces; must resolve an evade check if leaving a
+     monster's space voluntarily)
    - Explore (interact with a search token or unexplored doorway; the app reveals
      what you find — items, clues, narrative text, or new map tiles)
    - Search (look for hidden items in your current room; the app determines what

@@ -71,39 +71,46 @@ Each investigator's turn follows a structured action-point sequence:
    points (some abilities or conditions may modify this).
 2. SPEND ACTIONS - Each action point may be spent on one of the following:
    a) MOVE - Move to an adjacent room on the modular board.
-   b) ATTACK - Roll dice to attack a monster in your room. The dice pool is
-      determined by your character's stats and equipment. Hits are assigned to
-      reduce monster health; tentacle results trigger stress.
-   c) REST - Remove one stress token from your investigator.
+   b) ATTACK - Target a single enemy in your space and make a roll. Each success
+      deals one wound to the target; tentacle results cost 1 sanity each.
+   c) REST - Only available in a Safe space (no enemies present). Heal your
+      stress and/or wounds up to 3 spaces total across those tracks.
    d) TRADE - Exchange items or companions with another investigator in the
       same room.
    e) EPISODE-SPECIFIC ACTIONS - Each scenario defines unique actions related
       to disrupting the ritual (e.g., destroying ritual components, activating
       seals, gathering clues).
-3. RESOLVE MYTHOS - After spending actions, draw and resolve one Mythos card
-   from the Episode deck. Mythos cards advance the Elder God's summoning track,
-   spawn monsters, move cultists, or trigger environmental effects. The Mythos
-   deck is the game's clock — it advances relentlessly regardless of player
-   success.
-4. MONSTER ACTIVATION - Each monster in the active investigator's room (and
-   sometimes adjacent rooms) attacks. Monsters deal stress, which advances the
-   insanity track.
+3. DRAW MYTHOS CARD - Draw and resolve one Mythos card from the deck. Mythos
+   cards may advance the Elder One's summoning track, spawn monsters, move
+   enemies, or trigger special effects. The Mythos deck is the game's clock —
+   it advances relentlessly regardless of player success.
+4. INVESTIGATE OR FIGHT - If the investigator is in a Safe space (no enemies
+   present), draw a Discovery card that may grant items, companions, or
+   conditions. If enemies are present, every enemy in the investigator's space
+   attacks, rolling dice as shown on their reference card; each success deals
+   a wound and each tentacle costs 1 sanity.
+5. RESOLVE END OF TURN - Resolve any end-of-turn effects, check fire tokens,
+   check the Mythos discard pile for Elder One summoning symbols (3 symbols
+   advance the Elder One along its summoning track and reshuffle the Mythos
+   deck), check whether the Elder One is summoned, and resolve any Elder One
+   end-of-turn effects.
 
 The game proceeds through two phases. In Phase One, investigators must complete
-scenario-specific objectives to disrupt the ritual — typically destroying three
-ritual tokens scattered across the map. Once all ritual tokens are destroyed, the
-Elder God fully manifests on the board in a weakened state, and Phase Two begins:
-a direct boss fight where investigators must deal enough damage to kill the Elder
-God before the Mythos deck runs out or all investigators are eliminated.
+episode-specific objectives to disrupt the ritual (e.g., destroying labs, closing
+gates, or other tasks defined by the chosen Episode card). Once the ritual is
+disrupted, the Elder One is summoned and can now be attacked — Phase Two begins:
+a direct boss fight where investigators must defeat all of the Elder One's Stages
+before the Progression token reaches the end of the summoning track or all
+investigators are eliminated.
 
 ### Key Design Patterns
 
-INSANITY AS POWER SOURCE: The insanity track is the game's central risk-reward
-mechanism and its most original design contribution. As investigators take stress
-(from monster attacks, failed rolls, or Mythos events), they advance along a
-personal insanity track. Each threshold on the track unlocks a new ability —
-bonus dice, damage mitigation, extra actions, or supernatural effects. However,
-reaching the end of the track means death. The design creates a non-obvious
+INSANITY AS POWER SOURCE: The sanity track is the game's central risk-reward
+mechanism and its most original design contribution. As investigators lose sanity
+(from tentacle results on any dice roll, or Mythos effects), they advance along a
+personal sanity track toward madness. Each Insanity Threshold on the track
+activates an insanity card, levels up a skill, and some thresholds permanently add
+a bonus die to all rolls. However, reaching the end of the track means death. The design creates a non-obvious
 optimal play pattern: investigators who are too cautious remain weak, unable to
 match the escalating threat. Investigators who embrace insanity gain the power
 needed to fight the Elder God but risk elimination before the final battle. The
@@ -127,11 +134,12 @@ story through the sequence of objectives and the escalating mechanical pressure,
 not through reading flavor paragraphs.
 
 DICE MITIGATION THROUGH CONTROLLED INSANITY: The dice system uses custom dice
-with hits, blanks, Elder Signs (wild successes), and tentacles (which deal stress
-to the rolling investigator). The tentacle faces create a built-in risk in every
-roll: attacking a monster might advance your insanity as much as being attacked by
-one. But because insanity grants powers, tentacle results are not purely negative
-— they are a forced investment in your insanity track. Equipment cards and
+with successes, blanks, Elder Signs, and tentacles (which cost 1 sanity each).
+Investigators may take stress to reroll any die on any roll, as many times as they
+choose. The tentacle faces create a built-in risk in every roll: attacking a monster
+might erode your sanity as much as being attacked by one. But because reaching
+Insanity Thresholds grants powers, tentacle results are not purely negative —
+they are a forced investment in your sanity track's progression. Equipment cards and
 character abilities provide reroll and dice-manipulation effects, giving players
 agency over the randomness. The interplay between dice luck, mitigation abilities,
 and insanity advancement means that even a "bad" roll can be strategically

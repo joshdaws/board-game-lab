@@ -42,9 +42,11 @@ prices. This farm-to-factory pipeline is the game's economic spine, and it mirro
 the actual transformation of Scottish Highland economy during the period.
 
 Each clan carries a unique economic identity rooted in Scottish cultural and
-industrial history. Clan Buchanan specializes in grain production with discounted
-field placement. Clan Campbell begins with cheaper workers. Clan MacDonald has
-enhanced shipping range. Clan Stewart starts with extra export contracts. These
+industrial history. Clan Buchanan has an extra export box and can obtain up to
+two export contracts per turn. Clan Campbell gets increasing discounts on
+processed goods factories. Clan MacDonald replaces standard workers with
+versatile Fishermen who can occupy loch spaces. Clan Stewart starts with extra
+merchants and earns a bonus pound each time they trade at the market. These
 asymmetric abilities do not merely give mathematical bonuses — they suggest
 different economic strategies that correspond to historical clan activities.
 The result is that each clan feels like a distinct business with particular
@@ -62,45 +64,43 @@ priorities that no single clan can predict or control.
 
 ### Core Loop
 
-The game spans five rounds, each divided into three phases:
+The game spans five rounds, each divided into four phases:
 
-1. PREPARATION — Reveal a new round scoring tile (visible to all players from
-   setup, allowing long-term planning). Replenish port bonuses. Adjust turn order
-   based on previous round spending (lowest spender goes first).
+1. PREPARATION — Flip the previous round's scoring tile face-down. Refill empty
+   export contract boxes. Retrieve merchants from the market board. (Skipped in
+   round one.)
 
 2. ACTION PHASE — Players take turns in order, performing exactly one action per
-   turn, continuing until all players pass:
-   - Place a worker (woodcutter or miner) on the board, paying placement cost
-     based on terrain and distance from existing units
-   - Place a basic production unit (dairy, sheep pasture, or grain field) on an
-     appropriate terrain hex
-   - Place a processing unit (distillery, bakery, or cheese dairy) adjacent to
-     the corresponding raw production unit
-   - Upgrade shipping range (extending how far you can reach for neighborhood
-     bonuses and port access)
-   - Buy or sell goods on the market (dynamic pricing — each transaction shifts
-     the market price)
-   - Take an export contract from the available face-up contracts
-   - Fulfill an export contract by paying the required combination of goods
-   - Hire a merchant (expanding your action options or providing end-game bonuses)
-   - Expand to a new area using a shipping connection
+   turn, continuing until all players pass. There are eight possible actions:
+   - Trade (buy or sell one type of good on the market; price shifts per unit)
+   - Obtain an export contract (pay the current round cost to take a contract)
+   - Expand (place a unit — worker, sheep, cow, field, cheese dairy, bakery, or
+     distillery — on a space neighbouring or within shipping reach of your units)
+   - Upgrade shipping (pay 4 pounds to extend shipping reach one level)
+   - Upgrade technology (pay 10 pounds to improve worker income)
+   - Hire a merchant (pay 4 pounds to add a merchant from your player board)
+   - Fulfill an export contract (pay the required goods to earn rewards)
+   - Pass (stop taking actions for this round; earn pass bonus money)
 
 3. PRODUCTION — All production units simultaneously generate goods. Dairy farms
    produce milk. Sheep pastures produce wool. Grain fields produce grain.
    Processing units convert raw goods: cheese dairies convert milk to cheese,
    bakeries convert grain to bread, distilleries convert grain to whisky.
-   Workers produce income based on the current market prices of wood and ore.
+   Workers produce income (woodcutters earn 4 pounds, miners earn 6 pounds).
 
-After five rounds, final scoring combines points from fulfilled contracts, market
-position, clan-specific bonuses, glory (earned during the game), and the five
-round scoring tiles.
+4. SCORING — Players earn Glory based on the current round's scoring tile
+   condition.
+
+After five rounds, final scoring combines victory points from Glory track
+position, remaining basic goods (1 VP each), remaining processed goods (2 VP
+each), money (1 VP per 10 pounds), fulfilled export contracts, imported goods
+(hops, cotton, tobacco, sugar cane), and settlement scoring.
 
 ### Key Design Patterns
 
 DYNAMIC MARKET AS SUPPLY-DEMAND SIMULATION: The central market board tracks
-prices for seven commodities (milk, grain, wool, cheese, bread, whisky, and
-cotton). Each commodity occupies a price track where the current price is
-indicated by a marker. When a player buys a good from the market, the price
+prices for six goods (wool, milk, grain, bread, cheese, and whisky). Each
+good occupies a price track where the current price is indicated by a marker. When a player buys a good from the market, the price
 rises. When a player sells a good to the market, the price falls. This creates
 a genuine supply-demand simulation where player actions directly affect the
 economic environment. A player who sells three wool to the market crashes the wool
@@ -112,14 +112,14 @@ Every market transaction is simultaneously a personal economic decision and a
 manipulation of the shared economic environment.
 
 CLAN ASYMMETRY THROUGH UNIQUE ECONOMIC ADVANTAGES: Each of the nine clans
-has a unique ability that bends one specific economic rule. Clan Buchanan pays
-less for grain fields. Clan Campbell's workers cost less. Clan Cunningham earns
-more from export contracts. Clan Fergusson begins with processing units already
-built. These asymmetries are narrow enough that no clan dominates outright but
-wide enough that they meaningfully shape strategic priorities. A Buchanan player
-naturally gravitates toward grain-heavy strategies (bakeries, distilleries),
-while a Campbell player can afford an early worker swarm that generates income
-from the start. The design pattern is that effective asymmetry should constrain
+has a unique ability that bends one specific economic rule. Clan Buchanan can
+hold two export contracts simultaneously. Clan Campbell gets increasing
+discounts on processed goods factories. Clan Cunningham can convert surplus
+milk into 8 pounds each. Clan Fergusson starts with three workers and advanced
+shipping. These asymmetries are narrow enough that no clan dominates outright
+but wide enough that they meaningfully shape strategic priorities. A Campbell
+player naturally gravitates toward factory-heavy strategies producing processed
+goods, while a Cunningham player prioritizes dairy production for cash flow. The design pattern is that effective asymmetry should constrain
 the decision tree rather than expand it — giving each player a clear strategic
 direction while leaving tactical execution open.
 
@@ -184,17 +184,16 @@ telegraphing scoring conditions creates richer strategic planning than hidden or
 random scoring, because players can optimize across the full game arc rather
 than reacting to surprises.
 
-TURN ORDER THROUGH SPENDING: The player who spent the least money in the previous
-round goes first in the next round. This catch-up mechanism mirrors Power Grid's
-turn-order philosophy: leading in economic output is penalized by positional
-disadvantage. Going first matters because it grants priority access to contracts,
-market prices before they shift, and board positions before they fill. Frugal
-rounds — where a player conserves cash and builds minimally — are rewarded with
-first-mover advantage in the following round. This creates a rhythmic oscillation
-between expansion rounds (spend heavily, accept later turn order) and
-consolidation rounds (spend little, reclaim positional priority). The design
-pattern is that spending-based turn order creates natural pacing without requiring
-explicit round-structure mechanics.
+TURN ORDER THROUGH PASS ORDER: The order in which players pass during the action
+phase determines turn order for the next round — the first player to pass goes
+first next round and receives the highest pass bonus. Going first matters because
+it grants priority access to contracts, market prices before they shift, and
+board positions before they fill. Passing early is rewarded with first-mover
+advantage and bonus money but at the cost of fewer actions in the current round.
+This creates a rhythmic tension between taking more actions now (but accepting
+later turn order) and passing early to secure priority for the next round. The
+design pattern is that pass-order-based turn order creates natural pacing and
+forces players to weigh immediate actions against future positioning.
 
 ### What Makes It #75
 

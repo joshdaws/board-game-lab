@@ -100,9 +100,9 @@ On each turn, a player plays cards from their hand and resolves their effects:
 The game's objective is to descend into the catacombs, acquire an artifact (the
 most valuable treasures, located in the deepest rooms), and escape back to the
 surface before the dragon kills you. Players who escape with an artifact score
-its value plus all other collected treasures. Players who are knocked out below
-ground lose some of their treasure. Players knocked out on the surface still
-score. The game accelerates when the first player escapes: subsequent dragon
+its value plus all other collected treasures and earn a 20-point Mastery token.
+Players knocked out in the Depths or without an artifact score 0 points. Players
+knocked out outside the Depths with an artifact still score normally. The game accelerates when the first player escapes: subsequent dragon
 attacks grow dramatically more lethal, pressuring remaining players to flee.
 
 ### Key Design Patterns

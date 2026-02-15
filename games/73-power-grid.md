@@ -43,7 +43,7 @@ The power plant cards carry illustrations of their generation technology — coa
 oil, garbage, nuclear, wind, fusion — and their efficiency ratings map roughly
 to real-world energy economics. Coal and oil plants are cheap but fuel-hungry.
 Garbage plants convert waste into power at moderate efficiency. Nuclear plants
-are expensive but fuel-efficient. Wind and fusion plants require no fuel at all,
+are expensive but fuel-efficient. Ecological (wind/solar) plants require no fuel at all,
 representing the holy grail of zero marginal cost energy. This progression from
 dirty-and-cheap to clean-and-expensive mirrors actual energy sector transitions,
 giving players an intuitive understanding of why upgrading your plant portfolio

@@ -33,24 +33,25 @@ Designer: Vital Lacerda. Published by Eagle-Gryphon Games (2017).
 Lisboa is set in the aftermath of the catastrophic 1755 Lisbon earthquake,
 tsunami, and fire -- one of the deadliest natural disasters in European history.
 Players take on the roles of members of the Portuguese nobility working to
-rebuild the city under the guidance of three historical figures: the Marquis of
-Pombal (the pragmatic prime minister who oversaw the reconstruction), King Jose
-I (who funded the effort through royal decree), and the Cardinal Patriarch (who
-provided spiritual authority and managed the Church's considerable resources).
+rebuild the city under the guidance of three historical figures: Manuel da Maia (the master builder who designed the
+reconstruction), the Marquis of Pombal (the pragmatic prime minister who oversaw
+the effort), and King D. Jose I (who funded it through royal decree). The
+Cardinal also plays a role through the Church track, providing clergy tiles and
+wigs.
 This is not a generic city-building exercise; every system in the game reflects
 the specific political, economic, and religious tensions that shaped Lisbon's
 reconstruction.
 
 The card system captures the political reality of operating within a power
-structure. When you play a card to a noble's column, you are petitioning that
-historical figure for assistance -- asking the Marquis to authorize
-construction, requesting the King's treasury to fund your ambitions, or seeking
-the Cardinal's blessing for your endeavors. When you instead play a card to your
-own portfolio, you are acting independently, leveraging your personal resources
-and connections. This dual-use creates a persistent tension between cooperating
-with the power structure (which grants more powerful effects but advances the
-nobles' agendas) and acting autonomously (which is less powerful but serves only
-your interests).
+structure. When you play a card to the Royal Court, you are visiting a Noble directly --
+spending Influence to gain access to their State actions and their powerful Noble
+action (building stores, taking decrees, or opening public buildings). When you
+instead play a card to your Portfolio, you are conducting commerce -- selling
+goods via ships or trading with the Nobles' offices for State actions at the
+cost of goods rather than Influence. This dual-use creates a persistent tension
+between spending Influence for direct access to Noble actions and conserving
+Influence by trading goods through your Portfolio, each path feeding different
+strategic threads.
 
 The rubble that covers the city is not a flavor element but a core mechanical
 reality. Before any building can be constructed, the rubble from the earthquake
@@ -66,66 +67,72 @@ social currency.
 
 Lisboa is structured around a card-driven action system where the single choice
 of how to play a card cascades into multiple interconnected subsystems. On your
-turn, you perform one primary action by playing a card, then optionally take
-free actions:
+turn, you first dock returning ships, then either get 1 gold (by discarding a
+card) or play a card from your hand to take one of four actions:
 
-1. PLAY A CARD TO A NOBLE'S COLUMN - Choose one of three nobles (Marquis, King,
-   Cardinal). Place the card in their column. Gain the noble's favor effect,
-   which varies based on the card played and the noble chosen:
-   - Marquis: Authorize city plans, open stores in the rebuilt streets,
-     gain construction permits
-   - King: Decree royal ships, fund public buildings, access the royal
-     treasury
-   - Cardinal: Consecrate churches, gain clergy influence, acquire wigs
-     (influence tokens)
-   The noble also advances on their influence track, potentially triggering
-   powerful bonus events for the player with the most influence over that
-   noble.
+1. PLAY A CARD TO YOUR PORTFOLIO FOR SELL GOODS - Tuck the card under your
+   player board, resolve its reward or penalty, then sell goods from your
+   warehouses onto Ships docked at any player's Portfolio. The goods are sold
+   at market prices from the Royal Treasury. When a Ship's cargo hold is full,
+   it sets sail and its owner earns wigs.
 
-2. PLAY A CARD TO YOUR PORTFOLIO - Place the card face-up in your personal area.
-   Gain the card's portfolio effect (typically resources, money, or influence).
-   Portfolio cards also score end-game VP based on set collection criteria. This
-   action bypasses the nobles entirely but provides less immediate power.
+2. PLAY A CARD TO YOUR PORTFOLIO FOR TRADE WITH NOBLES - Tuck the card under
+   your player board, resolve its reward or penalty, then trade 1 or 2 goods
+   from your warehouses to the Nobles' offices in exchange for State actions:
+   - Manuel da Maia (the Builder) accepts tools or gold: Recruit State
+     Officials or Acquire a Plan
+   - Marquis de Pombal (the Minister) accepts books or gold: Build a Ship
+     or Produce Goods
+   - King D. Jose I (the King) accepts cloth or gold: Meet the Cardinal or
+     Get a Royal Favor
 
-3. DISCARD A CARD FOR BASIC ACTIONS - Take a weaker baseline action (gain money,
-   gain resources, etc.). This serves as a safety valve when your hand does not
-   align with your strategic needs.
+3. PLAY A NOBLE CARD TO THE ROYAL COURT TO VISIT A NOBLE - Place a Noble card
+   on the Royal Court, spend Influence to visit that Noble's office, optionally
+   take one of the Noble's State actions without paying a good, then take the
+   Noble action:
+   - Manuel da Maia: Build a Store in the rebuilt downtown streets
+   - Marquis de Pombal: Take a Decree (earns wigs at game end)
+   - King D. Jose I: Open a Public Building
 
-After the primary card action, players may take free actions: sell goods at the
-market, visit the royal court for favors, build public buildings in cleared
-rubble sites, open stores along rebuilt streets, or acquire ships for trade. The
-interconnection between these systems is dense -- building a public building
-requires a permit from the Marquis, stone cleared from rubble, treasury funding
-from the King, and possibly a wig spent for political influence.
+4. PLAY A TREASURY CARD TO THE ROYAL COURT TO SPONSOR AN EVENT - Place a
+   Treasury card on the Royal Court to take a Political Card (scoring
+   objectives for end-game wigs).
 
-The game ends after a set number of rounds, and scoring encompasses public
-buildings constructed, stores opened, ships acquired, portfolio set bonuses,
-noble influence track positions, and rubble cleared.
+After playing a card, draw a new one from the Political card display. The game
+is divided into two time periods, each spanning a variable number of rounds. A
+period ends when a player completes 4 rubble sets or 3 Political card decks are
+exhausted. After the second period, scoring encompasses wigs from stores and
+Public Buildings, Decrees, completed rubble sets, portfolio Influence, clergy
+tiles, remaining goods and money, and Political cards. The player with the most
+wigs wins.
 
 ### Key Design Patterns
 
 CARD DUAL-USE AS POLITICAL CHOICE: Every card in your hand presents a genuine
-dilemma with three or more distinct resolution paths. Playing to the Marquis
-column grants construction authority. Playing to the King column grants
-financial support. Playing to the Cardinal column grants social influence.
-Playing to your portfolio grants personal resources and end-game scoring
-potential. Discarding grants a basic action. The same physical card might be
-worth 5 VP in your portfolio, or it might grant a critical construction permit
-if played to the Marquis. This is not a simple "action A vs. action B" choice --
-each path activates different subsystems with different timing implications.
-Lacerda uses the card as a decision compression device: one object, five
-possible outcomes, each feeding into a different strategic thread.
+dilemma with multiple distinct resolution paths. Noble cards can be played to
+your Portfolio (for their reward and to Sell Goods or Trade with Nobles) or to
+the Royal Court (to Visit a Noble, spending Influence for direct access to State
+and Noble actions). Treasury cards can be played to your Portfolio (to claim a
+subsidy from the Royal Treasury) or to the Royal Court (to Sponsor an Event and
+take a Political Card). Any card can be discarded for 1 gold. The same physical
+card might provide valuable Influence in your Portfolio, or it might unlock a
+critical Noble action if played to the Royal Court. This is not a simple
+"action A vs. action B" choice -- each path activates different subsystems with
+different timing implications. Lacerda uses the card as a decision compression
+device: one object, multiple possible outcomes, each feeding into a different
+strategic thread.
 
-NOBLE INFLUENCE AS ACTION AMPLIFIER: Each noble maintains an influence track.
-Players with the highest influence over a noble gain preferential access to that
-noble's benefits and score bonus VP from their patronage. Influence accumulates
-through card plays, wig expenditure, and specific actions. The amplification
-dynamic means that early investment in a noble's track makes all future
-interactions with that noble more productive -- a positive feedback loop that
-rewards commitment. However, other players can overtake you on the track,
-stealing your advantageous position. This creates a "king of the hill" dynamic
-on each of the three tracks, forcing players to either defend their noble
-relationships or concede them and invest elsewhere.
+INFLUENCE AS GATED CURRENCY: Each player has a single Influence track that
+governs their ability to Visit Nobles. Visiting a Noble costs Influence equal to
+the Treasury value plus the number of other players' State Officials in that
+Noble's office -- meaning popular Nobles become more expensive to visit.
+Influence is gained primarily by building Ships and through Church Scoring, and
+can also be spent in place of money (reis). If you lack sufficient Influence to
+visit a Noble, you can pay the difference in wigs. This creates a strategic
+tension between accumulating Influence for powerful Noble visits and spending it
+as currency for other needs. Players who invest in Influence gain access to the
+game's most powerful actions (Noble actions plus a free State action), while
+those who spend it freely must rely on the less direct Portfolio path.
 
 RUBBLE CLEARING AS AREA DEVELOPMENT: The Lisbon city grid begins covered in
 rubble from the earthquake. Before any public building can be constructed in a
@@ -165,26 +172,30 @@ historical themes, Lisboa demonstrates that the deepest integration comes from
 making historical facts into mechanical constraints rather than narrative
 dressing.
 
-TREASURY AND FAVOR ECONOMY: Money in Lisboa flows through the royal treasury,
-not directly between players. When you pay for construction, the money enters
-the treasury. When the King distributes funds, they come from the treasury. This
-indirect economy means that other players' spending indirectly funds your
-potential future actions via the King's treasury. The favor system (wigs)
+TREASURY AND FAVOR ECONOMY: Money (reis) in Lisboa flows through the Royal
+Treasury, not directly between players. When you sell goods, the reis come from
+the Treasury. When you play a Treasury card to your Portfolio, you claim a
+subsidy from the Treasury. When you buy land for stores, the reis go to the
+general supply while the Treasury marker tracks the base cost of land. This
+indirect economy means that Treasury card plays deplete the shared pool,
+raising land costs and constraining other players' options. The favor system (wigs)
 operates as a parallel social currency, spent to gain preferential treatment
 from nobles, bypass certain prerequisites, or claim contested benefits. Having
 two currencies with different circulation patterns -- money cycles through the
 treasury, wigs are spent and removed -- creates strategic diversity in resource
 management.
 
-WIGS AS SOCIAL CURRENCY: The wig tokens are Lisboa's most thematically
-distinctive resource. In 18th-century Portugal, powdered wigs signified social
-status and political influence. In the game, wigs function as a wildcard
-currency that can substitute for influence, bribe nobles, or facilitate actions
-that would otherwise require specific prerequisites. Wigs are scarce and
-primarily obtained through the Cardinal's patronage, creating a strategic
-dependency on church influence for players who want maximum flexibility. The wig
-system demonstrates how a thematically specific resource can add mechanical
-texture that a generic "influence token" would lack.
+WIGS AS VICTORY POINTS AND SOCIAL CURRENCY: The wig tokens are Lisboa's most
+thematically distinctive resource and also its victory condition -- the player
+with the most wigs wins. In 18th-century Portugal, powdered wigs signified
+social status and political influence. In the game, wigs are earned from
+building stores near Public Buildings, from Church Scoring (by surrendering
+Clergy tiles), from Ships setting sail with full cargo, and from Decrees at
+game end. Wigs can also substitute for Influence when visiting a Noble (1 wig =
+1 Influence), creating a tension between spending wigs for powerful actions and
+hoarding them for final scoring. The wig system demonstrates how a thematically
+specific resource can serve as both currency and victory condition, adding
+mechanical texture that a generic "victory point" would lack.
 
 STORE NETWORK AND MAJORITY SCORING: As Lisbon's streets are rebuilt, players can
 open stores along them. Stores score based on majority control of street

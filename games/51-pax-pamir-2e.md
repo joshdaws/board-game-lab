@@ -67,9 +67,9 @@ before it disappears mirrors the fleeting nature of political alliances.
 
 On each turn, a player takes two actions from the following options:
 
-1. PURCHASE - Buy a card from the six-card market row. Cards on the left cost more
-   (up to 4 rupees plus loyalty cost) while the rightmost cards cost less or are
-   free. Purchased cards are placed face-up in your court (personal tableau).
+1. PURCHASE - Buy a card from the twelve-card market (a grid of two rows and six
+   columns). Cards in the rightmost columns cost more (up to five rupees) while the
+   leftmost column is free. Purchased cards go into your hand.
 2. PLAY - Play a card from your hand into your court. Some cards have immediate
    effects when played (such as placing armies, roads, or tribes on the map).
 3. CARD ACTIONS - Use an action printed on a card already in your court. Each card
@@ -84,8 +84,10 @@ On each turn, a player takes two actions from the following options:
    e) BETRAY - Remove another player's card from their court if you have a spy on
       the same card. The betrayed card is discarded.
    f) BATTLE - Initiate combat in a region, removing opponent coalition blocks.
-4. CHANGE LOYALTY - Discard all cards in your court without gifts, pay 2 rupees,
-   and switch your loyalty to a different coalition (British, Russian, or Afghan).
+4. CHANGE LOYALTY - Triggered by gaining an influence point in a different coalition
+   (by playing a patriot or betraying a card for a prize of another coalition). When
+   you change loyalty, return your gifts, discard any prizes and patriots that do not
+   match your new coalition, and adjust your loyalty dial.
 
 After taking two actions, the active player checks whether a Dominance Check is
 triggered. Four Dominance Check cards are shuffled into the deck; when one is
@@ -111,11 +113,12 @@ genuinely unstable, mirrors the historical reality of Afghan political flexibili
 and creates a game where reading the table — predicting who will stay loyal and
 who will defect — is as important as optimizing your own position.
 
-MARKET ROW AS SHARED INTELLIGENCE: The six-card market is fully visible to all
-players, and every card purchased from it reveals the buyer's strategic intentions.
+MARKET ROW AS SHARED INTELLIGENCE: The twelve-card market (two rows of six) is
+fully visible to all players, and every card purchased from it reveals the buyer's
+strategic intentions.
 Buying a military card signals aggression; buying a card aligned with a particular
-coalition hints at loyalty. The market's pricing structure — cheaper on the right,
-more expensive on the left — creates timing pressure. A powerful card entering the
+coalition hints at loyalty. The market's pricing structure — free on the left,
+more expensive toward the right — creates timing pressure. A powerful card entering the
 market on the right will be snapped up quickly unless players are cash-poor or
 distracted. The market also serves as the game's clock: as cards cycle through the
 market and into players' courts, the deck depletes, and Dominance Check cards

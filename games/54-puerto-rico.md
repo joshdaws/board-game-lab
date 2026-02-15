@@ -159,8 +159,8 @@ provide the same benefit. Small buildings tweak the rules in focused ways (the
 Small Market adds a doubloon when selling; the Hacienda grants an extra
 plantation; the Construction Hut lets you take quarries during Settler). Large
 buildings provide major end-game scoring bonuses based on specific board states
-(the Guild Hall scores per production building; the Residence scores per filled
-plantation row; the City Hall scores per building type). This diversity means that
+(the Guild Hall scores per production building; the Residence scores based on the number of filled
+island spaces; the City Hall scores per beige building). This diversity means that
 each player's building portfolio creates a unique strategic identity, and the
 shared building supply creates competition for key structures. The one-copy limit
 on most buildings means that a purchased building is denied to all opponents,

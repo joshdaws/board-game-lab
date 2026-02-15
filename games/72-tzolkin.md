@@ -99,9 +99,9 @@ TIME-AS-RESOURCE THROUGH ROTATING GEARS: The gear mechanism is not a gimmick —
 is a complete reimagining of how worker placement functions. In traditional worker
 placement, you place a worker and immediately execute an action. In Tzolk'in, placing
 a worker is an investment; the return comes later, and it grows the longer you wait.
-A worker placed on space 0 of Yaxchilan gains 1 wood immediately upon retrieval. But
-if left for three rounds, that same worker rides the gear to space 3 and gains 1 wood
-plus 1 stone. Wait five rounds and it reaches space 5 for 1 wood, 1 stone, and 1 gold.
+A worker placed on space 0 of Yaxchilan gains 1 wood upon retrieval. But if left
+for two rounds, that same worker rides the gear to space 2 and gains 1 stone and
+1 corn. Wait four rounds and it reaches space 4 for 1 crystal skull.
 The design insight is that time becomes a tangible, tradeable resource. Placing early
 costs less corn but requires patience. Placing late costs more corn but delivers
 immediate results. Every placement is a bet on how long you can afford to wait, and
@@ -141,11 +141,11 @@ The design wisdom is that parallel scoring tracks with diminishing marginal retu
 encourage diverse strategies and prevent single-axis optimization.
 
 CRYSTAL SKULLS AS SET COLLECTION: Crystal skulls are the game's premium resource,
-obtainable only through specific high-level actions on the Tikal and Yaxchilan gears.
-Delivering a skull to Chichen Itza advances you on all three temple tracks
-simultaneously and scores points equal to the space number where your worker
-retrieves (higher spaces on the Chichen Itza gear yield more temple advancement
-per skull). Skulls thus represent a convergence strategy — they advance everything
+obtainable primarily through the Yaxchilan gear and certain technologies or buildings.
+Delivering a skull to Chichen Itza advances you on one specific temple track
+(each action space is dedicated to a particular god) and scores immediate
+victory points, with higher spaces on the Chichen Itza gear yielding greater
+rewards per skull. Skulls thus represent a convergence strategy — they advance everything
 at once but require significant investment to obtain and deliver. The set-collection
 aspect emerges because skulls have increasing marginal value as your temple
 positions rise. The first skull advances you from low temple positions (small

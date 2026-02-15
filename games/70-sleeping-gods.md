@@ -32,7 +32,7 @@ Designer: Ryan Laukat. Published by Red Raven Games (2021).
 ### Theme Integration
 
 Sleeping Gods places players aboard the steamship Manticore in the year 1929,
-crewed by Captain Odessa Saito and her diverse crew, who have been transported
+crewed by Captain Sofi Odessa and her diverse crew, who have been transported
 to a strange and unfamiliar world. The objective is not conquest or optimization
 but survival and discovery -- find the totems of the sleeping gods scattered
 across the map so you can return home. This premise is not a framing device for
@@ -70,35 +70,37 @@ follows an ongoing cycle until players choose to stop, the event deck runs out,
 or the ship's situation becomes untenable. The turn structure within a session
 proceeds as follows:
 
-1. DRAW EVENT - Draw and resolve an event card. Events introduce narrative
-   complications, resource drains, combat encounters, or opportunities. The
-   event deck serves as the campaign's clock -- when it empties, the campaign
-   scores and may end or continue based on player choice.
-2. SPEND ACTION POINTS - The crew has a shared pool of action points (typically
-   7-9 based on crew health and abilities). Players collectively decide how to
-   allocate these points across available actions:
-   - MOVE - Sail the Manticore to an adjacent sea zone (1 AP). Navigation
-     across the map is literal -- you trace routes between connected zones.
-   - EXPLORE - Visit a location on the current map tile. Read the
+1. SHIP ACTION - The active player moves the ship action figure to one of five
+   ship rooms (Bridge, Galley, Deck, Quarters, Sick Bay), each providing a
+   different benefit such as drawing ability cards, gaining command tokens,
+   restoring crew health, or searching for resources. The same room cannot be
+   repeated two turns in a row.
+2. DRAW EVENT - Draw and resolve an event card. Events introduce narrative
+   complications, combat encounters, or opportunities. The event deck serves
+   as the campaign's clock -- over the course of a campaign, you cycle through
+   the event deck three times, with escalating story consequences each time.
+3. TWO ACTIONS - The active player performs two actions chosen from:
+   - TRAVEL - Sail the Manticore to a new region by performing a Craft
+     challenge and consulting the travel table for distance. Hazards in
+     regions may impose additional skill challenges.
+   - EXPLORE - Visit a location on the current atlas page. Read the
      corresponding storybook entry, which describes what you find and
-     presents choices (2 AP).
-   - MARKET - Buy or sell equipment, resources, or provisions at a port
-     (1 AP).
-   - PREPARE - Recover crew health, reorganize equipment, or craft items
-     (1 AP).
-   - SPECIAL ACTIONS - Use location-specific or crew-specific abilities
-     that become available through narrative progression.
-3. RESOLVE ENCOUNTERS - If exploration or events trigger combat, resolve it
-   using the card-row targeting system. Players draw from a shared adventure
-   deck and assign damage to specific hit zones on enemy cards. Combat is
+     presents choices, challenges, or combat.
+   - MARKET - Visit a market location to draw 7 market cards and purchase
+     adventure cards with coins.
+   - PORT - Visit a port to use the inn, shipyard, healer, or spend XP
+     on crew level cards.
+   Players may also skip an action to gain 1 command token instead.
+4. END OF TURN - Pass the captain token to the player on the left. That
+   player begins their turn.
+5. RESOLVE ENCOUNTERS - If exploration or events trigger combat, resolve it
+   using the card-row targeting system. Players draw from the ability deck
+   and assign damage to specific hit zones on enemy cards. Combat is
    cooperative and tactical, requiring coordination of crew abilities and
    equipment.
-4. MANAGE RESOURCES - After actions are spent, manage the ship's provisions
-   (food and fuel), crew health, and equipment. Insufficient provisions force
-   difficult choices about rationing or emergency stops.
-5. SAVE AND CONTINUE - At any point, players may save the campaign state (using
-   a save system with baggies for components) and resume later. A campaign
-   typically spans 10-20 hours across multiple sessions.
+6. SAVE AND CONTINUE - At any point, players may save the campaign state
+   (using a journey log sheet and storage boxes for components) and resume
+   later. A campaign typically spans 10-20 hours across multiple sessions.
 
 The campaign ends when players have collected enough totems to attempt a final
 confrontation, or when the event deck has been cycled a set number of times.
@@ -134,13 +136,15 @@ established in previous sessions. The storybook is not a random encounter table;
 it is a carefully authored narrative web.
 
 SHIP MANAGEMENT AS SHARED RESOURCE: The Manticore is the central shared resource
-that all players manage cooperatively. The ship requires provisions (food and
-fuel) to operate, and running low on either creates escalating consequences.
-Provisions are consumed over time and must be replenished at ports, creating a
-logistical layer that interacts with the exploration layer -- you might want to
-explore a remote island chain, but do you have enough supplies for the round
-trip? The ship's status also affects available action points, as damaged or
-exhausted crew contribute fewer points to the shared pool. This shared resource
+that all players manage cooperatively. The ship has five rooms that provide
+actions, and each room has damage spaces -- a room with all damage spaces filled
+cannot be used. The ship can sustain 11 total damage before the crew is defeated.
+Meanwhile, crew members require food (meat, vegetables, grain) and coins to
+maintain health and equipment at ports, creating a logistical layer that interacts
+with the exploration layer -- you might want to explore a remote island chain,
+but can your crew and ship absorb the hazards along the way? The command token
+economy ties everything together, as command is spent to activate crew abilities,
+equip ability cards, and coordinate between players. This shared resource
 creates natural cooperative tension, as players must balance individual desires
 (exploring a personally interesting storyline) against collective needs
 (restocking at the nearest port).
@@ -148,7 +152,7 @@ creates natural cooperative tension, as players must balance individual desires
 COMBAT AS CARD-ROW TARGETING: Sleeping Gods' combat system is distinctive for
 its spatial specificity. Enemies are represented by cards with multiple hit
 zones, each with a defense value and sometimes a special effect when struck.
-Players draw cards from the adventure deck and use them to target specific hit
+Players draw fate from the ability deck and use the results to target specific hit
 zones, attempting to destroy the enemy by eliminating all its zones or hitting a
 critical weak point. Crew members contribute combat abilities based on their
 equipment and health -- a damaged crew member fights less effectively. The
@@ -158,9 +162,10 @@ creating a genuine risk-reward calculation around whether to fight or flee from
 encounters.
 
 CAMPAIGN SAVE AND RESUME SYSTEM: Sleeping Gods' campaign spans 10-20 hours, far
-too long for a single sitting. The save system uses labeled bags and a campaign
-log to preserve the game state between sessions -- crew health, equipment, map
-progress, active quests, discovered locations, and remaining event deck. This
+too long for a single sitting. The save system uses a journey log sheet, plastic
+bags, and multiple storage boxes to preserve the game state between sessions --
+crew health, equipment, map progress, active quests, discovered locations, and
+remaining event deck. This
 technical solution to a logistical problem is itself a design statement: Laukat
 is asserting that a board game can demand the same time commitment as a video
 game campaign, and players will accept this if the experience justifies it. The
@@ -196,12 +201,12 @@ eastern shore?" This self-directed motivation is more powerful than any quest
 marker because it emerges from genuine curiosity rather than mechanical
 incentive.
 
-CREW HEALTH AS DEGRADING CAPABILITY: Each crew member has a health track, and as
-they take damage, their capabilities diminish. A fully healthy navigator
-provides maximum action points and powerful exploration abilities. A heavily
-wounded navigator provides fewer action points and may lose access to abilities
-entirely. When a crew member is knocked out, their contribution drops to zero
-until they recover. This degradation mechanic creates a fundamentally different
+CREW HEALTH AS DEGRADING CAPABILITY: Each crew member has a health track, and
+damage accumulates on their crew board. A crew member at 0 health cannot attack,
+participate in challenges, or activate any of their crew board abilities or
+ability cards until they regain at least 1 health. Fatigue tokens compound the
+problem -- a crew member with 2 fatigue cannot participate in challenges at all,
+and their second fatigue token causes them to deal -1 damage in combat. This degradation mechanic creates a fundamentally different
 relationship to damage than binary "alive or dead" systems. Every wound matters
 incrementally, and the decision to push forward with a wounded crew versus
 stopping to heal becomes a persistent strategic question. The mechanic also

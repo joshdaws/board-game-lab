@@ -62,30 +62,30 @@ single axis.
 
 ### Core Loop
 
-The game plays over 16 rounds divided into four seasons, with a Courtship card
-drawn each season that establishes what the Fairchild family values (reputation,
-prestige, specific improvement types). Each round follows this structure:
+The game plays over 16 rounds divided into four seasons, with a Theme Card
+drawn each season that establishes what the Fairchild family values (one of five
+improvement categories: Essentials, Service, Estate, Prestige, or Sporting).
+Each round follows this structure:
 
-1. SELECT IMPROVEMENT - Optionally purchase an estate tile from the builder's
-   market (a rotating display of rooms, gardens, and service buildings). Tiles
-   cost money and sometimes require specific guest or staff prerequisites.
+1. ROTATE SERVICE - Move servants from the Servants' Quarters to Available
+   Service (now usable this turn). Move servants from Expended Service to the
+   Servants' Quarters (still resting). Guests in the discard pile remain
+   unavailable until the player passes to reclaim them.
 2. HOST ACTIVITY - Choose one of your estate tiles to activate. Each tile
-   specifies a required combination of service staff (e.g., butler + footman)
-   and invites one or more guests from your available hand. The tile provides
-   rewards: reputation, prestige, money, favors, or new guest acquisitions.
-3. COLLECT REWARDS - Gain all benefits from the hosted activity. Some guests
-   provide additional bonuses based on their class or special abilities.
-   Prestige guests and distinguished visitors generate more powerful effects
-   than casual acquaintances.
-4. EXHAUST PARTICIPANTS - All guests who attended the event and all staff who
-   served it are rotated to an "exhausted" state. They cannot be used again
-   until they recover.
-5. REFRESH - At the start of each round, a subset of exhausted guests and staff
-   return to availability. The refresh rate creates the pacing -- you can never
-   use your entire roster every round.
+   specifies a required servant and invites one or more guests from your
+   available hand. The tile and guest cards provide rewards: money, reputation,
+   and invitations to new guests.
+3. PROVIDE SERVICE - Place the matching servants from Available Service onto
+   the improvement tile and guest cards.
+4. ENJOY FAVOURS - Collect all benefits from the hosted activity: pounds,
+   reputation, and new gentry cards as indicated on the tile and guests.
+5. CLEAR BOARD AND BUY - Move used servants to Expended Service, return the
+   improvement tile to the organiser, and place attending gentry below the
+   player board. Then optionally purchase an estate tile from the builder's
+   market (a rotating display of rooms, gardens, and service buildings).
 
-At the end of each four-round season, a Courtship card is scored, awarding bonus
-VP to the player who best matches the Fairchild family's current priorities.
+At the end of each four-round season, a courtship event is scored, awarding
+bonus VP to the player who best matches the current Theme Card's category.
 After the fourth season, final scoring combines estate value, guest prestige,
 reputation track position, courtship bonuses, and objective cards.
 

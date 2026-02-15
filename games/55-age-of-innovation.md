@@ -37,26 +37,26 @@ Mystica and Gaia Project — a fantasy landscape where diverse factions terrafor
 terrain to suit their needs and build civilizations through economic and
 technological development. But where Terra Mystica assigned fixed factions with
 immutable powers, Age of Innovation introduces modular faction construction.
-Players choose a race (which determines their home terrain type, base abilities,
-and physical identity) and pair it with an innovation tile (which grants a unique
-special power and shapes their strategic trajectory). This combinatorial identity
-system means that the same race plays differently depending on which innovation it
-selects, and the same innovation creates different strategic incentives depending
-on which race wields it. The theme of "innovation" is thus not merely decorative
+Players choose a faction (which determines unique abilities and special powers)
+and pair it with a planning display (which determines home terrain type, starting
+resources, and building costs). This combinatorial identity system means that the
+same faction plays differently depending on which planning display it uses, and
+the same planning display creates different strategic incentives depending on
+which faction wields it. The theme of "innovation" is thus not merely decorative
 — it is structurally expressed through the game's core asymmetry system.
 
 The terrain transformation mechanic remains the thematic centerpiece. The game
 board features a hex grid of seven terrain types, and each faction can only build
 on its home terrain. To expand, players must terraform adjacent hexes by spending
-spades to cycle through the terrain wheel until the target hex matches their home
-type. This process is expensive and incremental — each step on the terrain wheel
+spades to cycle through the terraforming circle until the target hex matches their home
+type. This process is expensive and incremental — each step on the terraforming circle
 costs resources — which means that expanding into territory far from your native
 terrain type is prohibitively costly. The result is that geography is destiny:
 your starting position and terrain distribution constrain your expansion in ways
 that feel natural rather than arbitrary. Two factions with adjacent home terrains
 will compete fiercely for shared border hexes, while factions on opposite sides
-of the terrain wheel are natural geographic allies who rarely contest the same
-spaces. The terrain wheel creates an implicit alliance structure without any
+of the terraforming circle are natural geographic allies who rarely contest the same
+spaces. The terraforming circle creates an implicit alliance structure without any
 negotiation mechanics.
 
 The fantasy setting provides thematic permission for the game's abstract economic
@@ -64,72 +64,73 @@ systems. The power cycle — where power tokens move through three bowls in a lo
 generating usable power only when they reach bowl III — would feel arbitrary in a
 historical context. In a fantasy world of magical civilizations, the idea that
 mystical energy must be cultivated through stages before it can be deployed is
-intuitive. Similarly, the science tracks (replacing Terra Mystica's cult tracks)
-represent technological advancement that unlocks new capabilities, and the Book
-of Innovations provides a branching tech tree that lets each faction pursue a
-unique developmental path. The fantasy frame liberates the design from historical
+intuitive. Similarly, the four discipline tracks on the science display (replacing Terra
+Mystica's cult tracks) represent technological advancement that unlocks new
+capabilities, and the Innovation display provides a set of acquirable tiles that
+lets each faction pursue a unique developmental path. The fantasy frame liberates the design from historical
 plausibility constraints, allowing the mechanical systems to be as abstract and
 interlocking as the design requires.
 
 ### Core Loop
 
-The game is played over six rounds. Each round consists of an action phase
-followed by income and cleanup:
+The game is played over six rounds. Each round consists of three phases —
+income, actions, and science bonus/preparation:
 
-1. ACTION PHASE - Players take turns performing one action each, in clockwise
-   order, until all players have passed. Available actions:
-   a) TERRAFORM AND BUILD - Pay spades (from power or special abilities) to
-      transform a hex to your home terrain, then pay coins and workers to build
-      a dwelling on it. This is the primary expansion action.
+1. INCOME PHASE - Receive income based on your structures and position on various
+   tracks. Income includes coins, tools, scholars, power, and books. The amount
+   of each resource received depends on which structures you have built and which
+   income upgrades you have acquired.
+2. ACTION PHASE - Players take turns performing one action each, following the
+   turn order display, until all players have passed. Available actions:
+   a) TERRAFORM AND BUILD - Pay spades (from tools or special abilities) to
+      transform a hex to your home terrain, then pay tools and coins to build
+      a workshop on it. This is the primary expansion action.
    b) UPGRADE A STRUCTURE - Replace an existing structure with a more advanced
       one along the building upgrade paths:
-      - Dwelling -> Trading House (costs coins and workers; provides income and
+      - Workshop -> Guild (costs tools and coins; provides income and
         interaction bonuses)
-      - Trading House -> Temple (costs coins and workers; provides favor tiles
-        and power income) OR Trading House -> Stronghold (costs coins and workers;
-        provides a faction-specific special action or ability)
-      - Temple -> Sanctuary (costs coins and workers; provides additional favor
-        tiles and end-game scoring)
-   c) ADVANCE ON A SCIENCE TRACK - Pay scholars to move up on one of the science
-      tracks. Each track provides immediate bonuses at certain thresholds and
-      end-game scoring based on position. Reaching the top of a track grants a
-      powerful one-time bonus.
+      - Guild -> Palace (costs tools and coins; provides a unique Palace tile
+        ability) OR Guild -> School (costs tools and coins; provides a
+        competency tile and science advancement)
+      - School -> University (costs tools and coins; provides an additional
+        competency tile)
+   c) SEND A SCHOLAR - Place a scholar on the science display to advance on one
+      of the four discipline tracks. Each track provides immediate bonuses at
+      certain thresholds and end-game scoring based on position. Reaching the
+      top of a track grants a powerful one-time bonus.
    d) POWER ACTIONS - Spend power from bowl III to take one of several powerful
       one-time actions (gain resources, terraform, advance on science tracks).
       Each power action can be used only once per round.
-   e) BOOK OF INNOVATIONS - Spend scholars and other resources to claim an
-      innovation tile from the shared Book of Innovations, gaining a permanent
-      ability or scoring condition. Innovations are arranged in a branching tree
-      structure; claiming one may unlock access to more advanced innovations.
-   f) SPECIAL ACTIONS - Use faction-specific actions (from stronghold or
-      innovation tile) or actions gained from favor tiles.
+   e) DEVELOP AN INNOVATION - Spend books (at least 5, some requiring specific
+      disciplines) to claim an innovation tile from the Innovation display,
+      gaining a permanent ability or scoring condition. Players who have not yet
+      built their palace must also pay 5 coins.
+   f) SPECIAL ACTIONS - Use faction-specific actions (from palace or
+      innovation tile) or actions gained from competency tiles.
    g) PASS - Claim a bonus tile for the next round and stop taking actions for
       the current round. Early passers get first pick of bonus tiles, creating
       incentive to pass before you have exhausted all productive actions.
-2. INCOME PHASE - Receive income based on your structures and position on various
-   tracks. Income includes coins, workers, scholars, power, and priests. The
-   amount of each resource received depends on which structures you have built
-   and which income upgrades you have acquired.
-3. CLEANUP - Reset power actions, prepare the next round's bonus tiles, and
-   advance the round marker.
+3. SCIENCE BONUS AND PREPARATION - Gain science bonuses based on discipline
+   track positions and the current round score tile. Reset power and book
+   actions, prepare the next round's bonus tiles, and advance the round marker.
 
 End-game scoring combines in-game victory points (earned through building,
-upgrading, town formation, science track advancement, and innovation tiles) with
-final scoring from area majority on science tracks, network size, and specific
-innovation or favor tile bonuses.
+upgrading, city formation, science track advancement, and innovation tiles) with
+final scoring from area majority on discipline tracks, largest connected building
+group, leftover resources, and specific innovation or competency tile bonuses.
 
 ### Key Design Patterns
 
-TERRAIN TRANSFORMATION AS SPATIAL PUZZLE: The terrain wheel — a circular
+TERRAIN TRANSFORMATION AS SPATIAL PUZZLE: The terraforming circle — a circular
 arrangement of seven terrain types where each type is adjacent to two others —
 is the game's core spatial constraint. Terraforming a hex requires paying one
-spade per step on the wheel to convert it to your home terrain. A hex that is one
+spade per step on the circle to convert it to your home terrain. A hex that is one
 step away costs one spade; a hex that is three steps away costs three. Because
-spades are expensive (typically costing multiple power or workers), the terrain
-wheel creates a gradient of expansion cost radiating outward from your home
+spades are expensive (typically costing multiple power or tools), the terraforming
+circle creates a gradient of expansion cost radiating outward from your home
 terrain. This gradient means that factions with similar home terrains compete
 for the same cheap-to-terraform hexes, while factions on opposite sides of the
-wheel expand into non-overlapping territory. The spatial puzzle is not just about
+circle expand into non-overlapping territory. The spatial puzzle is not just about
 where to build but about how much it costs to get there, and this cost calculus
 interacts with your resource income, your neighbors' positions, and the bonus
 tiles available each round. Efficient terraforming — finding the cheapest path
@@ -154,52 +155,51 @@ adjacency bonuses and territory) and expanding away from them (denying them powe
 activation).
 
 MODULAR FACTION DESIGN: Age of Innovation's signature departure from its
-predecessors is the race-plus-innovation combination system. Rather than selecting
-a single faction with fixed abilities, players draft a race (determining home
-terrain, starting resources, and base stats) and an innovation tile (determining
-a unique special power). The combinatorial space is enormous — dozens of race and
-innovation pairings create distinct strategic profiles. A race with cheap
-terraforming paired with an innovation that rewards building density plays very
-differently from the same race paired with an innovation that rewards science
-track advancement. This modularity solves the "solved faction" problem that
-plagued Terra Mystica, where experienced players could memorize optimal strategies
-for each faction. In Age of Innovation, the variable pairing ensures that even
-familiar races present novel strategic puzzles depending on their innovation.
+predecessors is the faction-plus-planning-display combination system. Rather than
+selecting a single faction with fixed terrain and abilities, players draft a
+faction tile (determining unique abilities and special powers) and a planning
+display (determining home terrain type, starting resources, and building costs).
+The combinatorial space is enormous — twelve factions paired with seven planning
+displays create distinct strategic profiles. A faction with cheap terraforming
+paired with a planning display whose terrain is scarce on the board plays very
+differently from the same faction paired with a planning display whose terrain
+is abundant. This modularity solves the "solved faction" problem that plagued
+Terra Mystica, where experienced players could memorize optimal strategies for
+each faction. In Age of Innovation, the variable pairing ensures that even
+familiar factions present novel strategic puzzles depending on their terrain.
 
-BOOK OF INNOVATIONS AS BRANCHING TECH TREE: The Book of Innovations is a shared
-display of innovation tiles arranged in a branching structure. Players spend
-scholars and resources to claim innovations, which provide permanent abilities,
-passive bonuses, or end-game scoring conditions. The branching structure means
-that claiming an early innovation may unlock access to more powerful downstream
-innovations, creating a tech-tree progression within the game. Because the Book
-is shared, innovations claimed by one player are permanently unavailable to
-others, creating competition for valuable nodes. The tech tree also interacts
-with the race-plus-innovation identity system: your starting innovation tile
-may synergize with specific branches of the Book, guiding your technological
-development. The result is that each player develops along a unique technological
-trajectory that compounds their initial faction identity.
+INNOVATION DISPLAY AS TECH TREE: The Innovation display is a shared set of
+innovation tiles arranged in columns. Players spend books and sometimes coins
+to claim innovations, which provide permanent abilities, immediate points,
+or additional buildings. The display structure means that tiles in higher columns
+cost more books of specific disciplines, creating a progression within the game.
+Because the display is shared, innovations claimed by one player are permanently
+unavailable to others, creating competition for valuable tiles. Each player may
+develop up to three innovations during the game, placed on their planning display.
+The result is that each player develops along a unique technological trajectory
+that compounds their initial faction identity.
 
-TOWN FORMATION AS CLUSTER REWARD: When a player builds a connected group of
-structures whose combined power value meets or exceeds a threshold (typically 7),
-they form a town. Town formation grants an immediate reward — a town tile
-providing VP, resources, or a permanent ability — and the structures in the town
-gain a town marker for end-game scoring. This mechanic rewards dense, connected
+CITY FORMATION AS CLUSTER REWARD: When a player builds a connected group of
+at least four buildings whose combined power value meets or exceeds 7,
+they found a city. City formation grants an immediate reward — a city tile
+providing VP, resources, or a permanent ability — and the buildings in the city
+gain a city marker. This mechanic rewards dense, connected
 building over sprawling expansion, creating tension with the terraforming system
 that encourages spreading across the map to claim territory. A player who builds
-tightly forms towns quickly (gaining bonuses) but controls less territory. A player
-who builds widely claims more hexes but may struggle to connect structures into
-towns. The town threshold is high enough that forming one requires deliberate
-planning — you cannot accidentally stumble into a town — and the town tile rewards
-are significant enough that ignoring town formation is a serious strategic
+tightly founds cities quickly (gaining bonuses) but controls less territory. A player
+who builds widely claims more hexes but may struggle to connect buildings into
+cities. The city threshold is high enough that forming one requires deliberate
+planning — you cannot accidentally stumble into a city — and the city tile rewards
+are significant enough that ignoring city formation is a serious strategic
 sacrifice.
 
-SCIENCE TRACKS AS PARALLEL SCORING AXIS: The science tracks (replacing Terra
+DISCIPLINE TRACKS AS PARALLEL SCORING AXIS: The discipline tracks (replacing Terra
 Mystica's cult tracks) provide a non-spatial scoring dimension. Each track
 represents a field of knowledge, and advancing on a track costs scholars (a
 dedicated resource). Tracks provide threshold bonuses (immediate rewards at
 specific positions), end-game VP based on relative position, and area-majority
 scoring at game end. The tracks interact with the rest of the game through
-multiple channels: some innovation tiles reward track advancement, some favor
+multiple channels: some innovation tiles reward track advancement, some competency
 tiles provide bonuses based on track position, and some power actions allow
 track advancement. Because track advancement is competitive (area majority
 determines bonus VP), players must monitor opponents' track positions and
@@ -224,20 +224,20 @@ ADJACENCY INTERACTION AS INDIRECT COMPETITION: Age of Innovation features no
 direct conflict — you cannot attack opponents' structures or steal their
 resources. Instead, interaction is mediated through adjacency. Building next to
 an opponent's structure activates their power (helping them) but also blocks them
-from expanding into that hex (hurting them). Trading houses generate bonus income
-when adjacent to opponents. Town formation may require building into contested
+from expanding into that hex (hurting them). Guilds generate bonus income
+when adjacent to opponents. City formation may require building into contested
 areas. This adjacency-based interaction creates a game where you are constantly
 aware of your neighbors without ever directly attacking them — a hallmark of the
 Euro-game tradition that Age of Innovation refines to an art. The interaction is
 subtle but pervasive: every building placement on the map has implications for
-every adjacent player's power economy, expansion options, and town-formation
+every adjacent player's power economy, expansion options, and city-formation
 potential.
 
 ### What Makes It #55
 
 Age of Innovation is the culmination of a design lineage that began with Terra
 Mystica in 2012 and continued through Gaia Project in 2017. What distinguishes
-it from its predecessors is the modular faction system — the race-plus-innovation
+it from its predecessors is the modular faction system — the faction-plus-planning-display
 pairing — which transforms a game that was already strategically deep into one
 that is also combinatorially vast. Where Terra Mystica players eventually
 memorized optimal strategies for each faction, Age of Innovation ensures that

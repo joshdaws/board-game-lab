@@ -64,21 +64,24 @@ critical modifications to support the exploration and supply themes:
 
 1. ACTIONS — Each player takes 4 actions per turn, drawn from:
    - Move (drive/ferry, sail, or fly between connected locations)
-   - Make supplies (convert a city card into supply cubes at that location)
-   - Deliver supplies (place supply cubes from your hand onto a city)
-   - Reconnaissance (scout an adjacent unexplored region, potentially revealing
-     new locations, threats, or story elements)
-   - Build supply center (discard cards to establish a permanent supply hub)
+   - Make supplies (take 1 supply cube from the stockpile onto your character card)
+   - Deliver supplies (place supply cubes from your character card into your location)
+   - Recon (discard city cards matching a route from a supply center to explore
+     the world and open packages)
+   - Build supply center (discard 5 cards matching your current city's color to
+     place a supply center)
    - Share knowledge (trade city cards with co-located players)
 
 2. DRAW CARDS — Draw 2 Player cards. If an Epidemic card is drawn, resolve the
-   epidemic sequence: increase infection rate, draw bottom infection card, add
-   Hollow Men or remove supplies from that location.
+   epidemic sequence: increase infection rate, draw the bottom infection card
+   and remove all supply cubes from that city, then shuffle the infection
+   discard pile back on top of the infection deck.
 
 3. INFECT — Draw infection cards equal to the current infection rate. For each
    drawn city, remove one supply cube. If a city has no supplies, add a plague
-   cube (Hollow Men). Three plague cubes on any city triggers an incident. Eight
-   incidents across a campaign month triggers a game loss.
+   cube and advance the incident marker one space. If a city already has 3
+   plague cubes, an outbreak occurs instead. If the incident marker reaches
+   the end of the track, the players immediately lose.
 
 4. LEGACY ACTIONS — Between and during games, open sealed packages triggered by
    narrative milestones. Apply stickers to the board, add new rules, destroy
@@ -112,11 +115,11 @@ deteriorate. The design wisdom here is that inverting a familiar mechanic create
 novelty without requiring players to learn an entirely new system. Veterans of
 Pandemic immediately understand the stakes but must rethink their strategies.
 
-RECONNAISSANCE AS EXPLORATION MECHANIC: Scouting unexplored regions is not just
+RECON AS EXPLORATION MECHANIC: Exploring the lost world through recon is not just
 thematically satisfying — it is mechanically essential. New locations revealed
-through reconnaissance expand the supply network's potential reach, unlock new
+through recon expand the supply network's potential reach, unlock new
 city cards for the player deck, and sometimes trigger narrative events or provide
-access to critical resources. But reconnaissance costs actions, and actions spent
+access to critical resources. But recon costs actions, and actions spent
 exploring are actions not spent delivering supplies to existing cities. This
 creates a genuine strategic dilemma: expand your knowledge of the world or
 maintain what you already have. The tension between exploration and maintenance

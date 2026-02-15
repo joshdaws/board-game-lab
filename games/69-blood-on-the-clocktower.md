@@ -3,7 +3,7 @@
 ## Quick Stats
 
 - **Players:** 5-20
-- **Time:** 30-120 min
+- **Time:** 30-90 min
 - **Weight:** 3.09/5
 
 ## Mechanics
@@ -89,7 +89,7 @@ day phases (public discussion and execution). A full cycle proceeds as follows:
 4. NOMINATIONS - Any living player may nominate another player for execution.
    The nominated player may make a defense speech. All players (including dead
    players who have not yet used their final vote) vote by raising hands. If the
-   vote count exceeds 50% of living players AND exceeds the highest previous
+   vote count equals or exceeds half the number of living players AND exceeds the highest previous
    vote this day, the nomination stands as the leading candidate. Multiple
    nominations can occur in a single day.
 5. EXECUTION - At the end of the day, the player with the most votes (if
@@ -180,8 +180,8 @@ path. For designers, this demonstrates that difficulty scaling can be achieved
 through content curation (which characters are available) rather than rule
 changes.
 
-THE DEMON BLUFF MECHANIC: During setup, the Demon learns three character tokens
-that are NOT in play. These are the "demon bluffs" -- characters that evil
+THE DEMON BLUFF MECHANIC: During setup, the Demon learns three good character
+tokens that are NOT in play. These are the "demon bluffs" -- characters that evil
 players can safely claim to be, knowing that no one at the table actually holds
 that role. This single piece of information dramatically improves the evil
 team's ability to bluff and creates a strategic meta-layer where good players
