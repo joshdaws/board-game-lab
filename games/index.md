@@ -1,4 +1,4 @@
-# Top 75 BGG Games - Research Index
+# Top 100 BGG Games - Research Index
 
 Games sourced from BoardGameGeek rankings (Feb 2026).
 
@@ -79,3 +79,28 @@ Games sourced from BoardGameGeek rankings (Feb 2026).
 | 73 | Power Grid | 2004 | Enriched |
 | 74 | Mansions of Madness: Second Edition | 2016 | Enriched |
 | 75 | Clans of Caledonia | 2017 | Enriched |
+| 76 | The White Castle | 2023 | Enriched |
+| 77 | The Quacks of Quedlinburg | 2018 | Enriched |
+| 78 | Paladins of the West Kingdom | 2019 | Enriched |
+| 79 | Great Western Trail: New Zealand | 2023 | Enriched |
+| 80 | Le Havre | 2008 | Enriched |
+| 81 | The Gallerist | 2015 | Enriched |
+| 82 | Android: Netrunner | 2012 | Enriched |
+| 83 | Agricola (Revised Edition) | 2016 | Enriched |
+| 84 | Star Wars: Imperial Assault | 2014 | Enriched |
+| 85 | Maracaibo | 2019 | Enriched |
+| 86 | Mechs vs. Minions | 2016 | Enriched |
+| 87 | Darwin's Journey | 2023 | Enriched |
+| 88 | Voidfall | 2023 | Enriched |
+| 89 | The Crew: The Quest for Planet Nine | 2019 | Enriched |
+| 90 | Revive | 2022 | Enriched |
+| 91 | Wingspan Asia | 2022 | Enriched |
+| 92 | Kingdom Death: Monster | 2015 | Enriched |
+| 93 | Race for the Galaxy | 2007 | Enriched |
+| 94 | Five Tribes: The Djinns of Naqala | 2014 | Enriched |
+| 95 | Endeavor: Deep Sea | 2024 | Enriched |
+| 96 | Azul | 2017 | Enriched |
+| 97 | Final Girl | 2021 | Enriched |
+| 98 | Clank!: A Deck-Building Adventure | 2016 | Enriched |
+| 99 | Fields of Arle | 2014 | Enriched |
+| 100 | El Grande | 1995 | Enriched |
