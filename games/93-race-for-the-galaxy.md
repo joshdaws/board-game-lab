@@ -65,20 +65,21 @@ in a universe; you are all racing through the same historical epochs.
 
 Each round follows a simultaneous phase selection structure:
 
-1. **PHASE SELECTION** -- Each player secretly selects one of seven phase
-   cards: Explore (draw cards), Develop (play a development), Settle
-   (play a world), Trade (sell goods for cards), Consume (convert goods
-   to VP), Produce (place goods on production worlds). Some phases have
-   two variants (Explore +5 or +1/+1, Consume Trade or Consume 2x VP).
+1. **PHASE SELECTION** -- Each player secretly selects one of seven action
+   cards corresponding to five phases: Explore (draw cards), Develop
+   (play a development), Settle (play a world), Consume (convert goods
+   to VP), Produce (place goods on production worlds). Two phases have
+   two action card variants each (Explore +5 or +1/+1, Consume: Trade
+   or Consume: 2x VPs).
 
 2. **PHASE RESOLUTION** -- Only selected phases occur, resolved in fixed
    numerical order. All players participate in every selected phase, but
    the player(s) who chose a phase get a bonus:
-   - Explore: Draw extra cards or keep extra cards
+   - Explore: Draw extra cards or keep extra cards (depending on variant)
    - Develop: Pay one fewer card for the development
    - Settle: Draw a card after settling
-   - Trade: Sell one good before consuming
-   - Consume: Trade a good for cards, or double VP from consuming
+   - Consume: Trade -- sell one good for cards before consuming
+   - Consume: 2x VPs -- double VP chips from consuming
    - Produce: Produce on one windfall world as well
 
 3. **CARD PLAY** -- During Develop and Settle phases, players play cards
@@ -157,8 +158,9 @@ multiple components to align.
 
 SIX-COST DEVELOPMENTS AS STRATEGY ANCHORS: The most expensive developments
 (cost 6) are unique, powerful, and each one defines a strategic direction.
-Galactic Federation rewards military diversity. Mining League rewards
-production worlds. Galactic Renaissance rewards developments and genes.
+Galactic Federation rewards 6-cost and other developments. Mining League
+rewards Rare elements worlds. Galactic Renaissance scores for every
+three VP chips accumulated.
 These 6-cost cards function as late-game scoring multipliers that reward
 commitment to a specific strategy. They serve a crucial design function:
 they give players a target to build toward, converting an open-ended
@@ -190,7 +192,7 @@ the learning curve and rewards investment in fluency.
 
 EXPLORE AS INFORMATION ADVANTAGE: The Explore phase (draw cards, keep some,
 discard rest) is the game's primary mechanism for hand quality improvement.
-The +5 variant lets you see seven cards and keep two; the +1/+1 variant
+The +5 variant lets you see seven cards and keep one; the +1/+1 variant
 lets you see three and keep two. Explore is often undervalued by beginners
 who focus on building, but experienced players recognize that card
 selection IS strategy selection. Seeing more cards means finding the

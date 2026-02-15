@@ -58,11 +58,11 @@ metaphor that makes the draft legible to new players within seconds.
 
 ### Core Loop
 
-The game plays over multiple rounds, each divided into two phases:
+The game plays over multiple rounds, each divided into three phases:
 
 **Phase 1 — Factory Offer (Drafting)**
 
-1. DISPLAY SETUP: Each round, fill N+1 factory displays with 4 random tiles
+1. DISPLAY SETUP: Each round, fill 2N+1 factory displays with 4 random tiles
    drawn from a bag (N = number of players). So 2 players use 5 factories,
    3 players use 7, 4 players use 9.
 2. TILE SELECTION: On your turn, choose one of two options:
@@ -93,6 +93,12 @@ all factories and the center.
 3. Incomplete pattern lines remain for the next round — their tiles carry
    over.
 4. Subtract floor line penalties. Reset the floor line.
+
+**Phase 3 — Preparing the Next Round**
+
+If no player has completed a horizontal row on the wall, the player with
+the starting player marker refills all factory displays with 4 tiles
+from the bag. If the bag is empty, refill it from the lid of the box.
 
 **End Game**: The game ends at the conclusion of the round in which any
 player completes a horizontal row on their wall. Bonus scoring: +2 per

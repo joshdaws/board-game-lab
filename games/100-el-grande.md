@@ -57,8 +57,9 @@ medieval Spanish power dynamics.
 The power card system reinforces the theme of limited political capital.
 Each player has an identical hand of 13 power cards numbered 1-13.
 Playing a higher card means acting first in a round but mobilizing fewer
-caballeros from your province (your reserve). Playing a lower card means
-acting later but moving more caballeros onto the board. This tradeoff
+caballeros from the Province (the general supply) to your Court (your
+personal reserve). Playing a lower card means acting later but moving more
+caballeros into your Court for future deployment. This tradeoff
 models the historical tension between spending political capital to act
 quickly versus conserving resources for sustained influence. Power cards
 are not recovered once played, creating a 9-round arc of declining
@@ -70,44 +71,37 @@ as a political campaign exhausts its reserves.
 The game plays over exactly 9 rounds, with scoring occurring after rounds
 3, 6, and 9. Each round has two phases:
 
-**Phase 1 — POWER CARD SELECTION (Simultaneous Auction)**
+**Phase 1 — POWER CARD SELECTION (Sequential)**
 
-1. All players simultaneously choose one power card from their hand and
-   reveal together. Power cards are numbered 1-13 (each player has an
-   identical set of 13, used once each across the game).
-2. The player who played the highest card acts first in Phase 2. Ties
-   are broken by proximity to the current first player.
-3. Based on your power card value, you move caballeros from the general
-   supply to your Province (personal reserve):
-   - Cards 1-3: Move 5 caballeros to your Province.
-   - Cards 4-6: Move 4 caballeros to your Province.
-   - Cards 7-9: Move 3 caballeros to your Province.
-   - Cards 10-11: Move 2 caballeros to your Province.
-   - Cards 12-13: Move 1 caballero to your Province.
-   This is the fundamental tradeoff: priority versus supply.
+1. Starting with the First Player and proceeding clockwise, each player
+   plays one power card from their hand face up. Each card must have a
+   different value from all cards already played this round. Power cards
+   are numbered 1-13 (each player has an identical set of 13, used once
+   each across the game).
+2. The player who played the highest card acts first in Phase 2.
+3. Based on your power card value, you move caballeros from the Province
+   (general supply) to your Court (personal supply). Higher power cards
+   grant fewer caballeros; cards 12 and 13 grant zero. This is the
+   fundamental tradeoff: priority versus supply.
 
 **Phase 2 — ACTION CARD SELECTION AND CABALLERO DEPLOYMENT (In Turn Order)**
 
 In power card order (highest to lowest), each player:
 
-1. Chooses one of five face-up action cards. Action cards are numbered
-   1-5, and each has a unique special effect:
-   - Card 1: Weakest effect, but you deploy 1 caballero.
-   - Card 2: Moderate effect, deploy 2 caballeros.
-   - Card 3: Medium effect, deploy 3 caballeros.
-   - Card 4: Strong effect, deploy 4 caballeros.
-   - Card 5: Strongest effect, deploy 5 caballeros.
-   Lower-numbered action cards have MORE powerful special effects but
-   allow FEWER caballero deployments. Higher-numbered cards have weaker
-   effects but more deployments. You may also choose to take no action
-   card (deploying 0 and getting no effect).
+1. Chooses one of five face-up action cards (one revealed from each of
+   five stacks). Each card shows two things: a number of caballeros you
+   may place (matching the stack number, 1-5) and a unique special
+   action. You perform both actions in either order. You may choose not
+   to perform the special action, but if you do, you must execute as
+   much of it as possible.
 2. Execute the action card's special effect. Effects include: moving the
    King, relocating opponents' caballeros, adding caballeros to the
-   Castillo, triggering special scoring, moving caballeros between
-   regions, and placing or removing authority markers.
-3. Deploy caballeros from your Province to regions on the board. You may
-   NOT place caballeros in the King's current region. You may place them
-   in the Castillo instead.
+   Castillo, triggering special scoring of specific regions, moving
+   caballeros between regions, and placing or moving scoring tiles.
+3. Deploy caballeros from your Court to regions on the board. You may
+   ONLY place caballeros in regions neighboring the King's current
+   region — never directly in the King's region itself. You may throw
+   some or all of them into the Castillo instead.
 
 **SCORING (After Rounds 3, 6, and 9)**
 
@@ -128,7 +122,8 @@ total points wins.
 POWER CARD AUCTION AS TURN ORDER: The power card system is a masterpiece
 of mechanism design that has influenced thirty years of games since. Each
 player holds an identical hand of 13 cards numbered 1-13. Every round,
-you play one card simultaneously. Higher number means you act first but
+you play one card sequentially (each must differ from those already
+played). Higher number means you act first but
 receive fewer caballeros; lower number means more caballeros but later
 action. Cards are never recovered — playing your 13 on round 1 means
 you will never have that option again. This creates a 9-round metagame
@@ -136,8 +131,9 @@ of resource management layered on top of the tactical round-by-round
 play. When do you spend your high cards? Early, to establish board
 position? Late, to make a decisive scoring-round play? The power card
 system is simultaneously an auction, a resource-management puzzle, and
-a bluffing game (trying to read when opponents will play high versus
-low). Its elegance lies in the zero-sum nature: every card you play is
+a reading game (anticipating when opponents will play high versus low,
+since cards are played sequentially and each must be unique). Its
+elegance lies in the zero-sum nature: every card you play is
 one you cannot play later, so every decision has permanent consequences.
 
 THE CASTILLO AS HIDDEN DEPLOYMENT: The Castillo — a physical cardboard
@@ -157,13 +153,14 @@ swinging majorities. The Castillo rewards long-term planning and
 misdirection, and it is the primary mechanism that prevents the game
 from becoming a purely calculable optimization.
 
-KING'S REGION AS NO-GO ZONE: The King piece occupies one region at all
-times, and no player may deploy new caballeros into that region. The
-King moves via specific action card effects, meaning his position is
-partially controllable. This creates area denial as a core strategic
-tool: moving the King into a region where an opponent has majority
-locks that region, preventing reinforcement. Moving the King out of a
-region you want to contest opens it for deployment. The King is a
+KING'S REGION AS TABOO ZONE: The King piece occupies one region at all
+times. Nothing in the King's region may ever be changed — no caballeros,
+Grandes, or scoring tiles may be placed in, moved to, or removed from
+it. The King moves via specific action card effects, meaning his
+position is partially controllable. This creates area denial as a core
+strategic tool: moving the King into a region where an opponent has
+majority locks that region completely. Moving the King out of a region
+you want to contest opens it for deployment. The King is a
 shared resource that players fight to control, and his movement is one
 of the most contested action card effects. The no-go zone rule also
 models the thematic concept of royal prerogative — the crown's presence
@@ -183,19 +180,21 @@ prevents the common area-control problem of runaway leaders — because
 all positions are evaluated at the same moments, a player who falls
 behind in one scoring cycle can pivot and compete in the next.
 
-ACTION CARD SELECTION WITH INVERSE POWER: The five face-up action cards
-represent the round's available special effects. Lower-numbered cards
-have stronger effects but fewer caballero deployments; higher-numbered
-cards have weaker effects but more deployments. This inverse
-relationship creates a second layer of tradeoff within each round (the
-first being the power card auction). A player who won turn priority
-with a high power card might choose a low-numbered action card for its
-powerful effect, accepting fewer deployments. A player who played a low
-power card (gaining many caballeros) might choose a high-numbered action
-card to deploy as many as possible. The two tradeoffs intersect: your
-power card decision constrains your action card options because both
-affect your caballero economy. This nested tradeoff structure produces
-rich strategic texture from simple components.
+ACTION CARD SELECTION AS DEPLOYMENT-VS-EFFECT TRADEOFF: The five face-up
+action cards represent the round's available special effects. Each card
+comes from one of five stacks numbered 1-5, where the stack number
+determines how many caballeros you may place. Stack 1 cards allow only
+1 deployment; stack 5 cards allow 5. Each card also carries a unique
+special action. The tradeoff is between deploying many caballeros (high
+stack number) and choosing the specific special action you want, which
+may only be available on a lower-numbered stack. A player who won turn
+priority with a high power card gets first pick of the available action
+cards. A player who played a low power card (gaining many caballeros
+for their Court) may want a high-numbered action card to deploy as many
+as possible. The two tradeoffs intersect: your power card decision
+constrains your action card options because both affect your caballero
+economy. This nested tradeoff structure produces rich strategic texture
+from simple components.
 
 REGIONAL MAJORITY SCORING WITH TIERED REWARDS: Each region scores points
 for first, second, and third place. The values differ by region and are
@@ -212,10 +211,13 @@ keeps the game dynamic across its nine rounds.
 THE MOBILE KING AS AREA DENIAL: The King is not just a thematic
 ornament; he is the game's primary interaction mechanism. Players jockey
 to control the King's movement because his position determines which
-region is locked (no new deployments). An experienced player uses the
-King offensively — parking him in an opponent's stronghold to prevent
-reinforcement before a scoring round — and defensively — keeping him
-in their own majority region to protect it. The King creates a meta-
+region is completely locked (no changes of any kind). An experienced
+player uses the King offensively — parking him in an opponent's
+stronghold to freeze it before a scoring round — and defensively —
+keeping him in their own majority region to protect it. Note that
+players may only deploy caballeros to regions neighboring the King's
+region, making his position doubly important for controlling where
+new forces can arrive. The King creates a meta-
 game of positioning that operates on top of the caballero deployment
 game. Control the King, and you control the board's topology: which
 regions are open, which are closed, and therefore where the game's

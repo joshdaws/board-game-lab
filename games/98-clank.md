@@ -49,7 +49,7 @@ but unimpressive. The deep vaults are lucrative but may kill you before
 you escape. This depth-versus-safety gradient is the game's central
 thematic expression: how greedy are you willing to be?
 
-The market row of cards available for purchase represents the tools,
+The Dungeon Row of cards available for purchase represents the tools,
 allies, and tricks your thief discovers along the way. A mercenary might
 provide combat strength but generates clank. A secret passage grants
 movement but costs gold. Each card is a narrative micro-decision: do you
@@ -61,17 +61,17 @@ experience accessible and fun.
 
 ### Core Loop
 
-Players take turns simultaneously building their decks and moving through
-the dungeon board. Each turn follows a simple sequence:
+Players take individual turns in clockwise order, building their decks and
+moving through the dungeon board. Each turn follows a simple sequence:
 
 **1. PLAY CARDS**
 
 Play your entire hand (typically 5 cards). Cards generate four possible
 resources:
 
-1. SKILL (blue) — Currency for buying new cards from the market row.
+1. SKILL (blue) — Currency for buying new cards from the Dungeon Row.
 2. SWORDS (red) — Combat strength for defeating dungeon monsters on the
-   board and in the market row.
+   board and in the Dungeon Row.
 3. BOOTS (yellow) — Movement points for traversing the dungeon map,
    moving one space per boot along connected paths.
 4. CLANK — Add your clank cubes to the clank area. Some cards generate
@@ -80,26 +80,28 @@ resources:
 
 **2. BUY CARDS AND USE BOARD EFFECTS**
 
-- Spend skill points to buy cards from the market row (6 face-up cards
-  from the dungeon deck, plus always-available Mercenaries and Explores).
-  Purchased cards go to your discard pile.
-- Defeat monsters in the market row using swords for immediate rewards
+- Spend skill points to buy cards from the Dungeon Row (6 face-up cards
+  from the dungeon deck, plus the always-available Reserve: Mercenaries,
+  Explores, and Secret Tomes).
+  Purchased cards go to your discard pile. You may also fight the Goblin
+  in the Reserve for its reward (it is never discarded).
+- Defeat monsters in the Dungeon Row using swords for immediate rewards
   (gold, extra cards, movement).
 - Pick up tokens from your current board space (minor treasures, market
   items, monkey idols, etc.).
-- Use movement points to traverse the dungeon map. Paths may require
-  swords to pass (guarded tunnels) or boots for extra cost (difficult
-  terrain).
+- Use movement points to traverse the dungeon map. Some tunnels require
+  two boots (footprint icons), some deal monster damage reduced by
+  swords, and locked tunnels require a Master Key from the Market.
 
 **3. DRAGON ATTACKS**
 
 Certain cards in the dungeon deck feature a dragon icon. When revealed
-during market row refill, a dragon attack triggers:
+during Dungeon Row refill, a dragon attack triggers:
 
 1. All clank cubes from the clank area go into the dragon bag (which
    also contains a fixed number of black dragon cubes).
 2. Draw cubes from the bag equal to the current dragon attack strength
-   (which increases as artifacts are taken and as the danger track
+   (which increases as artifacts are taken and as the Rage Track
    advances).
 3. Colored cubes drawn deal 1 damage to the corresponding player.
    Black cubes are harmless draws.
@@ -108,13 +110,15 @@ during market row refill, a dragon attack triggers:
 
 The goal is to venture into the depths, grab an artifact (worth 5-30
 points), and escape back to the surface. Once above ground, you are safe
-from dragon attacks. If you are knocked out underground, your body is
-dragged to the entrance and you score your artifact (if you have one) at
-a penalty. If knocked out in the deep dungeon, you score nothing.
+from dragon attacks. If you are knocked out after retrieving an artifact
+and escaping the Depths, you are rescued by townsfolk and still score
+your points. If knocked out while still in the Depths or without an
+artifact, you are eliminated and score nothing.
 
-**End Condition**: Once any player escapes or is knocked out, a countdown
-begins. The dragon attacks with increasing severity each round until all
-remaining players are either out or knocked out.
+**End Condition**: The first time any player escapes or is knocked out, the
+Countdown Track activates. Each subsequent round triggers a dragon attack
+with escalating extra cube draws (1, 2, then 3 extra), and on the fifth
+space all remaining players in the dungeon are instantly knocked out.
 
 ### Key Design Patterns
 
@@ -155,8 +159,8 @@ where you need to go.
 
 DRAGON ATTACKS AS ESCALATING SHARED TIMER: Dragon attacks serve as the
 game's clock, and they escalate in two ways. First, the attack strength
-increases as artifacts are removed from the board and as the danger track
-advances (certain cards move the danger marker). Second, the ratio of
+increases as artifacts are removed from the board and as the Rage Track
+advances (certain cards move the Dragon marker along the Rage Track). Second, the ratio of
 player cubes to black cubes in the bag worsens over time because clank
 accumulates across all players every round. Early dragon attacks are
 survivable nuisances. Late dragon attacks are lethal. This dual
@@ -165,8 +169,9 @@ accelerates toward its climax organically, driven by player actions
 rather than an arbitrary timer.
 
 THE ESCAPE TRIGGER AND COUNTDOWN: Once any player escapes the dungeon or
-is knocked out, a countdown begins. The dragon attacks every round with
-maximum ferocity, and players who have not escaped face increasing danger.
+is knocked out, a Countdown Track activates. The dragon attacks each round
+with escalating extra cubes drawn (1 extra, then 2, then 3), and on the
+fifth space all remaining players in the dungeon are instantly knocked out.
 This mechanism solves the classic problem of elimination games: rather
 than knocking players out and making them wait, the escape trigger creates
 urgency for everyone simultaneously. It also introduces strategic
@@ -174,14 +179,15 @@ interaction — an aggressive player can escape early to trigger the
 countdown and pressure opponents who went deeper. The escape trigger
 transforms the endgame from a leisurely optimization into a frantic race.
 
-MARKET ROW AS TACTICAL PURCHASING: The six face-up cards from the
+DUNGEON ROW AS TACTICAL PURCHASING: The six face-up cards from the
 dungeon deck, refreshed as cards are bought, create a shared tactical
 market. Unlike Dominion's fixed supply piles, Clank!'s market is
 unpredictable — you cannot plan a strategy around cards that may never
 appear. This shifts the skill from strategic deck construction (knowing
 which cards to buy) to tactical adaptation (making the best of what
-appears). The always-available Mercenaries and Explores provide a floor:
-you can always buy something, even if the market row is unfavorable. This
+appears). The always-available Reserve cards (Mercenaries, Explores, and Secret
+Tomes) provide a floor: you can always buy something, even if the
+Dungeon Row is unfavorable. This
 prevents dead turns while preserving the excitement of discovering
 powerful cards.
 
@@ -195,7 +201,7 @@ find themselves stranded deep in the dungeon without enough boots to
 escape. Movement as deck output creates a resource tension that purely
 abstract deck builders lack.
 
-COMPANION CARDS AS THEMATIC ALLIES: The market row includes companion
+COMPANION CARDS AS THEMATIC ALLIES: The Dungeon Row includes companion
 cards — characters like the Rebel Scout, the Treasure Hunter, or the
 Watcher — that provide ongoing or powerful abilities. These cards are
 among the most expensive and impactful purchases, and they serve a dual

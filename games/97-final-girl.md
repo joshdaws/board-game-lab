@@ -50,14 +50,14 @@ yourself, saving victims. The midgame escalates as victims die, the terror
 track rises, and the killer's behavior becomes more aggressive. The endgame
 narrows to the final confrontation: just you and the killer, resources
 depleted, dice rolls carrying life-or-death stakes. This is not scripted;
-it emerges from the mechanical systems. The terror track, victim pool, and
+it emerges from the mechanical systems. The Horror track, victim pool, and
 killer AI conspire to produce the same narrative shape every time, while
 the specific details vary. It is procedural horror storytelling.
 
 The Feature Film box system — where each release pairs a killer with a
 location — extends the cinematic metaphor. You are not playing a single
-game; you are selecting which horror movie to watch tonight. Mixing Hans,
-the camp counselor killer, with the summer camp location recreates Friday
+game; you are selecting which horror movie to watch tonight. Mixing Hans
+the Butcher with the Camp Happy Trails location recreates Friday
 the 13th. Pairing the alien entity with the space station evokes Alien.
 Each killer has unique AI behaviors, special powers, and a dedicated terror
 card deck, while each location has its own map, item deck, event deck, and
@@ -67,54 +67,66 @@ slasher meets haunted house, creature feature meets suburbia.
 
 ### Core Loop
 
-Each round follows a structured sequence that maps to the rhythm of a horror
-movie scene:
+Each turn follows a structured sequence of five phases that maps to the
+rhythm of a horror movie scene:
 
 **1. ACTION PHASE (Your Turn)**
 
-You have a pool of action points (typically starting at 4-5, modified by
-cards and the terror level). Spend action points on:
+You have a pool of Time (starting at 6, reset to 6 each Planning phase,
+or 5 in Extreme Horror Mode). Spend Time on:
 
-1. MOVE — Move to an adjacent location space on the map. Movement is
-   constrained by the map's layout, creating chokepoints and dead ends
-   that replicate horror geography.
-2. SEARCH — Draw cards from the location's item deck. Items provide dice
-   manipulation, one-time effects, and combat bonuses. Searching costs
-   time and position.
-3. SAVE A VICTIM — If you are in the same space as a victim and there is
-   a safe route, spend action points to escort them to safety. Saved
-   victims reduce the killer's power and score points.
-4. ATTACK — Initiate combat with the killer if in the same space. Roll
-   dice against the killer's health, modified by items, cards, and
-   special abilities. Combat is the primary push-your-luck element:
-   spending more action points on attacks increases damage potential but
-   leaves fewer points for defense and movement.
+1. MOVE — Play a movement Action card (like Walk or Sprint) and make a
+   Horror Roll to move between adjacent spaces on the map. You may take
+   up to 2 victims with you when leaving a space. Movement is constrained
+   by the map's layout, creating chokepoints and dead ends that replicate
+   horror geography.
+2. SEARCH — Play a Search Action card while on a Search space and make a
+   Horror Roll to draw from the location's item deck. Items provide
+   weapons, healing, and special abilities. Searching costs Time and
+   position.
+3. SAVE A VICTIM — If you are on an Exit space with victims, you may
+   save them (place them on your Final Girl card for rewards such as
+   reducing Horror or gaining items). Saving enough victims unlocks your
+   Final Girl's Ultimate Ability.
+4. ATTACK — Play an attack Action card and make a Horror Roll (rolling
+   dice equal to the current Horror Level). Each success (5 or 6) deals
+   1 damage; partial successes (3 or 4) can be converted by discarding
+   2 Action cards each. Weapons modify damage output. Combat costs Time
+   and cards, creating a push-your-luck tension between attacking now
+   versus preparing for a stronger later assault.
 5. PLAY CARDS — Use action cards from your hand for special effects:
    setting traps, healing, repositioning, gaining bonus dice.
 
-**2. KILLER PHASE (AI Turn)**
+**2. PLANNING PHASE**
 
-1. Draw and resolve a terror card from the killer's deck. These cards
+1. Spend remaining Time to purchase Action cards from the Action Tableau.
+2. Reset Time marker to 6 (any unspent Time is lost).
+3. Return all played/discarded Action cards to the Action Tableau.
+
+**3. KILLER PHASE (AI Turn)**
+
+1. Resolve the Killer Action on the Finale card (or its back, once
+   revealed).
+2. Draw and resolve the top Terror card from the Terror deck. These cards
    move the killer, trigger special abilities, kill victims, raise the
-   terror track, or spawn new threats. Each killer's terror deck has
+   Horror Level, or spawn new threats. Each killer's Terror deck has
    unique cards reflecting their personality and methods.
-2. The killer moves toward the nearest victim (or toward you, depending
-   on the killer's behavior rules and the current terror level).
-3. If the killer occupies the same space as a victim, the victim dies.
-   Dead victims raise the terror track and may trigger additional
-   killer powers.
 
-**3. UPKEEP**
+**4. PANIC PHASE**
 
-1. Advance the time track. If time runs out, you lose.
-2. Check terror level — higher terror unlocks more powerful killer
-   abilities, reduces your action points, and accelerates victim deaths.
-3. Replenish your hand from the finale deck (special powerful cards that
-   become available as the game escalates).
+If at least one victim was killed this turn, all victims in the killer's
+space panic — roll a die for each to scatter them to adjacent spaces.
 
-**End Conditions**: You win by reducing the killer's health to zero. You
-lose if the time track runs out, the terror track maxes out, or your
-final girl is killed.
+**5. UPKEEP PHASE**
+
+1. If no Terror cards remain, reveal the Finale card.
+2. Resolve any required upkeep from Events, Items, or special rules.
+3. Rearrange items between hands and backpack.
+
+**End Conditions**: You win by reducing the killer's health to zero (depleting
+all Health markers and the black Final Health token). You lose if the
+killer slays your Final Girl. In the rare case both die simultaneously,
+you win.
 
 ### Key Design Patterns
 
@@ -123,7 +135,7 @@ insight is that genre conventions can serve as a structural blueprint for
 game design. Rather than inventing mechanical systems from scratch and then
 applying a theme, Derrick and Porfirio started with the question: what does
 a horror movie feel like, and what mechanical systems would reproduce that
-feeling? The terror track creates rising dread. The victim pool creates
+feeling? The Horror track creates rising dread. The victim pool creates
 urgency and guilt. The time limit creates the ticking clock. The killer AI
 creates an unpredictable antagonist. None of these mechanics are novel in
 isolation, but their combination is precisely calibrated to a specific genre
@@ -154,20 +166,23 @@ rather than vertically superior. The design lesson is that content
 modularity, when built on a stable mechanical chassis, can provide
 variety without complexity inflation.
 
-TERROR TRACK AS ESCALATION TIMER: The terror track is the game's central
-pacing mechanism. It rises when victims die, when certain terror cards
-trigger, and when specific events occur. As it rises, the killer becomes
-more powerful (unlocking new abilities at thresholds), the player becomes
-weaker (losing action points), and the emotional tension increases. The
-terror track is not a countdown — it is a pressure gauge that the player
-can partially control. Saving victims slows its rise. Killing the killer
-early keeps it low. But it never decreases, so even successful play
-accumulates pressure. This one-directional ratchet is an elegant model
-for escalation: things always get worse, the question is how fast.
+HORROR TRACK AND BLOODLUST AS DUAL ESCALATION: The game uses two
+separate escalation systems. The Horror track (a circular dial on the
+player board) determines how many dice you roll on Horror Rolls — higher
+Horror means more dice, making actions more likely to succeed but also
+more volatile. The Bloodlust track (on the killer board) rises when
+victims die, directly increasing the killer's Movement Value and Attack
+Value while unlocking special effects and Dark Power cards at thresholds.
+Saving victims slows Bloodlust's rise by reducing Horror. The Horror
+Level can go both up and down through card effects, but Bloodlust only
+increases — it is the true one-directional ratchet. This dual-track
+system means the killer grows objectively stronger over time while the
+player's dice odds shift in a more nuanced way.
 
 VICTIM RESCUE AS SECONDARY OBJECTIVE: The victims scattered across the
-map serve a dual mechanical purpose. They are secondary scoring objectives
-— saving them earns rewards and slows the terror track. But they are also
+map serve a dual mechanical purpose. They are secondary objectives
+— saving them earns rewards (shown on the Final Girl card, such as
+items or bonus movement) and reduces Horror. But they are also
 the killer's primary targets, which means they create geographic pressure.
 You cannot simply hunt the killer; you must also protect the vulnerable.
 This creates the classic horror movie dilemma: do you run toward the
@@ -188,8 +203,9 @@ the perfect moment means running out of moments entirely.
 
 KILLER AI BEHAVIOR DECK: Rather than using a simple algorithm for the
 killer's movement and actions, Final Girl gives each killer a dedicated
-terror deck that functions as a behavioral AI. Cards dictate movement
-patterns, special attacks, victim targeting, and environmental effects.
+Terror deck (shuffled together with the location's Terror cards) that
+functions as a behavioral AI. Cards dictate movement patterns, special
+attacks, victim targeting, and environmental effects.
 This means the killer's behavior is probabilistic rather than deterministic
 — you can anticipate likely actions but never predict exactly what will
 happen. Different killers feel genuinely different to play against: a
@@ -204,8 +220,8 @@ preparation (searching, positioning, saving nearby victims). The middle
 phase is escalation (terror rising, victims dying, resources depleting).
 The finale is confrontation (direct combat with the killer, using
 accumulated items and finale cards). This arc is not hardcoded — it
-emerges from the interaction of the terror track, victim pool, time
-track, and card economy. The designers built systems that naturally
+emerges from the interaction of the Horror track, Bloodlust track, victim
+pool, Time track, and card economy. The designers built systems that naturally
 converge toward a climax, which is why Final Girl consistently produces
 satisfying narrative experiences despite being a mechanically driven game.
 

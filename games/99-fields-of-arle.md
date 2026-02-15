@@ -44,7 +44,7 @@ gives the design its character.
 
 The agricultural systems model the full lifecycle of East Frisian farming.
 You plow fields, sow grain or flax, harvest crops, and raise animals —
-horses, cattle, and sheep — that breed at the end of each half-year. Sheep
+horses, cattle, and sheep — that breed at the end of each winter. Sheep
 produce wool. Cattle provide hides. Flax becomes linen. These raw materials
 feed into textile production chains that are the game's economic backbone.
 Rosenberg does not simplify these chains for convenience; he models them
@@ -64,7 +64,8 @@ weaving textiles, tanning hides, building structures. This is not arbitrary
 flavor — it reflects the genuine seasonal rhythms of pre-industrial farming
 life, where the type of labor available depended on weather and daylight.
 The seasonal distinction shapes strategy because it forces players to plan
-across half-years: you cannot shear sheep in winter or weave linen in summer.
+across half-years: you cannot weave linen in summer or cut peat with the
+Peat Boatman in summer.
 
 ### Core Loop
 
@@ -74,39 +75,42 @@ action board; solo play uses a modified version.
 
 **Each Half-Year:**
 
-1. WORKER PLACEMENT: Players alternate placing workers (starting with 3-4
-   each, expandable to 5) on action spaces. Summer and winter offer
-   different action sets, though some spaces are available year-round.
+1. WORKER PLACEMENT: Players alternate placing workers (4 each) on action
+   spaces. Summer and winter offer different action sets, though some
+   spaces are available year-round.
 
    Summer-specific actions include:
-   - PLOW — Flip a moor tile on your home board to create a field.
+   - FARMER — Build a plow and/or plow fields to display grain or flax.
    - BUILD DIKE — Place a dike tile to reclaim land from the marsh,
      expanding your usable territory.
    - CUT PEAT — Remove peat tokens from moor spaces for fuel.
-   - SHEAR SHEEP — Collect wool from your sheep.
-   - SOW — Plant grain or flax on plowed fields.
-   - HARVEST — Collect crops from sown fields.
+   - WOOLEN WEAVER — Convert wool to woolen cloth.
+   - COLONIST — Take a horse and/or dehydrate a moor section.
+   - WOODCUTTER — Collect wood based on your axes.
 
    Winter-specific actions include:
-   - WEAVE LINEN — Convert flax to linen.
-   - WEAVE WOOL — Convert wool to woolen cloth.
-   - TAN HIDES — Convert cattle hides to leather.
-   - BUILD — Construct buildings on your home board using resources.
-   - MASTER — Upgrade a tool (plow, cart, etc.) for enhanced actions.
+   - LINEN WEAVER — Convert flax to linen.
+   - TANNER — Convert hides to leather.
+   - BUTCHER — Slaughter animals for food and hides.
+   - POTTER — Convert clay to food and peat.
+   - WAINWRIGHT — Build a vehicle and/or a peat boat.
 
-   Year-round actions include:
-   - TRADE — Load goods onto vehicles and trade them for other resources
-     or victory points.
-   - ANIMAL MARKET — Buy or sell animals.
-   - CRAFT — Various artisan actions depending on available tools.
+   Year-round actions (present in both summer and winter) include:
+   - MASTER — Upgrade tool indicators on the game board.
+   - CARPENTER — Build a stall or upgrade stalls to stables.
+   - LABORER — Pay food to build, or imitate an occupied action space.
+   - WARDEN/DIKE WARDEN — Flip upgrade tiles for free.
 
-2. BREEDING: At the end of each half-year, animals with at least two of a
-   kind produce one offspring. Sheep, cattle, and horses each breed
-   independently. Animals need shelter (stables, forests, or specific
-   buildings) or they must be sold.
+2. BREEDING: At the end of each winter half-year (May Inventorying),
+   animals breed. Stalls with exactly 2 animals of the same type produce
+   one offspring; stables with 2, 3, or 5 animals also produce one.
+   Stables with exactly 4 animals produce two offspring. Animals need
+   accommodation (dikes, empty land spaces, stalls, stables, or parks)
+   or they must be returned to the supply.
 
-3. FEEDING: Workers require food at the end of each half-year. Food comes
-   from grain, animals (slaughtered), or purchased provisions.
+3. SUSTENANCE: At the end of each half-year, players must pay food (3 Food
+   in both seasons) and, in November only, fuel (2 Peat). Missing items
+   can be substituted (grain for food, wood for peat) or cost 2 VP each.
 
 4. INCOME: Receive income based on buildings, trade routes, and other
    economic infrastructure.
@@ -134,8 +138,8 @@ the sandbox breadth that defines the experience.
 SEASONAL WORKER PLACEMENT: The alternation between summer and winter action
 sets is the game's structural signature. Rather than offering the same menu
 of options every round, Fields of Arle forces players to think in seasonal
-rhythms. You must shear sheep in summer to have wool available for winter
-weaving. You must plow in summer to sow before harvest. This temporal
+rhythms. You must use the Woolen Weaver in summer to convert wool before winter.
+You must plow fields in summer via the Farmer to harvest grain and flax. This temporal
 dependency creates planning horizons longer than a single round: you are
 always preparing for the next season's opportunities. The seasonal structure
 also prevents the common worker-placement problem of "always do the same
@@ -169,11 +173,11 @@ sense of progress as your board transforms from waterlogged bog to
 productive farmland.
 
 VEHICLE UPGRADING FOR TRADE CAPACITY: Trade in Fields of Arle requires
-vehicles — handcarts, horse carts, boats, and eventually trading ships.
-Each vehicle type has limited cargo capacity and accesses different trade
-destinations. Upgrading from a handcart to a horse cart, or from a boat to
-a trading ship, increases your cargo capacity and opens more valuable trade
-routes. The vehicle system creates an economic infrastructure layer: you
+vehicles — handcarts, wagons, carts, horse carts, carriages, and droshkies.
+Each vehicle type has different cargo capacity (single and double spaces)
+and costs. Upgrading from smaller vehicles (handcarts, wagons) to larger
+ones (horse carts, carriages, droshkies) increases your cargo capacity and
+opens more valuable trade destinations. The vehicle system creates an economic infrastructure layer: you
 cannot simply produce goods and sell them; you must invest in the logistics
 to bring them to market. This models the real economic reality of rural
 production — the gap between creating value and capturing value is bridged
@@ -205,8 +209,9 @@ settlements — while also creating a meaningful strategic tradeoff between
 short-term fuel needs and long-term land development.
 
 THE GENEROUS SANDBOX: Compared to Rosenberg's more famous Agricola, Fields
-of Arle is strikingly lenient. Feeding requirements are manageable. There
-is no starvation penalty that destroys your game. The scoring system
+of Arle is strikingly lenient. Feeding requirements are manageable. The
+penalty for missing sustenance (2 VP per missing item) is mild compared
+to games like Agricola. The scoring system
 rewards breadth, giving points for almost everything you accumulate. The
 action space menu is vast relative to the number of workers, so blocking
 is rarely crippling. This generosity is a deliberate design choice, not a

@@ -42,10 +42,10 @@ game, where workers represent your permanent labor force. In Five Tribes,
 the people belong to no one until the moment they are gathered and used.
 
 The five tribe colors map to distinct societal roles: yellow Viziers
-represent political power (majority scoring), blue Elders represent
-wisdom (set collection), green Merchants represent commerce (goods
-acquisition), white Assassins represent shadowy manipulation (removal of
-opponents' pieces), and red Builders represent infrastructure (coin
+represent political power (majority scoring), white Elders represent
+wisdom (2 VPs each at game end), green Merchants represent commerce (goods
+acquisition), red Assassins represent shadowy manipulation (removal of
+opponents' pieces), and blue Builders represent infrastructure (coin
 generation from surrounding tiles). These roles are not arbitrary color-coding
 -- they create a thematic logic for why gathering different meeple types
 produces different effects. Claiming a tile by emptying it of meeples
@@ -57,7 +57,7 @@ powerful magical allies, each named and illustrated as distinct supernatural
 beings. Djinns provide ongoing or one-time abilities that bend the game's
 rules, reinforcing the theme that in Naqala, power comes not just from
 political maneuvering but from bargains with otherworldly forces. The
-resource goods -- ivory, gold, gems, spices, and more -- evoke the
+resource goods -- ivory, gold, jewels, spices, and more -- evoke the
 historical Arabian trade networks, and their set collection scoring
 mirrors the merchant logic of assembling valuable shipments.
 
@@ -72,32 +72,36 @@ Each turn follows a three-step structure after a critical bidding phase:
 
 2. **MOVE MEEPLES (Mancala)** -- The active player picks up ALL meeples
    from one tile on the 5x6 grid and distributes them one-per-tile along
-   an orthogonal path (no diagonals, no backtracking), with the constraint
+   an orthogonal path (no diagonals, no immediate backtracking), with the constraint
    that the last meeple dropped must match at least one meeple already on
    the destination tile.
 
 3. **COLLECT TRIBE** -- Pick up all meeples of the last-dropped color from
    the destination tile. Resolve their tribal action:
    - Yellow Viziers: Keep for end-game majority scoring
-   - Blue Elders: Keep for set collection scoring (1/10/30/60/100 points
-     for 1/2/3/4/5+ elders)
+   - White Elders: Keep for end-game scoring (2 VPs per Elder owned)
    - Green Merchants: Claim resource goods from an adjacent market
-   - White Assassins: Remove meeples or opponent camels from the board
-   - Red Builders: Earn coins equal to the number of surrounding blue
-     building tiles multiplied by the number of builders collected
+   - Red Assassins: Remove meeples or opponent Viziers/Elders from the board
+   - Blue Builders: Earn coins equal to the number of surrounding blue
+     tiles (including the destination) multiplied by the number of builders collected
 
 4. **CLAIM TILE** -- If the tile is now empty of meeples and unclaimed,
    place your camel on it. You now own this tile for end-game scoring.
 
-5. **OPTIONAL ACTIONS** -- Before or after the mancala move, the player may:
-   - Purchase one Djinn from the face-up display (pay elders or coins)
-   - Purchase one or more resource goods from the face-up market (pay coins)
-   - Use an active Djinn power
+5. **TILE ACTION** -- Perform the action of the tile where your mancala
+   move ended: Oasis (place Palm Tree), Village (place Palace), Small
+   Market (pay 3 coins for 1 resource), Large Market (pay 6 coins for
+   2 resources), or Sacred Places (pay Elders/Fakir for a Djinn).
+
+6. **MERCHANDISE SALE (Optional)** -- After all actions, sell one or more
+   sets of different Merchandise for gold coins (1/3/7/13/21/30/40/50/60
+   for 1-9 different types).
 
 The game ends when one player places their last camel or when no legal
-mancala moves remain. Final scoring sums: coins, tile values, Djinn
-point values, Vizier majority bonuses, Elder set collection, and goods
-set collection.
+mancala moves remain. Final scoring sums: gold coins (1 VP each),
+Vizier majority bonuses, Elders (2 VPs each), Djinn point values,
+Palm Trees (3 VPs each) and Palaces (5 VPs each) on owned tiles,
+tile values, and merchandise set collection.
 
 ### Key Design Patterns
 
@@ -130,8 +134,8 @@ being auctioned has uncertain value that depends on player-specific context.
 
 FIVE TRIBE TYPES AS FIVE SCORING MECHANISMS: Each meeple color triggers a
 completely different effect, and the five effects span different strategic
-paradigms: Viziers reward long-term accumulation (majority), Elders
-reward set collection (exponential scaling), Merchants reward market
+paradigms: Viziers reward long-term accumulation (majority bonus), Elders
+reward collection (flat 2 VPs each), Merchants reward market
 timing (goods acquisition), Assassins reward tactical aggression
 (removal), and Builders reward spatial awareness (adjacency calculation).
 A single turn's value depends entirely on which color you collect and in
@@ -165,9 +169,9 @@ The territory game also interacts with Builders, who score based on
 surrounding tile values, meaning a cluster of claimed tiles near blue
 buildings creates compounding value.
 
-ASSASSINATION AS BOARD MANIPULATION: White Assassin meeples allow players
-to remove meeples from the board -- either from the destination tile or
-from adjacent tiles. This removal capability is Five Tribes' primary
+ASSASSINATION AS BOARD MANIPULATION: Red Assassin meeples allow players
+to remove one meeple from the board -- from a tile within range equal to
+the number of Assassins collected -- or steal an opponent's Vizier or Elder. This removal capability is Five Tribes' primary
 interaction mechanism. Assassins can eliminate an opponent's last meeple
 on a tile to prevent them from claiming it, remove Viziers to weaken an
 opponent's majority position, or clear meeples to enable future tile
@@ -176,7 +180,7 @@ movement as every other action -- the interaction is embedded in the
 core mechanism rather than bolted on as a separate attack system.
 
 RESOURCE GOODS AS SET COLLECTION: The nine types of resource goods
-(papyrus, ivory, gems, etc.) score on an escalating set collection
+(papyrus, ivory, jewels, etc.) score on an escalating set collection
 curve. A single good is worth little; a complete set of different
 goods is worth enormously more. Green Merchant meeples let you
 claim goods from the market row adjacent to your destination tile,
