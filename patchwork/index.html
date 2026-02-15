@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patchwork</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --surface2: #0f3460;
+    --accent: #e94560;
+    --gold: #f0c040;
+    --text: #eee;
+    --text-dim: #889;
+    --grid-line: #334;
+    --cell-empty: #1e2d4a;
+    --cell-filled: #4a7c9b;
+    --cell-income: #d4a843;
+    --cell-valid: rgba(80, 200, 120, 0.3);
+    --cell-invalid: rgba(200, 60, 60, 0.2);
+    --track-bg: #0d1b2a;
+    --track-income: #d4a843;
+    --track-special: #e94560;
+    --p1-color: #4ecdc4;
+    --p2-color: #ff6b6b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  #app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px;
+  }
+
+  /* ── Header ─── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background: var(--surface);
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .header h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  /* ── Time Track ─── */
+  .time-track-container {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    overflow-x: auto;
+  }
+  .time-track-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .time-track {
+    display: flex;
+    gap: 1px;
+    min-width: fit-content;
+  }
+  .track-cell {
+    width: 18px;
+    height: 32px;
+    background: var(--track-bg);
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.55rem;
+    color: var(--text-dim);
+    padding-bottom: 2px;
+  }
+  .track-cell.income { background: var(--track-income); color: #000; }
+  .track-cell.special { background: var(--track-special); color: #fff; }
+  .track-marker {
+    position: absolute;
+    top: -2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 2;
+  }
+  .track-marker.p0 { background: var(--p1-color); left: -2px; }
+  .track-marker.p1 { background: var(--p2-color); right: -2px; }
+
+  /* ── Main Layout ─── */
+  .game-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  /* ── Player Panel ─── */
+  .player-panel {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .player-panel.active { border-color: var(--accent); }
+  .player-panel.p0 .player-name { color: var(--p1-color); }
+  .player-panel.p1 .player-name { color: var(--p2-color); }
+
+  .player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .player-name { font-weight: 700; font-size: 1rem; }
+  .player-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .stat { display: flex; align-items: center; gap: 4px; }
+
+  /* ── Quilt Board ─── */
+  .quilt-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    background: var(--grid-line);
+    border: 1px solid var(--grid-line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .quilt-cell {
+    width: 32px;
+    height: 32px;
+    background: var(--cell-empty);
+    transition: background 0.15s;
+  }
+  .quilt-cell.filled { background: var(--cell-filled); }
+  .quilt-cell.preview { background: var(--cell-valid); }
+  .quilt-cell.preview-invalid { background: var(--cell-invalid); }
+  .quilt-cell.income-marker { background: var(--cell-income); }
+  .quilt-cell.clickable { cursor: pointer; }
+  .quilt-cell.clickable:hover { background: rgba(80, 200, 120, 0.5); }
+
+  /* ── Market ─── */
+  .market-container {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+  }
+  .market-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .market-ring {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 4px 0;
+    align-items: flex-end;
+  }
+  .market-patch {
+    flex-shrink: 0;
+    background: var(--surface2);
+    border-radius: 6px;
+    padding: 6px;
+    border: 2px solid transparent;
+    cursor: default;
+    opacity: 0.4;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .market-patch.available {
+    opacity: 1;
+    border-color: var(--accent);
+    cursor: pointer;
+  }
+  .market-patch.available:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .market-patch.available.unaffordable {
+    opacity: 0.6;
+    border-color: #555;
+    cursor: not-allowed;
+  }
+  .market-patch.available.no-placement {
+    opacity: 0.5;
+    border-color: #444;
+    cursor: not-allowed;
+  }
+  .market-patch.pawn-marker::before {
+    content: 'pawn';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold);
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+  .patch-shape { display: grid; gap: 1px; }
+  .patch-cell { width: 10px; height: 10px; border-radius: 1px; }
+  .patch-cell.filled { background: var(--cell-filled); }
+  .patch-cell.income { background: var(--cell-income); }
+  .patch-cell.empty { background: transparent; }
+  .patch-info {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    margin-top: 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* ── Action Bar ─── */
+  .action-bar {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .action-bar .message { flex: 1; font-size: 0.9rem; min-width: 200px; }
+  .action-bar button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .action-bar button:hover { background: #d63851; }
+  .action-bar button:disabled { background: #445; cursor: not-allowed; }
+  .action-bar button.secondary { background: var(--surface2); }
+  .action-bar button.secondary:hover { background: #1a4a80; }
+
+  .placement-controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .placement-controls button {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid #556;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  .placement-controls button:hover { background: var(--accent); border-color: var(--accent); }
+  .key-hint { font-size: 0.65rem; color: var(--text-dim); }
+
+  /* ── Game Over Overlay ─── */
+  .game-over-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  .game-over-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 32px 48px;
+    text-align: center;
+    border: 2px solid var(--accent);
+  }
+  .game-over-card h2 { font-size: 1.8rem; margin-bottom: 16px; }
+  .score-table { margin: 16px auto; border-collapse: collapse; }
+  .score-table th, .score-table td { padding: 6px 16px; text-align: center; }
+  .score-table th { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; }
+  .score-table .total { font-weight: bold; font-size: 1.2rem; color: var(--gold); }
+
+  /* ── Setup Screen ─── */
+  .setup-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    gap: 24px;
+  }
+  .setup-screen h1 { font-size: 2.5rem; letter-spacing: 4px; }
+  .setup-screen .subtitle { color: var(--text-dim); font-size: 0.9rem; margin-top: -16px; }
+  .setup-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 300px;
+  }
+  .setup-options label { font-size: 0.85rem; color: var(--text-dim); }
+  .setup-options select {
+    width: 100%;
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid #445;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+  .start-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .start-btn:hover { background: #d63851; }
+
+  @media (max-width: 800px) {
+    .game-area { grid-template-columns: 1fr; }
+    .quilt-cell { width: 28px; height: 28px; }
+    .track-cell { width: 14px; height: 26px; }
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="module">
+import {
+  createGame, getActivePlayer, getAvailablePatches,
+  findValidPlacements, canPlace, placePatch,
+  actionAdvance, actionBuyPatch, confirmPlacement,
+  placeSpecialPatch, getScoreBreakdown, countEmpty,
+  rotateShape, flipShape, getOrientations, has7x7,
+  remainingIncomeTriggers,
+} from './engine.js';
+import { PATCHES, TRACK_LENGTH, BUTTON_INCOME_AFTER, SPECIAL_PATCH_AFTER } from './patches.js';
+import { executeAIMove, aiPlaceSpecialPatch } from './ai.js';
+
+// ── App State ────────────────────────────────────────────────
+
+let game = null;
+let appMode = 'setup'; // setup | playing
+let gameMode = 'vs-ai'; // vs-ai | local
+let aiDifficulty = 'medium';
+
+// Placement state
+let placingPatch = null;
+let placingShape = null;
+let placingRow = 0;
+let placingCol = 0;
+let placingOrientationIdx = 0;
+let placingOrientations = [];
+let placingValid = false;
+
+const app = document.getElementById('app');
+
+// ── Safe DOM Builder ─────────────────────────────────────────
+
+function el(tag, attrs, ...children) {
+  const e = document.createElement(tag);
+  if (attrs) {
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === 'className') e.className = v;
+      else if (k === 'style' && typeof v === 'object') Object.assign(e.style, v);
+      else if (k.startsWith('on')) e[k] = v;
+      else if (k.startsWith('data-')) e.setAttribute(k, v);
+      else e.setAttribute(k, v);
+    }
+  }
+  for (const child of children) {
+    if (child == null) continue;
+    if (typeof child === 'string' || typeof child === 'number') {
+      e.appendChild(document.createTextNode(String(child)));
+    } else if (Array.isArray(child)) {
+      child.forEach(c => { if (c) e.appendChild(c); });
+    } else {
+      e.appendChild(child);
+    }
+  }
+  return e;
+}
+
+// ── Render ───────────────────────────────────────────────────
+
+function render() {
+  app.replaceChildren();
+  if (appMode === 'setup') {
+    app.appendChild(renderSetup());
+  } else {
+    renderGame();
+  }
+}
+
+function renderSetup() {
+  const gameModeSelect = el('select', { id: 'game-mode' },
+    el('option', { value: 'vs-ai', selected: '' }, 'vs AI'),
+    el('option', { value: 'local' }, 'Local 2-Player')
+  );
+  const aiSelect = el('select', { id: 'ai-difficulty' },
+    el('option', { value: 'easy' }, 'Easy'),
+    el('option', { value: 'medium', selected: '' }, 'Medium'),
+    el('option', { value: 'hard' }, 'Hard')
+  );
+  gameModeSelect.onchange = (e) => {
+    gameMode = e.target.value;
+    aiSelect.disabled = gameMode === 'local';
+  };
+  aiSelect.onchange = (e) => { aiDifficulty = e.target.value; };
+
+  const startBtn = el('button', { className: 'start-btn' }, 'Start Game');
+  startBtn.onclick = startGame;
+
+  return el('div', { className: 'setup-screen' },
+    el('h1', null, 'PATCHWORK'),
+    el('p', { className: 'subtitle' }, 'A game by Uwe Rosenberg'),
+    el('div', { className: 'setup-options' },
+      el('label', null, 'Game Mode'),
+      gameModeSelect,
+      el('label', null, 'AI Difficulty'),
+      aiSelect,
+      startBtn
+    )
+  );
+}
+
+function startGame() {
+  game = createGame();
+  appMode = 'playing';
+  placingPatch = null;
+  placingShape = null;
+  render();
+}
+
+function renderGame() {
+  app.replaceChildren();
+
+  // Header
+  const newGameBtn = el('button', null, 'New Game');
+  newGameBtn.onclick = () => { appMode = 'setup'; render(); };
+  app.appendChild(el('div', { className: 'header' },
+    el('h1', null, 'PATCHWORK'),
+    el('div', { className: 'header-controls' }, newGameBtn)
+  ));
+
+  // Time Track
+  app.appendChild(buildTimeTrack());
+
+  // Game Area
+  const active = game.currentPlayer;
+  const gameArea = el('div', { className: 'game-area' });
+  gameArea.appendChild(buildPlayerPanel(0, active === 0));
+  gameArea.appendChild(buildPlayerPanel(1, active === 1));
+  app.appendChild(gameArea);
+
+  // Market
+  app.appendChild(buildMarket());
+
+  // Action Bar
+  app.appendChild(buildActionBar());
+
+  // Game Over
+  if (game.phase === 'game_over') {
+    app.appendChild(buildGameOver());
+  }
+
+  // Schedule AI turn if needed
+  if (gameMode === 'vs-ai' && game.currentPlayer === 1 && game.phase !== 'game_over') {
+    setTimeout(doAITurn, 600);
+  }
+}
+
+function buildTimeTrack() {
+  const p0pos = game.players[0].timePosition;
+  const p1pos = game.players[1].timePosition;
+  const track = el('div', { className: 'time-track' });
+
+  for (let i = 0; i <= 52; i++) {
+    const isIncome = BUTTON_INCOME_AFTER.includes(i);
+    const isSpec = SPECIAL_PATCH_AFTER.includes(i) && !game.specialPatchesClaimed.includes(i);
+    let cls = 'track-cell';
+    if (isIncome) cls += ' income';
+    if (isSpec) cls += ' special';
+
+    const cell = el('div', { className: cls });
+    if (p0pos === i) cell.appendChild(el('div', { className: 'track-marker p0' }, '1'));
+    if (p1pos === i) cell.appendChild(el('div', { className: 'track-marker p1' }, '2'));
+    cell.appendChild(el('span', null, String(i)));
+    track.appendChild(cell);
+  }
+
+  return el('div', { className: 'time-track-container' },
+    el('div', { className: 'time-track-label' }, 'Time Track'),
+    track
+  );
+}
+
+function buildPlayerPanel(idx, isActive) {
+  const p = game.players[idx];
+  const empty = countEmpty(p.board);
+  const isPlacingForThis = (game.phase === 'place_patch' || game.phase === 'place_special') && game.currentPlayer === idx;
+  const name = (gameMode === 'vs-ai' && idx === 1) ? 'AI' : `Player ${idx + 1}`;
+
+  let cls = `player-panel p${idx}`;
+  if (isActive) cls += ' active';
+
+  // Stats
+  const stats = el('div', { className: 'player-stats' },
+    el('span', { className: 'stat' }, `${p.buttons} buttons`),
+    el('span', { className: 'stat' }, `+${p.totalButtonIncome}/trigger`),
+    el('span', { className: 'stat' }, `${empty} empty (-${empty * 2})`)
+  );
+  if (p.hasSpecialTile) {
+    stats.appendChild(el('span', { className: 'stat' }, '7x7 bonus!'));
+  }
+
+  // Board
+  const board = el('div', { className: 'quilt-board' });
+  for (let r = 0; r < 9; r++) {
+    for (let c = 0; c < 9; c++) {
+      let cellCls = 'quilt-cell';
+      if (p.board[r][c]) cellCls += ' filled';
+
+      // Placement preview
+      if (isPlacingForThis && placingShape) {
+        const sr = r - placingRow;
+        const sc = c - placingCol;
+        if (sr >= 0 && sr < placingShape.length && sc >= 0 && sc < placingShape[0].length) {
+          if (placingShape[sr][sc] >= 1) {
+            if (p.board[r][c]) {
+              cellCls += ' preview-invalid';
+            } else {
+              cellCls += placingShape[sr][sc] === 2 ? ' income-marker preview' : ' preview';
+            }
+          }
+        }
+      }
+
+      if (game.phase === 'place_special' && game.currentPlayer === idx && !p.board[r][c]) {
+        cellCls += ' clickable';
+      }
+
+      const cell = el('div', { className: cellCls, 'data-r': String(r), 'data-c': String(c) });
+
+      // Events
+      cell.onclick = () => {
+        if (game.phase === 'place_special' && idx === game.currentPlayer) {
+          doPlaceSpecial(r, c);
+        }
+      };
+      cell.onmouseenter = () => {
+        if (game.phase === 'place_patch' && idx === game.currentPlayer && placingShape) {
+          placingRow = r;
+          placingCol = c;
+          updatePlacementPreview();
+        }
+      };
+
+      board.appendChild(cell);
+    }
+  }
+
+  return el('div', { className: cls },
+    el('div', { className: 'player-header' },
+      el('span', { className: 'player-name' }, name),
+      stats
+    ),
+    board
+  );
+}
+
+function buildMarket() {
+  const available = getAvailablePatches(game);
+  const availableIndices = new Set(available.map(a => a.marketIndex));
+  const player = game.players[game.currentPlayer];
+  const len = game.patches.length;
+
+  const ring = el('div', { className: 'market-ring' });
+  const displayCount = Math.min(len, 15);
+
+  for (let offset = 0; offset < displayCount; offset++) {
+    const idx = (game.pawnIndex + offset) % len;
+    const patch = game.patches[idx];
+    const isAvailable = availableIndices.has(idx);
+    const isPawn = offset === 0;
+    const canAfford = player.buttons >= patch.buttonCost;
+    const hasPlacements = isAvailable ? findValidPlacements(player.board, patch.shape).length > 0 : false;
+
+    let cls = 'market-patch';
+    if (isAvailable) {
+      cls += ' available';
+      if (!canAfford) cls += ' unaffordable';
+      else if (!hasPlacements) cls += ' no-placement';
+    }
+    if (isPawn) cls += ' pawn-marker';
+
+    const cols = patch.shape[0].length;
+    const shapeGrid = el('div', { className: 'patch-shape', style: { gridTemplateColumns: `repeat(${cols}, 10px)` } });
+    for (const row of patch.shape) {
+      for (const cellVal of row) {
+        let cc = 'patch-cell';
+        if (cellVal === 2) cc += ' income';
+        else if (cellVal === 1) cc += ' filled';
+        else cc += ' empty';
+        shapeGrid.appendChild(el('div', { className: cc }));
+      }
+    }
+
+    const costStr = `${patch.buttonCost}btn ${patch.timeCost}t`;
+    const incomeStr = patch.buttonIncome > 0 ? ` +${patch.buttonIncome}` : '';
+
+    const patchEl = el('div', { className: cls, 'data-market-idx': String(idx) },
+      shapeGrid,
+      el('div', { className: 'patch-info' }, costStr + incomeStr)
+    );
+
+    if (isAvailable && canAfford && hasPlacements) {
+      patchEl.onclick = () => {
+        if (game.phase !== 'choose_action') return;
+        if (gameMode === 'vs-ai' && game.currentPlayer === 1) return;
+        doBuyPatch(idx);
+      };
+    }
+
+    ring.appendChild(patchEl);
+  }
+
+  return el('div', { className: 'market-container' },
+    el('div', { className: 'market-label' }, `Patch Market (${len} remaining)`),
+    ring
+  );
+}
+
+function buildActionBar() {
+  const active = game.currentPlayer;
+  const isAI = gameMode === 'vs-ai' && active === 1;
+  const name = isAI ? 'AI' : `Player ${active + 1}`;
+
+  if (game.phase === 'game_over') {
+    return el('div', { className: 'action-bar' },
+      el('div', { className: 'message' }, 'Game Over!')
+    );
+  }
+
+  if (game.phase === 'place_special') {
+    const msg = isAI
+      ? 'AI is placing a special patch...'
+      : `${name}: Click an empty square to place a 1x1 special patch`;
+    return el('div', { className: 'action-bar' },
+      el('div', { className: 'message' }, msg)
+    );
+  }
+
+  if (game.phase === 'place_patch') {
+    const rotateBtn = el('button', null, 'Rotate (R)');
+    rotateBtn.onclick = doRotate;
+    const flipBtn = el('button', null, 'Flip (F)');
+    flipBtn.onclick = doFlip;
+    const confirmBtn = el('button', null, 'Confirm (Enter)');
+    confirmBtn.onclick = doConfirmPlacement;
+    if (!placingValid) confirmBtn.disabled = true;
+    const cancelBtn = el('button', { className: 'secondary' }, 'Reset (Esc)');
+    cancelBtn.onclick = doCancelPlacement;
+
+    return el('div', { className: 'action-bar' },
+      el('div', { className: 'message' }, `${name}: Place the patch on your board. Hover to position.`),
+      el('div', { className: 'placement-controls' }, rotateBtn, flipBtn, confirmBtn, cancelBtn)
+    );
+  }
+
+  if (isAI) {
+    return el('div', { className: 'action-bar' },
+      el('div', { className: 'message' }, 'AI is thinking...')
+    );
+  }
+
+  const opponent = game.players[1 - active];
+  const player = game.players[active];
+  const advanceSpaces = Math.max(1, Math.min(opponent.timePosition + 1, 52) - player.timePosition);
+
+  const advanceBtn = el('button', null, `Advance (+${advanceSpaces} buttons)`);
+  advanceBtn.onclick = doAdvance;
+
+  return el('div', { className: 'action-bar' },
+    el('div', { className: 'message' }, `${name}'s turn`),
+    advanceBtn,
+    el('span', { style: { color: 'var(--text-dim)', fontSize: '0.8rem' } }, 'or select a patch')
+  );
+}
+
+function buildGameOver() {
+  const s0 = getScoreBreakdown(game.players[0]);
+  const s1 = getScoreBreakdown(game.players[1]);
+  const name0 = 'Player 1';
+  const name1 = (gameMode === 'vs-ai') ? 'AI' : 'Player 2';
+  const winnerName = game.winner === 0 ? name0 : name1;
+
+  const table = el('table', { className: 'score-table' },
+    el('tr', null, el('th'), el('th', null, name0), el('th', null, name1)),
+    el('tr', null, el('td', null, 'Buttons'), el('td', null, String(s0.buttons)), el('td', null, String(s1.buttons))),
+    el('tr', null, el('td', null, '7x7 Bonus'), el('td', null, String(s0.specialTileBonus)), el('td', null, String(s1.specialTileBonus))),
+    el('tr', null, el('td', null, 'Empty Penalty'), el('td', null, `-${s0.emptyPenalty}`), el('td', null, `-${s1.emptyPenalty}`)),
+    el('tr', { className: 'total' }, el('td', null, 'Total'), el('td', null, String(s0.total)), el('td', null, String(s1.total)))
+  );
+
+  const playAgainBtn = el('button', {
+    className: 'start-btn',
+    style: { marginTop: '16px' }
+  }, 'Play Again');
+  playAgainBtn.onclick = startGame;
+
+  const overlay = el('div', { className: 'game-over-overlay' },
+    el('div', { className: 'game-over-card' },
+      el('h2', null, `${winnerName} Wins!`),
+      table,
+      playAgainBtn
+    )
+  );
+  overlay.onclick = (e) => { if (e.target === overlay) { /* do nothing */ } };
+  return overlay;
+}
+
+// ── Actions ──────────────────────────────────────────────────
+
+function doAdvance() {
+  if (game.phase !== 'choose_action') return;
+  actionAdvance(game);
+  afterTurn();
+}
+
+function doBuyPatch(marketIndex) {
+  if (game.phase !== 'choose_action') return;
+  const player = game.players[game.currentPlayer];
+  const patch = game.patches[marketIndex];
+
+  if (player.buttons < patch.buttonCost) return;
+  const placements = findValidPlacements(player.board, patch.shape);
+  if (placements.length === 0) return;
+
+  const result = actionBuyPatch(game, marketIndex);
+  if (result.error) return;
+
+  placingPatch = result.patch;
+  placingOrientations = getOrientations(result.patch.shape);
+  placingOrientationIdx = 0;
+  placingShape = placingOrientations[0];
+  placingRow = 0;
+  placingCol = 0;
+  placingValid = canPlace(player.board, placingShape, placingRow, placingCol);
+  render();
+}
+
+function doRotate() {
+  placingOrientationIdx = (placingOrientationIdx + 1) % placingOrientations.length;
+  placingShape = placingOrientations[placingOrientationIdx];
+  updatePlacementPreview();
+}
+
+function doFlip() {
+  placingShape = flipShape(placingShape);
+  const key = JSON.stringify(placingShape);
+  const idx = placingOrientations.findIndex(o => JSON.stringify(o) === key);
+  if (idx >= 0) {
+    placingOrientationIdx = idx;
+  } else {
+    placingOrientationIdx = (placingOrientationIdx + 4) % placingOrientations.length;
+    placingShape = placingOrientations[placingOrientationIdx];
+  }
+  updatePlacementPreview();
+}
+
+function updatePlacementPreview() {
+  const player = game.players[game.currentPlayer];
+  placingValid = canPlace(player.board, placingShape, placingRow, placingCol);
+  render();
+}
+
+function doConfirmPlacement() {
+  if (!placingValid) return;
+  confirmPlacement(game, placingShape, placingRow, placingCol);
+  placingPatch = null;
+  placingShape = null;
+  afterTurn();
+}
+
+function doCancelPlacement() {
+  placingRow = 0;
+  placingCol = 0;
+  placingOrientationIdx = 0;
+  if (placingOrientations.length > 0) {
+    placingShape = placingOrientations[0];
+  }
+  render();
+}
+
+function doPlaceSpecial(r, c) {
+  const result = placeSpecialPatch(game, r, c);
+  if (result.error) return;
+  afterTurn();
+}
+
+function afterTurn() {
+  if (game.phase === 'place_special' && gameMode === 'vs-ai' && game.currentPlayer === 1) {
+    while (game.pendingSpecials && game.pendingSpecials.length > 0) {
+      const pos = aiPlaceSpecialPatch(game);
+      placeSpecialPatch(game, pos.row, pos.col);
+    }
+  }
+  render();
+}
+
+function doAITurn() {
+  if (game.phase === 'game_over') return;
+
+  if (game.phase === 'place_special') {
+    while (game.pendingSpecials && game.pendingSpecials.length > 0) {
+      const pos = aiPlaceSpecialPatch(game);
+      placeSpecialPatch(game, pos.row, pos.col);
+    }
+    render();
+    if (game.currentPlayer === 1 && game.phase === 'choose_action') {
+      setTimeout(doAITurn, 600);
+    }
+    return;
+  }
+
+  if (game.phase !== 'choose_action' || game.currentPlayer !== 1) return;
+
+  const { move, result } = executeAIMove(game, aiDifficulty);
+
+  if (game.phase === 'place_special') {
+    while (game.pendingSpecials && game.pendingSpecials.length > 0) {
+      const pos = aiPlaceSpecialPatch(game);
+      placeSpecialPatch(game, pos.row, pos.col);
+    }
+  }
+
+  render();
+
+  if (game.currentPlayer === 1 && game.phase === 'choose_action') {
+    setTimeout(doAITurn, 600);
+  }
+}
+
+// ── Keyboard Shortcuts ───────────────────────────────────────
+
+document.addEventListener('keydown', (e) => {
+  if (appMode !== 'playing') return;
+  if (game.phase === 'place_patch') {
+    switch (e.key.toLowerCase()) {
+      case 'r': doRotate(); break;
+      case 'f': doFlip(); break;
+      case 'enter': doConfirmPlacement(); break;
+      case 'escape': doCancelPlacement(); break;
+      case 'arrowleft':
+        e.preventDefault();
+        placingCol = Math.max(0, placingCol - 1);
+        updatePlacementPreview();
+        break;
+      case 'arrowright':
+        e.preventDefault();
+        placingCol = Math.min(8, placingCol + 1);
+        updatePlacementPreview();
+        break;
+      case 'arrowup':
+        e.preventDefault();
+        placingRow = Math.max(0, placingRow - 1);
+        updatePlacementPreview();
+        break;
+      case 'arrowdown':
+        e.preventDefault();
+        placingRow = Math.min(8, placingRow + 1);
+        updatePlacementPreview();
+        break;
+    }
+  }
+});
+
+// ── Init ─────────────────────────────────────────────────────
+render();
+</script>
+</body>
+</html>
