@@ -58,8 +58,9 @@ Each mission follows a compact sequence:
    or assigned according to the specific mission's rules.
 2. COMMUNICATION (OPTIONAL, ONCE PER MISSION) - Before or between tricks, each
    player may perform one communication action for the entire mission: reveal one
-   card from their hand and place their radio token on it, indicating whether it
-   is the HIGHEST, LOWEST, or ONLY card of that suit in their hand. Once placed,
+   color card (not submarines) from their hand and place their sonar token on
+   it, indicating whether it is the HIGHEST, LOWEST, or ONLY card of that suit
+   in their hand. Once placed,
    this information remains visible but no further communication is allowed.
 3. TRICK PLAY - Standard trick-taking: lead player plays a card, others must
    follow suit if able, highest card of the led suit wins (trumps beat all
@@ -160,13 +161,13 @@ trick by trick as tasks are completed or become endangered.
 PLAYER COUNT ADAPTATION THROUGH STRUCTURAL MODIFICATION: At 3-5 players, the
 game operates naturally — more players means more hands to coordinate, more
 communication tokens in play, and a richer information environment. At 2 players,
-the design introduces "Jarvis" — a partial dummy hand that the non-captain
-player controls. This is not a simple bot or automated player; it is a
-structural modification that preserves the core puzzle (coordinating trick wins
-across incomplete information) while adjusting the information landscape for
-two. The Jarvis mechanism acknowledges that trick-taking fundamentally assumes
-three or more players and provides an elegant workaround rather than
-compromising the core design.
+the design introduces a dedicated two-player variant with modified card
+distribution and adjusted communication rules. This is not a simple bot or
+automated player; it is a structural modification that preserves the core puzzle
+(coordinating trick wins across incomplete information) while adjusting the
+information landscape for two. The variant acknowledges that trick-taking
+fundamentally assumes three or more players and provides an elegant workaround
+rather than compromising the core design.
 
 FOLK GAME LITERACY AS DESIGN LEVERAGE: The game builds on centuries of cultural
 familiarity with trick-taking. Anyone who has played Hearts, Spades, Bridge, or

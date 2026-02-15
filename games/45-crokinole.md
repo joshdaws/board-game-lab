@@ -47,9 +47,10 @@ Each round follows a strict alternation:
    flicks it toward the center of the board. The shot must obey one critical rule:
    if any opponent discs are on the board, the flicked disc MUST make contact with
    at least one of them (directly or via ricochet). If the shot fails to contact
-   an opponent disc, the flicked disc is removed from the board. If no opponent
-   discs are present, the player may shoot freely, typically aiming for the center
-   hole (the twenty).
+   an opponent disc, the flicked disc, all discs it struck, and any 20s made
+   are removed from the board. If no opponent discs are present, the No Hiding Rule applies: the
+   shooting disc (or a disc struck during the shot) must end up touching or
+   within the 15-point line (a 20 counts).
 2. RESOLVE — Discs that land in the central hole (the twenty) are immediately
    removed and set aside, scoring 20 points at round end. Discs that leave the
    playing surface are removed from play and score nothing. Remaining discs stay
@@ -57,13 +58,13 @@ Each round follows a strict alternation:
    inner = 15).
 3. ALTERNATE — The opponent takes their turn. In 4-player team play, the shooting
    order rotates around the board (alternating teams, partners seated opposite).
-4. SCORE BY CANCELLATION — When all discs have been flicked (12 per player in a
-   two-player game), count points by ring. The critical mechanism: scores cancel.
-   Only the difference between the two sides scores for the higher-scoring side.
-   If one side has 65 points of discs on the board and the other has 45, the
-   leading side scores 20 for the round — plus 20 for each disc sunk in the
-   twenty during play.
-5. ACCUMULATE — Play successive rounds until one side reaches 100 points.
+4. SCORE BY CANCELLATION — When all discs have been flicked (8 per player in
+   singles, 6 per player in doubles), count points by ring, including any 20s
+   set aside during the round. The critical mechanism: scores cancel. Only the
+   difference between the two sides scores for the higher-scoring side. The
+   round winner receives 2 points; ties award 1 point each.
+5. ACCUMULATE — A game consists of 4 rounds. The side with the most points
+   wins. (The NCA awards 2 points per round win, 1 each for ties.)
 
 ### Key Design Patterns
 

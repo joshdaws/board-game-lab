@@ -68,17 +68,18 @@ of money for the second time. Each round follows a structured sequence of phases
 1. RESTRUCTURING — Players simultaneously decide which employees will work this
    turn, arranging active cards into an organizational chart beneath their CEO.
    The CEO provides three slots for direct reports, which can be filled by regular
-   employees or managers. Managers (on black cards) can supervise 2-10
+   employees or managers. Managers (on black cards) can supervise 2-6
    subordinates depending on their rank, but the hierarchy caps at three levels:
    CEO, manager, employee. Cards left out of the org chart are "on the beach" —
    they do not work and do not require salary. This phase is the game's core
    planning moment, where players commit to a specific operational configuration
    for the round.
 
-2. ORDER OF BUSINESS — Players select positions on the turn order track. Lower
-   turn order numbers act first during the working phase but have fewer open
-   slots in their organizational structure. Higher numbers get more capacity but
-   act later — a tension between speed and scale.
+2. ORDER OF BUSINESS — Players choose positions on the turn order track. The
+   player with the most open slots in their company structure picks first,
+   followed by the next largest, and so on. Lower turn order numbers act first
+   during the working phase. The number of open slots in the org chart thus
+   determines both action capacity and priority in choosing when to act.
 
 3. WORKING 9-TO-5 — In turn order, each player activates their employees one at
    a time, performing actions in a fixed sequence: recruiting new staff, training

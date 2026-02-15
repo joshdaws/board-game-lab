@@ -68,8 +68,9 @@ The seven core personality cards:
    bonus from all provinces that have already produced this cycle.
 4. COLONIST — Place new colonists on the board from your supply, or
    collect money proportional to your total colonists.
-5. MERCATOR — Trade goods with the bank: buy and/or sell at fixed prices,
-   with one free trade and subsequent trades costing 1 sestertius each.
+5. MERCATOR — Receive 3 sestertii from the bank (5 with a purchased
+   Mercator), then trade in up to two types of goods with the bank at
+   fixed prices (buy two types, sell two types, or sell one and buy one).
 6. SENATOR — Purchase up to 2 personality cards from the display, paying
    their listed cost.
 7. CONSUL — Purchase 1 personality card at a reduced cost.

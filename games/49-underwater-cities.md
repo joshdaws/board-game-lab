@@ -63,11 +63,13 @@ The game spans ten rounds divided into three eras, with production phases
 occurring after rounds 4, 7, and 10. Each round follows a simple but
 consequential structure:
 
-1. CARD DRAW — At the start of each round, players draw cards from the current
-   era's deck to replenish their hand to three cards (or more, if card effects
-   have increased their hand limit). Era I cards tend toward basic resource
-   generation, Era II cards offer stronger engine-building effects, and Era III
-   cards emphasize end-game scoring and powerful late-game actions.
+1. CARD MANAGEMENT — Players begin each round with a hand of cards (starting
+   the game with 3 after drafting from 6). At the end of each turn, the player
+   draws 1 card from the current era's deck. At the transition between eras,
+   players draw 3 cards from the new era deck, add them to any remaining cards,
+   and discard down to 3. Era I cards tend toward basic resource generation,
+   Era II cards offer stronger engine-building effects, and Era III cards
+   emphasize end-game scoring and powerful late-game actions.
 
 2. ACTION PHASE — Players take turns placing one of their three action markers
    on an unoccupied slot on the central action board, simultaneously playing
@@ -81,7 +83,7 @@ consequential structure:
 
 3. PRODUCTION PHASE (after rounds 4, 7, and 10) — All connected infrastructure
    produces simultaneously. Farms generate kelp, desalination plants generate
-   credits, laboratories generate science. Upgraded structures produce bonus
+   credits, laboratories generate steelplast. Upgraded structures produce bonus
    resources or victory points. Symbiotic cities generate 2 VP each. Tunnels
    produce 1 credit each (upgraded: +1 VP). Then each connected city consumes
    1 kelp to feed its population — any shortfall must be covered from reserves

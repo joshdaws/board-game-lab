@@ -53,19 +53,22 @@ Each round follows a tight sequence:
 1. ROLL — Both players simultaneously roll their 4 dice behind personal screens.
    Dice values are private; neither player knows what the other has available.
 2. PLACE — Players alternate placing one die at a time onto shared cockpit board
-   spaces. The Pilot always places first. Each space accepts one die and produces
-   an effect determined by the die's value:
+   spaces. The arrow on the Altitude Track determines who places first each round
+   (alternating between Pilot and Co-Pilot as altitude decreases). Each space
+   accepts one die and produces an effect determined by the die's value:
    - **Axis** — Pilot's die tilts left, Co-Pilot's die tilts right. Higher values
      produce more tilt. If the axis marker is beyond the safe zone at round end,
      the plane crashes.
    - **Engines** — Each engine accepts one die. Combined engine value determines
      speed on the approach track. Must match the required descent rate.
-   - **Radio** — Clears airplane traffic tokens from the approach track. Higher
-     die values clear more traffic.
-   - **Landing Gear / Flaps** — Must be deployed before final approach. Require
-     specific die values or cumulative placement.
-   - **Concentration** — Allows rerolling or modifying dice. A pressure valve for
-     bad rolls.
+   - **Radio** — Clears airplane traffic tokens from the approach track. The die
+     value determines which space to clear (counting from the current position),
+     removing one airplane token from that space.
+   - **Landing Gear** (Pilot only) / **Flaps** (Co-Pilot only) — Must be deployed
+     in sequence before final approach. Each requires specific die values and
+     shifts Aerodynamics markers, changing the speed thresholds.
+   - **Concentration** — Generates Coffee tokens that can be spent to modify any
+     die value by +/- 1. A pressure valve for bad rolls.
    - **Brakes** — Used during final landing to reduce speed below the threshold.
 3. RESOLVE — Check axis balance (crash if off-center), advance plane on approach
    track based on engine speed, verify no traffic collision. If the plane has

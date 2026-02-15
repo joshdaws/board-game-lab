@@ -39,9 +39,9 @@ than narrative — Halflings, Giants, Chaos Magicians, Darklings, and others eac
 have a "home terrain" that defines their identity, but the fantasy flavor is
 thin scaffolding over what is fundamentally an economic optimization puzzle.
 Where the theme does meaningful design work is in the terrain cycle: seven
-terrain types are arranged in a wheel (Plains → Swamp → Lakes → Sea → Wasteland →
-Mountains → Forest → Plains), and converting terrain costs shovels proportional
-to the distance around the wheel. This creates asymmetric geography — a terrain
+terrain types are arranged in a wheel (Plains → Desert → Wasteland → Forest →
+Lakes → Swamp → Mountains → Plains), and converting terrain costs shovels
+proportional to the distance around the wheel. This creates asymmetric geography — a terrain
 type that is cheap for one faction to terraform is expensive for another. The
 same hex has radically different strategic value depending on who you are playing.
 The faction differentiation goes beyond starting terrain: each of the fourteen
@@ -64,16 +64,21 @@ The game plays over six rounds, each structured as follows:
    around the table until all players have passed. Available actions include:
    a) TERRAFORM AND BUILD - Spend shovels (derived from workers) to convert a
       terrain hex to your home type, then optionally build a Dwelling.
-   b) UPGRADE A STRUCTURE - Advance a building along the chain: Dwelling →
-      Trading House → Stronghold or Temple → Sanctuary. Each upgrade costs
-      resources and changes the income the structure generates.
-   c) SEND A PRIEST TO A CULT TRACK - Advance on one of four elemental cult
+   b) ADVANCE SHIPPING - Pay coins and priests to increase your Shipping
+      value, letting structures separated by river spaces count as adjacent.
+   c) LOWER EXCHANGE RATE - Pay workers, coins, and a priest to improve
+      the worker-to-shovel conversion rate on your faction board.
+   d) UPGRADE A STRUCTURE - Advance a building along one of two chains:
+      Dwelling → Trading House → Temple → Sanctuary, or Dwelling → Trading
+      House → Stronghold. Each upgrade costs resources and changes the income
+      the structure generates.
+   e) SEND A PRIEST TO A CULT TRACK - Advance on one of four elemental cult
       tracks (Fire, Water, Earth, Air).
-   d) POWER ACTIONS - Spend power from Bowl III on unique once-per-round
+   f) POWER ACTIONS - Spend power from Bowl III on unique once-per-round
       actions (gain workers, gain coins, terraform, gain a bridge).
-   e) SPECIAL ACTIONS - Use abilities from Favor Tiles, Bonus Tiles, or
+   g) SPECIAL ACTIONS - Use abilities from Favor Tiles, Bonus Tiles, or
       Stronghold powers.
-   f) PASS - Take a new Bonus Tile for next round. First to pass gets first
+   h) PASS - Take a new Bonus Tile for next round. First to pass gets first
       pick, creating an incentive to pass early, but at the cost of fewer
       actions this round.
 3. CULT BONUSES AND CLEANUP - Resolve round-end scoring for cult track

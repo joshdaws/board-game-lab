@@ -40,11 +40,11 @@ representing the passage of time and the arrival of new workers ready to contrib
 The theme is not merely decorative: it shapes mechanical identity at every level.
 Critter cards represent individual characters (Shopkeeper, Monk, Bard, Queen) whose
 abilities reflect their narrative roles — the Shopkeeper generates resources when
-Construction cards are played, the Monk produces berries through quiet labor, the
+Construction cards are played, the Monk converts berries into points by giving them to opponents, the
 Bard scores points for collecting Critters. Construction cards are the physical
 infrastructure those Critters inhabit, and the pairing system (each Critter has a
 matching Construction) creates a thematic logic where a Husband and Wife score
-bonuses for cohabiting, and a Dungeon only functions when staffed by a Ranger. The
+bonuses for cohabiting, and a Dungeon's second cell unlocks when a Ranger joins your city. The
 Ever Tree — a 3D cardboard centerpiece — serves no strict mechanical purpose beyond
 holding cards and resources, but it anchors the entire visual and spatial experience,
 making the woodland world feel tangible. The resource types (twigs, resin, pebbles,
@@ -82,7 +82,8 @@ On your turn, you perform exactly ONE of three possible actions:
    stop), you advance to the next season. Retrieve ALL placed workers. Activate
    all Green Production cards in your city (generating resources, cards, or VP).
    Gain the seasonal bonus: Spring grants 1 worker and activates Production;
-   Summer grants 1 worker; Autumn grants 2 workers and activates Production.
+   Summer grants 1 worker and lets you draw up to 2 Meadow cards; Autumn
+   grants 2 workers and activates Production.
    Each player independently decides when to Prepare, so players can be in
    different seasons simultaneously.
 
@@ -137,9 +138,10 @@ shifts unpredictably, adding a dynamic element that pure hand management lacks.
 CARD TYPES AS TIMING ARCHITECTURE: The five card colors encode fundamentally
 different temporal value profiles. Tan (Traveler) cards deliver value immediately
 on play — a one-time burst of resources or cards. Green (Production) cards deliver
-value repeatedly, triggering each time you Prepare for Season. This means a Green
-card played in Spring triggers three times (Spring, Summer-to-Autumn, Autumn-to-
-Winter preparation), while one played in Autumn triggers only once. The implicit
+value repeatedly, activating once immediately when played and again during the
+Spring and Autumn Prepare for Season actions. A Green card played before your
+first Prepare for Season triggers up to three times (immediately, Spring
+preparation, Autumn preparation), while one played in Autumn triggers only once. The implicit
 rule: play Green cards early, Tan cards whenever convenient. Red (Destination)
 cards create new worker placement spots, and their value scales with remaining
 turns — more turns means more opportunities for workers to visit. Blue (Governance)

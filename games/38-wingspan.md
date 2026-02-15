@@ -69,8 +69,8 @@ Each action is one of two types:
 
 1. PLAY A BIRD — Pay the bird's food cost (from your personal supply, originally
    gained from the birdfeeder dice). Pay an egg cost if the habitat row already
-   contains birds (0 eggs for the first column, 1 for the second, 2 for the
-   third and beyond). Place the bird in the leftmost open space of its valid
+   contains birds (0 eggs for column 1, 1 egg for columns 2-3, 2 eggs for
+   columns 4-5). Place the bird in the leftmost open space of its valid
    habitat row. Resolve any "when played" (white) power immediately. The bird
    is now permanently part of that habitat's engine.
 

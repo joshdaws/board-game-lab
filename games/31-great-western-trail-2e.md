@@ -70,9 +70,10 @@ The game's rhythm is a repeating cycle of trail traversal:
    engine — better cattle cards, more useful buildings, higher railroad reach —
    compounds.
 
-The game ends when a set number of job market tiles or objective tiles have been
-exhausted, triggering a final scoring that rewards the player who has most efficiently
-converted trail loops into accumulated value.
+The game ends when a worker tile is placed on the last field of the job market,
+pushing the job market indicator off the board along the green arrow and triggering
+a final scoring that rewards the player who has most efficiently converted trail
+loops into accumulated value.
 
 ### Key Design Patterns
 
@@ -118,9 +119,10 @@ pool mechanics.
 BUILDING PLACEMENT AS BOARD CUSTOMIZATION: When you construct a building, you place
 it on a specific location along the trail, replacing a neutral tile. This is a
 permanent alteration to the shared game space. Your buildings provide powerful
-personal actions when you land on them, but critically, other players who pass
-through must either stop and use a weaker version of the action or pay you a toll
-to pass. This creates a spatial economic layer: well-placed buildings generate
+personal actions when you land on them, but critically, other players who stop
+on your building can only perform a single auxiliary action (not the building's
+main actions), and players passing through must pay you a fee based on the
+building's hand color. This creates a spatial economic layer: well-placed buildings generate
 passive income from opponents and give you privileged access to custom actions.
 The strategic depth comes from placement decisions — a building near the start
 of the trail will be visited every loop, while one near the end might be skipped
@@ -140,9 +142,8 @@ quality; players who over-invest in it may lack the cattle diversity or building
 infrastructure to capitalize on the cities they've unlocked.
 
 HAZARDS AND TOLLS AS FRICTION: The trail includes hazards (floods, droughts,
-rockfalls) and indigenous territory tiles that impose penalties — typically
-losing money or victory points — on any player who passes through without
-sufficient workers of the appropriate type. These friction points serve multiple
+rockfalls) and bandit tiles that impose penalties — typically losing money or
+requiring fees — on any player who passes through. These friction points serve multiple
 design purposes: they create an incentive to hire workers beyond their primary
 strategic function, they add cost to the "rush through the trail quickly"
 approach, and they create differentiation between players who have invested in

@@ -69,7 +69,8 @@ Each year (round) follows a fixed seasonal structure:
    - Give Tour — earn money from visitors to your vineyard
    - Build Structure — construct buildings that expand capabilities
    - Play Summer Visitor — activate a Summer Visitor card from your hand
-   - Sell Grapes — sell grapes directly for money (bypasses winemaking)
+   - Sell Grapes / Buy or Sell Field — sell grapes directly for money, or
+     buy or sell one of your fields
 
 3. FALL — Draw either a Summer or Winter Visitor card (no worker required).
    This free draw ensures all players have visitor card options regardless of
@@ -78,16 +79,19 @@ Each year (round) follows a fixed seasonal structure:
 4. WINTER — Worker placement phase for production/commerce actions:
    - Draw Wine Order — acquire order cards to fill later
    - Harvest Field — move grape values from a planted field to your crush pad
-   - Make Wine — combine grapes from the crush pad into wine in your cellar
+   - Make Up to Two Wine Tokens — combine grapes from the crush pad into wine
+     in your cellar (up to 2 tokens per action)
    - Play Winter Visitor — activate a Winter Visitor card from your hand
    - Fill Wine Order — match wine in your cellar to an order card for VP
      and residual income
    - Train Worker — pay to gain a permanent additional worker
 
 5. YEAR END — Age grapes and wines (each increases by 1 on their respective
-   tracks), collect residual income, return workers to the ready pool.
+   tracks), discard down to 7 cards, return workers to the ready pool, collect
+   residual income, and rotate the first-player token counter-clockwise.
 
-Victory: First player to reach 25 VP triggers the final round. Highest VP wins.
+Victory: First player to reach 20 VP triggers the end of the current year.
+Highest VP wins (players may exceed 20).
 
 ### Key Design Patterns
 
@@ -167,8 +171,8 @@ variance means no two games follow the same strategic path.
 
 STRUCTURE TREE AS CAPABILITY GATING: Buildings are not passive VP generators —
 they unlock or improve specific actions. The trellis allows planting higher-value
-vines. Irrigation allows planting vines with more grape types. The yoke enables
-harvesting two fields at once. The medium and large cellars expand wine storage
+vines. Irrigation allows planting vines with more grape types. The yoke provides a private action space to uproot a vine or
+harvest a field in any season. The medium and large cellars expand wine storage
 to higher values. The tasting room earns VP when giving tours. The windmill
 earns VP when planting. Each structure is individually modest, but together
 they define a player's strategic profile. Building decisions made in years one
@@ -186,7 +190,7 @@ prioritization — you cannot do everything in a season, so you must identify
 the one or two actions that matter most this year. As the game progresses and
 players train additional workers, the action economy loosens, creating a natural
 arc from tight constraint to broader capability. The wake-up track bonus of a
-temporary worker (position 6) is disproportionately valuable early, when going
+temporary worker (position 7) is disproportionately valuable early, when going
 from three to four workers represents a 33% increase in seasonal capacity.
 
 ### What Makes It #44

@@ -53,15 +53,15 @@ Each game in the 10+ session campaign follows the base Clank! structure
 with escalating legacy modifications:
 
 1. PLAY CARDS — On your turn, play your entire hand of 5 cards from your
-   personal deck. Cards generate four resource types: Skill (boot icons
-   for movement), Swords (to fight monsters in the dungeon row or on the
-   board), Gold (to buy new cards from the market row), and Clank (noise
-   cubes you must place in the dragon area).
-2. ACQUIRE CARDS — Spend Gold to buy cards from a face-up market row of
-   6 Dungeon cards, plus always-available Mercenaries (1 Sword for 2 Gold)
-   and Explore cards (2 Skill for 3 Gold). Purchased cards go to your
-   discard pile. Some cards in the market row are monsters — spend Swords
-   to defeat them for immediate rewards rather than adding them to your deck.
+   personal deck. Cards generate five resource types: Skill (to acquire
+   new cards), Swords (to fight monsters in the dungeon row or on the
+   board), Boots (for movement through rooms), Gold (to buy from markets),
+   and Clank (noise cubes you must place in the dragon area).
+2. ACQUIRE CARDS — Spend Skill to acquire cards from a face-up Adventure
+   Row of 6 cards, plus always-available reserve cards (Mercenary, Explore,
+   Mysterious Tome). Acquired cards go to your discard pile. Some cards in
+   the Adventure Row are monsters — spend Swords to defeat them for
+   immediate rewards rather than adding them to your deck.
 3. MOVE & INTERACT — Spend Skill to move through connected rooms on the
    board. Paths may require Swords (monster tunnels) or Boot icons
    (difficult terrain). Collect tokens from rooms: minor secrets, major
@@ -122,8 +122,8 @@ board implications. Skill cards move your pawn deeper into danger or
 closer to safety. Sword cards clear path obstacles. Gold cards improve
 your future capabilities. And Clank cards — the critical negative
 resource — physically place cubes that can damage you. The starting deck
-is deliberately mediocre: 6 Burgles (1 Gold each), 2 Stumbles (1 Clank
-each, no benefit), 1 Sidestep (1 Skill), 1 Scramble (1 Skill, 1 Gold).
+is deliberately mediocre: 6 Burgles (1 Skill each), 2 Stumbles (1 Clank
+each, no benefit), 1 Sidestep (1 Boot), 1 Scramble (1 Boot, 1 Skill).
 The Stumbles are pure liability — they generate noise with zero upside.
 Acquiring cards that let you trash Stumbles is one of the earliest
 strategic decisions, directly connecting deckbuilding optimization to

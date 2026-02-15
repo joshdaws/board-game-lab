@@ -119,8 +119,8 @@ WORKER COST ESCALATION: Action spaces are arranged in columns within thematic
 strips, with leftmost columns requiring 1 Viking and rightmost columns
 requiring 3-4 Vikings. Stronger versions of the same action type cost more
 workers. This creates a natural resource allocation puzzle: you have a fixed
-worker pool per round (starting at 6 Vikings, gaining 1 per round via
-newborn), and every powerful action you take reduces the total number of
+worker pool per round (starting at 5 Vikings in the long game, gaining 1 per
+round from the Banquet Table), and every powerful action you take reduces the total number of
 actions you can perform. A single 4-Viking action consumes most of your
 workforce but provides a proportionally powerful result. The escalation curve
 is deliberately generous — you don't simply pay more for the same thing, you

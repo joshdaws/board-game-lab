@@ -52,12 +52,12 @@ remote locations. Compass and tablet icons on cards represent the navigation
 tools and scholarly knowledge needed to push deeper into the island. Even the
 resource palette reinforces the theme: coins fund purchases at base camp,
 compasses navigate jungle paths, tablets unlock research insights, and
-arrowheads, gems, and rubies represent increasingly rare archaeological finds.
+arrowheads and jewels represent increasingly rare archaeological finds.
 
 ### Core Loop
 
 The game plays over exactly 5 rounds. Each round, players draw 5 cards from
-their personal deck (starting at 10 cards), then take turns performing one
+their personal deck (starting at 6 cards), then take turns performing one
 action each until all players pass. The tight round structure creates urgency
 — there is no sixth round, so every action across all 5 rounds must count.
 
@@ -111,7 +111,8 @@ eliminates dead turns: even a hand full of weak cards can serve as travel
 currency.
 
 FEAR CARDS AS NEGATIVE DECKBUILDING: Undefeated guardians add Fear cards to
-your deck — cards with no useful effect and no travel icons. In a tight 15-20
+your deck — cards with no useful effect (though they do carry a compass travel
+icon). In a tight 15-20
 card deck where you draw 5 per round, even one Fear card meaningfully degrades
 your draws. Two or three Fear cards can be crippling. This creates a powerful
 incentive loop: explore sites to gain resources, but exploring summons

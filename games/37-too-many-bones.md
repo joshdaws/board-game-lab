@@ -59,9 +59,10 @@ Each playthrough follows a multi-day adventure structure:
    negotiate, or explore — each leading to different rewards and risks.
 
 2. COMBAT (when triggered) - Fought on a 4x4 grid battle mat:
-   a) ROLL - Roll your entire active dice pool. Each die shows faces
-      corresponding to the skill it represents — attack values, special
-      abilities, defensive stances, or wild results.
+   a) SELECT AND ROLL - Choose which dice to roll from your available Attack,
+      Defense, and Skill dice, up to your current Dexterity stat. Each die shows
+      faces corresponding to the skill it represents — attack values, special
+      abilities, defensive stances, or Bones (wild results for the Backup Plan).
    b) PLACE - Assign rolled dice to your character mat (activating skills and
       abilities) or to the battle mat (for positioning, attacks, and
       battlefield effects). Unneeded dice can be stored as Backup Plans for
@@ -72,7 +73,7 @@ Each playthrough follows a multi-day adventure structure:
 
 3. TRAINING - After surviving an encounter, Gearlocs earn training points.
    Spend these to unlock new dice from your personal skill tree, a branching
-   network of approximately 20 unique skills per Gearloc. Each unlock adds a
+   network of 16 unique skill dice per Gearloc. Each unlock adds a
    new custom die to your active pool or upgrades an existing capability.
 
 4. LOOT AND RECOVERY - Acquire loot items (additional dice or passive
@@ -111,12 +112,13 @@ serving as both progression system and strategic puzzle. Prerequisites in the
 tree force players to commit to a build path early, creating the kind of
 planning tension usually found in video game skill systems.
 
-GEARLOC ASYMMETRY AS ROLE DEFINITION: The seven base Gearlocs are not minor
-variations on a template — they represent fundamentally different combat roles
-with entirely unique skill dice. Patches functions as a healer, managing
-recovery and support. Ghillie controls the battlefield through traps and
-area denial. Tantrum delivers massive damage through reckless aggression.
-Picket serves as a tank, absorbing hits and protecting allies. Each Gearloc's
+GEARLOC ASYMMETRY AS ROLE DEFINITION: The four base Gearlocs (Boomer, Patches,
+Picket, Tantrum) are not minor variations on a template — they represent
+fundamentally different combat roles with entirely unique skill dice. Patches
+functions as a healer, managing recovery and support. Boomer controls the
+battlefield as a ranged utility bomber. Tantrum delivers massive damage through
+reckless aggression. Picket serves as a tank, absorbing hits and protecting
+allies. Each Gearloc's
 skill tree reinforces its role identity, meaning cooperative play requires
 genuine role coordination. A party of four damage dealers will struggle
 differently than a balanced group, and the game's difficulty is calibrated

@@ -83,9 +83,10 @@ are triggered:
    d) R&D — Claim cars from the Test Track using matching design tiles, or
       spend designs and parts to create upgraded designs worth additional VP.
       Cars are placed into personal garages.
-   e) ADMINISTRATION — Perform a reduced-efficiency action from any other
-      department, acquire Speed Chargers for persistent abilities, or advance
-      training.
+   e) ADMINISTRATION — Choose one other department and split shifts between
+      Administration and that department, performing tasks at reduced shift
+      allocation (1-2 shifts instead of the usual 2-3), or advance training
+      in Administration and/or the chosen department.
    In any department, players may also spend shifts to advance on that
    department's training track instead of (or in addition to) performing the
    primary action.

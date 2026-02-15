@@ -58,9 +58,10 @@ rational expressions of class interest, not moral absolutes.
 Each game round follows a structured sequence built around legislation,
 action, and economic resolution:
 
-1. PREPARATION PHASE - Events are revealed that modify the current round's
-   conditions. The State player sets the political agenda by proposing bills
-   that would shift policy tracks. Policy positions on each track (Fiscal,
+1. PREPARATION PHASE - Each player performs role-specific setup steps: paying
+   interest on loans, drawing action cards, gaining new workers, and adjusting
+   populations. In 4-player games, the State draws Event cards that present
+   societal issues requiring attention. Policy positions on each track (Fiscal,
    Labor, Foreign Trade, Immigration, Healthcare, Education) determine the
    economic rules for the round — tax rates, minimum wages, trade tariffs,
    immigration flow, public service availability.
@@ -76,23 +77,30 @@ action, and economic resolution:
      for favorable policy, maximize profit extraction
    - State: legislate, tax, fund public services (healthcare, education),
      manage national debt, maintain legitimacy
-   Players alternate taking single actions until all have passed.
+   Players take turns in fixed order (Working Class, Middle Class, Capitalist
+   Class, State) playing one card per turn for 5 turns each, keeping 2 cards
+   in hand for the next round. On each turn a player either plays a card for
+   its effect (Main Action) or discards it to perform a Basic Action, and may
+   also perform one Free Action.
 
-3. PRODUCTION & MARKET PHASE - Companies produce goods based on their workforce.
-   Goods must be sold into a market with tracked demand. Overproduction depresses
-   prices; underproduction creates scarcity. The market is not infinite — it
-   models real supply-demand dynamics.
+3. PRODUCTION PHASE - Companies produce goods and services based on their
+   workforce; workers are paid wages. The people's basic needs (Food) are
+   covered, IMF debt limits are checked, and players pay taxes to the State.
+   Production order is reversed (State first, then Capitalist, Middle Class,
+   Working Class).
 
-4. VOTING & LEGISLATION PHASE - Proposed policy changes are voted on. Votes
-   are weighted — not one-person-one-vote but influenced by class power, wealth,
-   and political capital. The outcome shifts policy tracks left or right,
-   changing the economic rules for subsequent rounds.
+4. ELECTIONS PHASE - Proposed Bills (placed during the Action Phase via the
+   Propose Bill basic action) are voted on. Each class first refills the voting
+   bag with cubes proportional to its power (population, companies, or both),
+   then elections are carried out: players declare in favor or against, 5 cubes
+   are drawn from the bag, and players may spend Influence to add additional
+   votes. The outcome shifts policy tracks, changing economic rules for
+   subsequent rounds.
 
-5. SCORING & UPKEEP - Each class scores based on its unique objectives: the
-   Working Class scores for high wages and strong welfare, Capitalists score for
-   profits and low regulation, the Middle Class scores for economic stability
-   and opportunity, the State scores for balanced governance and legitimacy.
-   The economy resets for the next round.
+5. SCORING PHASE - Each class scores additional Victory Points based on its
+   unique objectives and the state of its player board. The State also resolves
+   any unhandled Event penalties. At game end (after round 5), loan penalties
+   apply and final scores from the Politics table and player boards are added.
 
 Victory is determined by accumulated class-specific victory points over five
 rounds, with each class pursuing fundamentally different scoring criteria.

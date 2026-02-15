@@ -62,7 +62,7 @@ On each turn, a player performs one action:
    a) MOVE - Move up to 2 units (character, mechs, or workers) across territories.
       Workers cannot move into opponent-occupied territories. Mechs and characters
       entering opponent spaces trigger combat.
-   b) BOLSTER - Gain Power on the Power Track and/or draw Combat Cards.
+   b) BOLSTER - Gain Power on the Power Track or draw Combat Cards.
    c) TRADE - Pay 1 coin to gain 2 resources of your choice, or pay 1 coin to
       increase Popularity by 1.
    d) PRODUCE - Choose up to 2 territories you control with workers. Each worker
@@ -82,7 +82,7 @@ completing objectives such as deploying all mechs, building all structures,
 enlisting all recruits, winning combat, reaching maximum power, reaching maximum
 popularity, completing objective cards, or deploying all workers), the game
 ends immediately. Final scoring: coins in hand + (stars x popularity multiplier) +
-(territories x popularity multiplier) + (resources x popularity multiplier).
+(territories x popularity multiplier) + (every 2 resources x popularity multiplier).
 The popularity track has three tiers that dramatically scale the multiplier.
 
 ### Key Design Patterns

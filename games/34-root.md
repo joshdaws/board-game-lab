@@ -78,7 +78,8 @@ creating an accelerating curve.
 **Eyrie Dynasties (The Programmed Regime)**
 1. BIRDSONG — Add one or two cards from hand to the Decree (a tableau of four
    columns: Recruit, Move, Battle, Build). These are permanent commitments.
-2. DAYLIGHT — Resolve every card in the Decree left to right, column by column.
+2. DAYLIGHT — Craft cards by activating roosts, then resolve every card in the
+   Decree left to right, column by column.
    Each card requires the matching action to be performed in a clearing of that
    suit (Bird cards are wild). If any Decree action cannot be fulfilled, the
    government falls into Turmoil: lose VP, discard the Decree (except loyal
@@ -99,8 +100,9 @@ or the whole system collapses.
 2. DAYLIGHT — Craft using sympathy tokens; then Mobilize (add cards from hand
    to supporters), Train (spend a card matching a base to place an officer,
    increasing the number of military actions per turn).
-3. EVENING — Military Operations (move and battle, limited by officer count);
-   then draw one card plus one per base on the map. Recruit warriors at bases.
+3. EVENING — Military Operations (move, battle, recruit at bases, or organize
+   new sympathy — limited by officer count); then draw one card plus one per
+   uncovered draw bonus. Discard down to five.
 
 Scores primarily by spreading sympathy: each new sympathy token scores VP on an
 escalating track. The Alliance's Guerrilla War ability means that in combat as

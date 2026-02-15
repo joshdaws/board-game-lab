@@ -106,8 +106,8 @@ rhythm of proactive heroism followed by reactive crisis management:
 4. VICTORY OR DEFEAT — Players win by reducing the villain's hit points to
    zero across all villain stages. Players lose if the main scheme accumulates
    threat beyond its threshold and advances past its final stage. Individual
-   heroes can be knocked out and may re-enter play, but if all heroes are
-   eliminated simultaneously, the game ends in defeat.
+   heroes who reach zero hit points are eliminated from the game, and if
+   all heroes are eliminated, the game ends in defeat.
 
 ### Key Design Patterns
 

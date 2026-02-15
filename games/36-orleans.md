@@ -2,7 +2,7 @@
 
 ## Quick Stats
 
-- **Players:** 2-5
+- **Players:** 2-4
 - **Time:** 90 min
 - **Weight:** 3.01/5
 
@@ -59,23 +59,30 @@ The game is played over 18 rounds. Each round follows a fixed sequence:
    advance knowledge of a shared threat or opportunity. Events include taxation
    (lose coins), plague (lose followers), pilgrimage (bonus for monks), and harvest
    (gain goods). Players can see what's coming and plan their round accordingly.
-2. CENSUS PHASE - Determine first player for the round based on who is farthest
-   along the census track (a proxy for agricultural capacity, advanced by Farmers).
-   Ties broken by current player order.
+2. CENSUS PHASE - Compare positions on the Farmers Track. The player farthest
+   ahead receives 1 coin; the player farthest behind must pay 1 coin. Ties
+   negate the reward or penalty. This phase rewards agricultural investment
+   and creates an ongoing economic pressure tied to Farmer recruitment.
 3. DRAW PHASE - Each player simultaneously draws follower tokens from their personal
-   bag. The number drawn equals their current draw count (starting at 4, potentially
-   increased to 5-8 through technology tiles). This is the game's signature moment:
+   bag. The number drawn equals their current draw count on the Knights Track
+   (starting at 4, potentially increased to 8 by recruiting Knights via the
+   Castle action). This is the game's signature moment:
    you reach into the bag blind, and what you pull determines your options.
 4. PLANNING PHASE - Simultaneously, each player places their drawn followers onto
    action spaces on their personal player board. Each action space requires a specific
    combination of follower types. Unplaceable followers sit idle for the round.
 5. ACTION PHASE - In player order, each player resolves their activated action spaces
-   one at a time. Actions include: Village (recruit a new follower), Ship (travel by
-   waterway), Wagon (travel by road), Guildhall (gain a technology tile), Castle
-   (gain coins), Scriptorium (gain Development track progress), Farmhouse (advance
-   census and gain a good), Town Hall (place a follower on Beneficial Deeds for VP).
+   one at a time. Actions include: Farm House (recruit a Farmer and advance on the
+   Farmers Track to gain a good), Village (recruit a Boatman, Craftsman, or Trader
+   and advance on the corresponding track), Castle (recruit a Knight and advance on
+   the Knights Track to increase draw count), University (recruit a Scholar and
+   advance on the Development Track), Monastery (recruit a Monk wildcard), Ship
+   (travel by waterway collecting goods), Wagon (travel by road collecting goods),
+   Guildhall (build a Trading Station), Scriptorium (advance on the Development
+   Track), Town Hall (place followers on Beneficial Deeds for coins or VP).
 6. EVENT RESOLUTION - The revealed event now takes effect, potentially costing
    resources or granting bonuses.
+7. START PLAYER - The Start Player Token passes to the left.
 
 Game ends after round 18. Final scoring: coins, goods sets, trading stations,
 citizen tiles, Beneficial Deeds VP, and Development track bonuses.
@@ -126,13 +133,12 @@ investing in Farmers (who are otherwise modest followers) earns first-player
 priority, which can be decisive when multiple players compete for the same map
 positions or technology tiles.
 
-TECHNOLOGY TILES AS PERMANENT MODIFIERS: The Guildhall action grants technology
-tiles that permanently modify your capabilities — extra draws from the bag, bonus
-actions, resource conversions, or rule-breaking abilities. These tiles function as
-the "card market" equivalent in a deck-builder: they're the primary way to customize
-your engine beyond raw follower composition. Because technology tiles are drawn from
-a limited supply and provide unique, powerful effects, the Guildhall becomes a
-contested action space. Early technology acquisition can define a player's entire
+TECHNOLOGY TILES AS PERMANENT MODIFIERS: The Village Craftsman action grants
+technology tiles that permanently replace a follower on an action space, reducing
+the recruitment cost of activating that action for the rest of the game. These
+tiles function as efficiency upgrades: they slim your action requirements without
+adding followers to your bag. Because technology tiles are drawn from a limited
+supply, the Craftsman track becomes a contested investment. Early technology acquisition can define a player's entire
 strategic arc, creating divergent play experiences even when players start from
 identical positions. The tiles also serve as a catch-up mechanism — powerful tiles
 remain available even as the game progresses, and a well-timed technology grab can

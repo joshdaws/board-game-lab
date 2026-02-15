@@ -70,11 +70,15 @@ player turns until all players have declared "end of round." On each turn:
       needed, generated from cards.
    c) COMBAT — Engage enemies at adventure sites, dungeons, monster lairs, or cities.
       Combat is a multi-phase puzzle resolved entirely through card play.
-   d) REST or SPECIAL ACTIONS — Discard a non-Wound card to heal one Wound, or use
-      special card abilities.
-3. DRAW BACK UP — Refill hand to hand limit (default 5). If your deck runs out,
-   you may choose to end your round immediately or continue with what remains in
-   hand.
+   d) REST — Instead of a Regular turn, choose to rest. Standard Rest requires
+      discarding one non-Wound card and any number of Wound cards to your discard
+      pile (they will cycle back into your deck next round). Slow Recovery applies
+      if you have only Wounds in hand — discard one Wound.
+3. END OF TURN — Return mana dice to the Source. Clean up your play area (return
+   crystals to bank, discard played cards). If your Shield token crossed a Fame
+   threshold, Level up. Draw cards from your Deed deck up to your Hand limit
+   (default 5). If your deck runs out, you may announce the End of the Round or
+   continue with what remains in hand.
 
 At end of round: the day/night marker advances, the Source (mana dice) is rerolled,
 each player shuffles their discard pile into a new deck, and a new Round begins.
@@ -147,17 +151,17 @@ parallel: taking the red mana die that another player needed for their powered
 Attack is genuine competition over a shared resource. Personal mana crystals are
 scarce (gained from specific cards and level-up bonuses) and can be "used" (flipped
 from active to spent) once per round. The day/night cycle further constrains mana:
-gold mana from the Source becomes black mana at night, changing which powered
-effects are accessible. Black mana fuels powerful but dangerous abilities during
-nighttime, when enemies are also stronger. The whole mana system ensures that even
+gold mana in the Source is immediately depleted at night (and black mana is
+depleted during the day), changing which powered effects are accessible. Black
+mana fuels powerful abilities during nighttime, when enemies also gain +1 Armor. The whole mana system ensures that even
 a perfectly constructed hand may lack the fuel to execute its potential.
 
 DAY/NIGHT CYCLE AS STRATEGIC CLOCK: The alternation between day and night is not
 cosmetic. During the day, movement through open terrain is easier, most enemies are
 at standard difficulty, and the Source provides normal colored mana. At night,
 forests become nearly impassable (cost 5 instead of 3), deserts become easier (cost
-3 instead of 5), all enemies gain +1 Armor, and the Source produces black mana
-instead of gold. This binary state change forces medium-term planning: you might
+3 instead of 5), and the Source produces black mana instead of gold (gold mana dice
+are depleted). This binary state change forces medium-term planning: you might
 spend a day round positioning and recruiting, then assault a dungeon at night using
 black-mana-powered spells, or rush a city during the day when defenders are weaker.
 The round structure (each round is one day or night period) means the cycle is

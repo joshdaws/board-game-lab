@@ -81,33 +81,45 @@ The game spans five rounds, each following a structured sequence:
       concrete, machinery, and/or workers. Spent resources go onto the
       construction wheel, not back to supply.
    b) PRODUCE ENERGY — Activate a dam-conduit-powerhouse chain to generate
-      energy. Water flows from the dam through the conduit to the powerhouse,
-      and the amount of energy produced equals the drop in elevation between dam
-      and powerhouse. Produced water continues flowing downstream.
+      energy. Move water drops from a dam through a conduit to a powerhouse.
+      Each water drop generates Energy Units equal to the conduit's production
+      value (printed on the map). Produced water continues flowing downstream
+      after exiting the powerhouse.
    c) MANAGE CONTRACTS — Acquire contracts that convert energy production into
       VP and resources. Contracts define what you gain when you produce specific
       amounts of energy.
    d) ACQUIRE TECHNOLOGY — Gain technology tiles that modify building rules or
       grant special abilities. Installed on your company board, these provide
       permanent advantages.
-   e) USE EXTERNAL WORKS — Build or use neutral structures available to all
-      players, providing alternative production or water manipulation options.
-   f) MANAGE WATER — Manipulate water placement on the map, moving water between
-      connected basins.
+   e) WATER MANAGEMENT — Place water drops on headstream tiles to influence
+      future water flow.
+   f) WORKSHOP — Pay Credits to rotate the Construction Wheel additional
+      segments, speeding the return of locked resources.
+   g) BANK — Place Engineers to gain Credits equal to the number placed.
+   h) MACHINERY SHOP — Pay Credits to acquire additional Excavators or Concrete
+      Mixers.
 
-3. PRODUCTION PHASE — Fulfilled contracts pay out VP and resources. Unfulfilled
-   contracts may carry penalties.
+3. WATER FLOW PHASE — All water drops on headstream tiles flow downstream
+   following rivers and basins, filling dams along the way. This redistributes
+   water across the map, potentially filling opponents' dams with runoff.
 
-4. END OF ROUND — The construction wheel rotates one segment. Resources that have
-   completed their full rotation return to the player's supply. Round scoring
-   bonuses are resolved.
+4. SCORING PHASE — The player leading on the Energy Track scores VP; all players
+   gain Credits based on their energy position. The current round's Bonus tile
+   awards VP to qualifying players based on structures built. The Bonus tile is
+   then discarded.
 
-The fundamental rhythm is: commit scarce resources to build infrastructure, use
-that infrastructure to convert water into energy, convert energy into VP through
-contracts, then wait for your spent resources to cycle back through the
-construction wheel. Every round tightens the screw — more water enters the
-system, the board becomes more contested, and the construction wheel means
-early-round investments are only now returning.
+5. END OF ROUND — Update turn order (lowest energy producer goes first next
+   round). Reset Energy markers to zero. Return all Engineers to personal supply.
+   Replace Advanced Technology tiles on the Patent Office board.
+
+The fundamental rhythm is: commit scarce resources to build infrastructure
+(placing Technology tiles and Machineries into the Construction Wheel, which
+rotates one segment per build action), use that infrastructure to convert water
+into energy, convert energy into VP through contracts, then wait for your spent
+resources to cycle back as the wheel rotates on future build actions. Every
+round tightens the screw — more water enters the system, the board becomes more
+contested, and the construction wheel means early-round investments are only
+now returning.
 
 ### Key Design Patterns
 
@@ -127,8 +139,9 @@ strategically powerful: you collect everyone else's runoff.
 CONSTRUCTION WHEEL AS TEMPORAL RESOURCE LOCK: The construction wheel is Barrage's
 most distinctive economic mechanism. When you spend workers, machinery, or
 concrete to build, those resources are placed on your personal construction
-wheel, which rotates one segment per round. Depending on wheel position,
-resources take 2-5 rounds to return to your supply. This transforms the
+wheel, which rotates one segment each time you perform a construction action.
+Depending on wheel position, resources take multiple build actions to return
+to your supply. This transforms the
 economy from a simple spend-and-recover model into a temporal commitment
 system. Every building action is simultaneously a production decision and a
 cash-flow decision: can you afford to lock up these resources for three rounds?
