@@ -11,7 +11,7 @@
 - Dice Drafting
 - Worker Placement
 - Set Collection
-- Area Majority / Influence
+- Track Advancement
 
 ## Categories
 
@@ -79,17 +79,20 @@ The game is played over three rounds, each following the same structure:
      contribute to set collection and area scoring.
    - CASTLE — Place courtiers into one of the three tiers of Himeji Castle.
      Higher tiers grant more influence but require specific resources to access.
-     Courtiers score based on area majority within each tier.
-   - PERSONAL DOMAIN — Activate resource production, advance warriors across
-     the bridge, move along the daimyo track, or gain special ability cards.
-     The die value modifies the strength or cost of the action.
+     Each courtier scores fixed Clan Points based on its tier (1 at the Gate,
+     3 on the first floor, 6 on the second floor, 10 on the third floor).
+   - PERSONAL DOMAIN — Activate resource production, send warriors to
+     Training Yards, move along the Passage of Time track, or gain special
+     ability cards. The die value modifies the strength or cost of the action.
 
-3. ROUND CLEANUP — Resolve bridge crossing bonuses for warriors who reached
-   checkpoints. Advance the round marker. Prepare the next dice pool.
+3. ROUND CLEANUP — Determine new turn order based on the Passage of Time
+   track. Activate gardeners on garden cards beside bridges that still have
+   dice. Re-roll all dice and place them on bridges for the next round.
 
-After three rounds, final scoring combines garden set collection, courtier
-area majority across castle tiers, bridge advancement bonuses, daimyo track
-position, and various end-game card objectives.
+After three rounds, final scoring combines remaining resources and Daimyo
+Seals, Passage of Time track position, per-courtier positional scoring
+across castle tiers, warrior-courtier multiplication in Training Yards,
+gardener points, and Clan Points collected during play.
 
 ### Key Design Patterns
 
@@ -117,15 +120,16 @@ design pattern is that parallel tracks with overlapping but distinct reward
 structures prevent a single dominant strategy by making the optimal allocation
 dependent on what opponents are doing.
 
-COURTIER INFLUENCE AS AREA MAJORITY: Placing courtiers into the castle's three
-tiers creates area majority contests that resolve at game end. Each tier is a
-separate majority competition: the player with the most courtiers in a tier
-scores the most points from that tier, with diminishing returns for second and
-third place. Because courtiers require specific resources to place in higher
-tiers, the area majority contest is gated by engine efficiency — you cannot
-simply flood a tier without the economic infrastructure to support it. The
-design insight is that area majority becomes more interesting when access to
-contested regions is itself a strategic challenge, not a given.
+COURTIER INFLUENCE AS POSITIONAL SCORING: Placing courtiers into the castle's
+tiers creates escalating positional rewards at game end. Each courtier scores
+fixed Clan Points based on its tier — 1 at the Gate, 3 on the first floor, 6
+on the second floor, 10 on the third floor — so the incentive is to advance
+courtiers as high as possible through social climbing (paying Mother-of-Pearl).
+Because courtiers require specific resources to place and promote to higher
+tiers, the scoring is gated by engine efficiency — you cannot simply stack
+courtiers in the top tier without the economic infrastructure to support it.
+The design insight is that positional scoring becomes more interesting when
+access to high-value positions is itself a strategic challenge, not a given.
 
 RESOURCE CONVERSION CHAINS: The game features multiple resource types (coins,
 food, iron, mother-of-pearl) that feed into different actions. Placing courtiers
@@ -137,25 +141,26 @@ resource hoarding because resources have no intrinsic end-game value; they
 matter only insofar as they enable scoring actions. Players who accumulate
 resources without converting them into board presence fall behind.
 
-BRIDGE CROSSING AS WORKER ADVANCEMENT: Warriors on the bridge represent a
-linear advancement track with checkpoint bonuses. Moving warriors forward
-requires spending food, and reaching specific positions on the bridge grants
-immediate rewards and end-game points. The bridge is a communal track where
-all players' warriors coexist, creating a subtle race element — the first
-player to reach a checkpoint may claim a bonus tile, incentivizing early
-investment. The design pattern is that linear advancement tracks with
-checkpoint rewards create natural pacing within a game that otherwise lacks
-explicit round-by-round goals. The bridge gives players a persistent
-investment target that spans all three rounds.
+WARRIOR PLACEMENT IN TRAINING YARDS: Warriors are sent from the player's
+personal domain to Training Yards on the main board, paying an iron cost that
+depends on the chosen yard. Each Training Yard has associated actions on its
+Die tiles that the warrior can activate upon arrival. At end of game, warriors
+score by multiplying their total value by the number of courtiers the player
+has inside the castle. This multiplication creates a synergy between two
+otherwise independent subsystems — warrior placement and courtier advancement —
+rewarding players who invest in both rather than specializing in one. The
+design pattern is that multiplicative scoring between separate subsystems
+creates implicit coupling that forces balanced investment even when the
+moment-to-moment actions feel independent.
 
-DAIMYO TRACK AS EXTERNAL SCORING PRESSURE: The daimyo track is a separate
-advancement path that awards escalating end-game points based on how far a
-player progresses. Advancing on the daimyo track requires specific die
-placements and action choices, meaning it competes with other scoring avenues
-for player attention and resources. The daimyo track functions as an external
-scoring benchmark — ignoring it entirely concedes significant points to
-opponents who invest in it, but over-investing in it starves the gardens,
-courtiers, and bridge of resources. The design wisdom is that a single
+PASSAGE OF TIME TRACK AS EXTERNAL SCORING PRESSURE: The Passage of Time track
+is a separate advancement path that awards escalating end-game Clan Points
+based on how far a player progresses (3, 6, or 10-15 points depending on the
+season reached). Advancing on the track requires gaining Influence and paying
+Daimyo Seal costs at checkpoints between seasons, meaning it competes with
+other scoring avenues for player attention and resources. The track also
+determines turn order each round, adding a tempo consideration to what would
+otherwise be purely a scoring race. The design wisdom is that a single
 high-value track that sits outside the main action economy creates a
 gravitational pull that all players must account for, preventing complete
 specialization in any one subsystem.

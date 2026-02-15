@@ -63,11 +63,12 @@ The game is played over a variable number of rounds until a set number of
 end-game triggers have been reached. On each turn, a player performs one
 main action by moving their gallerist pawn to one of four locations:
 
-1. ARTIST COLONY - Discover a new artist (take an artist tile from the
-   colony and place it in your gallery's artist wing) or buy a work of art
-   from a discovered artist. Each artist produces works in a specific
-   medium (painting, sculpture, photograph, digital) and at a specific
-   fame level. Buying art costs money based on the artist's current fame.
+1. ARTIST COLONY - Discover a new artist (flip a face-down artist tile,
+   gain its bonus, place a Fame marker, and take a commission) or buy a
+   work of art from a discovered artist. Each artist produces works in a
+   specific medium (photography, painting, digital art, sculpture) and at
+   a specific fame level. Buying art costs money equal to the artist's
+   current fame.
 
 2. MEDIA CENTER - Promote an artist to increase their fame on the fame
    track, or hire an assistant (a specialist worker that provides ongoing
@@ -80,13 +81,15 @@ main action by moving their gallerist pawn to one of four locations:
    Selling requires matching a displayed work with an available contract.
    The sale price is determined by the artist's current fame level.
 
-4. INTERNATIONAL MARKET - Sell art to the international market (an
-   alternative exit strategy that doesn't require contracts but has its
-   own constraints) or acquire tickets that provide end-game bonuses and
-   special abilities.
+4. INTERNATIONAL MARKET - Take a Reputation tile (increasing your
+   reputation and placing an assistant on the market table) or make an
+   offer for Art of International Renown (placing an assistant in the
+   auction section, which determines end-game art auctions and majority
+   scoring).
 
-After performing a main action, the player may execute bonus actions
-using influence tokens, assistant abilities, or other earned resources.
+Before or after their main Location action, the player may take one
+Executive Action: either move Visitors by discarding tickets or use a
+bonus from a contract card by placing an assistant on it.
 The crucial wrinkle is the "kicked out" mechanic: when you move to a
 location occupied by another player's gallerist, that player immediately
 gets a free bonus action before leaving. This transforms the worker
@@ -123,52 +126,52 @@ all boats.
 VISITOR MANAGEMENT AS AREA CONTROL: Visitors (represented by meeples) move
 between the central plaza and individual galleries based on game events.
 The type and number of visitors in your gallery determine influence gains,
-scoring opportunities, and available actions. VIP visitors (white meeples)
-are worth more than regular visitors (pink meeples), creating a hierarchy
-of attraction. Managing visitor flow -- attracting them to your gallery
+scoring opportunities, and available actions. Visitors come in three types — Investors (brown), VIPs (pink), and
+Collectors (white) — each providing different benefits, creating a
+hierarchy of attraction. Managing visitor flow -- attracting them to your gallery
 through displayed art, converting them via sales, and ensuring you have
 the right visitors at the right time -- functions as an area-control
 minigame layered onto the economic engine. Your gallery is a physical space
 that you curate, and its population matters as much as its inventory.
 
-INFLUENCE AS UNIVERSAL CURRENCY: Influence tokens function as a flexible
-currency that can be spent across multiple systems. They can trigger bonus
-actions, substitute for resources in certain transactions, and contribute
-to end-game scoring if unspent. This creates a classic engine-building
+INFLUENCE AS UNIVERSAL CURRENCY: Influence is tracked on a board track and
+functions as a flexible currency that can be spent across multiple systems.
+It can be converted into money (moving the disc back on the track) or
+traded for additional Fame when promoting artists, and the final position
+on the track earns money during end-game scoring. This creates a classic engine-building
 tension: spending influence now for tactical advantage versus hoarding it
 for end-game points. The multi-use nature of influence means players must
 constantly reassess its marginal value in different contexts, and it serves
 as a pressure-release valve that prevents players from ever feeling truly
 stuck -- there is always something you can do with influence.
 
-INTERNATIONAL MARKET AS EXIT STRATEGY: The international market provides
-an alternative path for selling art that bypasses the contract system
-entirely. This is critical design because it prevents the contract deck
-from becoming a bottleneck. If the available contracts don't match your
-inventory, you are not locked out of selling -- you simply pivot to the
-international market, which has its own constraints and rewards. By
-providing two distinct selling channels, Lacerda ensures that players
-always have agency over their sales timing, reducing the frustration of
-mismatched supply and demand.
+INTERNATIONAL MARKET AS REPUTATION AND AUCTION: The International Market
+provides two distinct actions: acquiring Reputation tiles (which grant
+end-game scoring bonuses) and making offers for auctioned Works of Art
+of International Renown. Accessing these actions requires specific Visitor
+types in your Lobby, gating powerful late-game scoring behind gallery
+development. The auction mechanism at end-game scoring awards renowned
+Works of Art to players with the most assistants in each column, creating
+a majority-based competition that adds an area-control dimension to the
+economic engine.
 
-REPUTATION TRACK GATING: The reputation track functions as both a scoring
-mechanism and a gating system. Higher reputation unlocks access to more
-powerful actions, better contracts, and end-game bonuses. But reputation
-is earned through a combination of sales, promotions, and visitor
-management -- it cannot be pursued in isolation. This forces players to
-engage with multiple systems rather than hyper-specializing. The track
-also creates visible progress that opponents can monitor, making relative
-standing transparent and enabling strategic responses to leaders and
-laggards.
+REPUTATION TILES AS END-GAME MULTIPLIERS: Reputation tiles, acquired from
+the International Market, are placed on the player board and each provides
+a unique end-game scoring formula (e.g., money per Collector, money per
+Work of Art sold, money per Visitor in Gallery). Because each tile scores
+differently, the tiles players acquire shape which strategies are most
+rewarding. Only four Reputation spaces are available on each player board,
+so tile selection is a critical long-term commitment that forces players
+to align their gallery operations with their chosen scoring bonuses.
 
-AUCTION HOUSE AS ACQUISITION: The auction house (embedded in the Artist
-Colony location) provides an alternative acquisition path where players
-can bid on art that other players have put up for sale. This creates a
-secondary market that adds price discovery to the game -- art is worth
-what someone will pay for it, not just what the fame track says. The
-auction mechanic also provides liquidity to players who need cash more
-than inventory, turning art into a convertible asset rather than a
-locked-in investment.
+END-GAME AUCTION AT INTERNATIONAL MARKET: During end-game scoring, Works
+of Art on the easels (Works of International Renown) are auctioned off
+based on each player's assistant presence in the lower rows of the
+International Market table. Each assistant is worth 1, 3, or 6 money
+depending on its row. The player with the highest total offer in each
+column wins the corresponding Work of Art, receiving money equal to its
+sales value. This creates an area-majority competition that rewards
+sustained investment in the International Market throughout the game.
 
 INTERCONNECTED SYSTEM TOPOLOGY: Lacerda's defining design signature is
 that every system feeds into every other system. You need money to buy

@@ -69,63 +69,70 @@ strategic choices write the answer.
 ### Core Loop
 
 Revive plays over a variable number of rounds until the end-game trigger
-(any player reaches a specific milestone on their development track or
-the exploration tile supply is exhausted). Each player's turn follows a
-simple structure with deep consequences:
+(a player takes the last major artifact from the game board). Each
+player's turn follows a simple structure with deep consequences: perform
+up to 2 actions, OR hibernate to cycle your cards.
 
-1. PLAY A CARD — Select one card from your hand and play it. Each card
-   has multiple uses:
-   - MAIN ACTION — The card's printed action: explore a terrain tile,
-     build a machine, populate a location, or trigger a special ability.
-     The card specifies the action type, strength, and any resource costs.
-   - SLOT INTO PLAYER BOARD — Instead of using the card's main action,
-     tuck it under one of the designated slots on your player board. The
-     card's icon provides a permanent passive bonus (resource generation,
-     action amplification, or scoring multiplier) for the rest of the game.
-     Once slotted, the card is no longer in your hand or deck.
-   - USE AS RESOURCE — Discard the card to gain its printed resource
-     value, fueling other actions or paying construction costs.
+1. CHOOSE ACTIONS — On your turn, perform up to 2 of the following
+   actions (you may perform two different actions or the same action
+   twice):
+   - PLAY A CARD — Take a card from your active area and tuck it into
+     a vacant card slot on your player board. If placed in a top slot,
+     gain the card's top effect; if placed in a lower slot, gain its
+     bottom effect. Playing a card also activates any slot modules
+     matching the card's color.
+   - USE SWITCH TOKEN — Slide your switch token to gain one basic
+     resource (gear, book, or food). Available once per hibernate cycle.
+   - EXPLORE — Choose a face-down area tile on the game board, pay the
+     range cost (in food) and the tile's exploration cost, flip the tile,
+     recruit a citizen card, and gain points.
+   - POPULATE — Place a population figure from your tribe board onto a
+     location space, paying books and range cost. The first populate
+     action unlocks your tribe's bottom technology.
+   - BUILD — Place a small building (3 gears) or large building (5 gears)
+     on a vacant sand space, paying the range cost. Buildings adjacent to
+     terrain spaces advance the corresponding machine tracks.
 
-2. RESOLVE ACTION — Execute the chosen card function. If exploring, flip
-   a face-down terrain tile adjacent to your presence on the board and
-   place an exploration marker. If building, place a machine token in a
-   location you control, paying the required resources. If populating,
-   place citizen tokens in available locations, establishing area influence.
+2. GAIN BONUSES — Many locations, machines, and board slots provide
+   immediate bonuses when activated. These may include: advancing on
+   machine tracks, gaining energy or crates, collecting artifacts, or
+   moving progress markers.
 
-3. GAIN BONUSES — Many locations, machines, and board slots provide
-   immediate or ongoing bonuses when activated. These may include:
-   advancing on the technology track, gaining artifact tokens, drawing
-   new cards, or recovering cards from your discard pile.
+3. FREE ACTIONS — At any point during your turn, you may also trade
+   crystals for basic resources, activate machines using energy, and
+   open crates.
 
-4. CHECK PROGRESS — After resolving, check whether any development track
-   milestones have been reached. Milestones unlock new capabilities,
-   provide scoring opportunities, and may trigger the end-game condition.
-
-5. DRAW/RECOVER — At the end of your turn, draw cards from your deck
-   or the shared market to refill your hand. If your deck is empty,
-   shuffle your discard pile to form a new deck. Cards slotted into your
-   player board do NOT return — they are permanently invested.
+4. HIBERNATE (ALTERNATIVE TO ACTIONS) — Instead of performing actions,
+   you may hibernate: return all energy to storage, move all cards from
+   your resting area to your active area (and all played cards from
+   slots to your resting area), reset your switch token, and advance
+   your hibernation marker one space (gaining a reward). When you reach
+   the 4th hibernation space, you must remove a major artifact from the
+   board — if it is the last one, the end game is triggered.
 
 ### Key Design Patterns
 
-MULTI-USE CARDS AS CORE DECISION ENGINE: Every card in Revive presents
-a three-way decision: use it for its action, slot it for a permanent
-bonus, or spend it as a resource. This triple-use design means no card
-is ever dead — even a card whose action is irrelevant can be slotted
-for its passive bonus or discarded for resources. The strategic depth
-comes from evaluating each card across all three dimensions simultaneously.
-A powerful action card might be MORE valuable as a permanent slot bonus
-if your engine needs that specific modifier. A weak action card might be
-worth playing for the action early in the game but better spent as a
-resource later when your engine is established. The multi-use system also
-creates a natural tension between short-term and long-term thinking:
-playing a card for its action provides immediate value, but slotting it
-into your player board provides compounding value over every remaining
-round. Players who slot aggressively build powerful engines but sacrifice
-early-game tempo; players who play actions aggressively establish board
-presence but lack late-game efficiency. The optimal balance depends on
-the game state, the tribe's asymmetric strengths, and the specific cards
-available — making every card play a genuinely interesting decision.
+DUAL-EFFECT CARDS AS CORE DECISION ENGINE: Every card in Revive has both
+a top effect and a bottom effect, and the decision of which slot to tuck
+it into determines which effect you gain. Top slots provide one set of
+benefits; bottom slots provide another. Additionally, playing a card
+activates any slot modules on your player board whose color matches the
+card, creating cascading bonuses as your board develops. Cards that have
+been played into slots move to your resting area when you hibernate,
+eventually cycling back to your active area. This cycle means cards are
+not permanently consumed — they rotate through active area, card slot,
+resting area, and back. The strategic depth comes from evaluating each
+card across both its effects and its color (for module activation)
+simultaneously. A card with a weak top effect might have a strong
+bottom effect, or might activate multiple modules of its color —
+making slot choice a genuinely interesting decision. The card cycling
+system also creates a natural tension between playing cards (using
+them now for their effects) and holding them (keeping more options in
+your active area). Players who play cards aggressively trigger more
+effects but hibernate sooner; players who hold cards maintain
+flexibility but sacrifice action efficiency. The optimal balance
+depends on the game state, the tribe's asymmetric strengths, and the
+specific cards available.
 
 TERRAIN EXPLORATION AS MODULAR DISCOVERY: The face-down terrain tiles
 create a map that is partially known (the fixed central starting area)

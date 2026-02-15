@@ -69,34 +69,33 @@ invested in industrial growth.
 The game plays over a fixed number of rounds determined by player count
 (with a shorter variant available). Each round follows this structure:
 
-1. SUPPLY — At the start of each round, goods accumulate on specific offer
-   spaces on the board. Each offer space gains one unit of its designated good
-   per round: fish pile up on the fish space, wood on the wood space, clay on
-   the clay space, and so on. Goods accumulate across rounds if unclaimed,
-   making each offer space increasingly attractive the longer it goes untouched.
+1. PLAYER TURNS — A round consists of 7 individual player turns (players have
+   different numbers of turns per round based on player count). On your turn,
+   you perform two mandatory steps:
+   a. SUPPLY ACTION — Place your ship marker on the next Supply tile and add
+      the two shown goods (one token from each of two Supply spaces) to their
+      corresponding Offer spaces. Goods accumulate across turns if unclaimed,
+      making each Offer space increasingly attractive the longer it goes
+      untouched.
+   b. MAIN ACTION — Choose one of two options:
+      - TAKE GOODS FROM AN OFFER SPACE — Choose any Offer space and take all
+        tokens on it (all accumulated units).
+      - USE A BUILDING — Place your worker in any unoccupied building (yours,
+        an opponent's, or the town's) and execute its action. If it is an
+        opponent's building, pay the entry fee. Building actions include:
+        processing goods (e.g., convert iron to steel), constructing new
+        buildings, and more.
+   In addition, at any time during your turn you may BUY buildings or ships
+   (paying their purchase price) and/or SELL buildings and ships (for half
+   their value).
 
-2. PLAYER TURNS — Each player takes one turn per round. On your turn, you
-   MUST perform exactly two steps in order:
-   a. TAKE ALL GOODS FROM ONE OFFER SPACE — Choose any offer space and take
-      every good on it (all accumulated units). This is mandatory.
-   b. PERFORM ONE ACTION — Either:
-      - USE A BUILDING — Place your worker in any building (yours or an
-        opponent's) and execute its action. If it is an opponent's building,
-        pay the entry fee. Building actions include: processing goods (e.g.,
-        convert iron to steel), selling goods for francs, constructing new
-        buildings, buying/selling at the market, taking loans, and more.
-      - BUY A BUILDING — Purchase an available building from the unbuilt
-        supply, paying its construction cost in goods and/or francs. The
-        building goes to your personal tableau, and you now own it (collecting
-        entry fees and having free access).
-      - SELL A BUILDING — Sell one of your buildings back to the supply for
-        half its value in francs.
-
-3. HARVEST (periodic) — At specific intervals marked on the round track, a
-   harvest occurs. Each player must feed their workers a fixed amount of food
-   (the amount increases as you hire more workers). Food can be paid in fish,
-   bread, meat, or francs (at a punishing exchange rate). Failure to feed
-   triggers mandatory loans.
+2. END OF ROUND — After every 7 game turns, the Round card is resolved.
+   A Harvest may occur (players with at least 1 grain receive 1 grain;
+   players with at least 2 cattle receive 1 cattle). Then each player must
+   feed their workers the amount of food shown on the Round card. Ships
+   owned reduce the food requirement. Food can be paid in fish, bread,
+   meat, or francs (1 franc = 1 food). Failure to feed triggers mandatory
+   loans. A new ship card is also introduced at the end of each round.
 
 After all rounds, final scoring totals the value of owned buildings plus cash
 minus outstanding loans (each loan is negative 7 francs). Ships owned count
@@ -105,10 +104,10 @@ toward building value.
 ### Key Design Patterns
 
 RESOURCE ACCUMULATION ON OFFER SPACES: The game's most distinctive mechanism
-is the way goods enter the economy. Each round, one unit of a designated good
-is added to each offer space. If no one claims the fish space for three rounds,
-it accumulates three fish. When a player finally takes that space, they take
-all three. This creates a rising-value dynamic: unclaimed spaces become
+is the way goods enter the economy. Each player turn, two goods (determined
+by the current Supply tile) are added to their corresponding Offer spaces.
+If no one claims the fish Offer space for several turns, it accumulates
+multiple fish. When a player finally takes that space, they take all of them. This creates a rising-value dynamic: unclaimed spaces become
 increasingly attractive, and the timing of when to claim each space is a
 strategic calculation. Take it too early and you get a small haul; wait too
 long and an opponent snatches the pile. The design insight is that accumulating
@@ -132,14 +131,14 @@ utility, and the tension between these roles drives strategic depth. Players
 must weigh the benefit of using an opponent's building (gaining a powerful
 action) against the cost (funding their opponent's economy).
 
-FOOD PRESSURE THROUGH FEEDING AT HARVEST: At regular intervals, players must
-feed their workers or take loans. The feeding requirement scales with workforce
-size — more workers means more food pressure. This creates a fundamental
-strategic tension around workforce expansion: hiring additional workers
-increases your action capacity (you can do more per round) but increases your
-food burden. Early in the game, feeding is manageable with raw fish from the
-offer spaces. As the game progresses and food demands grow, players must invest
-in food-processing infrastructure (smokehouse, bakehouse, abattoir) to convert
+FOOD PRESSURE THROUGH FEEDING AT ROUND END: At the end of each round (every
+7 turns), players must feed their workers the amount shown on the Round card
+or take loans. The food requirement increases over the course of the game as
+later Round cards demand more food. Ships owned reduce the food requirement,
+making ship-building an important investment for managing food pressure.
+Early in the game, feeding is manageable with raw fish from the Offer spaces.
+As the game progresses and food demands grow, players must invest in
+food-processing infrastructure (smokehouse, bakehouse, abattoir) to convert
 raw goods into more efficient food sources. The design pattern is that periodic
 mandatory expenses create strategic rhythm — players oscillate between
 investment phases (building infrastructure) and sustenance phases (securing
@@ -160,9 +159,10 @@ high-value ships. This arc gives the game a narrative trajectory — from
 subsistence fishing to industrial shipping — that emerges from the mechanics
 rather than being imposed by scenario design.
 
-LOAN SYSTEM AS NEGATIVE VP WITH FLEXIBILITY: Players can take a loan at any
-time, gaining immediate francs but accepting a permanent negative 7 VP penalty
-(unless the loan is repaid, which costs more francs than the loan provided).
+LOAN SYSTEM AS NEGATIVE VP WITH FLEXIBILITY: Players may take loans only when
+they cannot pay required costs (interest or feeding), gaining 4 francs per
+loan but accepting a permanent negative 7 VP penalty at game end (unless
+the loan is repaid for 5 francs during the game).
 Loans function as a financial pressure valve: they prevent players from being
 completely locked out of actions when cash-poor. But the negative VP makes
 loans strategically costly — a player carrying three loans into final scoring

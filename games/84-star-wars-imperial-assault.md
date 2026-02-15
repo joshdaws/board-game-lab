@@ -78,8 +78,10 @@ Imperial player alternating activations:
    one deployment group. This continues until all figures have activated.
    Each activation consists of 2 actions chosen from:
    - MOVE - Move up to your speed value in spaces. Figures can move
-     through allies but not enemies. Terrain affects movement (doors
-     must be opened, difficult terrain costs extra movement).
+     through allies freely and through enemies by spending an extra
+     movement point, but cannot end movement in an occupied space.
+     Terrain affects movement (doors must be opened, difficult terrain
+     costs extra movement).
    - ATTACK - Choose a target within range and line of sight. Roll
      attack dice (colored by weapon type: blue for ranged accuracy,
      red/green/yellow for damage). The defender rolls white/black dice
@@ -99,9 +101,9 @@ Imperial player alternating activations:
 
 Between campaign missions, heroes spend experience points on class cards
 (skill upgrades) and credits on item cards (equipment upgrades). The
-Imperial player spends experience on Agenda cards (Imperial class upgrades
-and side mission triggers) and allocates Influence to strengthen deployment
-groups for future missions.
+Imperial player spends experience on Imperial class cards (ability
+upgrades) and spends influence to purchase Agenda cards (special events
+and side mission triggers).
 
 The skirmish mode (competitive 2-player) replaces the campaign structure
 with point-based army construction, command card decks, and symmetric

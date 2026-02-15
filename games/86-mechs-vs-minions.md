@@ -63,41 +63,42 @@ plans are funny when they go wrong.
 
 ### Core Loop
 
-Each mission follows a structured round sequence:
+Each mission follows a structured round sequence with a Player Phase
+followed by a Minion Phase:
 
-1. MINION PHASE — Minions already on the board move according to their
-   facing arrows (one space forward). New minions spawn at designated
-   entry points based on the current scenario's spawn card, which dictates
-   quantity, location, and facing. If minions reach certain board locations
-   or accumulate past a threshold, the team loses.
+PLAYER PHASE:
+1. DRAFT COMMAND CARDS — 5 command cards are drawn from the deck and
+   placed face-up. Starting with the first player, each player drafts
+   one card in clockwise order until 4 cards have been picked (with
+   fewer than 4 players, some players draft multiple cards). The
+   remaining card is discarded. Cards come in four elements (Fire,
+   Electric, Metal, Computery) and include movement, turning, and
+   attack types.
 
-2. DRAFT PHASE — A number of ability cards equal to the player count are
-   drawn from the shuffled deck and placed face-up. Starting with a
-   rotating first-player token, each player drafts one card. Cards include
-   movement (Blaze, Scythe, Speed), attack (Ripsaw, Flamethrower, Cyclotron),
-   turning (Omnistomp), and special abilities. The drafted card is placed
-   into one of six numbered slots on the player's command line. If a slot
-   already contains a card, the new card is placed ON TOP, and the slot
-   now executes the top card's ability at a power level equal to the total
-   number of cards in that stack.
+2. PLAY COMMAND CARDS — All players simultaneously slot their drafted
+   cards into one of six numbered slots on their command line. Cards
+   cannot be saved; all must be slotted. Cards of the same element can
+   stack (up to 3 deep) in a single slot, with the top card's ability
+   executing at power equal to the stack's total card count.
 
-3. COMMAND LINE EXECUTION — Each player executes their command line from
-   slot 1 through slot 6. Each occupied slot triggers its top card's ability.
-   Stacked cards increase power: a Ripsaw in a stack of three deals three
-   damage instead of one. A Speed card in a stack of two moves you two
-   spaces instead of one. Empty slots are skipped. Execution is mandatory
-   and sequential — you cannot skip a slot or change the order.
+3. EXECUTE COMMAND LINES — Starting with the first player, each player
+   executes their command line from slot 1 through slot 6. Each occupied
+   slot triggers its top card's ability. Empty slots are skipped.
+   Execution is mandatory and sequential.
 
-4. BOSS/OBJECTIVE CHECK — Scenario-specific conditions are evaluated.
-   Some missions require destroying a target, reaching a location,
-   or surviving a certain number of rounds.
+MINION PHASE (once all missions introduce minions):
+4. MINION MOVEMENT — Minions move according to the Rune Die roll and
+   Crystal Compass direction. Minions cannot move into occupied spaces
+   or push mechs.
 
-5. DAMAGE RESOLUTION — If a player's mech occupied a space with minions
-   at any point or was targeted by a boss ability, damage cards are drawn.
-   Damage cards are placed into the command line at specific slots
-   (determined by the card) and typically rotate the slot's facing,
-   replace the ability, or add a persistent glitch. Damage is not health
-   loss — it is command corruption.
+5. SPAWN NEW MINIONS — New minions appear at designated locations based
+   on the current scenario's spawn rules.
+
+6. MINIONS ATTACK — Each minion adjacent to a mech deals 1 damage.
+   For each damage taken, a Damage Card is drawn. Damage cards may be
+   Glitch (immediate one-time effect), System (ongoing effect), or Slot
+   damage (placed into a command line slot, corrupting it). Damage is
+   not health loss — it is command corruption.
 
 ### Key Design Patterns
 
@@ -138,7 +139,7 @@ games because no one can dictate another player's program when the draft
 itself limits everyone's options.
 
 COOPERATIVE PROGRAMMING WITH FRIENDLY FIRE RISK: Because command lines
-execute simultaneously and mechs share the same board, positional
+execute sequentially (first player through last) and mechs share the same board, positional
 coordination is critical. A flamethrower fires in a line from your mech's
 facing — if an ally is in that line, they take damage. A Scythe card
 damages everything adjacent, including friendly mechs. Movement cards can
@@ -196,7 +197,7 @@ STACKING AS POWER SCALING: The command line stacking mechanic elegantly
 solves the power curve problem. Rather than introducing new, more
 powerful cards as the mission progresses, the same cards become
 stronger when stacked. A Ripsaw dealing one damage becomes a Ripsaw
-dealing four damage when stacked four deep. This means early-game
+dealing three damage when stacked three deep (the maximum). This means early-game
 cards remain relevant, the draft stays meaningful throughout (even
 duplicate cards are valuable for stacking), and power growth is
 player-directed rather than deck-driven. Stacking also creates

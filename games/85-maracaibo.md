@@ -81,37 +81,31 @@ route. On your turn, you perform two steps:
 2. PERFORM ACTIONS - Based on where you stopped:
 
    AT A VILLAGE:
-   - Deliver goods matching the village's demand for rewards
-   - Develop the village by placing a development token (providing
-     ongoing benefits and end-game scoring)
-   - Play a card for its village-specific action
+   - Perform one or more village actions depending on movement spent
+     (1 action normally; 2 if you spent 4-6 movement; 3 if you spent
+     all 7). Each village action lets you: buy a project card, take
+     1 doubloon, or discard cards for 2 doubloons.
 
    AT A CITY:
-   - Take the city's unique major action. Cities offer distinct
-     action types:
-     - Hire crew cards from the display (adding cards to your hand
-       or tableau)
-     - Complete quests (turning in required resources/conditions for
-       rewards and VP)
+   - Optionally deliver a good to the city's market (discard a
+     matching card, remove a disc from your ship board), then
+     perform the city's unique action. City actions include:
+     - Combat (gain influence and place ownership markers)
      - Gain influence with one of the three nations
-     - Acquire projects (cards placed in your tableau for ongoing
-       or end-game benefits)
-     - Conduct combat to place influence discs on the map
-     - Use the explorer to claim exploration tokens from the inland
-       map
+     - Complete quests (paying required costs for rewards and VP)
+     - Use the explorer to advance along the explorer track
 
-   CARD PLAY (available at most locations):
-   - Play a card from hand for its action effect (gaining resources,
-     influence, combat strength, or special abilities)
-   - Tuck a card under your player board for end-game set collection
-     scoring (cards show nation symbols and types)
-   - Discard a card to gain doubloons (the game's currency)
+   FREE ACTIONS (before, during, or after main action):
+   - Add a card from hand to the planning area on your ship board
+     (up to 3 slots)
+   - Complete career card goals
 
-   At the end of each round, a round-end scoring phase evaluates
+   At the end of each round, an interim scoring phase evaluates
    position on the three nation influence tracks, awarding VP and
-   bonuses based on relative standing. After 4 rounds, final scoring
-   adds VP from tucked cards, completed quests, developed villages,
-   projects, and remaining resources.
+   income based on track positions. After 4 rounds, final scoring
+   adds VP from project cards in your display, prestige building
+   investments, completed quests, income track positions, nation
+   majority bonuses, and noble rank multipliers.
 
 ### Key Design Patterns
 
@@ -133,20 +127,22 @@ ends when any player completes the circuit, adding a racing dimension: a
 player who sails fast can end the round before slower players reach their
 intended destinations.
 
-CARD MULTI-USE SYSTEM: Every card in Maracaibo can be used in at least
-three ways: played from hand for its action effect, tucked under your
-player board for end-game scoring based on its nation symbol and type,
-or discarded for doubloons. This triple-use design means that every card
-acquisition is simultaneously a tactical decision (what action does this
-card provide now?), a strategic decision (what does this card contribute
-to my end-game scoring tableau?), and a resource decision (is the doubloon
-value of discarding it worth more than either other use?). The multi-use
-system also prevents dead draws -- even a card whose action effect is
-irrelevant to your strategy has value as a tuck target or currency. Pfister
-uses this pattern across many of his designs (Great Western Trail, Mombasa),
-but Maracaibo refines it by making the tuck decision explicitly tied to
-set collection scoring, creating a long-term deckbuilding dimension within
-a game that is not a deckbuilder.
+CARD MULTI-USE SYSTEM: Every card in Maracaibo can be used in multiple
+ways: held in hand as a good or object for delivery and quest costs,
+placed in the planning area for later purchase, bought as a project card
+in your display (providing permanent effects, income, and end-game VP),
+or discarded for doubloons. This multi-use design means that every card
+acquisition is simultaneously a tactical decision (what can this card
+do as a good or object?), a strategic decision (what does this card
+contribute to my engine if I buy it?), and a resource decision (is the
+doubloon value of discarding it worth more than its other uses?). The
+multi-use system also prevents dead draws -- even a card whose permanent
+effect is irrelevant to your strategy has value as a delivery good or
+currency. Pfister uses this pattern across many of his designs (Great
+Western Trail, Mombasa), and Maracaibo refines it by tying card effects
+to color-coded categories (income, permanent, immediate, assistant)
+that create layered engine-building within a game that rewards long-term
+card investment.
 
 THREE-NATION INFLUENCE AS PARALLEL TRACKS: Spain, England, and France each
 have an influence track that all players share. Advancing on a track costs
@@ -194,32 +190,30 @@ most points."
 
 COMBAT AS AREA INFLUENCE: Maracaibo's combat system is not a
 confrontational wargame mechanic -- it is an area influence system dressed
-in combat language. Players spend combat strength (generated by cards,
-crew, and actions) to place influence discs on map regions. These discs
-contribute to end-game area majority scoring and unlock region-specific
-bonuses. "Combat" in Maracaibo is really investment: you are projecting
-power into a region to claim ongoing and final rewards. There is no direct
-player-vs-player combat -- you are competing for majority in shared
-spaces, not attacking each other's units. This design choice preserves
-the Euro sensibility of indirect competition while adding a spatial
-dimension to the game's strategic landscape. The combat system also
-interacts with the three-nation influence tracks, as influence discs
-are placed in regions aligned with specific nations, creating another
-cross-system connection.
+in combat language. Players reveal a combat token indicating combat value
+for each nation, choose a nation to fight for, and spend that combat
+value on actions: gaining influence on a nation's track, or annexing/
+displacing ownership markers on the map. These markers contribute to
+end-game majority scoring for each nation. "Combat" in Maracaibo is
+really investment: you are projecting a nation's power into the Caribbean
+to claim scoring multipliers. There is no direct player-vs-player
+combat -- you are competing for majority in shared territory, not
+attacking each other's units. This design choice preserves the Euro
+sensibility of indirect competition while adding a spatial dimension
+to the game's strategic landscape. The combat system also interacts
+with the three-nation influence tracks, as ownership markers are placed
+for specific nations, creating another cross-system connection.
 
-VILLAGE DEVELOPMENT AS PERSISTENT PRESENCE: When you develop a village
-(by placing a development token on it), that token remains on the board
-for the rest of the game (or campaign). Developed villages provide
-bonuses when you or other players stop there, and they score VP at
-game end based on their type and the number of villages you've
-developed. Development creates a persistent board presence that grows
-in value over time -- a village developed in round 1 provides benefits
-for all 4 rounds, while one developed in round 4 provides benefits only
-at game end. This temporal value differential incentivizes early
-development, creating a tension with the resource scarcity of the early
-game. In campaign mode, village development persists across sessions,
-making early-campaign development investments compound over the entire
-campaign arc.
+OWNERSHIP MARKERS AS PERSISTENT PRESENCE: When you annex a village
+through combat (by placing a nation's ownership marker on it), that
+marker remains on the board for the rest of the game. Ownership markers
+contribute to end-game majority scoring for each nation -- the nation
+with the most markers on the board earns a majority bonus multiplier.
+Placing markers creates a persistent board presence that grows in
+strategic value over time, as the multiplier interacts with your noble
+rank on each nation's influence track during final scoring. In campaign
+mode, ownership placement persists across sessions, making early-campaign
+territorial investments compound over the entire campaign arc.
 
 ROUND-END TRIGGER AS RACING MECHANISM: Any player who completes the
 circular route triggers the end of the current round. This means that a

@@ -73,7 +73,8 @@ The game is played over nine rounds, each following the same structure:
 2. SIMULTANEOUS DRAWING — All players draw chips from their bags simultaneously.
    On each draw:
    - Pull one chip blindly from your bag
-   - Place it on the next open space in your pot's spiral track
+   - Place it on the pot's spiral track, advancing a number of spaces equal
+     to the chip's value (a 2-chip skips one space, a 4-chip skips three)
    - Check if your total cherry bomb value exceeds 7. If it does, your pot
      EXPLODES — you stop immediately and must choose to score either victory
      points OR buying power for this round, but not both
@@ -87,12 +88,13 @@ The game is played over nine rounds, each following the same structure:
    one or the other. The furthest-advanced player who did not explode earns
    a bonus die roll.
 
-4. BUYING — Starting with the player furthest behind on the score track,
-   each player spends coins to purchase 1-2 new ingredient chips from the
-   market. Purchased chips go into your bag immediately. Chip costs vary by
-   type and power level (1-4 cost tiers per ingredient color). Players
-   choose which ingredient sets to invest in, shaping their bag's
-   probability profile.
+4. BUYING — Starting with the start player, each player takes turns spending
+   coins to purchase 1 or 2 new ingredient chips from the market (the two
+   chips cannot be the same color). The number of coins available equals the
+   scoring space value of the player's last-placed chip. After everyone has
+   finished shopping, all purchased and drawn chips go into each player's
+   bag. Players choose which ingredient sets to invest in, shaping their
+   bag's probability profile.
 
 5. RAT TAIL ADJUSTMENT — Players behind the leader on the score track
    advance their rat tail marker, which grants them a head start on the

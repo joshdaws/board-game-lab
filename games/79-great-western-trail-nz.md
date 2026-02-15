@@ -51,28 +51,29 @@ economic landscape where every journey through the trail confronts you with
 new choices shaped by opponents' constructions. The trail is not static
 infrastructure — it is a living economy that changes with every building placed.
 
-The three specialist tracks — shepherds, sailors, and prospectors — map to the
-three pillars of New Zealand's colonial economy. Shepherds represent the
-pastoral tradition of wool and meat production. Sailors represent the maritime
-trade networks that connected New Zealand to global markets. Prospectors
-represent the gold rush that transformed the South Island's economy in the
-1860s. Each track provides escalating bonuses that correspond to deeper
-engagement with that economic sector, and the interplay between tracks creates
-the game's strategic texture.
+The four worker types — shepherds, craftsmen, sailors, and shearers — map to
+the pillars of New Zealand's colonial economy. Shepherds represent the
+pastoral tradition of wool and sheep acquisition. Craftsmen represent the
+building and infrastructure of the colony. Sailors represent the maritime
+trade networks that connected New Zealand to global markets. Shearers
+represent the wool production that was central to the economy.
+Each worker type provides escalating bonuses when hired, and the interplay
+between worker investment and the pathfinder, certificate, and gold tracks
+creates the game's strategic texture.
 
 ### Core Loop
 
 The game unfolds over a variable number of rounds, each consisting of a
-single turn per player. The game ends when the job market track triggers
-final scoring.
+single turn per player. The game ends when a bonus tile is placed on the
+last space of the bonus tiles market.
 
 On each turn, a player performs three phases:
 
-1. MOVEMENT — Move your rancher token forward along the trail (you must move
-   at least one space, up to your movement limit). You may stop at any
-   location along the trail — neutral locations, your own buildings, or
+1. MOVEMENT — Move your runholder forward along the trail (you must move
+   at least one step, up to your step limit). You may stop at any
+   location along the trail — neutral buildings, your own buildings, or
    opponents' buildings. Each location type offers different action
-   possibilities. The trail is a loop: when you reach the port at the end,
+   possibilities. The trail is a loop: when you reach Wellington at the end,
    you deliver your hand of sheep cards, then restart at the beginning.
 
 2. ACTIONS — At the location where you stopped, perform the available actions:
@@ -84,16 +85,18 @@ On each turn, a player performs three phases:
      pay a fee to use the full action. This creates indirect interaction.
    - At NEUTRAL LOCATIONS — Execute fixed actions defined by the board
      (markets, hiring grounds, rest stops).
-   - AUXILIARY ACTIONS — Regardless of location, you may perform unlimited
-     auxiliary actions (small bonuses gained from specialist track
-     advancement and other sources).
+   - AUXILIARY ACTIONS — At an opponent's building or hazard tile, you
+     perform one single auxiliary action instead of local actions. Auxiliary
+     actions are unlocked by clearing disc spaces on your player board.
 
-3. DELIVERY (at port only) — When you reach the port at the trail's end,
-   you must ship your hand of sheep cards. The total value of unique sheep
-   breeds in your hand determines which port destinations are available.
-   Higher-value hands unlock better ports with larger VP rewards and
-   additional bonuses. After delivery, gain income, advance on applicable
-   tracks, and return to the trail's start.
+3. DRAW — Draw up to your hand limit from your personal draw stack.
+
+When you reach Wellington at the trail's end, you carry out four
+Wellington subphases as part of Phase B: (1) Income — reveal sheep of
+different types and gain that amount from the bank, (2) Delivery — place
+a disc on a trading post matching your total breeding value, (3-4) Foresight
+— choose tiles from the foresight spaces. After Wellington, return your
+runholder to the trail's start.
 
 ### Key Design Patterns
 
@@ -138,17 +141,17 @@ periodic forced conversion events (you must deliver when you reach the
 port) create natural game rhythm and prevent indefinite engine-building
 without scoring.
 
-GOLD PANNING AS NEW SUBSYSTEM: New Zealand introduces gold panning as a
+GOLD AS NEW SUBSYSTEM: New Zealand introduces a gold track as a
 resource-conversion pathway absent from the original Great Western Trail.
-Prospector track advancement unlocks gold-panning actions that convert
-resources into gold, which provides both immediate VP and end-game scoring
-bonuses. Gold panning creates a third strategic axis alongside herding and
-shipping, giving players who choose to invest in the prospector track a
-distinct scoring pathway that does not depend on hand quality or shipping
-efficiency. The design pattern is that adding a subsystem to an established
-framework creates new strategic space without invalidating existing
-strategies — gold panning is viable alongside traditional herd-and-ship
-play, and the choice of emphasis is where player differentiation emerges.
+Gold track advancement unlocks the ability to collect and spend gold,
+which provides both immediate benefits (buying bonus cards) and end-game
+scoring bonuses. Gold creates an additional strategic axis alongside herding
+and shipping, giving players who choose to invest in the gold track a
+distinct resource pathway. The design pattern is that adding a subsystem
+to an established framework creates new strategic space without invalidating
+existing strategies — gold investment is viable alongside traditional
+herd-and-ship play, and the choice of emphasis is where player
+differentiation emerges.
 
 BUILDING PLACEMENT ALONG SHARED TRAIL: Players construct personal buildings
 on shared trail locations, and once a location is occupied by a building,
@@ -163,19 +166,17 @@ asymmetric benefit creates interaction without conflict — opponents' buildings
 are opportunities, not obstacles, but they are always better for their owner
 than for visitors.
 
-THREE SPECIALIST TRACKS: Shepherds, sailors, and prospectors represent three
-parallel advancement tracks that unlock escalating bonuses. Shepherd
-advancement improves your ability to acquire and manage sheep. Sailor
-advancement improves shipping rewards and port access. Prospector advancement
-unlocks gold panning and resource conversion. Each track has threshold
-bonuses at specific levels, and reaching the top of any track provides a
-powerful permanent ability. The three tracks create a specialization decision
-that shapes the entire game: a shepherd-heavy strategy maximizes herd quality,
-a sailor-heavy strategy maximizes delivery rewards, and a prospector-heavy
-strategy creates an alternative scoring pathway through gold. The design
-pattern is that parallel advancement tracks with distinct strategic
-implications create player differentiation within a shared mechanical
-framework.
+FOUR WORKER TYPES AND PARALLEL TRACKS: Shepherds, craftsmen, sailors, and
+shearers represent four worker types that can be hired from the job market.
+Shepherd hiring improves your ability to acquire sheep. Craftsman hiring
+enables building placement and upgrades. Sailor hiring improves ship
+movement on the sea routes board. Shearer hiring unlocks wool-shearing
+actions for income. Alongside the worker rows, the pathfinder track,
+certificate track, and gold track provide parallel advancement with
+threshold bonuses. The multiple worker types and tracks create a
+specialization decision that shapes the entire game. The design pattern
+is that parallel advancement tracks with distinct strategic implications
+create player differentiation within a shared mechanical framework.
 
 HAND QUALITY DETERMINING DELIVERY VALUE: The number of unique sheep breeds
 in your hand at the moment of delivery determines which port destinations
@@ -207,8 +208,8 @@ Great Western Trail: New Zealand demonstrates how a proven design framework
 can be meaningfully reimagined through thematic transplantation. The core
 loop — move along a trail, take actions at locations, deliver at the end —
 is identical to the original, but the shift from cattle-and-rail to
-sheep-and-shipping creates a distinct strategic texture. Gold panning adds
-a third scoring axis that the original lacked, and the shipping mechanism
+sheep-and-shipping creates a distinct strategic texture. The gold track adds
+a new resource axis that the original lacked, and the shipping mechanism
 creates different delivery incentives than the original's railroad-based
 system. The trail-as-rondel concept remains one of the most elegant spatial
 mechanisms in modern euro design: it transforms a simple linear path into a

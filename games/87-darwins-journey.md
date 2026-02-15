@@ -101,9 +101,14 @@ Darwin's Journey plays over five rounds, each divided into phases:
      display. Museum rows and columns score based on completion,
      rewarding set collection across the table.
 
-3. ROUND END — Score any triggered objectives. Advance the round marker.
-   Refresh action spaces. Return workers to player supply. Adjust
-   turn order based on the voyage track position.
+3. TURN ORDER PHASE — Adjust player order based on workers placed in
+   the Turn Order area during the Action Phase.
+
+4. REWARD PHASE — Receive benefits based on correspondence with the
+   scientific community and progress toward the current Beagle goal.
+
+5. CLEANUP PHASE — Prepare for the next round or proceed to final
+   scoring after all five rounds.
 
 ### Key Design Patterns
 
@@ -150,33 +155,33 @@ because exploration tokens are limited — the first player to reach an
 island claims its best rewards, incentivizing early investment in
 navigation.
 
-SPECIMEN COLLECTION AS DUAL-PURPOSE RESOURCES: Specimens occupy the
-game's most interesting design space. Each specimen token can be used
-in two mutually exclusive ways: sent to a European institution via
-correspondence (earning reputation points and end-game scoring
-multipliers) or contributed to the shared museum display (earning
-set-collection points based on row and column completion). This binary
-choice is the game's central tension at the resource level. Institutions
-demand specific specimens and reward focused specialization; the museum
-rewards breadth and timing (completing a row before opponents). A player
-collecting finch specimens must decide: send them to the ornithological
-society for guaranteed reputation, or place them in the museum hoping
-to complete a scoring row? The dual-purpose design means specimens are
-never dead resources — they always have at least two productive
-destinations.
+SPECIMEN COLLECTION AND MUSEUM DELIVERY: Specimens are gathered through
+exploration and research actions -- players place Research tokens onto
+matching Specimen icons on their personal boards. These specimens are
+then delivered to the shared Museum display, earning coins and Theory
+of Evolution track advancement based on the position of the Museum tile
+within its row and column. The Museum's grid structure rewards strategic
+placement: for each empty space in the row, you gain a coin, and for
+each already-placed tile, you advance on the Theory of Evolution track.
+Completing a museum row also triggers additional bonuses. Specimens
+thus drive both immediate resource gains and long-term scoring through
+the evolution track multiplier system, making the collection and
+delivery pipeline one of the game's most rewarding strategic throughlines.
 
-CORRESPONDENCE AS REPUTATION BUILDING: The institution correspondence
-system models scientific patronage as a game mechanic. Each institution
-card specifies which specimens it will accept and what it rewards —
-immediate reputation, end-game multipliers, or special abilities. Sending
-correspondence requires the correspondence seal on your worker and
-spending the required specimens. The system creates a long-term strategic
-arc: early-game institution selection determines which specimens you
-prioritize, which islands you explore, and which workers you train. A
-player pursuing the botanical society needs plant specimens from specific
-islands accessed via specific navigation routes. This cascading dependency
-chain — institution demands specimens, specimens demand exploration,
-exploration demands training — is the game's deepest strategic through-line.
+CORRESPONDENCE AS STAMP PLACEMENT: The correspondence system models
+scientific communication as an area-majority mechanic. Players move
+Stamps from their personal board stacks onto Envelope locations on the
+main board. During the Reward Phase, the players with the most and
+second-most Stamps on each Envelope earn that Envelope's bonus actions.
+Depleting a Stamp stack from your personal board also triggers the
+associated action printed beneath it. The system creates a long-term
+strategic arc: managing your limited Stamp supply across multiple
+Envelopes requires balancing immediate benefits (Stamp stack depletion
+bonuses) against Reward Phase majority contests. Correspondence requires
+specific Wax Seals on your worker, linking it to the training pipeline
+and creating a cascading dependency: correspondence demands trained
+workers, trained workers demand Academy investment, Academy investment
+demands early-game tempo sacrifice.
 
 MUSEUM CONTRIBUTIONS AS SHARED DISPLAY: The museum board is shared
 across all players, creating a rare semi-cooperative element in a

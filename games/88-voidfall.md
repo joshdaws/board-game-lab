@@ -71,41 +71,40 @@ the galaxy's specific configuration.
 Voidfall plays over three cycles, each consisting of multiple rounds driven
 by the focus card system:
 
-1. FOCUS CARD SELECTION — Each player has three focus cards: Agenda,
-   Development, and Combat. At the start of each round, each player
-   selects one focus card to activate. The selected card determines which
-   actions are available AND at what power level. Each focus card shows
-   primary actions (performed at full strength) and secondary actions
-   (available but weaker). The unselected cards rotate — their power
-   increases the longer they remain unchosen, creating a natural rhythm
-   of action cycling.
+1. FOCUS CARD SELECTION — Each player has a hand of nine standard Focus
+   cards (plus possible house-specific Focus cards). At the start of each
+   round, each player selects one Focus card to play. Each Focus card
+   shows three actions (top, middle, and bottom), and the player may
+   resolve up to two of the three actions in any order (or all three if
+   they have flipped a Trade token). Additionally, the player may play
+   an Agenda card (a separate system with four types: Support, Might,
+   Wealth, and Dominance) alongside their Focus. Played Focus cards go
+   to the player's personal discard pile; all discarded Focus cards are
+   returned to hand at the end of each Cycle's Evaluation Phase.
 
-2. ACTION EXECUTION — The active focus card grants access to a suite of
-   actions. Players execute their actions in turn order:
-   - AGENDA FOCUS — Prioritizes political influence, population
-     management, and sector administration. Place influence tokens in
-     sectors, manage population across your controlled territories,
-     establish trade routes, and manipulate turn order. Population is
-     the foundation of your economy: it generates resources, enables
-     fleet construction, and scores victory points.
-   - DEVELOPMENT FOCUS — Prioritizes technology research and
-     infrastructure construction. Research technologies from your
-     house-specific tech tree, build installations in controlled
-     sectors, upgrade existing structures, and develop production
-     chains. Technologies provide permanent modifications to your core
-     actions, making future rounds more efficient.
-   - COMBAT FOCUS — Prioritizes military operations against the
-     Voidborn and rival houses. Build fleets from your production
-     capacity, move fleets between sectors, engage Voidborn forces to
-     purge corruption, and contest rival-controlled sectors. Combat
-     resolution is deterministic: fleet strength, technology bonuses,
-     and installation defenses are compared without dice.
+2. ACTION EXECUTION — The selected Focus card's three actions cover a
+   range of operations. Players execute their chosen actions in turn
+   order. Focus card actions span categories such as production
+   (generating resources from population), development and prosperity
+   (researching technologies, building installations), reinforcement
+   (deploying fleets), mobilization (moving fleets between sectors),
+   and invasion (engaging Voidborn forces or rival houses). Each Focus
+   card has a specific combination of actions, so the card you select
+   determines which operations are available that round. Technologies
+   can add further actions triggered by specific Focus types. Combat
+   resolution is deterministic: fleet strength, technology bonuses,
+   and installation defenses are compared without dice. Agenda cards,
+   played alongside the Focus, provide additional bonuses tied to
+   their type (Support, Might, Wealth, or Dominance).
 
-3. GALACTIC EVENT — After all players have acted, a galactic event card
-   is revealed. Events affect all players and typically advance the
-   Voidborn threat — spawning new corruption, moving Voidborn fleets,
-   or triggering scoring conditions. Events are drawn from a shuffled
-   deck, providing the game's primary source of uncertainty.
+3. GALACTIC EVENT — During the Preparation Phase at the start of each
+   Cycle, a Galactic Event card is revealed and placed on the Galactic
+   board. The event's instructions affect all players for that entire
+   Cycle, typically advancing the Voidborn threat — spawning new
+   corruption, moving Voidborn fleets, or modifying scoring conditions.
+   In cooperative and solo modes, an Alert deck also introduces
+   per-round challenges (Situation and War cards) that create additional
+   Voidborn pressure.
 
 4. CYCLE SCORING — At the end of each cycle (after a set number of
    rounds), players score based on controlled sectors, population
@@ -134,22 +133,21 @@ The determinism also changes the social dynamic: you can see exactly
 what an opponent can accomplish on their turn, making threats credible
 and diplomacy meaningful.
 
-FOCUS CARD SYSTEM AS ACTION CYCLING: The three focus cards (Agenda,
-Development, Combat) create a forced rhythm that prevents any single
-strategy from dominating. Selecting Agenda means Development and Combat
-power up for future rounds; neglecting Combat for too long means your
-eventual military turn will be devastating but your borders may have
-been compromised in the interim. The cycling mechanic is self-balancing:
-it is mechanically impossible to pursue pure military aggression because
-your Combat focus must eventually yield to Agenda or Development, and
-vice versa. This design solves one of the oldest 4X problems — the
-player who rushes military early and snowballs into an unbeatable
-position. In Voidfall, the focus system ensures every player engages
-with all three pillars of civilization, creating a more balanced and
-strategically diverse game. The increasing power of unchosen cards also
-creates a satisfying tempo: the long-delayed Combat focus that finally
-unleashes a devastating fleet feels earned precisely because it was
-deferred.
+FOCUS CARD SYSTEM AS ACTION SELECTION: Each player's hand of nine
+standard Focus cards (plus house-specific cards) provides a wide
+action menu, but each card offers a specific combination of three
+actions. Since you can only resolve up to two actions per card, the
+Focus you select each round determines which pillars of civilization
+you engage with — production, development, military deployment, or
+fleet movement. The hand management creates strategic rhythm: playing
+a Focus discards it until the Evaluation Phase returns all cards at
+the end of the Cycle, so within a Cycle you must plan which Focuses
+to play in which order, knowing each can only be used once. This
+design solves one of the oldest 4X problems — the player who rushes
+military early and snowballs into an unbeatable position. In Voidfall,
+the Focus system ensures balanced engagement across economic,
+technological, and military dimensions because no single Focus card
+covers all needs.
 
 HOUSE ASYMMETRY THROUGH UNIQUE TECH TREES: Each noble house has a
 distinct technology tree that modifies which actions are efficient and
@@ -211,14 +209,14 @@ time: by cycle three, two players with different technology paths
 will be playing materially different games even with the same focus
 card selections.
 
-GALACTIC EVENTS AS SHARED CHALLENGES: The event deck introduces the
-game's only significant random element, and it functions as a pacing
-mechanism and shared adversity generator. Events are revealed after all
-players have acted, meaning they cannot be planned around with certainty
-but can be anticipated probabilistically (players know which events
-remain in the deck). Events typically advance the Voidborn threat,
-trigger scoring conditions, or modify the galactic environment for the
-following round. By making events affect all players equally, the
+GALACTIC EVENTS AS SHARED CHALLENGES: The Galactic Event deck introduces
+a significant variable element, functioning as a pacing mechanism and
+shared adversity generator. One event is revealed per Cycle during the
+Preparation Phase, and its effects persist for the entire Cycle. Players
+can anticipate probabilistically which events remain in the deck, but
+cannot plan around the specific event until it is revealed at the start
+of the Cycle. Events typically advance the Voidborn threat, trigger
+scoring conditions, or modify the galactic environment for that Cycle. By making events affect all players equally, the
 designers ensure that randomness does not advantage or disadvantage
 any single player — it shifts the entire game's strategic landscape
 simultaneously. Events also create shared narrative moments: a Voidborn
