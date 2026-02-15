@@ -1,4 +1,4 @@
-# Game Index — Top 175 BGG Games
+# Game Index — Top 200 BGG Games
 
 Quick-lookup table for finding comparable games by archetype, weight, and mechanics.
 Source: `games/NN-slug.md` (relative to project root)
@@ -193,18 +193,43 @@ Source: `games/NN-slug.md` (relative to project root)
 | 173 | Star Realms | 1.91 | CT | Deck Building, Hand Management, Open Drafting |
 | 174 | Alchemists | 3.92 | EB | Deduction, Worker Placement, Action Drafting |
 | 175 | Too Many Bones: Undertow | 4.04 | NC | Cooperative Game, Dice Building, Tech Trees, Variable Player Powers |
+| 176 | Ticket to Ride: Europe | 1.92 | ES | Connections, Contracts, Network and Route Building, Hand Management |
+| 177 | Dominion: Second Edition | 2.17 | CT | Deck Building, Hand Management, Open Drafting, Variable Set-up |
+| 178 | Res Arcana | 2.66 | CT | Hand Management, Income, Multi-Use Cards, Race |
+| 179 | Cartographers | 1.89 | SP | Grid Coverage, Pattern Building, Paper-and-Pencil, End Game Bonuses |
+| 180 | Undaunted: Normandy | 2.26 | AC | Deck Building, Dice Rolling, Hand Management, Scenario/Campaign |
+| 181 | War Chest | 2.32 | AC | Bag Building, Area Majority, Grid Movement, Hand Management |
+| 182 | It's a Wonderful World | 2.33 | EB | Closed Drafting, Income, Set Collection, Simultaneous Action |
+| 183 | LotR: Fellowship Trick-Taking | 1.95 | CC | Cooperative Game, Communication Limits, Trick-taking, Scenario/Campaign |
+| 184 | Watergate | 2.28 | AC | Card Driven, Hand Management, Connections, Take That |
+| 185 | LotR: The Card Game | 3.22 | CC | Cooperative Game, Deck Construction, Hand Management, Scenario/Campaign |
+| 186 | Stone Age | 2.46 | EB | Worker Placement, Dice Rolling, Set Collection, Contracts |
+| 187 | Praga Caput Regni | 3.73 | EB | Action Drafting, Tile Placement, Area Majority, Track Movement |
+| 188 | TM: Ares Expedition | 2.92 | CT | Hand Management, Multi-Use Cards, Income, Follow |
+| 189 | Istanbul | 2.58 | ES | Grid Movement, Market, Pick-up and Deliver, Worker Placement |
+| 190 | The Isle of Cats | 2.36 | SP | Tile Placement, Grid Coverage, Pattern Building, Set Collection |
+| 191 | Andromeda's Edge | 3.74 | AC | Worker Placement, Dice Rolling, Area Majority, Tech Trees |
+| 192 | Unmatched: Cobble & Fog | 1.97 | AC | Card Play Conflict Resolution, Hand Management, Variable Player Powers |
+| 193 | Legendary Encounters: Alien | 2.70 | CC | Cooperative Game, Deck Building, Events, Traitor Game |
+| 194 | Viscounts of the West Kingdom | 3.46 | EB | Deck Building, Rondel, Area Majority, Set Collection |
+| 195 | Xia: Legends of a Drift System | 3.20 | NC | Pick-up and Deliver, Map Addition, Dice Rolling, Variable Player Powers |
+| 196 | Kemet | 3.00 | AC | Action Points, Area Majority, Tech Trees, Card Play Conflict Resolution |
+| 197 | Glen More II: Chronicles | 3.01 | ES | Tile Placement, Market, Set Collection, Turn Order Time Track |
+| 198 | Sherlock Holmes Consulting Detective | 2.66 | CC | Cooperative Game, Deduction, Narrative Choice, Storytelling |
+| 199 | Star Wars: Outer Rim | 2.59 | NC | Pick-up and Deliver, Narrative Choice, Dice Rolling, Variable Player Powers |
+| 200 | Marco Polo II | 3.38 | EB | Worker Placement, Dice Workers, Contracts, Variable Player Powers |
 
 ## Archetype Counts
 
 | Archetype | Count | Weight Range |
 |-----------|------:|-------------|
-| Engine Builder (EB) | 56 | 1.95 – 4.40 |
-| Card Tableau (CT) | 30 | 1.36 – 3.89 |
-| Cooperative Crisis (CC) | 25 | 1.03 – 4.08 |
-| Asymmetric Conflict (AC) | 23 | 2.89 – 4.48 |
-| Narrative Campaign (NC) | 19 | 2.66 – 4.41 |
-| Economic Simulation (ES) | 13 | 3.09 – 4.67 |
-| Spatial Puzzle (SP) | 11 | 1.60 – 3.97 |
+| Engine Builder (EB) | 61 | 1.95 – 4.40 |
+| Card Tableau (CT) | 33 | 1.36 – 3.89 |
+| Cooperative Crisis (CC) | 29 | 1.03 – 4.08 |
+| Asymmetric Conflict (AC) | 29 | 1.97 – 4.48 |
+| Narrative Campaign (NC) | 21 | 2.59 – 4.41 |
+| Economic Simulation (ES) | 16 | 1.92 – 4.67 |
+| Spatial Puzzle (SP) | 13 | 1.60 – 3.97 |
 | Dexterity Challenge (DC) | 1 | 1.22 |
 
 ## Finding Comparables

@@ -1,57 +1,57 @@
 # Board Game Categories and Themes
 
-Categories sorted by frequency of appearance across the top 175 ranked board games (BGG, February 2026).
+Categories sorted by frequency of appearance across the top 200 ranked board games (BGG, February 2026).
 
 ## Dominant Themes (15+ games)
 
 | Count | Category |
 |------:|----------|
-| 61 | Economic |
-| 41 | Fantasy |
-| 38 | Science Fiction |
-| 34 | Card Game |
-| 30 | Adventure |
-| 30 | Fighting |
-| 25 | Exploration |
-| 20 | Animals |
+| 66 | Economic |
+| 48 | Fantasy |
+| 44 | Science Fiction |
+| 43 | Card Game |
+| 34 | Adventure |
+| 34 | Fighting |
+| 27 | Exploration |
+| 24 | Space Exploration |
+| 21 | Animals |
+| 21 | Medieval |
+| 20 | Civilization |
 | 20 | Industry / Manufacturing |
-| 20 | Space Exploration |
-| 19 | Civilization |
-| 17 | City Building |
-| 16 | Medieval |
-| 16 | Territory Building |
+| 19 | City Building |
+| 19 | Territory Building |
+| 16 | Novel-based |
 
 ## Strong Presence (8-14 games)
 
 | Count | Category |
 |------:|----------|
+| 14 | Wargame |
+| 13 | Horror |
 | 13 | Miniatures |
-| 12 | Novel-based |
-| 12 | Political |
-| 11 | Ancient |
-| 11 | Horror |
-| 11 | Wargame |
+| 13 | Political |
+| 12 | Ancient |
+| 11 | Dice |
+| 11 | Farming |
 | 10 | Environmental |
-| 10 | Farming |
-| 9 | Dice |
-| 8 | Puzzle |
+| 10 | Puzzle |
+| 8 | Deduction |
 
 ## Moderate Presence (4-7 games)
 
 | Count | Category |
 |------:|----------|
-| 7 | Deduction |
+| 7 | Mythology |
+| 7 | Nautical |
 | 6 | Medical |
-| 6 | Mythology |
-| 6 | Nautical |
+| 6 | Travel |
+| 5 | Abstract Strategy |
 | 5 | Educational |
 | 5 | Negotiation |
-| 5 | Travel |
-| 4 | Abstract Strategy |
+| 5 | Trains |
+| 5 | Transportation |
 | 4 | Party Game |
 | 4 | Spies / Secret Agents |
-| 4 | Trains |
-| 4 | Transportation |
 
 ## Minor Presence (2-3 games)
 
@@ -60,9 +60,13 @@ Categories sorted by frequency of appearance across the top 175 ranked board gam
 | 3 | American West |
 | 3 | Bluffing |
 | 3 | Licensed IP |
+| 3 | Movies / TV / Radio theme |
 | 3 | Renaissance |
 | 3 | Word Game |
 | 2 | Arabian |
+| 2 | Collectible Components |
+| 2 | Murder / Mystery |
+| 2 | Post-Napoleonic |
 | 2 | Racing |
 | 2 | Science |
 
@@ -74,36 +78,37 @@ Categories sorted by frequency of appearance across the top 175 ranked board gam
 | 1 | Aviation / Flight |
 | 1 | Civil War |
 | 1 | Cold War |
-| 1 | Collectible Components |
 | 1 | Comic Book / Strip |
 | 1 | Cyberpunk |
 | 1 | Japanese |
 | 1 | Legacy |
 | 1 | Modern Warfare |
 | 1 | Movies |
-| 1 | Movies / TV |
-| 1 | Murder / Mystery |
 | 1 | Mystery |
-| 1 | Post-Napoleonic |
+| 1 | Pirates |
+| 1 | Prehistoric |
 | 1 | Religious |
 | 1 | Sports |
 | 1 | Victorian |
 | 1 | Video Game Theme |
+| 1 | World War II |
 
 ---
 
-Total unique categories: 63
-Sample size: 175 games (BGG top-ranked, February 2026)
+Total unique categories: 66
+Sample size: 200 games (BGG top-ranked, February 2026)
 
 ## Notes
 
-- Economic grew from 56 to 61 appearances (34.9% of all 175 games), adding five entries in the 151-175 range (Vinhos: Deluxe Edition, Yokohama, Rajas of the Ganges, Roll for the Galaxy, PARKS). It remains the single most dominant category by a wide margin.
-- Fantasy surged from 35 to 41, adding six entries (Rising Sun, Tyrants of the Underdark, Champions of Midgard, Magic: The Gathering, Alchemists, Too Many Bones: Undertow). It solidified its position as the second most common category.
-- Science Fiction grew from 31 to 38 with seven new entries (ISS Vanguard, Forbidden Stars, Clank! In! Space!, The 7th Continent, Planet Unknown, Roll for the Galaxy, Star Realms), reflecting a heavy concentration of sci-fi themes in this range.
-- Fighting rose from 24 to 30, tying with Adventure after gaining six entries (Forbidden Stars, Tyrants of the Underdark, Champions of Midgard, Magic: The Gathering, Star Realms, Too Many Bones: Undertow). Combat-oriented designs remain heavily represented throughout the rankings.
-- Card Game grew from 28 to 34 with six new entries (Forest Shuffle, Codenames, The 7th Continent, Magic: The Gathering, Targi, Star Realms), reflecting the continued strength of card-driven designs.
-- Territory Building rose from 14 to 16 (Rajas of the Ganges, Planet Unknown), crossing from Strong Presence into Dominant Themes. Wargame rose from 9 to 11 (Rising Sun, Forbidden Stars), strengthening its position in Strong Presence.
-- Dice jumped from 5 to 9 (Champions of Midgard, Rajas of the Ganges, Roll for the Galaxy, Too Many Bones: Undertow), moving from Moderate Presence to Strong Presence. Puzzle similarly rose from 6 to 8 (Planet Unknown, Alchemists), also entering Strong Presence.
-- Deduction grew from 4 to 7 (Just One, Codenames, Alchemists), remaining in Moderate Presence but now its largest category. Party Game doubled from 2 to 4 (Just One, Codenames), moving from Minor Presence to Moderate Presence. Spies / Secret Agents similarly rose from 3 to 4 (Codenames), and Trains doubled from 2 to 4 (Russian Railroads, Pandemic: Iberia), both entering Moderate Presence.
-- Bluffing tripled from 1 to 3 (Rising Sun, Forbidden Stars) and Word Game similarly from 1 to 3 (Just One, Codenames), both moving from Singular Appearances to Minor Presence. Arabian doubled from 1 to 2 (Targi), also leaving the singular tier.
-- Two new categories appeared in the 151-175 expansion: Post-Napoleonic (Pandemic: Iberia) and Collectible Components (Magic: The Gathering). The total unique category count rose from 61 to 63. The long tail contracted slightly: 19 categories appear only once, roughly 30% of all unique categories, continuing the downward trend from 36% at 125 games and 33% at 150 games.
+- Economic grew from 61 to 66 appearances (33.0% of all 200 games), adding five entries in the 176-200 range (It's a Wonderful World, Stone Age, Istanbul, Glen More II: Chronicles, Marco Polo II). It remains the single most dominant category by a wide margin and now appears in one-third of all games in the dataset.
+- Fantasy surged from 41 to 48 with seven new entries (Res Arcana, Cartographers, LotR: Fellowship Trick-Taking, LotR: The Card Game, The Isle of Cats, Unmatched: Cobble & Fog, Kemet), widening its lead as the second most common category. Fantasy now appears in nearly one-quarter of all 200 games.
+- Science Fiction grew from 38 to 44 with six new entries (It's a Wonderful World, Terraforming Mars: Ares Expedition, Andromeda's Edge, Legendary Encounters: Alien, Xia, Star Wars: Outer Rim), maintaining its position as the third most common category.
+- Card Game jumped from 34 to 43 with nine new entries, the largest single-category increase in this expansion (Dominion: Second Edition, Res Arcana, It's a Wonderful World, LotR: Fellowship Trick-Taking, Watergate, LotR: The Card Game, Terraforming Mars: Ares Expedition, Unmatched: Cobble & Fog, Legendary Encounters: Alien). This 26% increase reflects a heavy concentration of card-driven designs in the 176-200 range.
+- Adventure and Fighting both grew from 30 to 34, remaining tied. Adventure added four entries (LotR: Fellowship Trick-Taking, LotR: The Card Game, Xia, Star Wars: Outer Rim); Fighting also added four (Andromeda's Edge, Unmatched: Cobble & Fog, Legendary Encounters: Alien, Xia).
+- Medieval rose from 16 to 21 with five new entries (Dominion: Second Edition, War Chest, Praga Caput Regni, Viscounts of the West Kingdom, Marco Polo II), climbing from a borderline Dominant Theme to firmly within the tier and tying with Animals.
+- Novel-based rose from 12 to 16 (LotR: Fellowship Trick-Taking, LotR: The Card Game, Unmatched: Cobble & Fog, Sherlock Holmes Consulting Detective), crossing from Strong Presence into Dominant Themes. The Tolkien license alone contributed two of these four entries.
+- Space Exploration rose from 20 to 24 (Terraforming Mars: Ares Expedition, Andromeda's Edge, Xia, Star Wars: Outer Rim), remaining solidly in Dominant Themes. Territory Building rose from 16 to 19 (Cartographers, Andromeda's Edge, Glen More II: Chronicles), also staying in Dominant Themes.
+- Wargame grew from 11 to 14 (Undaunted: Normandy, War Chest, Kemet), strengthening its Strong Presence position. Horror grew from 11 to 13 (Unmatched: Cobble & Fog, Legendary Encounters: Alien). Political rose from 12 to 13 (Watergate). Dice grew from 9 to 11 (Stone Age, Marco Polo II). Farming grew from 10 to 11 (Glen More II: Chronicles).
+- Deduction rose from 7 to 8 (Sherlock Holmes Consulting Detective), crossing from Moderate Presence into Strong Presence.
+- Movies / TV / Radio theme grew from 1 to 3 (Legendary Encounters: Alien, Star Wars: Outer Rim), moving from Singular Appearances to Minor Presence. Collectible Components doubled from 1 to 2 (LotR: The Card Game), Murder / Mystery doubled from 1 to 2 (Sherlock Holmes Consulting Detective), and Post-Napoleonic doubled from 1 to 2 (Sherlock Holmes Consulting Detective), all moving from Singular to Minor Presence.
+- Three new categories appeared in the 176-200 expansion: World War II (Undaunted: Normandy), Pirates (The Isle of Cats), and Prehistoric (Stone Age). The total unique category count rose from 63 to 66. The singular tier now contains 18 categories, roughly 27% of all unique categories, continuing the downward trend from 36% at 125 games, 33% at 150 games, and 30% at 175 games.

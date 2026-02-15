@@ -4,7 +4,7 @@ Download sources for all rulebook PDFs. Games #1-25 were sourced in earlier sess
 
 ## Status
 
-- **Valid PDFs:** 163 of 175
+- **Valid PDFs:** 188 of 200
 - **Invalid PDFs:** #16 Through the Ages (172K, not a valid PDF), #17 SETI (200K, not a valid PDF) — pre-existing issues
 - **Missing:** #92 Kingdom Death: Monster — publisher does not offer a free rulebook PDF
 - **Manual download:** #103 SCOUT, #111 Through the Ages 1st ed., #125 Wyrmspan (Dropbox), #140 LOTR: Fate of Fellowship (too new), #142 Galactic Cruise (too new), #145 Nucleum (Dropbox), #148 Trajan (BGG login), #168 Planet Unknown (BGG login), #175 Too Many Bones: Undertow (Dropbox)
@@ -192,6 +192,36 @@ Sources not recorded. Downloaded in earlier sessions.
 | 173 | Star Realms | https://cdn.1j1ju.com/medias/27/e1/a6-star-realms-rulebook.pdf | 1j1ju mirror |
 | 174 | Alchemists | https://cdn.1j1ju.com/medias/ef/97/2b-alchemists-rulebook.pdf | 1j1ju mirror |
 | 175 | Too Many Bones: Undertow | Chip Theory Games via Dropbox | **Manual download** — https://www.chiptheorygames.com/support/ |
+
+## Games #176-200
+
+| # | Game | Source URL | Notes |
+|---|------|-----------|-------|
+| 176 | Ticket to Ride: Europe | https://ncdn0.daysofwonder.com/tickettoride/en/img/t2re15-rules-EN.pdf | Days of Wonder official |
+| 177 | Dominion: Second Edition | https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion2nd.pdf | Rio Grande Games official |
+| 178 | Res Arcana | https://cdn.1j1ju.com/medias/40/6f/1b-res-arcana-rulebook.pdf | 1j1ju mirror |
+| 179 | Cartographers | https://cdn.1j1ju.com/medias/a9/ad/01-cartographers-a-roll-player-tale-rulebook.pdf | 1j1ju mirror |
+| 180 | Undaunted: Normandy | https://cdn.1j1ju.com/medias/c4/59/26-undaunted-normandy-rulebook.pdf | 1j1ju mirror |
+| 181 | War Chest | https://cdn.1j1ju.com/medias/61/36/79-war-chest-rulebook.pdf | 1j1ju mirror |
+| 182 | It's a Wonderful World | https://cdn.1j1ju.com/medias/d9/aa/7e-its-a-wonderful-world-rulebook.pdf | 1j1ju mirror |
+| 183 | LotR: Fellowship Trick-Taking | https://cdn.svc.asmodee.net/production-officedog/uploads/2024/11/ODLO01_Rulebook.pdf | Asmodee CDN |
+| 184 | Watergate | https://cdn.1j1ju.com/medias/63/c7/7c-watergate-rulebook.pdf | 1j1ju mirror |
+| 185 | LotR: The Card Game | https://cdn.1j1ju.com/medias/80/e5/35-the-lord-of-the-rings-the-card-game-rulebook.pdf | 1j1ju mirror |
+| 186 | Stone Age | https://cdn.1j1ju.com/medias/e3/1b/ad-stone-age-rulebook.pdf | 1j1ju mirror |
+| 187 | Praga Caput Regni | https://deliciousgames.org/image/catalog/rules/PRAGA-rules-v13-EU-web.pdf | Delicious Games official |
+| 188 | TM: Ares Expedition | https://cdn.1j1ju.com/medias/eb/1e/0e-terraforming-mars-ares-expedition-rulebook.pdf | 1j1ju mirror |
+| 189 | Istanbul | https://cdn.1j1ju.com/medias/74/c0/33-istanbul-rulebook.pdf | 1j1ju mirror |
+| 190 | The Isle of Cats | https://cdn.1j1ju.com/medias/b0/ce/2c-the-isle-of-cats-rulebook.pdf | 1j1ju mirror |
+| 191 | Andromeda's Edge | https://cardboardalchemy.com/downloads/AndromedasEdge_Rulebook_sm.pdf | Cardboard Alchemy official |
+| 192 | Unmatched: Cobble & Fog | https://cdn.1j1ju.com/medias/db/c3/08-unmatched-cobble-fog-rulebook.pdf | 1j1ju mirror |
+| 193 | Legendary Encounters: Alien | https://theupperdeckco.wpenginepowered.com/wp-content/uploads/2024/05/Legendary_Encounters_Rules-Alien.pdf | Upper Deck official |
+| 194 | Viscounts of the West Kingdom | https://cdn.1j1ju.com/medias/48/31/fb-viscounts-of-the-west-kingdom-rulebook.pdf | 1j1ju mirror |
+| 195 | Xia: Legends of a Drift System | https://fgbradleys.com/wp-content/uploads/rules/Xia%20legends%20of%20a%20drift%20system%20-%20rules.pdf | fgbradleys.com |
+| 196 | Kemet | https://cdn.1j1ju.com/medias/07/25/66-kemet-rulebook.pdf | 1j1ju mirror |
+| 197 | Glen More II: Chronicles | https://cdn.1j1ju.com/medias/17/d7/70-glen-more-ii-chronicles-rulebook.pdf | 1j1ju mirror |
+| 198 | Sherlock Holmes Consulting Detective | https://cdn.1j1ju.com/medias/12/12/31-sherlock-holmes-consulting-detective-the-thames-murders-other-cases-rulebook.pdf | 1j1ju mirror |
+| 199 | Star Wars: Outer Rim | https://cdn.1j1ju.com/medias/de/3e/2b-star-wars-outer-rim-learn-to-play.pdf | 1j1ju mirror (Learn to Play) |
+| 200 | Marco Polo II | https://images.zmangames.com/filer_public/7d/74/7d748a3a-2a8e-4621-8b79-86c2083e84d6/zh006_rules_web.pdf | Z-Man Games official |
 
 ## Known Issues
 

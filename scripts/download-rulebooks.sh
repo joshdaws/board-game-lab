@@ -15,13 +15,13 @@ RULEBOOKS_DIR="$REPO_DIR/rulebooks"
 
 FORCE=false
 RANGE_START=1
-RANGE_END=175
+RANGE_END=200
 
 for arg in "$@"; do
   case "$arg" in
     --force) FORCE=true ;;
     *[0-9]*)
-      if [[ "$RANGE_START" -eq 1 && "$RANGE_END" -eq 175 ]]; then
+      if [[ "$RANGE_START" -eq 1 && "$RANGE_END" -eq 200 ]]; then
         RANGE_START="$arg"
         RANGE_END="$arg"
       else
@@ -627,6 +627,83 @@ in_range 174 && download 174 "alchemists" \
 
 in_range 175 && note_manual 175 "too-many-bones-undertow" \
   "Chip Theory Games via Dropbox — https://www.chiptheorygames.com/support/"
+
+# --- Games #176-200 ---
+
+in_range 176 && download 176 "ticket-to-ride-europe" \
+  "https://ncdn0.daysofwonder.com/tickettoride/en/img/t2re15-rules-EN.pdf"
+
+in_range 177 && download 177 "dominion-second-edition" \
+  "https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion2nd.pdf"
+
+in_range 178 && download 178 "res-arcana" \
+  "https://cdn.1j1ju.com/medias/40/6f/1b-res-arcana-rulebook.pdf"
+
+in_range 179 && download 179 "cartographers" \
+  "https://cdn.1j1ju.com/medias/a9/ad/01-cartographers-a-roll-player-tale-rulebook.pdf"
+
+in_range 180 && download 180 "undaunted-normandy" \
+  "https://cdn.1j1ju.com/medias/c4/59/26-undaunted-normandy-rulebook.pdf"
+
+in_range 181 && download 181 "war-chest" \
+  "https://cdn.1j1ju.com/medias/61/36/79-war-chest-rulebook.pdf"
+
+in_range 182 && download 182 "its-a-wonderful-world" \
+  "https://cdn.1j1ju.com/medias/d9/aa/7e-its-a-wonderful-world-rulebook.pdf"
+
+in_range 183 && download 183 "lotr-fellowship-trick-taking" \
+  "https://cdn.svc.asmodee.net/production-officedog/uploads/2024/11/ODLO01_Rulebook.pdf"
+
+in_range 184 && download 184 "watergate" \
+  "https://cdn.1j1ju.com/medias/63/c7/7c-watergate-rulebook.pdf"
+
+in_range 185 && download 185 "lotr-the-card-game" \
+  "https://cdn.1j1ju.com/medias/80/e5/35-the-lord-of-the-rings-the-card-game-rulebook.pdf"
+
+in_range 186 && download 186 "stone-age" \
+  "https://cdn.1j1ju.com/medias/e3/1b/ad-stone-age-rulebook.pdf"
+
+in_range 187 && download 187 "praga-caput-regni" \
+  "https://deliciousgames.org/image/catalog/rules/PRAGA-rules-v13-EU-web.pdf"
+
+in_range 188 && download 188 "terraforming-mars-ares-expedition" \
+  "https://cdn.1j1ju.com/medias/eb/1e/0e-terraforming-mars-ares-expedition-rulebook.pdf"
+
+in_range 189 && download 189 "istanbul" \
+  "https://cdn.1j1ju.com/medias/74/c0/33-istanbul-rulebook.pdf"
+
+in_range 190 && download 190 "the-isle-of-cats" \
+  "https://cdn.1j1ju.com/medias/b0/ce/2c-the-isle-of-cats-rulebook.pdf"
+
+in_range 191 && download 191 "andromedas-edge" \
+  "https://cardboardalchemy.com/downloads/AndromedasEdge_Rulebook_sm.pdf"
+
+in_range 192 && download 192 "unmatched-cobble-fog" \
+  "https://cdn.1j1ju.com/medias/db/c3/08-unmatched-cobble-fog-rulebook.pdf"
+
+in_range 193 && download 193 "legendary-encounters-alien" \
+  "https://theupperdeckco.wpenginepowered.com/wp-content/uploads/2024/05/Legendary_Encounters_Rules-Alien.pdf"
+
+in_range 194 && download 194 "viscounts-of-the-west-kingdom" \
+  "https://cdn.1j1ju.com/medias/48/31/fb-viscounts-of-the-west-kingdom-rulebook.pdf"
+
+in_range 195 && download 195 "xia-legends-of-a-drift-system" \
+  "https://fgbradleys.com/wp-content/uploads/rules/Xia%20legends%20of%20a%20drift%20system%20-%20rules.pdf"
+
+in_range 196 && download 196 "kemet" \
+  "https://cdn.1j1ju.com/medias/07/25/66-kemet-rulebook.pdf"
+
+in_range 197 && download 197 "glen-more-ii-chronicles" \
+  "https://cdn.1j1ju.com/medias/17/d7/70-glen-more-ii-chronicles-rulebook.pdf"
+
+in_range 198 && download 198 "sherlock-holmes-consulting-detective" \
+  "https://cdn.1j1ju.com/medias/12/12/31-sherlock-holmes-consulting-detective-the-thames-murders-other-cases-rulebook.pdf"
+
+in_range 199 && download 199 "star-wars-outer-rim" \
+  "https://cdn.1j1ju.com/medias/de/3e/2b-star-wars-outer-rim-learn-to-play.pdf"
+
+in_range 200 && download 200 "marco-polo-ii" \
+  "https://images.zmangames.com/filer_public/7d/74/7d748a3a-2a8e-4621-8b79-86c2083e84d6/zh006_rules_web.pdf"
 
 echo ""
 echo "========================================="

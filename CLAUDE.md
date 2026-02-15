@@ -4,18 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Board Game Lab is a knowledge base for AI-assisted board game design. It studies the top 175 ranked games on BoardGameGeek to extract design patterns, mechanic taxonomies, and reusable insights. There is no application code, build system, or tests — this is a structured Markdown + PDF research repository.
+Board Game Lab is a knowledge base for AI-assisted board game design. It studies the top 200 ranked games on BoardGameGeek to extract design patterns, mechanic taxonomies, and reusable insights. There is no application code, build system, or tests — this is a structured Markdown + PDF research repository.
 
 ## Repository Structure
 
-- `games/` — One Markdown file per game, numbered by BGG rank (01-175). `index.md` tracks the research status of each game.
-- `rulebooks/` — Source PDF rulebooks (gitignored, not committed). Games #1-25 have direct-download PDFs; most games #26-175 were enriched from designer knowledge without rulebook PDFs.
-- `mechanics/` — `index.md` has mechanic frequency counts across all 175 games; `categories.md` has theme/category frequency.
-- `knowledge/` — `design-patterns.md` synthesizes cross-cutting insights from the full 175-game dataset, including weight distribution, 15 core design insights, 8 design archetypes, and mechanic combination analysis.
+- `games/` — One Markdown file per game, numbered by BGG rank (01-200). `index.md` tracks the research status of each game.
+- `rulebooks/` — Source PDF rulebooks (gitignored, not committed). Games #1-25 have direct-download PDFs; most games #26-200 were enriched from designer knowledge without rulebook PDFs.
+- `mechanics/` — `index.md` has mechanic frequency counts across all 200 games; `categories.md` has theme/category frequency.
+- `knowledge/` — `design-patterns.md` synthesizes cross-cutting insights from the full 200-game dataset, including weight distribution, 15 core design insights, 8 design archetypes, and mechanic combination analysis.
 
 ## Game File Format
 
-All 175 game files are enriched. Each file contains:
+All 200 game files are enriched. Each file contains:
 
 - **Quick Stats** — Players, Time, Weight
 - **Mechanics** — Bulleted list of BGG mechanics
@@ -48,7 +48,7 @@ A Claude Code skill lives at `.claude/skills/board-game-design/`. It provides th
 - **`/design-critique <concept>`** — Analyzes a game concept against the knowledge base for strengths, gaps, and actionable recommendations
 - **`/design-mechanics [mechanic]`** — Deep-dives a mechanic: frequency tier, proven combinations, exemplar games, and application guidance
 
-The skill's `references/` directory contains a game index (all 175 games with archetype classifications), plus copies of the design patterns, mechanics taxonomy, and categories taxonomy. The `assets/` directory has a game design document template.
+The skill's `references/` directory contains a game index (all 200 games with archetype classifications), plus copies of the design patterns, mechanics taxonomy, and categories taxonomy. The `assets/` directory has a game design document template.
 
 ## Conventions
 

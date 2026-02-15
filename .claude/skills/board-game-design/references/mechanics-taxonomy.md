@@ -1,116 +1,124 @@
 # Board Game Mechanics Taxonomy
 
-Mechanics sorted by frequency of appearance across the top 175 ranked board games (BGG, February 2026).
+Mechanics sorted by frequency of appearance across the top 200 ranked board games (BGG, February 2026).
 
-## Tier 1: Near-Universal (20+ games)
-
-| Count | Mechanic |
-|------:|----------|
-| 84 | Hand Management |
-| 72 | Variable Player Powers |
-| 46 | Worker Placement |
-| 45 | Set Collection |
-| 43 | Dice Rolling |
-| 39 | Cooperative Game |
-| 37 | End Game Bonuses |
-| 36 | Area Majority / Influence |
-| 36 | Solo / Solitaire Game |
-| 32 | Modular Board |
-| 31 | Open Drafting |
-| 30 | Income |
-| 28 | Deck, Bag, and Pool Building |
-| 24 | Action Points |
-| 22 | Variable Set-up |
-| 20 | Tech Trees / Tech Tracks |
-
-## Tier 2: Core Staples (10-19 games)
+## Tier 1: Near-Universal (16+ games)
 
 | Count | Mechanic |
 |------:|----------|
-| 19 | Tile Placement |
-| 18 | Contracts |
-| 17 | Grid Movement |
-| 16 | Network and Route Building |
+| 97 | Hand Management |
+| 79 | Variable Player Powers |
+| 50 | Dice Rolling |
+| 50 | Set Collection |
+| 50 | Worker Placement |
+| 45 | End Game Bonuses |
+| 43 | Cooperative Game |
+| 41 | Area Majority / Influence |
+| 41 | Solo / Solitaire Game |
+| 38 | Open Drafting |
+| 37 | Modular Board |
+| 35 | Income |
+| 33 | Deck, Bag, and Pool Building |
+| 27 | Action Points |
+| 26 | Variable Set-up |
+| 23 | Tile Placement |
+| 22 | Contracts |
+| 22 | Tech Trees / Tech Tracks |
+| 21 | Grid Movement |
+| 18 | Network and Route Building |
+| 17 | Events |
+| 17 | Hexagon Grid |
+| 17 | Point to Point Movement |
+
+## Tier 2: Core Staples (10-15 games)
+
+| Count | Mechanic |
+|------:|----------|
+| 15 | Simultaneous Action Selection |
+| 14 | Area Movement |
 | 14 | Card Drafting |
-| 14 | Events |
-| 14 | Hexagon Grid |
-| 14 | Point to Point Movement |
-| 14 | Simultaneous Action Selection |
-| 13 | Area Movement |
-| 12 | Communication Limits |
-| 11 | Market |
-| 11 | Scenario / Mission / Campaign Game |
-| 10 | Campaign |
-| 10 | Card Play Conflict Resolution |
-| 10 | Delayed Purchase |
-| 10 | Multi-Use Cards |
-| 10 | Take That |
-| 10 | Variable Phase Order |
+| 14 | Market |
+| 14 | Scenario / Mission / Campaign Game |
+| 13 | Communication Limits |
+| 13 | Delayed Purchase |
+| 13 | Take That |
+| 12 | Card Play Conflict Resolution |
+| 12 | Multi-Use Cards |
+| 11 | Team-Based Game |
 | 10 | Action Retrieval |
+| 10 | Campaign |
+| 10 | Campaign / Battle Card Driven |
+| 10 | Connections |
+| 10 | Race |
+| 10 | Variable Phase Order |
 
 ## Tier 3: Common (7-9 games)
 
 | Count | Mechanic |
 |------:|----------|
 | 9 | Action Queue |
-| 9 | Campaign / Battle Card Driven |
-| 9 | Team-Based Game |
+| 9 | Once-Per-Game Abilities |
+| 8 | Action Drafting |
 | 8 | Auction / Bidding |
-| 8 | Connections |
+| 8 | Deck Construction |
 | 8 | Legacy Game |
-| 8 | Once-Per-Game Abilities |
 | 8 | Ownership |
 | 8 | Push Your Luck |
-| 7 | Action Drafting |
-| 7 | Deck Construction |
+| 7 | Grid Coverage |
+| 7 | Map Addition |
+| 7 | Narrative Choice / Paragraph |
+| 7 | Pattern Building |
+| 7 | Player Elimination |
+| 7 | Track Movement |
+| 7 | Turn Order: Progressive |
+| 7 | Worker Placement with Dice Workers |
 
 ## Tier 4: Recurring (5-6 games)
 
 | Count | Mechanic |
 |------:|----------|
-| 6 | Map Addition |
+| 6 | Deduction |
+| 6 | Hidden Roles |
 | 6 | Network Building |
-| 6 | Race |
-| 6 | Track Movement |
-| 6 | Turn Order: Progressive |
-| 6 | Worker Placement with Dice Workers |
+| 6 | Rondel |
+| 6 | Turn Order: Stat-Based |
 | 5 | Card Play |
 | 5 | Deck Building |
-| 5 | Deduction |
+| 5 | Die Icon Resolution |
+| 5 | Follow |
 | 5 | Force Commitment |
-| 5 | Grid Coverage |
-| 5 | Hidden Roles |
 | 5 | Increase Value of Unchosen Resources |
 | 5 | Loans |
-| 5 | Narrative Choice / Paragraph |
-| 5 | Pattern Building |
+| 5 | Pick-up and Deliver |
 | 5 | Resource Management |
 | 5 | Role Playing |
-| 5 | Rondel |
+| 5 | Storytelling |
 | 5 | Tags |
+| 5 | Trading |
 | 5 | Voting |
 
 ## Tier 5: Moderate (3-4 games)
 
 | Count | Mechanic |
 |------:|----------|
+| 4 | Action / Event |
 | 4 | Area-Impulse |
-| 4 | Die Icon Resolution |
+| 4 | Closed Drafting |
 | 4 | Engine Building |
-| 4 | Follow |
-| 4 | Player Elimination |
-| 4 | Storytelling |
-| 4 | Trading |
-| 4 | Turn Order: Stat-Based |
+| 4 | Resource to Move |
+| 4 | Traitor Game |
 | 4 | Worker Placement with Different Worker Types |
-| 3 | Action / Event |
 | 3 | Action Selection |
 | 3 | Advantage Token |
+| 3 | Enclosure |
 | 3 | Interrupts |
 | 3 | Layering |
+| 3 | Mancala |
+| 3 | Movement Points |
 | 3 | Route Building |
 | 3 | Simulation |
-| 3 | Traitor Game |
+| 3 | Square Grid |
+| 3 | Trick-Taking |
 | 3 | Victory Points as a Resource |
 
 ## Tier 6: Paired (2 games)
@@ -121,19 +129,16 @@ Mechanics sorted by frequency of appearance across the top 175 ranked board game
 | 2 | Betting and Bluffing |
 | 2 | Bluffing |
 | 2 | Chaining |
-| 2 | Closed Drafting |
 | 2 | Dice Drafting |
+| 2 | Different Worker Types |
 | 2 | Hidden Movement |
-| 2 | Mancala |
-| 2 | Movement Points |
+| 2 | Line of Sight |
+| 2 | Paper-and-Pencil |
 | 2 | Passed Action Token |
-| 2 | Pick-up and Deliver |
-| 2 | Resource to Move |
+| 2 | Score-and-Reset Game |
 | 2 | Semi-Cooperative Game |
-| 2 | Square Grid |
 | 2 | Sudden Death Ending |
 | 2 | Tableau Building |
-| 2 | Trick-Taking |
 | 2 | Turn Order: Auction |
 | 2 | Turn Order: Pass Order |
 
@@ -149,40 +154,42 @@ Mechanics sorted by frequency of appearance across the top 175 ranked board game
 | 1 | Automatic Resource Growth |
 | 1 | Bag Building |
 | 1 | Betrayal |
+| 1 | Bingo |
 | 1 | Building |
 | 1 | Catch the Leader |
+| 1 | Commodity Speculation |
 | 1 | Constrained Bidding |
 | 1 | Crafting |
 | 1 | Critical Hits and Failures |
 | 1 | Dice Workers |
-| 1 | Different Worker Types |
 | 1 | Drafting |
-| 1 | Enclosure |
 | 1 | Exploration |
 | 1 | Flicking |
 | 1 | Gear Mechanism |
 | 1 | Hidden Information |
+| 1 | Hidden Victory Points |
 | 1 | Influence |
-| 1 | Line of Sight |
+| 1 | King of the Hill |
 | 1 | Melding and Splaying |
 | 1 | Memory |
 | 1 | Modular Setup |
 | 1 | Negotiation |
 | 1 | One vs. Many |
-| 1 | Paper-and-Pencil |
 | 1 | Programmed Movement |
 | 1 | Programming |
 | 1 | Ratio / Combat Results Table |
 | 1 | Relative Movement |
-| 1 | Score-and-Reset Game |
+| 1 | Roll / Spin and Move |
+| 1 | Three Dimensional Movement |
 | 1 | Tile Drafting |
 | 1 | Time Track |
 | 1 | Time Travel |
 | 1 | Tug of War |
 | 1 | Turn Order: Claim Action |
+| 1 | Turn Order: Time Track |
 | 1 | Worker Displacement |
 
 ---
 
-Total unique mechanics: 145
-Sample size: 175 games (BGG top-ranked, February 2026)
+Total unique mechanics: 152
+Sample size: 200 games (BGG top-ranked, February 2026)

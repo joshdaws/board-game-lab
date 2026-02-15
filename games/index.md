@@ -1,4 +1,4 @@
-# Top 175 BGG Games - Research Index
+# Top 200 BGG Games - Research Index
 
 Games sourced from BoardGameGeek rankings (Feb 2026).
 
@@ -179,3 +179,28 @@ Games sourced from BoardGameGeek rankings (Feb 2026).
 | 173 | Star Realms | 2014 | Enriched |
 | 174 | Alchemists | 2014 | Enriched |
 | 175 | Too Many Bones: Undertow | 2018 | Enriched |
+| 176 | Ticket to Ride: Europe | 2005 | Enriched |
+| 177 | Dominion: Second Edition | 2016 | Enriched |
+| 178 | Res Arcana | 2019 | Enriched |
+| 179 | Cartographers | 2019 | Enriched |
+| 180 | Undaunted: Normandy | 2019 | Enriched |
+| 181 | War Chest | 2018 | Enriched |
+| 182 | It's a Wonderful World | 2019 | Enriched |
+| 183 | LotR: Fellowship Trick-Taking | 2025 | Enriched |
+| 184 | Watergate | 2019 | Enriched |
+| 185 | LotR: The Card Game | 2011 | Enriched |
+| 186 | Stone Age | 2008 | Enriched |
+| 187 | Praga Caput Regni | 2020 | Enriched |
+| 188 | Terraforming Mars: Ares Expedition | 2021 | Enriched |
+| 189 | Istanbul | 2014 | Enriched |
+| 190 | The Isle of Cats | 2019 | Enriched |
+| 191 | Andromeda's Edge | 2024 | Enriched |
+| 192 | Unmatched: Cobble & Fog | 2020 | Enriched |
+| 193 | Legendary Encounters: Alien | 2014 | Enriched |
+| 194 | Viscounts of the West Kingdom | 2020 | Enriched |
+| 195 | Xia: Legends of a Drift System | 2014 | Enriched |
+| 196 | Kemet | 2012 | Enriched |
+| 197 | Glen More II: Chronicles | 2019 | Enriched |
+| 198 | Sherlock Holmes Consulting Detective | 1981 | Enriched |
+| 199 | Star Wars: Outer Rim | 2019 | Enriched |
+| 200 | Marco Polo II | 2019 | Enriched |
