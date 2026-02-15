@@ -10,8 +10,8 @@
 
 - Cooperative Play
 - Campaign
-- Dice Rolling
 - Hand Management
+- Dice Rolling (optional alternative combat mode)
 - Storytelling
 
 ## Categories

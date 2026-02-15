@@ -73,14 +73,15 @@ with espionage mechanics replacing the disease-curing systems:
 
 2. DRAW PLAYER CARDS - After taking actions, draw two cards from the player deck.
    Cards represent cities and are used for movement, set collection objectives, and
-   special abilities. Epidemic cards shuffled into the deck trigger escalation events
+   special abilities. Escalation cards shuffled into the deck trigger escalation events
    that intensify the threat.
 
-3. ESCALATION PHASE - Draw cards from the threat deck to place hostile agents in
-   cities. If a city accumulates too many agents, incidents occur (the equivalent of
-   outbreaks), spreading threat to adjacent cities. The escalation system maintains
-   Pandemic's characteristic pressure curve: early rounds feel manageable; late rounds
-   feel desperate.
+3. THREAT PHASE - Draw cards from the threat deck to place Soviet agents in cities.
+   If a fourth agent would be placed in a city, an incident occurs: an incident token
+   is placed and a card is drawn from the bottom of the threat deck to resolve an
+   incident effect. Unlike standard Pandemic, agents do not spread to adjacent cities
+   during incidents. The escalation system maintains Pandemic's characteristic pressure
+   curve: early rounds feel manageable; late rounds feel desperate.
 
 4. TEAM COORDINATION - As a cooperative game, players share information and coordinate
    actions between turns. The spy theme modifies this coordination: identity-based
@@ -150,9 +151,9 @@ solves an exposition problem: rather than front-loading backstory, the game lets
 players discover the origins of the Pandemic timeline through lived experience.
 
 ESCALATION INHERITANCE FROM PANDEMIC: Season 0 inherits Pandemic's escalation
-system, the epidemic-driven reshuffling of the threat deck that ensures previously
-threatened cities face recurring danger, but applies it to espionage rather than
-disease. This mechanical inheritance is significant because the escalation system
+system, the escalation-card-driven reshuffling of the threat deck that ensures
+previously threatened cities face recurring danger, but applies it to espionage
+rather than disease. This mechanical inheritance is significant because the escalation system
 is the primary tension generator in all Pandemic variants. By preserving it intact,
 Season 0 maintains the characteristic pressure curve that makes Pandemic games
 compelling: the first half of each game feels exploratory, the second half feels

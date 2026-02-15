@@ -71,25 +71,32 @@ The game spans 4-7 eras (rounds), with the Cataclysm occurring after
 era 4 and the game ending after era 7 or earlier if triggered. Each era
 follows this sequence:
 
-1. PREPARATION PHASE - Determine available exosuits for the era. Roll the
-   paradox die for each outstanding time-travel debt (warp tiles not yet
-   repaid). Draw new worker dice from the bag to fill open population slots.
-   Choose which workers to assign to exosuits for main board deployment.
-2. WARP PHASE - Request resources from your future self via the time rift.
-   Place warp tiles on your timeline, specifying what you need (water,
-   neutronium, gold, uranium, breakthrough, or workers). Receive the
-   resources immediately. You must repay these debts in future eras by
-   sending matching resources back -- or suffer paradoxes.
-3. ACTION ROUNDS - Players alternate placing one exosuited worker on the
-   main board (capital actions) or one bare worker on their own player board
-   (Path actions). Capital actions include: mine resources, construct
-   buildings, recruit workers, research breakthroughs, trade at the market,
-   and purify water. Path actions use your faction's unique buildings.
+1. PREPARATION PHASE - Reveal the next Superproject above the timeline.
+   Shift building offers. Draw a Recruit pool card and a Mine pool card to
+   determine available workers and resources for the era.
+2. PARADOX PHASE - For each timeline tile with outstanding warp tiles,
+   the player(s) with the most warp tiles on it roll the Paradox die,
+   potentially gaining Paradox tokens. Three Paradoxes trigger an Anomaly
+   (a -3 VP tile placed on your player board). Skipped in era 1.
+3. POWER UP PHASE - Each player places up to 6 exosuits on their hex
+   slots, paying 1 Energy Core for each on the bottom three slots.
+   Remaining empty hex slots generate 1 Water each.
+4. WARP PHASE - Request assets from your future self via the time rift.
+   Secretly select 0-2 warp tiles and place them on the current timeline
+   tile. Warp tile types include resources, workers, water, or a powered-up
+   exosuit. Receive the assets immediately. You must repay these debts in
+   future eras by sending matching assets back -- or suffer paradoxes.
+5. ACTION ROUNDS - Players alternate placing one exosuited worker on the
+   main board or one bare worker on their own player board. Main board
+   actions include: Construct buildings, Recruit workers, Research
+   breakthroughs (Capital Actions), plus Mine resources, Purify Water,
+   Trade with Nomads, and the World Council. Player board actions include
+   Supply, Force Workers, and faction-specific building actions.
    Continue until all players pass.
-4. CLEAN-UP PHASE - Recall workers and exosuits. Power down exosuits.
-   Resolve end-of-era effects. Advance era marker. After era 4, the
-   Cataclysm strikes: certain main board spaces become unavailable,
-   evacuation actions open, and the game's strategic landscape shifts.
+6. CLEAN-UP PHASE - Retrieve workers and exosuits. Check for Impact
+   (after era 4, the asteroid strikes: Capital Action hex spaces gain
+   Collapsing Capital tiles, evacuation opens, and two exosuit slots per
+   player become unavailable). Check for game end. Advance era marker.
 
 ### Key Design Patterns
 
@@ -173,8 +180,9 @@ violations -- to create a meaningful risk-reward spectrum.
 WORKER TYPES AS SPECIALIZATION: Anachrony features multiple worker types
 (engineers, scientists, administrators, geniuses) rather than generic
 workers. Certain action spaces require specific worker types, and geniuses
-function as wildcards. Worker recruitment from a shared supply (drawn as
-dice) adds controlled randomness to workforce composition. The constraint
+function as wildcards. Worker recruitment from a shared pool (determined
+each era by recruit pool cards) adds controlled randomness to workforce
+composition. The constraint
 of matching worker types to action requirements creates an additional
 planning layer: you need not just enough workers, but the right workers.
 This pattern adds roster-management depth to the worker-placement

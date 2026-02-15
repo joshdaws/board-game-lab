@@ -26,7 +26,7 @@ See `rulebooks/56-ticket-to-ride-legacy.pdf`
 
 ## Design Notes
 
-Designer: Rob Daviau & Matt Leacock. Published by Days of Wonder (2023).
+Designer: Rob Daviau, Matt Leacock & Alan R. Moon. Published by Days of Wonder (2023).
 
 ### Theme Integration
 
@@ -66,13 +66,14 @@ with campaign-specific modifications that accumulate over the 12-game arc:
    constrained by the single-draw penalty.
 
 2. CLAIM A ROUTE - Discard a matched set of train cards to place your trains on a
-   route between two cities. Routes score immediate points based on length. Campaign
-   modifications may alter available routes, scoring values, or introduce special
-   route types through stickers and unlocked content.
+   route between two cities. Unlike other Ticket to Ride games, claiming a route does
+   not score points immediately; the game's economy is based on money (dollars) rather
+   than points. Campaign modifications may alter available routes, scoring values, or
+   introduce special route types through stickers and unlocked content.
 
-3. DRAW DESTINATION TICKETS - Take new destination tickets that define point-scoring
-   objectives. Completed tickets score their printed value; incomplete tickets penalize
-   at game end. The campaign layer introduces legacy-specific objectives that persist
+3. DRAW DESTINATION TICKETS - Draw three destination tickets and keep at least one.
+   Completed tickets score their printed value; incomplete tickets penalize at game
+   end. The campaign layer introduces legacy-specific objectives that persist
    across games or unlock based on prior decisions.
 
 4. CAMPAIGN ACTIONS - Depending on the current game in the campaign, additional

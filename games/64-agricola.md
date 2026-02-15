@@ -2,7 +2,7 @@
 
 ## Quick Stats
 
-- **Players:** 1-5
+- **Players:** 1-4
 - **Time:** 30-150 min
 - **Weight:** 3.63/5
 
@@ -103,7 +103,7 @@ Negative points for every category left empty.
 HARVEST CYCLE AS FORCING FUNCTION: The harvest is Agricola's structural
 heartbeat, occurring at rounds 4, 7, 9, 11, 13, and 14. Each harvest
 demands food equal to your family size. The accelerating frequency -- gaps
-of 3, 3, 2, 2, 2, 1 rounds between harvests -- creates mounting pressure
+of 4, 3, 2, 2, 2, 1 rounds between harvests -- creates mounting pressure
 as the game progresses. Early game, you have three rounds to prepare food
 before the first harvest. By endgame, harvests come every round or two,
 leaving almost no time for non-food activities. This forcing function

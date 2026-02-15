@@ -45,8 +45,9 @@ The blueprint-to-building pipeline captures the reality that Martian constructio
 requires planning, resource gathering, and execution as distinct phases. You do not
 simply place a building; you acquire its blueprint in orbit, gather resources on the
 surface, and then construct it in a specific location within the colony grid. The
-Life Support System (LSS) tracks represent shared colony infrastructure, oxygen, water,
-and plant cultivation, that all players contribute to and depend upon. Neglecting these
+Life Support System (LSS) tracks represent shared colony infrastructure, power
+generation, water extraction, plant cultivation, and oxygen production, that all
+players contribute to and depend upon. Neglecting these
 systems harms everyone; advancing them helps the colony but may or may not serve your
 individual scoring objectives. This tension between collective survival and individual
 achievement is the thematic heart of the game.
@@ -73,14 +74,15 @@ cycle, with players choosing their location strategically:
    and surface offer completely different action menus.
 
 2. ORBITAL ACTIONS - Players in orbit access the space station, where they can:
-   acquire blueprints for buildings, develop technologies on the tech tracks, take
-   contracts for end-game scoring, recruit scientists for special abilities, and
-   access Earth-sourced supplies. Orbit is the planning and acquisition phase.
+   acquire blueprints for buildings, develop technologies on the tech tracks,
+   conduct research and development, and access Earth-sourced supplies through
+   resupply. Orbit is the planning and acquisition phase.
 
 3. SURFACE ACTIONS - Players on the surface access the Mars colony, where they can:
-   construct buildings (using acquired blueprints and resources), mine resources,
-   upgrade the LSS infrastructure, explore new sectors of Mars, and activate
-   buildings already constructed. Surface is the execution and production phase.
+   construct buildings (using acquired blueprints and resources), upgrade buildings,
+   upgrade the LSS infrastructure, hire scientists, take Earth contracts, and use
+   the control center to deploy bots and rovers. Surface is the execution and
+   production phase.
 
 4. EXECUTIVE ACTION - After taking their main action, players may perform one
    executive action: a secondary action that costs additional resources or occupies
@@ -131,8 +133,8 @@ positions you are planning around may be claimed by opponents during the interve
 rounds.
 
 SHARED COLONY INFRASTRUCTURE (LSS): The Life Support System tracks, representing
-oxygen, water, and plant cultivation, are collectively managed resources that all
-players contribute to and benefit from. Advancing an LSS track helps the entire
+power generation, water extraction, plant cultivation, and oxygen production, are
+collectively managed resources that all players contribute to and benefit from. Advancing an LSS track helps the entire
 colony reach milestones, which unlock bonuses for everyone. This creates a social
 dilemma at the heart of the game: investing in LSS helps your opponents as much as
 it helps you, but neglecting it slows colony progress and delays milestones you need.

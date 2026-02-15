@@ -111,9 +111,9 @@ linkage creates decision tension without requiring complex rules. The mechanism 
 invisible to new players (they just "pick a pair") but deeply strategic for
 experienced ones.
 
-WILDLIFE SCORING CARD VARIABILITY: Each of the five wildlife species has multiple
-scoring cards (typically A, B, C, and sometimes D variants), and only one card per
-species is active in any given game. This creates massive combinatorial replayability.
+WILDLIFE SCORING CARD VARIABILITY: Each of the five wildlife species has four
+scoring cards (A, B, C, and D variants), and only one card per species is active
+in any given game. This creates massive combinatorial replayability.
 The A cards tend to be simpler patterns (pairs, lines), while higher-letter cards
 introduce more complex spatial requirements. The scoring card selection also
 fundamentally changes strategic priorities: a game with salmon scoring for long runs
@@ -155,12 +155,13 @@ gamers using C-level cards face a brutally tight spatial optimization challenge.
 The core rules never change; only the scoring conditions scale. This is the gold
 standard for weight-adjustable design.
 
-ANTI-HOARDING DISPLAY WIPE: The rule that three or more matching wildlife tokens in
-the display triggers a complete token refresh is a small but critical anti-degenerate
-mechanism. Without it, certain token types could accumulate in the display, starving
-players who need them. The wipe ensures that the token pool remains diverse, preventing
-the display from calcifying into unusable configurations. It is an invisible guardrail
-that most players never consciously notice.
+ANTI-HOARDING DISPLAY WIPE: When three matching wildlife tokens appear in the
+display, the active player may choose to wipe and redraw those tokens; when all four
+tokens match, the wipe is automatic. This small but critical anti-degenerate mechanism
+prevents certain token types from accumulating in the display and starving players who
+need them. The wipe ensures that the token pool remains diverse, preventing the display
+from calcifying into unusable configurations. It is an invisible guardrail that most
+players never consciously notice.
 
 ### What Makes It #57
 

@@ -79,23 +79,27 @@ new action spaces. Each round follows this structure:
    - Family growth (adding new dwarves, requires a dwelling)
    - Expeditions (armed dwarves go on quests for varied rewards)
    - Furnishing (placing cave tiles with special abilities)
-3. RETURN HOME - All dwarves return to the player's cave. Harvest check:
-   after rounds 3, 5, 7, 9, 11, and 12 (marked on the round track), a
-   harvest occurs.
-4. HARVEST (when triggered) - Three sub-phases: (A) Field phase: remove one
-   grain/vegetable from each sown field. (B) Breeding: each pair of same-type
-   animals produces one offspring (if housing exists). (C) Feeding: pay food
-   equal to 2 per adult dwarf, 1 per child. Shortfalls cost 3 negative VP
-   per missing food.
+3. RETURN HOME - All dwarves return to the player's cave dwellings.
+4. HARVEST (when triggered) - Not every round ends with a harvest. In
+   rounds 1-4, only round 3 has a full harvest; round 4 requires paying
+   1 food per dwarf instead. From round 5 onward, harvests occur by
+   default but randomized harvest markers (placed face-down during setup
+   on round spaces 6-12) can modify or skip them. When a harvest occurs,
+   three sub-phases play out: (A) Field phase: remove one grain/vegetable
+   from each sown field. (B) Feeding: pay food equal to 2 per adult dwarf,
+   1 per child born this round. Shortfalls cost 3 negative VP per missing
+   food. (C) Breeding: each pair of same-type farm animals produces one
+   offspring (if housing exists).
 
 ### Key Design Patterns
 
 SANDBOX OVER PRESSURE: Caverna's defining design choice relative to Agricola
 is the deliberate reduction of punitive pressure. Agricola's negative scoring
-for empty farm categories created anxiety; Caverna replaces this with abundant
-positive-scoring paths. There is no penalty for ignoring an entire dimension
-of the game -- no negative points for empty fields, no punishment for having
-zero animals of a type. The feeding requirement still exists but is far easier
+for empty farm categories created anxiety; Caverna significantly softens this.
+Caverna still penalizes players -2 points for each missing farm animal type
+and -1 point for each unused home board space, but the penalties are fewer
+in number and easier to avoid than Agricola's broader grid of negative
+categories. The feeding requirement still exists but is far easier
 to satisfy thanks to rubies (wild food), expeditions, and the sheer number of
 food-generating options. This transforms the emotional texture from survival
 to optimization. Rosenberg's insight was that the same core loop (place workers,
@@ -177,8 +181,8 @@ game's architecture (not patched on), it can support extreme player ranges
 without feeling compromised at any count.
 
 RUBY AS UNIVERSAL CURRENCY: Rubies function as Caverna's wildcard resource,
-convertible to food, animals, field tiles, or used to take occupied action
-spaces (a powerful rule-breaker). They are scarce and primarily acquired
+convertible to food, animals, building materials, field/tunnel/cavern tiles,
+or spent to bypass the armed-dwarf play order (a powerful rule-breaker). They are scarce and primarily acquired
 through cave development and certain expeditions. The design function of
 rubies is to lubricate the economy -- they prevent players from being
 completely locked out by resource scarcity or worker placement blocking.

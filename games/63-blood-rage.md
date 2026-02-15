@@ -68,29 +68,38 @@ cannot replicate.
 The game plays over exactly 3 ages (rounds), each following this structure:
 
 1. GODS' GIFTS (Card Drafting) - Each player receives a hand of 8 cards
-   (6 at 2 players). Players simultaneously select one card to keep and
-   pass the remainder to the left. Repeat until each player has drafted
-   their full hand. Cards include: battle cards (combat strength modifiers),
-   upgrade cards (clan improvements, monsters, warriors), and quest cards
-   (secret endgame objectives). The draft IS your strategy for the age.
+   (cards requiring more players are removed during setup). Players
+   simultaneously select one card to keep and pass the remainder to the
+   left (in a 2-player game, players pick 2 at a time). Repeat until each
+   player has drafted 6 cards; the last 2 are discarded unseen. Cards
+   include: battle cards (combat strength modifiers), upgrade cards (clan
+   improvements, monsters, warriors), and quest cards (divine objectives).
+   The draft IS your strategy for the age.
 2. ACTION PHASE - Players take turns clockwise, performing one action each
    until all players have passed. Actions cost Rage (the game's action
    currency, starting at 6 and upgradeable). Actions include:
-   - INVADE (place a figure from reserve onto an outer province or Yggdrasil)
-   - MARCH (move all figures from one province to an adjacent one)
+   - INVADE (place a figure from reserve onto an empty village in any outer
+     province; ships must be placed in fjords; cannot invade directly into
+     Yggdrasil)
+   - MARCH (move any number of figures from one province to empty villages
+     in any other single province -- it need not be adjacent)
    - UPGRADE (play an upgrade card, permanently improving your clan)
-   - QUEST (commit a quest card for endgame scoring if conditions are met)
+   - QUEST (commit a quest card face-down for later scoring)
    - PILLAGE (initiate combat in a province you occupy)
-   When a player's Rage reaches 0, they must pass for the remainder.
-3. DISCARD - Unused cards from hand are discarded. Quest cards already
-   committed remain.
-4. RAGNAROK - The designated province is destroyed. All figures there are
+   When a player's Rage reaches 0, they cannot take actions but may still
+   react to others' actions (e.g., joining battles via Call to Battle).
+3. DISCARD - Players may keep one card for the next age; all other unused
+   cards are discarded. In the Third Age, all cards are discarded.
+4. QUEST - Each player reveals committed quests. Fulfilled quests grant
+   glory and a stat increase; failed quests are simply discarded with no
+   penalty.
+5. RAGNAROK - The designated province is destroyed. All figures there are
    sent to Valhalla (killed). Glory may be gained from Valhalla-related
    card effects.
-5. RELEASE VALHALLA - All figures in Valhalla return to their owners'
+6. RELEASE VALHALLA - All figures in Valhalla return to their owners'
    reserves, available for the next age.
 
-Scoring occurs during pillaging (area majority), quest completion (endgame),
+Scoring occurs during pillaging (area majority), quest completion (per-age),
 and Valhalla effects (death-based). Game ends after Age 3; highest glory wins.
 
 ### Key Design Patterns
@@ -125,8 +134,9 @@ rather than suffering it as a setback.
 
 RAGNAROK AS MAP COMPRESSION: One province is destroyed at the end of each
 age, permanently removing it from the board. Any figures there are killed.
-With 8 outer provinces at the start and 5 remaining by Age 3, the play area
-physically contracts by over a third. This compression is the game's
+The board has 8 outer provinces, but some are pre-destroyed based on player
+count (1/2/3 at 4/3/2 players), and one more is destroyed each age. By
+Age 3, the play area has contracted significantly. This compression is the game's
 escalation engine: fewer provinces means more competition for remaining
 territory, more forced conflicts, and higher stakes per pillage action. The
 Ragnarok destruction also creates a tactical opportunity -- players can
@@ -147,16 +157,18 @@ no player can access late-game power early. The pattern teaches that
 segregating power levels by temporal phase creates reliable dramatic pacing
 without requiring complex trigger conditions.
 
-QUEST CARDS AS HIDDEN OBJECTIVES: Quest cards are committed during the
-action phase but scored only at end of game if their conditions are met
-(e.g., control specific provinces, have certain upgrade types, reach
-specific stat thresholds). Quests create hidden incentives that other
-players can partially read -- if you see someone committing a quest, you
-know they have a secret objective, even if you don't know the specifics.
-This informational asymmetry adds a layer of inference and deduction to
-the otherwise highly visible area-control game. Quests also serve as a
-catch-up mechanism: a player losing the board war might be accumulating
-quest-based points that overtake the territorial leader. The design
+QUEST CARDS AS HIDDEN OBJECTIVES: Quest cards are committed face-down
+during the action phase and evaluated during the Quest Phase at the end
+of each age. If their conditions are met (e.g., have the most STR in a
+specific region's province), the player gains glory and a stat increase.
+Failed quests are simply discarded with no penalty. Quests create hidden
+incentives that other players can partially read -- if you see someone
+committing a quest, you know they have a secret objective, even if you
+don't know the specifics. This informational asymmetry adds a layer of
+inference and deduction to the otherwise highly visible area-control
+game. Quests also serve as a catch-up mechanism: a player losing the
+board war might be accumulating quest-based glory that overtakes the
+territorial leader. The design
 function is dual -- quests create hidden scoring variance and they
 motivate players to pursue diverse strategic paths beyond pure military
 dominance.

@@ -31,12 +31,13 @@ Designer: Johan Benvenuto. Published by Libellud (2024).
 
 Harmonies presents itself as a landscape-building game where players stack colored
 tokens to create terrain formations that attract wildlife, and the theme is doing
-more mechanical work than its abstract-leaning appearance suggests. The five token
-colors map to terrain types: green for forests, brown for fields, blue for water,
-grey for mountains, and white for snow. The animal habitat cards that define scoring
+more mechanical work than its abstract-leaning appearance suggests. The six token
+colors map to terrain types: green for trees, yellow for fields, blue for water,
+grey for mountains, brown for tree trunks and building foundations, and red for
+building rooftops. The animal habitat cards that define scoring
 objectives depict specific three-dimensional terrain configurations that, viewed
 from above or the side, resemble the natural environments each animal would inhabit.
-A mountain goat card might require a pyramidal stack of grey tokens; a duck card
+A mountain goat card might require a pyramidal stack of grey tokens; a frog card
 might demand a flat expanse of blue. The theme is not narrative, but it is
 structurally coherent: the spatial patterns you build look like the habitats they
 represent.
@@ -88,11 +89,13 @@ complexity through three-dimensional spatial constraints:
    creating new groups for future drafting. The random draw ensures that the
    available combinations shift each round, requiring adaptive planning.
 
-5. GAME END - The game ends when the token bag is exhausted. Final scoring tallies
-   completed animal cards, with bonus points for completing sets of different animals
-   and for achieving specific landscape milestones. Incomplete animal cards score
-   nothing, creating a tension between ambitious card selection and reliable
-   completion.
+5. GAME END - The game ends when the token pouch is exhausted or a player's board
+   has two or fewer unoccupied spaces. Final scoring tallies landscape points (for
+   trees, mountains, fields, water, and buildings) plus animal card points. Each
+   animal card scores based on how many cubes have been placed on it: partially
+   completed cards score reduced points rather than nothing, but cards with no cubes
+   placed score zero. This graduated scoring creates a tension between ambitious card
+   selection and reliable completion.
 
 ### Key Design Patterns
 
