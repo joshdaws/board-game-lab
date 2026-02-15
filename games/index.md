@@ -1,4 +1,4 @@
-# Top 50 BGG Games - Research Index
+# Top 75 BGG Games - Research Index
 
 Games sourced from BoardGameGeek rankings (Feb 2026).
 
@@ -54,3 +54,28 @@ Games sourced from BoardGameGeek rankings (Feb 2026).
 | 48 | Marvel Champions: The Card Game | 2019 | Enriched |
 | 49 | Underwater Cities | 2018 | Enriched |
 | 50 | Food Chain Magnate | 2015 | Enriched |
+| 51 | Pax Pamir: Second Edition | 2019 | Enriched |
+| 52 | Cthulhu: Death May Die | 2019 | Enriched |
+| 53 | Clank!: Catacombs | 2022 | Enriched |
+| 54 | Puerto Rico | 2002 | Enriched |
+| 55 | Age of Innovation | 2023 | Enriched |
+| 56 | Ticket to Ride Legacy: Legends of the West | 2023 | Enriched |
+| 57 | Cascadia | 2021 | Enriched |
+| 58 | On Mars | 2020 | Enriched |
+| 59 | Harmonies | 2024 | Enriched |
+| 60 | Pandemic Legacy: Season 0 | 2020 | Enriched |
+| 61 | Caverna: The Cave Farmers | 2013 | Enriched |
+| 62 | Anachrony | 2017 | Enriched |
+| 63 | Blood Rage | 2015 | Enriched |
+| 64 | Agricola | 2007 | Enriched |
+| 65 | Oathsworn: Into the Deepwood | 2022 | Enriched |
+| 66 | Obsession | 2018 | Enriched |
+| 67 | Grand Austria Hotel | 2015 | Enriched |
+| 68 | Lisboa | 2017 | Enriched |
+| 69 | Blood on the Clocktower | 2022 | Enriched |
+| 70 | Sleeping Gods | 2021 | Enriched |
+| 71 | Pandemic Legacy: Season 2 | 2017 | Enriched |
+| 72 | Tzolk'in: The Mayan Calendar | 2012 | Enriched |
+| 73 | Power Grid | 2004 | Enriched |
+| 74 | Mansions of Madness: Second Edition | 2016 | Enriched |
+| 75 | Clans of Caledonia | 2017 | Enriched |
