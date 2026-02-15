@@ -1,97 +1,102 @@
 # Board Game Categories and Themes
 
-Categories sorted by frequency of appearance across the top 100 ranked board games (BGG, February 2026).
+Categories sorted by frequency of appearance across the top 125 ranked board games (BGG, February 2026).
 
 ## Dominant Themes (15+ games)
 
 | Count | Category |
 |------:|----------|
-| 37 | Economic |
-| 25 | Fantasy |
-| 20 | Science Fiction |
-| 19 | Adventure |
-| 17 | Fighting |
-| 16 | Card Game |
-| 16 | Animals |
+| 47 | Economic |
+| 29 | Fantasy |
+| 26 | Science Fiction |
+| 25 | Card Game |
+| 22 | Adventure |
+| 20 | Exploration |
+| 19 | Fighting |
+| 18 | Animals |
+| 16 | Civilization |
+| 15 | Industry / Manufacturing |
+| 15 | Space Exploration |
 
 ## Strong Presence (8-14 games)
 
 | Count | Category |
 |------:|----------|
-| 14 | Industry / Manufacturing |
-| 14 | Exploration |
-| 11 | Territory Building |
-| 11 | Civilization |
-| 10 | Space Exploration |
-| 10 | Miniatures |
+| 12 | City Building |
+| 12 | Territory Building |
 | 10 | Farming |
-| 9 | Political |
-| 9 | City Building |
-| 8 | Horror |
+| 10 | Miniatures |
+| 10 | Political |
+| 9 | Horror |
+| 8 | Ancient |
+| 8 | Environmental |
+| 8 | Wargame |
 
 ## Moderate Presence (4-7 games)
 
 | Count | Category |
 |------:|----------|
-| 7 | Wargame |
-| 7 | Environmental |
-| 6 | Medieval |
-| 5 | Puzzle |
-| 5 | Novel-based |
+| 7 | Medieval |
+| 7 | Novel-based |
 | 5 | Nautical |
-| 4 | Medical |
+| 5 | Puzzle |
+| 4 | Deduction |
+| 4 | Dice |
 | 4 | Educational |
+| 4 | Medical |
+| 4 | Mythology |
 
 ## Minor Presence (2-3 games)
 
 | Count | Category |
 |------:|----------|
-| 3 | Negotiation |
-| 3 | Licensed IP |
-| 3 | Dice |
-| 3 | Ancient |
 | 3 | American West |
-| 2 | Transportation |
-| 2 | Science |
-| 2 | Mythology |
+| 3 | Licensed IP |
+| 3 | Negotiation |
+| 3 | Spies / Secret Agents |
 | 2 | Abstract Strategy |
+| 2 | Party Game |
+| 2 | Racing |
+| 2 | Science |
+| 2 | Transportation |
+| 2 | Travel |
 
 ## Singular Appearances (1 game)
 
 | Count | Category |
 |------:|----------|
-| 1 | Video Game Theme |
-| 1 | Victorian |
-| 1 | Travel |
-| 1 | Trains |
-| 1 | Sports |
-| 1 | Spies / Secret Agents |
-| 1 | Religious |
-| 1 | Racing |
-| 1 | Party Game |
-| 1 | Mystery |
-| 1 | Murder / Mystery |
-| 1 | Movies |
-| 1 | Modern Warfare |
-| 1 | Legacy |
-| 1 | Japanese |
-| 1 | Deduction |
-| 1 | Cyberpunk |
-| 1 | Comic Book / Strip |
-| 1 | Cold War |
-| 1 | Civil War |
-| 1 | Aviation / Flight |
-| 1 | Arabian |
 | 1 | Action / Dexterity |
+| 1 | Arabian |
+| 1 | Aviation / Flight |
+| 1 | Bluffing |
+| 1 | Civil War |
+| 1 | Cold War |
+| 1 | Comic Book / Strip |
+| 1 | Cyberpunk |
+| 1 | Japanese |
+| 1 | Legacy |
+| 1 | Modern Warfare |
+| 1 | Movies |
+| 1 | Movies / TV |
+| 1 | Murder / Mystery |
+| 1 | Mystery |
+| 1 | Religious |
+| 1 | Renaissance |
+| 1 | Sports |
+| 1 | Trains |
+| 1 | Victorian |
+| 1 | Video Game Theme |
+| 1 | Word Game |
 
 ---
 
-Total unique categories: 57
-Sample size: 100 games (BGG top-ranked, February 2026)
+Total unique categories: 61
+Sample size: 125 games (BGG top-ranked, February 2026)
 
 ## Notes
 
-- Economic is the runaway leader at 37 appearances, present in over a third of all top-100 games. This reflects the dominance of resource-conversion engines as a core design framework in modern hobby games.
-- Fantasy and Science Fiction remain the two strongest thematic categories (25 and 20 respectively), but their combined share relative to the dataset has dropped from 80% (top 25) to 45% (top 100), indicating that deeper into the rankings the theme palette diversifies considerably.
-- Animals (16) and Farming (10) have surged from near-invisibility in the top 25 to dominant/strong presence across 100 games, pointing to a wave of nature-themed designs that rank well but cluster outside the very top tier.
-- The long tail is striking: 23 categories appear only once, meaning roughly 40% of all unique categories are represented by a single game. Highly ranked games reward distinctive thematic identity rather than clustering around a few safe genres.
+- Economic extended its lead to 47 appearances (37.6% of all 125 games), present in more than a third of all top-ranked games. This reflects the dominance of resource-conversion engines as a core design framework in modern hobby games.
+- Card Game nearly doubled from 16 to 25, reflecting the wave of card-driven designs in the 101-125 range (Aeon's End, SCOUT, Concordia Venus, 7 Wonders, Decrypto, Arkham Horror Revised, Inis, Wyrmspan).
+- Exploration surged from 14 to 20, crossing into Dominant Themes -- driven by adventure and discovery games clustering in the lower rankings (Robinson Crusoe, Quest for El Dorado, Inis, Battlestar Galactica).
+- Ancient leapt from 3 to 8 appearances, driven by historical Mediterranean games (Concordia Venus, Teotihuacan, 7 Wonders, Ra, Inis).
+- The long tail remains striking: 22 categories appear only once, roughly 36% of all unique categories. Four new singular categories appeared in the expanded dataset (Bluffing, Movies / TV, Renaissance, Word Game).

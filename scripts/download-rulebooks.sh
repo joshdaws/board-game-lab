@@ -15,13 +15,13 @@ RULEBOOKS_DIR="$REPO_DIR/rulebooks"
 
 FORCE=false
 RANGE_START=1
-RANGE_END=100
+RANGE_END=125
 
 for arg in "$@"; do
   case "$arg" in
     --force) FORCE=true ;;
     *[0-9]*)
-      if [[ "$RANGE_START" -eq 1 && "$RANGE_END" -eq 100 ]]; then
+      if [[ "$RANGE_START" -eq 1 && "$RANGE_END" -eq 125 ]]; then
         RANGE_START="$arg"
         RANGE_END="$arg"
       else
@@ -396,6 +396,83 @@ in_range 99 && download 99 "fields-of-arle" \
 
 in_range 100 && download 100 "el-grande" \
   "https://www.hans-im-glueck.de/wp-content/uploads/2023/07/ElGrande_2023_rule_EN_20-07-23-komprimiert.pdf"
+
+# --- Games #101-125 ---
+
+in_range 101 && download 101 "eclipse-new-dawn" \
+  "https://cdn.1j1ju.com/medias/48/0e/83-eclipse-rulebook.pdf"
+
+in_range 102 && download 102 "aeons-end" \
+  "https://cdn.1j1ju.com/medias/3f/5c/9e-aeons-end-rulebook.pdf"
+
+in_range 103 && note_manual 103 "scout" \
+  "Oink Games — search BGG files section or https://onemoregame.cloud-line.com/files/SCOUT!_v2.1_English_open.pdf"
+
+in_range 104 && download 104 "concordia-venus" \
+  "https://cdn.1j1ju.com/medias/b9/72/a8-concordia-venus-rulebook.pdf"
+
+in_range 105 && download 105 "lords-of-waterdeep" \
+  "https://media.wizards.com/downloads/dnd/DnD_LOW_Rulebook_EN.pdf"
+
+in_range 106 && download 106 "arcs" \
+  "https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Arcs_Base_Rulebook.pdf?v=1713374179"
+
+in_range 107 && download 107 "teotihuacan" \
+  "https://cdn.1j1ju.com/medias/fc/ee/c7-teotihuacan-city-of-gods-rulebook.pdf"
+
+in_range 108 && download 108 "beyond-the-sun" \
+  "https://cdn.1j1ju.com/medias/d8/5b/54-beyond-the-sun-rulebook.pdf"
+
+in_range 109 && download 109 "dominant-species" \
+  "https://cdn.1j1ju.com/medias/5b/b9/55-dominant-species-rulebook.pdf"
+
+in_range 110 && download 110 "search-for-planet-x" \
+  "https://cdn.1j1ju.com/medias/1c/fb/79-the-search-for-planet-x-rulebook.pdf"
+
+in_range 111 && note_manual 111 "through-the-ages-1e" \
+  "Czech Games Edition — 1st edition; search BGG files section for official PDF"
+
+in_range 112 && download 112 "splendor-duel" \
+  "https://cdn.1j1ju.com/medias/d5/20/a3-splendor-duel-rulebook.pdf"
+
+in_range 113 && download 113 "bomb-busters" \
+  "https://meepletron-storage.s3.us-east-2.amazonaws.com/resources/bomb-busters-rulebook.pdf"
+
+in_range 114 && download 114 "7-wonders" \
+  "https://cdn.1j1ju.com/medias/c8/d6/88-7-wonders-rule.pdf"
+
+in_range 115 && download 115 "decrypto" \
+  "https://cdn.1j1ju.com/medias/fb/0d/f3-decrypto-rulebook.pdf"
+
+in_range 116 && download 116 "robinson-crusoe" \
+  "https://cdn.1j1ju.com/medias/83/5f/a2-robinson-crusoe-adventures-on-the-cursed-island-rulebook.pdf"
+
+in_range 117 && download 117 "voyages-of-marco-polo" \
+  "https://cdn.1j1ju.com/medias/d5/6b/3b-the-voyages-of-marco-polo-rulebook.pdf"
+
+in_range 118 && download 118 "arkham-horror-tcg-revised" \
+  "https://images-cdn.fantasyflightgames.com/filer_public/50/8b/508bb12f-0673-4541-8310-1fbab01cbcaa/ahc60_learn_to_play_eng-compressed.pdf"
+
+in_range 119 && download 119 "ra" \
+  "https://images.zmangames.com/filer_public/1c/f1/1cf1f19e-70bb-413f-8756-13e1e5239b8a/kn27_ra_rulebook_eng.pdf"
+
+in_range 120 && download 120 "trickerion" \
+  "https://cdn.1j1ju.com/medias/f4/cd/e2-trickerion-legends-of-illusion-rulebook.pdf"
+
+in_range 121 && download 121 "quest-for-el-dorado" \
+  "https://cdn.1j1ju.com/medias/fc/6a/fa-the-quest-for-el-dorado-rulebook.pdf"
+
+in_range 122 && download 122 "inis" \
+  "https://cdn.1j1ju.com/medias/46/41/fc-inis-rulebook.pdf"
+
+in_range 123 && download 123 "battlestar-galactica" \
+  "https://cdn.1j1ju.com/medias/b5/e7/37-battlestar-galactica-the-board-game-rulebook.pdf"
+
+in_range 124 && download 124 "carnegie" \
+  "https://cdn.1j1ju.com/medias/9e/25/38-carnegie-rulebook.pdf"
+
+in_range 125 && note_manual 125 "wyrmspan" \
+  "Stonemaier Games via Dropbox — https://stonemaiergames.com/games/wyrmspan/rules-faq/"
 
 echo ""
 echo "========================================="

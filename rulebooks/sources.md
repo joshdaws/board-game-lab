@@ -4,9 +4,10 @@ Download sources for all rulebook PDFs. Games #1-25 were sourced in earlier sess
 
 ## Status
 
-- **Valid PDFs:** 97 of 100
+- **Valid PDFs:** 119 of 125
 - **Invalid PDFs:** #16 Through the Ages (172K, not a valid PDF), #17 SETI (200K, not a valid PDF) — pre-existing issues
 - **Missing:** #92 Kingdom Death: Monster — publisher does not offer a free rulebook PDF
+- **Manual download:** #103 SCOUT, #111 Through the Ages 1st ed., #125 Wyrmspan (Dropbox)
 
 ## Games #1-25 (Original Batch)
 
@@ -101,6 +102,36 @@ Sources not recorded. Downloaded in earlier sessions.
 | 98 | Clank! | https://cdn.1j1ju.com/medias/dc/cc/ae-clank-a-deck-building-adventure-rulebook.pdf | 1j1ju archive |
 | 99 | Fields of Arle | https://images.zmangames.com/filer_public/55/a3/55a3403e-c817-4641-a169-4c0cbff7d116/zm7490_fields_of_arle_rules.pdf | Z-Man Games official |
 | 100 | El Grande | https://www.hans-im-glueck.de/wp-content/uploads/2023/07/ElGrande_2023_rule_EN_20-07-23-komprimiert.pdf | Hans im Gluck official |
+
+## Games #101-125
+
+| # | Game | Source URL | Notes |
+|---|------|-----------|-------|
+| 101 | Eclipse: New Dawn for the Galaxy | https://cdn.1j1ju.com/medias/48/0e/83-eclipse-rulebook.pdf | 1j1ju mirror (1st edition) |
+| 102 | Aeon's End | https://cdn.1j1ju.com/medias/3f/5c/9e-aeons-end-rulebook.pdf | 1j1ju mirror |
+| 103 | SCOUT | Oink Games / One More Game | Manual download — https://onemoregame.cloud-line.com/files/SCOUT!_v2.1_English_open.pdf |
+| 104 | Concordia Venus | https://cdn.1j1ju.com/medias/b9/72/a8-concordia-venus-rulebook.pdf | 1j1ju mirror |
+| 105 | Lords of Waterdeep | https://media.wizards.com/downloads/dnd/DnD_LOW_Rulebook_EN.pdf | Wizards of the Coast official |
+| 106 | Arcs | https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Arcs_Base_Rulebook.pdf?v=1713374179 | Leder Games official (Shopify CDN) |
+| 107 | Teotihuacan: City of Gods | https://cdn.1j1ju.com/medias/fc/ee/c7-teotihuacan-city-of-gods-rulebook.pdf | 1j1ju mirror |
+| 108 | Beyond the Sun | https://cdn.1j1ju.com/medias/d8/5b/54-beyond-the-sun-rulebook.pdf | 1j1ju mirror |
+| 109 | Dominant Species | https://cdn.1j1ju.com/medias/5b/b9/55-dominant-species-rulebook.pdf | 1j1ju mirror |
+| 110 | The Search for Planet X | https://cdn.1j1ju.com/medias/1c/fb/79-the-search-for-planet-x-rulebook.pdf | 1j1ju mirror |
+| 111 | Through the Ages: A Story of Civilization | BGG files section | 1st edition; manual download from BGG |
+| 112 | Splendor Duel | https://cdn.1j1ju.com/medias/d5/20/a3-splendor-duel-rulebook.pdf | 1j1ju mirror |
+| 113 | Bomb Busters | https://meepletron-storage.s3.us-east-2.amazonaws.com/resources/bomb-busters-rulebook.pdf | Meepletron S3 mirror |
+| 114 | 7 Wonders | https://cdn.1j1ju.com/medias/c8/d6/88-7-wonders-rule.pdf | 1j1ju mirror |
+| 115 | Decrypto | https://cdn.1j1ju.com/medias/fb/0d/f3-decrypto-rulebook.pdf | 1j1ju mirror |
+| 116 | Robinson Crusoe | https://cdn.1j1ju.com/medias/83/5f/a2-robinson-crusoe-adventures-on-the-cursed-island-rulebook.pdf | 1j1ju mirror |
+| 117 | The Voyages of Marco Polo | https://cdn.1j1ju.com/medias/d5/6b/3b-the-voyages-of-marco-polo-rulebook.pdf | 1j1ju mirror |
+| 118 | Arkham Horror: TCG (Revised Core) | https://images-cdn.fantasyflightgames.com/filer_public/50/8b/508bb12f-0673-4541-8310-1fbab01cbcaa/ahc60_learn_to_play_eng-compressed.pdf | FFG official (Revised Core Set Learn to Play) |
+| 119 | Ra | https://images.zmangames.com/filer_public/1c/f1/1cf1f19e-70bb-413f-8756-13e1e5239b8a/kn27_ra_rulebook_eng.pdf | Z-Man Games official |
+| 120 | Trickerion | https://cdn.1j1ju.com/medias/f4/cd/e2-trickerion-legends-of-illusion-rulebook.pdf | 1j1ju mirror |
+| 121 | The Quest for El Dorado | https://cdn.1j1ju.com/medias/fc/6a/fa-the-quest-for-el-dorado-rulebook.pdf | 1j1ju mirror |
+| 122 | Inis | https://cdn.1j1ju.com/medias/46/41/fc-inis-rulebook.pdf | 1j1ju mirror |
+| 123 | Battlestar Galactica | https://cdn.1j1ju.com/medias/b5/e7/37-battlestar-galactica-the-board-game-rulebook.pdf | 1j1ju mirror |
+| 124 | Carnegie | https://cdn.1j1ju.com/medias/9e/25/38-carnegie-rulebook.pdf | 1j1ju mirror |
+| 125 | Wyrmspan | Stonemaier Games via Dropbox | https://stonemaiergames.com/games/wyrmspan/rules-faq/ |
 
 ## Known Issues
 

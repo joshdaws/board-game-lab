@@ -2,14 +2,14 @@
 
 AI-assisted board game design knowledge base and eventual design skill.
 
-Built by studying the top 100 ranked games on BoardGameGeek to extract design patterns, mechanic taxonomies, and reusable insights for game designers.
+Built by studying the top 125 ranked games on BoardGameGeek to extract design patterns, mechanic taxonomies, and reusable insights for game designers.
 
 ## Repository Structure
 
 ```
-games/          100 game analysis files (Markdown), one per BGG-ranked game
+games/          125 game analysis files (Markdown), one per BGG-ranked game
 rulebooks/      Source PDF rulebooks (gitignored — see Downloading Rulebooks below)
-mechanics/      Mechanic and category frequency taxonomies across all 100 games
+mechanics/      Mechanic and category frequency taxonomies across all 125 games
 knowledge/      Cross-cutting design pattern synthesis
 scripts/        Utility scripts
 ```
@@ -19,7 +19,7 @@ scripts/        Utility scripts
 Rulebook PDFs are gitignored and not included in the repository. To download them after cloning:
 
 ```bash
-# Download all available rulebooks (~80 of 100 have direct URLs)
+# Download all available rulebooks (~100 of 125 have direct URLs)
 ./scripts/download-rulebooks.sh
 
 # Download a specific range
@@ -45,7 +45,7 @@ The repository includes a Claude Code skill (`board-game-design.skill`) that tur
 | `/design-critique <concept>` | Analyze a game concept against proven patterns — identifies strengths, gaps, comparable games, and gives actionable recommendations. |
 | `/design-mechanics [mechanic]` | Explore a specific mechanic — frequency data, proven combinations, exemplar games, and integration guidance. |
 
-All recommendations are grounded in the 100-game dataset with specific citations.
+All recommendations are grounded in the 125-game dataset with specific citations.
 
 ## Game Analysis Format
 

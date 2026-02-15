@@ -1,4 +1,4 @@
-# Top 100 BGG Games - Research Index
+# Top 125 BGG Games - Research Index
 
 Games sourced from BoardGameGeek rankings (Feb 2026).
 
@@ -104,3 +104,28 @@ Games sourced from BoardGameGeek rankings (Feb 2026).
 | 98 | Clank!: A Deck-Building Adventure | 2016 | Enriched |
 | 99 | Fields of Arle | 2014 | Enriched |
 | 100 | El Grande | 1995 | Enriched |
+| 101 | Eclipse: New Dawn for the Galaxy | 2011 | Enriched |
+| 102 | Aeon's End | 2016 | Enriched |
+| 103 | SCOUT | 2019 | Enriched |
+| 104 | Concordia Venus | 2018 | Enriched |
+| 105 | Lords of Waterdeep | 2012 | Enriched |
+| 106 | Arcs | 2024 | Enriched |
+| 107 | Teotihuacan: City of Gods | 2018 | Enriched |
+| 108 | Beyond the Sun | 2020 | Enriched |
+| 109 | Dominant Species | 2010 | Enriched |
+| 110 | The Search for Planet X | 2020 | Enriched |
+| 111 | Through the Ages: A Story of Civilization | 2006 | Enriched |
+| 112 | Splendor Duel | 2022 | Enriched |
+| 113 | Bomb Busters | 2024 | Enriched |
+| 114 | 7 Wonders | 2010 | Enriched |
+| 115 | Decrypto | 2018 | Enriched |
+| 116 | Robinson Crusoe: Adventures on the Cursed Island | 2012 | Enriched |
+| 117 | The Voyages of Marco Polo | 2015 | Enriched |
+| 118 | Arkham Horror: The Card Game (Revised Core Set) | 2021 | Enriched |
+| 119 | Ra | 1999 | Enriched |
+| 120 | Trickerion: Legends of Illusion | 2015 | Enriched |
+| 121 | The Quest for El Dorado | 2017 | Enriched |
+| 122 | Inis | 2016 | Enriched |
+| 123 | Battlestar Galactica: The Board Game | 2008 | Enriched |
+| 124 | Carnegie | 2022 | Enriched |
+| 125 | Wyrmspan | 2024 | Enriched |
