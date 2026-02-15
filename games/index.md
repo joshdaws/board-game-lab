@@ -1,4 +1,4 @@
-# Top 125 BGG Games - Research Index
+# Top 150 BGG Games - Research Index
 
 Games sourced from BoardGameGeek rankings (Feb 2026).
 
@@ -129,3 +129,28 @@ Games sourced from BoardGameGeek rankings (Feb 2026).
 | 123 | Battlestar Galactica: The Board Game | 2008 | Enriched |
 | 124 | Carnegie | 2022 | Enriched |
 | 125 | Wyrmspan | 2024 | Enriched |
+| 126 | Dwellings of Eldervale | 2020 | Enriched |
+| 127 | Nemesis: Lockdown | 2022 | Enriched |
+| 128 | Architects of the West Kingdom | 2018 | Enriched |
+| 129 | Tigris & Euphrates | 1997 | Enriched |
+| 130 | Keyflower | 2012 | Enriched |
+| 131 | Dominion: Intrigue | 2009 | Enriched |
+| 132 | Raiders of the North Sea | 2015 | Enriched |
+| 133 | Tainted Grail: The Fall of Avalon | 2019 | Enriched |
+| 134 | Wonderland's War | 2022 | Enriched |
+| 135 | Caylus | 2005 | Enriched |
+| 136 | Eldritch Horror | 2013 | Enriched |
+| 137 | Lorenzo il Magnifico | 2016 | Enriched |
+| 138 | Troyes | 2010 | Enriched |
+| 139 | Age of Steam | 2002 | Enriched |
+| 140 | The Lord of the Rings: Fate of the Fellowship | 2025 | Enriched |
+| 141 | The Lord of the Rings: Journeys in Middle-Earth | 2019 | Enriched |
+| 142 | Galactic Cruise | 2025 | Enriched |
+| 143 | Mombasa | 2015 | Enriched |
+| 144 | Dominion | 2008 | Enriched |
+| 145 | Nucleum | 2023 | Enriched |
+| 146 | Patchwork | 2014 | Enriched |
+| 147 | Hansa Teutonica | 2009 | Enriched |
+| 148 | Trajan | 2011 | Enriched |
+| 149 | Aeon's End: War Eternal | 2017 | Enriched |
+| 150 | Twilight Imperium: Third Edition | 2005 | Enriched |

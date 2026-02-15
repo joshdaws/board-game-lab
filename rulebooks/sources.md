@@ -1,13 +1,13 @@
 # Rulebook PDF Sources
 
-Download sources for all rulebook PDFs. Games #1-25 were sourced in earlier sessions (URLs not recorded). Games #26-100 sourced February 2026.
+Download sources for all rulebook PDFs. Games #1-25 were sourced in earlier sessions (URLs not recorded). Games #26-150 sourced February 2026.
 
 ## Status
 
-- **Valid PDFs:** 119 of 125
+- **Valid PDFs:** 140 of 150
 - **Invalid PDFs:** #16 Through the Ages (172K, not a valid PDF), #17 SETI (200K, not a valid PDF) — pre-existing issues
 - **Missing:** #92 Kingdom Death: Monster — publisher does not offer a free rulebook PDF
-- **Manual download:** #103 SCOUT, #111 Through the Ages 1st ed., #125 Wyrmspan (Dropbox)
+- **Manual download:** #103 SCOUT, #111 Through the Ages 1st ed., #125 Wyrmspan (Dropbox), #140 LOTR: Fate of Fellowship (too new), #142 Galactic Cruise (too new), #145 Nucleum (Dropbox), #148 Trajan (BGG login)
 
 ## Games #1-25 (Original Batch)
 
@@ -132,6 +132,36 @@ Sources not recorded. Downloaded in earlier sessions.
 | 123 | Battlestar Galactica | https://cdn.1j1ju.com/medias/b5/e7/37-battlestar-galactica-the-board-game-rulebook.pdf | 1j1ju mirror |
 | 124 | Carnegie | https://cdn.1j1ju.com/medias/9e/25/38-carnegie-rulebook.pdf | 1j1ju mirror |
 | 125 | Wyrmspan | Stonemaier Games via Dropbox | https://stonemaiergames.com/games/wyrmspan/rules-faq/ |
+
+## Games #126-150
+
+| # | Game | Source URL | Notes |
+|---|------|-----------|-------|
+| 126 | Dwellings of Eldervale | https://gamers-hq.de/media/pdf/c7/c2/c2/DoERulebook2024.pdf | gamers-hq.de mirror (2024 edition) |
+| 127 | Nemesis: Lockdown | https://cdn.1j1ju.com/medias/0f/4f/16-nemesis-lockdown-rulebook.pdf | 1j1ju mirror |
+| 128 | Architects of the West Kingdom | https://cdn.1j1ju.com/medias/80/41/3d-architects-of-the-west-kingdom-rulebook.pdf | 1j1ju mirror |
+| 129 | Tigris & Euphrates | https://cdn.1j1ju.com/medias/04/4a/fe-tigris-euphrates-rulebook.pdf | 1j1ju mirror |
+| 130 | Keyflower | https://cdn.1j1ju.com/medias/2d/11/80-keyflower-rulebook.pdf | 1j1ju mirror |
+| 131 | Dominion: Intrigue | https://cdn.1j1ju.com/medias/ea/58/df-dominion-intrigue-rulebook.pdf | 1j1ju mirror |
+| 132 | Raiders of the North Sea | https://cdn.1j1ju.com/medias/c8/c7/e3-raiders-of-the-north-sea-rulebook.pdf | 1j1ju mirror |
+| 133 | Tainted Grail: The Fall of Avalon | https://cdn.1j1ju.com/medias/11/7a/e2-tainted-grail-the-fall-of-avalon-rulebook.pdf | 1j1ju mirror |
+| 134 | Wonderland's War | https://tesera.ru/images/items/1786613/Wonderland's%20War%20-%20Rulebook_08.10.2020.pdf | tesera.ru mirror |
+| 135 | Caylus | https://cdn.1j1ju.com/medias/e5/d0/ee-caylus-rulebook.pdf | 1j1ju mirror |
+| 136 | Eldritch Horror | https://cdn.1j1ju.com/medias/b4/2e/17-eldritch-horror-rulebook.pdf | 1j1ju mirror |
+| 137 | Lorenzo il Magnifico | https://cdn.1j1ju.com/medias/38/59/00-lorenzo-il-magnifico-rulebook.pdf | 1j1ju mirror |
+| 138 | Troyes | https://cdn.1j1ju.com/medias/cb/77/69-troyes-rulebook.pdf | 1j1ju mirror |
+| 139 | Age of Steam | https://cdn.1j1ju.com/medias/77/8c/75-age-of-steam-rulebook.pdf | 1j1ju mirror |
+| 140 | The Lord of the Rings: Fate of the Fellowship | N/A | **Manual download** — too new (2025), Z-Man Games has not posted public PDF |
+| 141 | The Lord of the Rings: Journeys in Middle-Earth | https://cdn.1j1ju.com/medias/bc/15/79-the-lord-of-the-rings-journeys-in-middle-earth-rulebook.pdf | 1j1ju mirror (also available from FFG CDN) |
+| 142 | Galactic Cruise | N/A | **Manual download** — too new (2025), check BGG files section |
+| 143 | Mombasa | https://cdn.1j1ju.com/medias/45/00/09-mombasa-rulebook.pdf | 1j1ju mirror |
+| 144 | Dominion | https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion2nd.pdf | Rio Grande Games official (2nd edition) |
+| 145 | Nucleum | Board&Dice via Dropbox | **Manual download** — https://boardanddice.com/download/ |
+| 146 | Patchwork | https://cdn.1j1ju.com/medias/74/af/f2-patchwork-rulebook.pdf | 1j1ju mirror |
+| 147 | Hansa Teutonica | https://cdn.1j1ju.com/medias/26/0c/b9-hansa-teutonica-rulebook.pdf | 1j1ju mirror |
+| 148 | Trajan | BGG files section | **Manual download** — publisher has no public PDF |
+| 149 | Aeon's End: War Eternal | https://cdn.1j1ju.com/medias/9d/8f/d0-aeons-end-war-eternal-rulebook.pdf | 1j1ju mirror |
+| 150 | Twilight Imperium: Third Edition | https://images-cdn.fantasyflightgames.com/ffg_content/Twilight%20Imperium%203/ti3rules.pdf | FFG official |
 
 ## Known Issues
 

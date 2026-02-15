@@ -1,4 +1,4 @@
-# Game Index — Top 125 BGG Games
+# Game Index — Top 150 BGG Games
 
 Quick-lookup table for finding comparable games by archetype, weight, and mechanics.
 Source: `games/NN-slug.md` (relative to project root)
@@ -143,18 +143,43 @@ Source: `games/NN-slug.md` (relative to project root)
 | 123 | Battlestar Galactica | 3.25 | CC | Cooperative Game, Hidden Roles, Traitor Game, Hand Management |
 | 124 | Carnegie | 3.81 | EB | Worker Placement, Network/Route Building, Income, Follow |
 | 125 | Wyrmspan | 2.82 | EB | End Game Bonuses, Hand Management, Open Drafting |
+| 126 | Dwellings of Eldervale | 3.24 | AC | Area Majority, Worker Placement, Variable Player Powers |
+| 127 | Nemesis: Lockdown | 3.90 | CC | Semi-Cooperative, Hand Management, Hidden Roles |
+| 128 | Architects of the West Kingdom | 2.76 | EB | Worker Placement, Hand Management, Variable Player Powers |
+| 129 | Tigris & Euphrates | 3.48 | AC | Area Majority, Tile Placement, Hand Management |
+| 130 | Keyflower | 3.33 | EB | Auction/Bidding, Worker Placement, Tile Placement |
+| 131 | Dominion: Intrigue | 2.41 | CT | Deck Building, Hand Management, Variable Player Powers |
+| 132 | Raiders of the North Sea | 2.57 | EB | Worker Placement, Hand Management, Set Collection |
+| 133 | Tainted Grail: The Fall of Avalon | 3.37 | NC | Campaign, Cooperative Game, Exploration, Hand Management |
+| 134 | Wonderland's War | 3.05 | AC | Area Majority, Bag Building, Worker Placement |
+| 135 | Caylus | 3.79 | EB | Worker Placement, Building, Variable Phase Order |
+| 136 | Eldritch Horror | 3.32 | CC | Cooperative Game, Dice Rolling, Variable Player Powers |
+| 137 | Lorenzo il Magnifico | 3.29 | EB | Worker Placement, Card Drafting, Dice Workers |
+| 138 | Troyes | 3.38 | EB | Dice Drafting, Worker Placement, Area Majority |
+| 139 | Age of Steam | 3.86 | ES | Auction/Bidding, Network/Route Building, Pick-up and Deliver |
+| 140 | LOTR: Fate of the Fellowship | 3.08 | CC | Cooperative Game, Action Points, Dice Rolling, Hand Management |
+| 141 | LOTR: Journeys in Middle-Earth | 2.70 | NC | Cooperative Game, Campaign, App-Driven, Hand Management |
+| 142 | Galactic Cruise | 3.98 | ES | Multi-Use Cards, Worker Placement, Market, Network Building |
+| 143 | Mombasa | 3.89 | CT | Hand Management, Area Majority, Worker Placement |
+| 144 | Dominion | 2.35 | CT | Deck Building, Hand Management |
+| 145 | Nucleum | 4.19 | EB | Action Retrieval, Network/Route Building, Tech Trees |
+| 146 | Patchwork | 1.60 | SP | Tile Placement, Pattern Building, Income |
+| 147 | Hansa Teutonica | 3.09 | ES | Network Building, Area Majority, Worker Displacement |
+| 148 | Trajan | 3.63 | EB | Mancala, Set Collection, Area Majority |
+| 149 | Aeon's End: War Eternal | 2.92 | CC | Cooperative Game, Deck Construction, Hand Management |
+| 150 | Twilight Imperium (3rd Ed.) | 4.26 | AC | Area Majority, Voting, Variable Player Powers, Grid Movement |
 
 ## Archetype Counts
 
 | Archetype | Count | Weight Range |
 |-----------|------:|-------------|
-| Engine Builder (EB) | 38 | 1.95 – 4.40 |
-| Card Tableau (CT) | 22 | 1.36 – 3.88 |
-| Cooperative Crisis (CC) | 17 | 1.55 – 4.08 |
-| Asymmetric Conflict (AC) | 17 | 2.89 – 4.48 |
-| Narrative Campaign (NC) | 14 | 2.66 – 4.41 |
-| Economic Simulation (ES) | 10 | 3.28 – 4.67 |
-| Spatial Puzzle (SP) | 9 | 1.77 – 3.97 |
+| Engine Builder (EB) | 46 | 1.95 – 4.40 |
+| Card Tableau (CT) | 25 | 1.36 – 3.89 |
+| Cooperative Crisis (CC) | 21 | 1.55 – 4.08 |
+| Asymmetric Conflict (AC) | 21 | 2.89 – 4.48 |
+| Narrative Campaign (NC) | 16 | 2.66 – 4.41 |
+| Economic Simulation (ES) | 13 | 3.09 – 4.67 |
+| Spatial Puzzle (SP) | 10 | 1.60 – 3.97 |
 | Dexterity Challenge (DC) | 1 | 1.22 |
 
 ## Finding Comparables

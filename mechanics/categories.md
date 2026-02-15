@@ -1,50 +1,53 @@
 # Board Game Categories and Themes
 
-Categories sorted by frequency of appearance across the top 125 ranked board games (BGG, February 2026).
+Categories sorted by frequency of appearance across the top 150 ranked board games (BGG, February 2026).
 
 ## Dominant Themes (15+ games)
 
 | Count | Category |
 |------:|----------|
-| 47 | Economic |
-| 29 | Fantasy |
-| 26 | Science Fiction |
-| 25 | Card Game |
-| 22 | Adventure |
-| 20 | Exploration |
-| 19 | Fighting |
+| 56 | Economic |
+| 35 | Fantasy |
+| 31 | Science Fiction |
+| 28 | Card Game |
+| 26 | Adventure |
+| 24 | Fighting |
+| 23 | Exploration |
 | 18 | Animals |
-| 16 | Civilization |
-| 15 | Industry / Manufacturing |
-| 15 | Space Exploration |
+| 18 | Civilization |
+| 17 | Industry / Manufacturing |
+| 17 | Space Exploration |
+| 15 | City Building |
+| 15 | Medieval |
 
 ## Strong Presence (8-14 games)
 
 | Count | Category |
 |------:|----------|
-| 12 | City Building |
-| 12 | Territory Building |
+| 14 | Territory Building |
+| 12 | Miniatures |
+| 12 | Political |
+| 11 | Horror |
+| 11 | Novel-based |
+| 10 | Ancient |
 | 10 | Farming |
-| 10 | Miniatures |
-| 10 | Political |
-| 9 | Horror |
-| 8 | Ancient |
+| 9 | Wargame |
 | 8 | Environmental |
-| 8 | Wargame |
 
 ## Moderate Presence (4-7 games)
 
 | Count | Category |
 |------:|----------|
-| 7 | Medieval |
-| 7 | Novel-based |
-| 5 | Nautical |
-| 5 | Puzzle |
+| 6 | Nautical |
+| 6 | Puzzle |
+| 5 | Dice |
+| 4 | Abstract Strategy |
 | 4 | Deduction |
-| 4 | Dice |
 | 4 | Educational |
 | 4 | Medical |
 | 4 | Mythology |
+| 4 | Negotiation |
+| 4 | Transportation |
 
 ## Minor Presence (2-3 games)
 
@@ -52,14 +55,13 @@ Categories sorted by frequency of appearance across the top 125 ranked board gam
 |------:|----------|
 | 3 | American West |
 | 3 | Licensed IP |
-| 3 | Negotiation |
 | 3 | Spies / Secret Agents |
-| 2 | Abstract Strategy |
+| 3 | Travel |
 | 2 | Party Game |
 | 2 | Racing |
+| 2 | Renaissance |
 | 2 | Science |
-| 2 | Transportation |
-| 2 | Travel |
+| 2 | Trains |
 
 ## Singular Appearances (1 game)
 
@@ -81,9 +83,7 @@ Categories sorted by frequency of appearance across the top 125 ranked board gam
 | 1 | Murder / Mystery |
 | 1 | Mystery |
 | 1 | Religious |
-| 1 | Renaissance |
 | 1 | Sports |
-| 1 | Trains |
 | 1 | Victorian |
 | 1 | Video Game Theme |
 | 1 | Word Game |
@@ -91,12 +91,14 @@ Categories sorted by frequency of appearance across the top 125 ranked board gam
 ---
 
 Total unique categories: 61
-Sample size: 125 games (BGG top-ranked, February 2026)
+Sample size: 150 games (BGG top-ranked, February 2026)
 
 ## Notes
 
-- Economic extended its lead to 47 appearances (37.6% of all 125 games), present in more than a third of all top-ranked games. This reflects the dominance of resource-conversion engines as a core design framework in modern hobby games.
-- Card Game nearly doubled from 16 to 25, reflecting the wave of card-driven designs in the 101-125 range (Aeon's End, SCOUT, Concordia Venus, 7 Wonders, Decrypto, Arkham Horror Revised, Inis, Wyrmspan).
-- Exploration surged from 14 to 20, crossing into Dominant Themes -- driven by adventure and discovery games clustering in the lower rankings (Robinson Crusoe, Quest for El Dorado, Inis, Battlestar Galactica).
-- Ancient leapt from 3 to 8 appearances, driven by historical Mediterranean games (Concordia Venus, Teotihuacan, 7 Wonders, Ra, Inis).
-- The long tail remains striking: 22 categories appear only once, roughly 36% of all unique categories. Four new singular categories appeared in the expanded dataset (Bluffing, Movies / TV, Renaissance, Word Game).
+- Economic extended its lead to 56 appearances (37.3% of all 150 games), gaining 9 new entries in the 126-150 range (Dwellings of Eldervale, Architects of the West Kingdom, Keyflower, Caylus, Troyes, Age of Steam, Galactic Cruise, Mombasa, Nucleum). Economic remains the single most dominant category by a wide margin, present in more than a third of all top-ranked games.
+- Medieval surged from 7 to 15, more than doubling its count and jumping from Moderate Presence into Dominant Themes. Eight new medieval games appeared (Architects of the West Kingdom, Dominion: Intrigue, Raiders of the North Sea, Tainted Grail, Caylus, Troyes, Dominion, Hansa Teutonica), reflecting the concentration of worker placement and card game designs with medieval settings in this range.
+- Fighting rose from 19 to 24, crossing into Dominant Themes. Five new entries (Dwellings of Eldervale, Tainted Grail, Eldritch Horror, LOTR: Journeys in Middle-Earth, Aeon's End: War Eternal) reflect the continued presence of combat-oriented cooperative and hybrid designs.
+- Novel-based jumped from 7 to 11, moving from Moderate Presence to Strong Presence. Four new entries (Wonderland's War, Eldritch Horror, LOTR: Fate of the Fellowship, LOTR: Journeys in Middle-Earth) reflect the clustering of literary adaptations in this range.
+- Abstract Strategy rose from 2 to 4 (Tigris & Euphrates, Patchwork), moving from Minor Presence to Moderate Presence. Negotiation similarly rose from 3 to 4 (Twilight Imperium 3E), and Transportation from 2 to 4 (Age of Steam, Nucleum), all crossing into Moderate Presence.
+- Renaissance doubled from 1 to 2 (Lorenzo il Magnifico) and Trains from 1 to 2 (Age of Steam), both moving from Singular Appearances to Minor Presence. Travel rose from 2 to 3 (Eldritch Horror), remaining in Minor Presence.
+- No entirely new categories appeared in the 126-150 expansion. The total unique category count remains at 61, suggesting the category landscape is stabilizing as the dataset grows. The long tail persists: 20 categories appear only once, roughly 33% of all unique categories, down slightly from 36% at 125 games.

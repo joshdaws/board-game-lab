@@ -15,13 +15,13 @@ RULEBOOKS_DIR="$REPO_DIR/rulebooks"
 
 FORCE=false
 RANGE_START=1
-RANGE_END=125
+RANGE_END=150
 
 for arg in "$@"; do
   case "$arg" in
     --force) FORCE=true ;;
     *[0-9]*)
-      if [[ "$RANGE_START" -eq 1 && "$RANGE_END" -eq 125 ]]; then
+      if [[ "$RANGE_START" -eq 1 && "$RANGE_END" -eq 150 ]]; then
         RANGE_START="$arg"
         RANGE_END="$arg"
       else
@@ -473,6 +473,83 @@ in_range 124 && download 124 "carnegie" \
 
 in_range 125 && note_manual 125 "wyrmspan" \
   "Stonemaier Games via Dropbox — https://stonemaiergames.com/games/wyrmspan/rules-faq/"
+
+# --- Games #126-150 ---
+
+in_range 126 && download 126 "dwellings-of-eldervale" \
+  "https://gamers-hq.de/media/pdf/c7/c2/c2/DoERulebook2024.pdf"
+
+in_range 127 && download 127 "nemesis-lockdown" \
+  "https://cdn.1j1ju.com/medias/0f/4f/16-nemesis-lockdown-rulebook.pdf"
+
+in_range 128 && download 128 "architects-of-the-west-kingdom" \
+  "https://cdn.1j1ju.com/medias/80/41/3d-architects-of-the-west-kingdom-rulebook.pdf"
+
+in_range 129 && download 129 "tigris-and-euphrates" \
+  "https://cdn.1j1ju.com/medias/04/4a/fe-tigris-euphrates-rulebook.pdf"
+
+in_range 130 && download 130 "keyflower" \
+  "https://cdn.1j1ju.com/medias/2d/11/80-keyflower-rulebook.pdf"
+
+in_range 131 && download 131 "dominion-intrigue" \
+  "https://cdn.1j1ju.com/medias/ea/58/df-dominion-intrigue-rulebook.pdf"
+
+in_range 132 && download 132 "raiders-of-the-north-sea" \
+  "https://cdn.1j1ju.com/medias/c8/c7/e3-raiders-of-the-north-sea-rulebook.pdf"
+
+in_range 133 && download 133 "tainted-grail" \
+  "https://cdn.1j1ju.com/medias/11/7a/e2-tainted-grail-the-fall-of-avalon-rulebook.pdf"
+
+in_range 134 && download 134 "wonderlands-war" \
+  "https://tesera.ru/images/items/1786613/Wonderland's%20War%20-%20Rulebook_08.10.2020.pdf"
+
+in_range 135 && download 135 "caylus" \
+  "https://cdn.1j1ju.com/medias/e5/d0/ee-caylus-rulebook.pdf"
+
+in_range 136 && download 136 "eldritch-horror" \
+  "https://cdn.1j1ju.com/medias/b4/2e/17-eldritch-horror-rulebook.pdf"
+
+in_range 137 && download 137 "lorenzo-il-magnifico" \
+  "https://cdn.1j1ju.com/medias/38/59/00-lorenzo-il-magnifico-rulebook.pdf"
+
+in_range 138 && download 138 "troyes" \
+  "https://cdn.1j1ju.com/medias/cb/77/69-troyes-rulebook.pdf"
+
+in_range 139 && download 139 "age-of-steam" \
+  "https://cdn.1j1ju.com/medias/77/8c/75-age-of-steam-rulebook.pdf"
+
+in_range 140 && note_manual 140 "lotr-fate-of-fellowship" \
+  "Z-Man Games — too new (2025), check BGG files section for official PDF"
+
+in_range 141 && download 141 "lotr-journeys-middle-earth" \
+  "https://cdn.1j1ju.com/medias/bc/15/79-the-lord-of-the-rings-journeys-in-middle-earth-rulebook.pdf"
+
+in_range 142 && note_manual 142 "galactic-cruise" \
+  "Kinson Key Games — too new (2025), check BGG files section for official PDF"
+
+in_range 143 && download 143 "mombasa" \
+  "https://cdn.1j1ju.com/medias/45/00/09-mombasa-rulebook.pdf"
+
+in_range 144 && download 144 "dominion" \
+  "https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion2nd.pdf"
+
+in_range 145 && note_manual 145 "nucleum" \
+  "Board&Dice via Dropbox — https://boardanddice.com/download/"
+
+in_range 146 && download 146 "patchwork" \
+  "https://cdn.1j1ju.com/medias/74/af/f2-patchwork-rulebook.pdf"
+
+in_range 147 && download 147 "hansa-teutonica" \
+  "https://cdn.1j1ju.com/medias/26/0c/b9-hansa-teutonica-rulebook.pdf"
+
+in_range 148 && note_manual 148 "trajan" \
+  "Ammonit Spiele / Huch! — search BGG files section for official PDF"
+
+in_range 149 && download 149 "aeons-end-war-eternal" \
+  "https://cdn.1j1ju.com/medias/9d/8f/d0-aeons-end-war-eternal-rulebook.pdf"
+
+in_range 150 && download 150 "twilight-imperium-3e" \
+  "https://images-cdn.fantasyflightgames.com/ffg_content/Twilight%20Imperium%203/ti3rules.pdf"
 
 echo ""
 echo "========================================="
