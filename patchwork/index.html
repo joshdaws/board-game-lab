@@ -2,1019 +2,640 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Patchwork</title>
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
 <style>
-:root {
-  --cell: 36px;
-  --gap: 2.5px;
-  --pad: 4px;
-  --bg: #F2F2F7;
-  --card: #FFFFFF;
-  --text: #1C1C1E;
-  --text2: #3C3C43;
-  --text3: #8E8E93;
-  --gray4: #D1D1D6;
-  --gray5: #E5E5EA;
-  --gray6: #F2F2F7;
-  --blue: #007AFF;
-  --green: #34C759;
-  --red: #FF3B30;
-  --orange: #FF9500;
-  --yellow: #FFCC00;
-  --teal: #5AC8FA;
-  --purple: #AF52DE;
-  --pink: #FF2D55;
-  --r: 14px;
-  --r-lg: 20px;
-  --shadow: 0 2px 10px rgba(0,0,0,0.06);
-  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
-}
-@media (max-width: 400px) { :root { --cell: 32px; --gap: 2px; } }
-@media (min-width: 768px) { :root { --cell: 38px; } }
-
-* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html, body { height: 100%; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  overscroll-behavior: none;
-}
-
-#app {
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 12px 16px;
-  padding-top: max(12px, env(safe-area-inset-top));
-  padding-bottom: max(12px, env(safe-area-inset-bottom));
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-/* ── Buttons ─── */
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 18px;
-  border-radius: 100px;
-  border: none;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.1s, opacity 0.15s;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.pill:active { transform: scale(0.96); }
-.pill-blue { background: var(--blue); color: #fff; }
-.pill-blue:disabled { background: var(--gray4); }
-.pill-gray { background: var(--gray5); color: var(--text); }
-.pill-sm { padding: 6px 14px; font-size: 13px; }
-.pill-icon {
-  width: 36px; height: 36px; padding: 0;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-}
-
-/* ── Header ─── */
-.hdr {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.hdr-title {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-.hdr-sub {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text3);
-}
-.hdr-badge {
-  font-size: 12px;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 100px;
-  color: #fff;
-}
-.hdr-badge.p0 { background: var(--teal); }
-.hdr-badge.p1 { background: var(--pink); }
-
-/* ── Stats Row ─── */
-.stats-row {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-.stat-card {
-  flex: 1;
-  background: var(--card);
-  border-radius: var(--r);
-  padding: 8px 10px;
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: box-shadow 0.3s;
-}
-.stat-card.active-p0 { box-shadow: 0 0 0 2px var(--teal), var(--shadow); }
-.stat-card.active-p1 { box-shadow: 0 0 0 2px var(--pink), var(--shadow); }
-.stat-avatar {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 800; color: #fff;
-  flex-shrink: 0;
-}
-.stat-avatar.p0 { background: var(--teal); }
-.stat-avatar.p1 { background: var(--pink); }
-.stat-vals { display: flex; flex-direction: column; font-size: 11px; }
-.stat-name { font-weight: 700; font-size: 13px; }
-.stat-detail { color: var(--text3); font-weight: 500; }
-
-/* ── Time Track ─── */
-.track-wrap {
-  background: var(--card);
-  border-radius: var(--r);
-  padding: 10px 14px 14px;
-  margin-bottom: 10px;
-  box-shadow: var(--shadow);
-}
-.track-label { font-size: 11px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-.track-bar {
-  position: relative;
-  height: 6px;
-  background: var(--gray5);
-  border-radius: 3px;
-}
-.track-dot {
-  position: absolute;
-  top: 50%;
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-.track-dot.income { background: var(--orange); }
-.track-dot.special { background: var(--purple); }
-.track-dot.claimed { background: var(--gray4); }
-.track-token {
-  position: absolute;
-  top: 50%;
-  width: 18px; height: 18px;
-  border-radius: 50%;
-  border: 2.5px solid #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 9px; font-weight: 800; color: #fff;
-  transition: left 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.track-token.t0 { background: var(--teal); z-index: 3; }
-.track-token.t1 { background: var(--pink); }
-
-/* ── Board ─── */
-.board-section {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.board-frame {
-  position: relative;
-  background: var(--card);
-  border-radius: var(--r-lg);
-  padding: 8px;
-  box-shadow: var(--shadow);
-  touch-action: none;
-}
-.board {
-  display: grid;
-  grid-template-columns: repeat(9, var(--cell));
-  gap: var(--gap);
-}
-.bc {
-  width: var(--cell);
-  height: var(--cell);
-  border-radius: 5px;
-  background: var(--gray6);
-  transition: background 0.15s;
-  position: relative;
-}
-.bc .bdot {
-  position: absolute; top: 3px; right: 3px;
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--orange);
-  border: 1px solid rgba(255,255,255,0.7);
-}
-.bc.clickable { cursor: pointer; }
-.bc.clickable::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  border: 2px dashed var(--green);
-  border-radius: 4px;
-  opacity: 0.6;
-}
-
-/* Preview overlay */
-.preview {
-  position: absolute;
-  pointer-events: none;
-  z-index: 5;
-  display: grid;
-  gap: var(--gap);
-  transition: transform 0.08s ease-out;
-}
-.preview .pc {
-  width: var(--cell);
-  height: var(--cell);
-  border-radius: 5px;
-  transition: background 0.1s;
-}
-.preview.valid .pc.on { background: rgba(52,199,89,0.45); box-shadow: inset 0 0 0 2px rgba(52,199,89,0.6); }
-.preview.invalid .pc.on { background: rgba(255,59,48,0.3); box-shadow: inset 0 0 0 2px rgba(255,59,48,0.4); }
-.preview .pc.off { /* transparent */ }
-
-/* ── Market ─── */
-.market-wrap {
-  background: var(--card);
-  border-radius: var(--r-lg);
-  padding: 12px;
-  margin-bottom: 10px;
-  box-shadow: var(--shadow);
-}
-.market-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.market-title { font-size: 11px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; }
-.market-count { font-size: 11px; color: var(--text3); }
-.market-row {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-.mp {
-  flex-shrink: 0;
-  min-width: 64px;
-  padding: 10px 8px 6px;
-  border-radius: var(--r);
-  background: var(--gray6);
-  border: 2px solid transparent;
-  text-align: center;
-  scroll-snap-align: start;
-  transition: all 0.2s;
-  cursor: default;
-  opacity: 0.3;
-  position: relative;
-}
-.mp.avail {
-  opacity: 1;
-  background: #fff;
-  border-color: var(--gray5);
-  cursor: pointer;
-}
-.mp.avail:active { transform: scale(0.95); }
-.mp.avail.cant {
-  opacity: 0.45;
-  cursor: not-allowed;
-  border-color: transparent;
-}
-.mp.avail.cant:active { transform: none; }
-.mp .pawn-pip {
-  position: absolute; top: -6px; left: 50%; transform: translateX(-50%);
-  width: 12px; height: 12px; border-radius: 50%;
-  background: var(--orange); border: 2px solid #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-}
-.mshape { display: inline-grid; gap: 2px; margin-bottom: 6px; }
-.mshape .ms {
-  width: 12px; height: 12px;
-  border-radius: 2px;
-}
-.mshape .ms.off { background: transparent; }
-.mp-cost {
-  font-size: 11px; font-weight: 600; color: var(--text2);
-  white-space: nowrap;
-}
-.mp-income {
-  display: inline-block;
-  font-size: 10px; font-weight: 700;
-  background: #FFF3E0; color: var(--orange);
-  padding: 1px 5px; border-radius: 4px;
-  margin-top: 2px;
-}
-
-/* ── Action Bar ─── */
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding: 4px 0;
-}
-.actions .msg {
-  flex: 1;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text2);
-  min-width: 120px;
-}
-.actions .hint {
-  font-size: 12px;
-  color: var(--text3);
-}
-
-/* ── Game Over ─── */
-.overlay {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 100;
-  animation: fadeIn 0.3s;
-  padding: 20px;
-}
-@keyframes fadeIn { from { opacity: 0 } }
-.over-card {
-  background: var(--card);
-  border-radius: var(--r-lg);
-  padding: 32px;
-  text-align: center;
-  box-shadow: var(--shadow-lg);
-  width: 100%;
-  max-width: 340px;
-  animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-@keyframes popIn { from { transform: scale(0.85); opacity: 0 } }
-.over-card h2 { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
-.over-sub { font-size: 14px; color: var(--text3); margin-bottom: 16px; }
-.score-grid {
-  display: grid;
-  grid-template-columns: auto 1fr 1fr;
-  gap: 4px 16px;
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.score-grid .lbl { text-align: left; color: var(--text3); font-weight: 500; }
-.score-grid .total { font-weight: 800; font-size: 18px; padding-top: 6px; border-top: 1px solid var(--gray5); }
-
-/* ── Setup ─── */
-.setup {
-  flex: 1;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 20px;
-  text-align: center;
-}
-.setup-title { font-size: 36px; font-weight: 800; letter-spacing: -1px; }
-.setup-sub { font-size: 15px; color: var(--text3); margin-top: -12px; }
-.setup-form { width: 260px; display: flex; flex-direction: column; gap: 12px; }
-.setup-form label { font-size: 12px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; text-align: left; }
-.setup-form select {
-  width: 100%; padding: 10px 14px;
-  background: var(--card); color: var(--text);
-  border: 1px solid var(--gray5);
-  border-radius: var(--r);
-  font-family: inherit; font-size: 15px;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%238E8E93' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 14px center;
-}
-.setup-form .pill { width: 100%; justify-content: center; margin-top: 4px; padding: 12px; font-size: 17px; }
-
-/* ── Desktop layout ─── */
-@media (min-width: 768px) {
-  #app { max-width: 900px; }
-  .desk-split { display: flex; gap: 16px; align-items: flex-start; }
-  .desk-main { flex: 1; }
-  .desk-side { flex: 1; }
-}
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; height:100%; overflow:hidden; background:#1a1a2e; }
+canvas { display:block; margin:0 auto; }
 </style>
 </head>
 <body>
-<div id="app"></div>
 <script type="module">
 import {
-  createGame, getAvailablePatches,
-  findValidPlacements, canPlace,
-  actionAdvance, actionBuyPatch, confirmPlacement,
-  placeSpecialPatch, getScoreBreakdown, countEmpty,
-  flipShape, getOrientations,
+  createGame, getAvailablePatches, findValidPlacements, canPlace,
+  actionAdvance, actionBuyPatch, confirmPlacement, placeSpecialPatch,
+  getScoreBreakdown, countEmpty, getOrientations, rotateShape,
+  remainingIncomeTriggers, shapeSize,
 } from './engine.js';
-import { BUTTON_INCOME_AFTER, SPECIAL_PATCH_AFTER } from './patches.js';
+import { PATCHES, TRACK_LENGTH, BUTTON_INCOME_AFTER, SPECIAL_PATCH_AFTER } from './patches.js';
 import { executeAIMove, aiPlaceSpecialPatch } from './ai.js';
 
-/* ── Colors ───────────────────────────────────────────── */
-const FC = [
-  '#FF6B6B','#FFA06B','#FFD36B','#A8E06B','#6BE0A8',
-  '#6BD4E0','#6BA8E0','#8B6BE0','#D46BE0','#E06B8B',
-  '#FF8C94','#FFB494','#FFD894','#B8E894','#94E8C4',
-  '#94DCE8','#94B8E8','#A894E8','#DC94E8','#E894B8',
-  '#C97272','#C99A72','#C9C072','#8AC972','#72C9A0',
-  '#72BCC9','#7296C9','#8A72C9','#BC72C9','#C97290',
-  '#E8A0A0','#E8C0A0','#D8E8A0',
+// ── Constants ──────────────────────────────────────────────
+const BOARD_SIZE = 9;
+const COLORS = {
+  bg: 0x1a1a2e,
+  panel: 0x16213e,
+  panelLight: 0x1f3460,
+  cell: 0x0f3460,
+  cellFilled: 0x533483,
+  cellEmpty: 0x162447,
+  cellHover: 0x2ecc71,
+  cellInvalid: 0xe74c3c,
+  accent: 0x00b4d8,
+  accent2: 0xe94560,
+  gold: 0xf4d03f,
+  white: 0xffffff,
+  textDim: 0x8899aa,
+  p1: 0x00b4d8,
+  p2: 0xe94560,
+  income: 0xf39c12,
+  special: 0x2ecc71,
+};
+const PATCH_FILLS = [
+  0x7c3aed, 0x2563eb, 0x059669, 0xd97706, 0xdc2626,
+  0x7c3aed, 0x0891b2, 0xbe185d, 0x4f46e5, 0x15803d,
+  0xb45309, 0x9333ea, 0x0284c7, 0x047857, 0xc2410c,
+  0xa21caf, 0x1d4ed8, 0x0d9488, 0xea580c, 0x6d28d9,
+  0x0369a1, 0x166534, 0x92400e, 0x86198f, 0x1e40af,
+  0x115e59, 0x9a3412, 0x6b21a8, 0x075985, 0x14532d,
+  0x7c2d12, 0x701a75, 0x1e3a5f,
 ];
-const SP_COLOR = '#B4A08C';
 
-/* ── State ────────────────────────────────────────────── */
-let game = null;
-let appMode = 'setup';
-let gameMode = 'vs-ai';
-let aiDiff = 'medium';
-let colorBoards = [null, null];
+// ── Game Scene ─────────────────────────────────────────────
+class GameScene extends Phaser.Scene {
+  constructor() { super('Game'); }
 
-// Placement
-let plPatch = null;
-let plShape = null;
-let plRow = 0, plCol = 0;
-let plOi = 0, plOrients = [];
-let plValid = false;
+  create() {
+    this.game_state = createGame();
+    this.aiDifficulty = 'medium';
+    this.selectedPatchIndex = -1;
+    this.currentOrientation = 0;
+    this.orientations = [];
+    this.dragPreview = null;
+    this.isDragging = false;
 
-// Drag tracking
-let dragging = false;
-let dragStartX = 0, dragStartY = 0;
-let didDrag = false;
-let lastTapTime = 0;
+    const W = this.scale.width;
+    const H = this.scale.height;
 
-// DOM refs
-let boardFrameEl = null;
-let previewEl = null;
+    // Calculate cell size to fit board
+    this.cellSize = Math.floor(Math.min((W - 40) / BOARD_SIZE, (H * 0.4) / BOARD_SIZE));
+    if (this.cellSize < 28) this.cellSize = 28;
+    if (this.cellSize > 42) this.cellSize = 42;
+    this.cellGap = 2;
 
-const $ = document.getElementById('app');
-
-function pColor(id) { return FC[id % FC.length]; }
-function makeColorBoard() { return Array.from({length:9}, () => Array(9).fill(null)); }
-
-/* ── DOM helper ───────────────────────────────────────── */
-function h(tag, a, ...ch) {
-  const e = document.createElement(tag);
-  if (a) for (const [k,v] of Object.entries(a)) {
-    if (k==='cls') e.className=v;
-    else if (k==='style'&&typeof v==='object') Object.assign(e.style,v);
-    else if (k.startsWith('on')) e[k]=v;
-    else e.setAttribute(k,String(v));
-  }
-  for (const c of ch) {
-    if (c==null||c===false) continue;
-    if (typeof c==='string'||typeof c==='number') e.append(String(c));
-    else if (Array.isArray(c)) c.forEach(x=>{if(x)e.append(x)});
-    else e.append(c);
-  }
-  return e;
-}
-
-/* ── Render ────────────────────────────────────────────── */
-function render() {
-  $.replaceChildren();
-  if (appMode==='setup') { $.append(renderSetup()); return; }
-  renderGame();
-}
-
-function renderSetup() {
-  const gm=h('select',null,h('option',{value:'vs-ai',selected:''},'vs AI'),h('option',{value:'local'},'2 Players'));
-  const ai=h('select',null,h('option',{value:'easy'},'Easy'),h('option',{value:'medium',selected:''},'Medium'),h('option',{value:'hard'},'Hard'));
-  gm.onchange=e=>{gameMode=e.target.value;ai.disabled=gameMode==='local';};
-  ai.onchange=e=>{aiDiff=e.target.value;};
-  const go=h('button',{cls:'pill pill-blue'},'Start Game');
-  go.onclick=startGame;
-  return h('div',{cls:'setup'},
-    h('div',{cls:'setup-title'},'Patchwork'),
-    h('p',{cls:'setup-sub'},'A quilting game for two'),
-    h('div',{cls:'setup-form'},
-      h('label',null,'Mode'),gm,
-      h('label',null,'Difficulty'),ai,go));
-}
-
-function startGame() {
-  game=createGame(); appMode='playing';
-  plPatch=null; plShape=null;
-  colorBoards=[makeColorBoard(),makeColorBoard()];
-  render();
-}
-
-function renderGame() {
-  $.replaceChildren();
-  const act=game.currentPlayer;
-  const isAI=gameMode==='vs-ai'&&act===1;
-  const name=i=>(gameMode==='vs-ai'&&i===1)?'AI':`P${i+1}`;
-
-  // Header
-  const badge=h('span',{cls:`hdr-badge p${act}`},
-    game.phase==='game_over'?'Done':`${name(act)}'s turn`);
-  const newBtn=h('button',{cls:'pill pill-gray pill-sm',onclick:()=>{appMode='setup';render();}},'New');
-  $.append(h('div',{cls:'hdr'},
-    h('div',null,h('span',{cls:'hdr-title'},'Patchwork'),' ',badge),newBtn));
-
-  // Stats
-  const sr=h('div',{cls:'stats-row'});
-  for (let i=0;i<2;i++) {
-    const p=game.players[i];
-    const emp=countEmpty(p.board);
-    let cls='stat-card';
-    if (act===i) cls+=` active-p${i}`;
-    sr.append(h('div',{cls},
-      h('div',{cls:`stat-avatar p${i}`},name(i)),
-      h('div',{cls:'stat-vals'},
-        h('div',{cls:'stat-name'},`${p.buttons} buttons`),
-        h('div',{cls:'stat-detail'},`+${p.totalButtonIncome}/trig  ${emp} empty${p.hasSpecialTile?' | 7x7!':''}`))));
-  }
-  $.append(sr);
-
-  // Time track
-  $.append(buildTrack());
-
-  // Board(s) - show active player's board, and opponent smaller on desktop
-  const isWide = window.innerWidth >= 768;
-  if (isWide) {
-    const split = h('div',{cls:'desk-split'});
-    split.append(h('div',{cls:'desk-main'},buildBoardSection(act)));
-    split.append(h('div',{cls:'desk-side'},buildBoardSection(1-act, true)));
-    $.append(split);
-  } else {
-    $.append(buildBoardSection(act));
+    this.drawUI();
+    this.updateDisplay();
   }
 
-  // Market
-  $.append(buildMarket());
+  drawUI() {
+    const W = this.scale.width;
+    const H = this.scale.height;
+    const cs = this.cellSize;
+    const boardPx = cs * BOARD_SIZE + this.cellGap * (BOARD_SIZE - 1);
 
-  // Actions
-  $.append(buildActions());
+    // ── Top bar: scores ──
+    this.topBar = this.add.container(0, 0);
+    const topBg = this.add.rectangle(W/2, 25, W, 50, COLORS.panel);
+    this.topBar.add(topBg);
 
-  // Game over
-  if (game.phase==='game_over') $.append(buildGameOver());
+    this.p1Label = this.add.text(12, 14, 'YOU', { fontSize: '13px', fontFamily: 'system-ui', color: '#00b4d8', fontStyle: 'bold' });
+    this.p1Buttons = this.add.text(12, 30, '5 btn', { fontSize: '12px', fontFamily: 'system-ui', color: '#aabbcc' });
+    this.topBar.add([this.p1Label, this.p1Buttons]);
 
-  // AI
-  if (isAI && game.phase!=='game_over') setTimeout(doAITurn,450);
-}
+    this.p2Label = this.add.text(W - 12, 14, 'AI', { fontSize: '13px', fontFamily: 'system-ui', color: '#e94560', fontStyle: 'bold' }).setOrigin(1, 0);
+    this.p2Buttons = this.add.text(W - 12, 30, '5 btn', { fontSize: '12px', fontFamily: 'system-ui', color: '#aabbcc' }).setOrigin(1, 0);
+    this.topBar.add([this.p2Label, this.p2Buttons]);
 
-/* ── Track ──────────────────────────────────────────── */
-function buildTrack() {
-  const bar=h('div',{cls:'track-bar'});
-  const pct=i=>`${(i/52)*100}%`;
+    this.turnText = this.add.text(W/2, 22, 'Your Turn', { fontSize: '14px', fontFamily: 'system-ui', color: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5);
+    this.topBar.add(this.turnText);
 
-  // Income & special dots
-  for (const p of BUTTON_INCOME_AFTER) {
-    bar.append(h('div',{cls:'track-dot income',style:{left:pct(p)}}));
-  }
-  for (const p of SPECIAL_PATCH_AFTER) {
-    const claimed=game.specialPatchesClaimed.includes(p);
-    bar.append(h('div',{cls:`track-dot ${claimed?'claimed':'special'}`,style:{left:pct(p)}}));
-  }
+    // ── Time track (compact) ──
+    const trackY = 62;
+    const trackW = W - 40;
+    this.add.rectangle(W/2, trackY, trackW, 8, COLORS.panelLight, 0.8).setStrokeStyle(1, 0x334466);
 
-  // Player tokens
-  for (let i=0;i<2;i++) {
-    const pos=game.players[i].timePosition;
-    bar.append(h('div',{cls:`track-token t${i}`,style:{left:pct(pos)}},String(i+1)));
-  }
+    // Income + special dots
+    for (const pos of BUTTON_INCOME_AFTER) {
+      const x = 20 + (pos / 52) * trackW;
+      this.add.circle(x, trackY, 3, COLORS.income, 0.7);
+    }
+    for (const pos of SPECIAL_PATCH_AFTER) {
+      const x = 20 + (pos / 52) * trackW;
+      this.add.rectangle(x, trackY, 5, 5, COLORS.special, 0.7);
+    }
 
-  return h('div',{cls:'track-wrap'},h('div',{cls:'track-label'},'Time Track'),bar);
-}
+    this.p1Token = this.add.circle(20, trackY, 5, COLORS.p1).setStrokeStyle(1, 0xffffff);
+    this.p2Token = this.add.circle(20, trackY, 5, COLORS.p2).setStrokeStyle(1, 0xffffff);
 
-/* ── Board ──────────────────────────────────────────── */
-function buildBoardSection(idx, small) {
-  const p=game.players[idx];
-  const cb=colorBoards[idx];
-  const isPlacing=(game.phase==='place_patch'||game.phase==='place_special')&&game.currentPlayer===idx;
+    // ── Quilt board ──
+    const boardX = Math.floor((W - boardPx) / 2);
+    const boardY = 82;
+    this.boardX = boardX;
+    this.boardY = boardY;
+    this.boardCells = [];
 
-  const board=h('div',{cls:'board'});
-  if (small) board.style.setProperty('--cell','28px');
-
-  for (let r=0;r<9;r++) {
-    for (let c=0;c<9;c++) {
-      const filled=p.board[r][c];
-      const cc=cb?cb[r][c]:null;
-      const cell=h('div',{cls:'bc'});
-
-      if (filled) {
-        const color = cc ? (cc.endsWith('!') ? cc.slice(0,-1) : cc) : '#C7C7CC';
-        cell.style.background=color;
-        if (cc && cc.endsWith('!')) cell.append(h('div',{cls:'bdot'}));
+    for (let r = 0; r < BOARD_SIZE; r++) {
+      this.boardCells[r] = [];
+      for (let c = 0; c < BOARD_SIZE; c++) {
+        const x = boardX + c * (cs + this.cellGap) + cs/2;
+        const y = boardY + r * (cs + this.cellGap) + cs/2;
+        const cell = this.add.rectangle(x, y, cs - 1, cs - 1, COLORS.cellEmpty)
+          .setStrokeStyle(1, 0x223355);
+        this.boardCells[r][c] = cell;
       }
+    }
 
-      // Special patch clickable
-      if (game.phase==='place_special' && game.currentPlayer===idx && !filled) {
-        cell.classList.add('clickable');
-        cell.onclick=()=>doPlaceSpecial(r,c);
+    // Board label
+    const boardBottom = boardY + boardPx;
+    this.boardLabel = this.add.text(W/2, boardBottom + 6, 'Your Board', {
+      fontSize: '11px', fontFamily: 'system-ui', color: '#667788'
+    }).setOrigin(0.5, 0);
+
+    // ── Action buttons ──
+    const btnY = boardBottom + 28;
+    this.advanceBtn = this.createButton(W/2 - 70, btnY, 120, 34, 'ADVANCE', COLORS.accent, () => this.onAdvance());
+    this.statusText = this.add.text(W/2, btnY + 46, '', {
+      fontSize: '12px', fontFamily: 'system-ui', color: '#8899aa', align: 'center', wordWrap: { width: W - 30 }
+    }).setOrigin(0.5, 0);
+
+    // ── Market area ──
+    const marketY = btnY + 68;
+    this.marketLabel = this.add.text(12, marketY, 'MARKET', {
+      fontSize: '11px', fontFamily: 'system-ui', color: '#667788', fontStyle: 'bold'
+    });
+    this.marketY = marketY + 18;
+    this.marketCards = [];
+
+    // ── Opponent board (small) ──
+    this.oppBoardY = H - 10;
+    this.oppCells = [];
+    const oppSize = Math.floor(Math.min((W - 20) / BOARD_SIZE, 14));
+    this.oppCellSize = oppSize;
+    const oppBoardPx = oppSize * BOARD_SIZE;
+    const oppX = Math.floor((W - oppBoardPx) / 2);
+    this.oppBoardX = oppX;
+    this.oppBoardYStart = this.oppBoardY - oppBoardPx - 16;
+
+    this.add.text(W/2, this.oppBoardYStart - 4, 'AI Board', {
+      fontSize: '10px', fontFamily: 'system-ui', color: '#556677'
+    }).setOrigin(0.5, 1);
+
+    for (let r = 0; r < BOARD_SIZE; r++) {
+      this.oppCells[r] = [];
+      for (let c = 0; c < BOARD_SIZE; c++) {
+        const x = oppX + c * oppSize + oppSize/2;
+        const y = this.oppBoardYStart + r * oppSize + oppSize/2;
+        const cell = this.add.rectangle(x, y, oppSize - 1, oppSize - 1, COLORS.cellEmpty);
+        this.oppCells[r][c] = cell;
       }
-
-      board.append(cell);
     }
+
+    // ── Drag preview layer ──
+    this.previewCells = [];
+    this.previewContainer = this.add.container(0, 0).setDepth(100).setVisible(false);
+
+    // ── Placement confirm button ──
+    this.placeBtn = this.createButton(W/2 + 50, btnY, 100, 34, 'PLACE', COLORS.special, () => this.onConfirmPlace());
+    this.placeBtn.setVisible(false);
+    this.rotateBtn = this.createButton(W/2 - 50, btnY, 80, 34, 'ROTATE', COLORS.panelLight, () => this.onRotate());
+    this.rotateBtn.setVisible(false);
   }
 
-  const frame=h('div',{cls:'board-frame'},board);
-
-  // Add preview overlay during placement
-  if (isPlacing && plShape && game.phase==='place_patch' && !small) {
-    const prev=buildPreview();
-    frame.append(prev);
-    // Store refs for drag updates
-    boardFrameEl=frame;
-    previewEl=prev;
-
-    // Attach pointer events for drag
-    frame.onpointerdown=onPointerDown;
-    frame.onpointermove=onPointerMove;
-    frame.onpointerup=onPointerUp;
-    frame.onpointercancel=onPointerUp;
-  } else {
-    boardFrameEl=null;
-    previewEl=null;
+  createButton(x, y, w, h, label, color, callback) {
+    const container = this.add.container(x, y);
+    const bg = this.add.rectangle(0, 0, w, h, color, 0.9).setStrokeStyle(1, 0x445566);
+    bg.setInteractive({ useHandCursor: true });
+    const txt = this.add.text(0, 0, label, {
+      fontSize: '12px', fontFamily: 'system-ui', color: '#ffffff', fontStyle: 'bold'
+    }).setOrigin(0.5);
+    container.add([bg, txt]);
+    bg.on('pointerdown', callback);
+    container.bg = bg;
+    container.label = txt;
+    container.setVisible = function(v) {
+      this.visible = v;
+      bg.visible = v;
+      txt.visible = v;
+      if (v) bg.setInteractive(); else bg.disableInteractive();
+      return this;
+    };
+    return container;
   }
 
-  const name=(gameMode==='vs-ai'&&idx===1)?'AI':`Player ${idx+1}`;
-  const label=small ? h('div',{style:{fontSize:'12px',fontWeight:'700',color:'var(--text3)',marginBottom:'6px',textAlign:'center'}},name) : null;
+  // ── Update Display ─────────────────────────────────────
+  updateDisplay() {
+    const gs = this.game_state;
+    const W = this.scale.width;
+    const trackW = W - 40;
 
-  return h('div',{cls:'board-section',style:{flexDirection:'column',alignItems:'center'}},label,frame);
-}
+    // Scores
+    const p1 = gs.players[0], p2 = gs.players[1];
+    this.p1Buttons.setText(`${p1.buttons} btn | ${countEmpty(p1.board)} empty`);
+    this.p2Buttons.setText(`${p2.buttons} btn | ${countEmpty(p2.board)} empty`);
 
-function buildPreview() {
-  const cols=plShape[0].length;
-  const g=h('div',{cls:`preview ${plValid?'valid':'invalid'}`,
-    style:{gridTemplateColumns:`repeat(${cols}, var(--cell))`,
-      padding:'8px', /* match board-frame padding */
-    }});
+    // Time tokens
+    const x1 = 20 + (p1.timePosition / 52) * trackW;
+    const x2 = 20 + (p2.timePosition / 52) * trackW;
+    this.tweens.add({ targets: this.p1Token, x: x1, duration: 300, ease: 'Back.easeOut' });
+    this.tweens.add({ targets: this.p2Token, x: x2, duration: 300, ease: 'Back.easeOut' });
 
-  for (const row of plShape) {
-    for (const v of row) {
-      g.append(h('div',{cls:`pc ${v>=1?'on':'off'}`}));
-    }
-  }
-
-  // Position it using CSS custom properties
-  updatePreviewPosition(g);
-  return g;
-}
-
-function updatePreviewPosition(el) {
-  const cellPx = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--cell'));
-  const gapPx = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
-  const step = cellPx + gapPx;
-  (el||previewEl).style.transform = `translate(${plCol*step}px, ${plRow*step}px)`;
-}
-
-/* ── Drag / Tap ────────────────────────────────────────── */
-function onPointerDown(e) {
-  if (game.phase!=='place_patch') return;
-  dragging=true;
-  didDrag=false;
-  dragStartX=e.clientX;
-  dragStartY=e.clientY;
-  e.currentTarget.setPointerCapture(e.pointerId);
-  e.preventDefault();
-}
-
-function onPointerMove(e) {
-  if (!dragging) return;
-  const dx=e.clientX-dragStartX, dy=e.clientY-dragStartY;
-  if (Math.abs(dx)>6||Math.abs(dy)>6) didDrag=true;
-  if (!didDrag) return;
-
-  // Calculate grid position from pointer
-  const rect=boardFrameEl.querySelector('.board').getBoundingClientRect();
-  const cellPx=rect.width/9; // approximate cell+gap
-  const x=e.clientX-rect.left;
-  const y=e.clientY-rect.top;
-
-  // Center the shape on the pointer
-  const rows=plShape.length, cols=plShape[0].length;
-  let nc=Math.round(x/cellPx - cols/2);
-  let nr=Math.round(y/cellPx - rows/2);
-  nc=Math.max(0,Math.min(9-cols,nc));
-  nr=Math.max(0,Math.min(9-rows,nr));
-
-  if (nr!==plRow || nc!==plCol) {
-    plRow=nr; plCol=nc;
-    plValid=canPlace(game.players[game.currentPlayer].board,plShape,plRow,plCol);
-    if (previewEl) {
-      updatePreviewPosition();
-      previewEl.className=`preview ${plValid?'valid':'invalid'}`;
-    }
-  }
-}
-
-function onPointerUp(e) {
-  if (!dragging) return;
-  dragging=false;
-
-  if (!didDrag) {
-    // It was a tap
-    const now=Date.now();
-    if (now-lastTapTime<400 && plValid) {
-      // Double tap → place
-      lastTapTime=0;
-      doConfirm();
+    // Turn indicator
+    if (gs.phase === 'game_over') {
+      const s0 = getScoreBreakdown(p1), s1 = getScoreBreakdown(p2);
+      this.turnText.setText(gs.winner === 0 ? 'You Win!' : 'AI Wins!');
+      this.turnText.setColor(gs.winner === 0 ? '#2ecc71' : '#e94560');
+      this.statusText.setText(
+        `You: ${s0.total} (${s0.buttons} btn + ${s0.specialTileBonus} tile - ${s0.emptyPenalty} penalty)\n` +
+        `AI: ${s1.total} (${s1.buttons} btn + ${s1.specialTileBonus} tile - ${s1.emptyPenalty} penalty)`
+      );
+      this.advanceBtn.setVisible(false);
+      this.hideMarket();
       return;
     }
-    lastTapTime=now;
-    // Single tap → rotate
-    doRotate();
-    return;
+
+    const isYourTurn = gs.currentPlayer === 0 && gs.phase === 'choose_action';
+    this.turnText.setText(isYourTurn ? 'Your Turn' : 'AI Thinking...');
+    this.turnText.setColor(isYourTurn ? '#ffffff' : '#e94560');
+
+    // Boards
+    this.renderBoard(this.boardCells, p1.board, 0);
+    this.renderBoard(this.oppCells, p2.board, 1);
+
+    // Market
+    if (gs.phase === 'choose_action' && gs.currentPlayer === 0) {
+      this.advanceBtn.setVisible(true);
+      this.showMarket();
+    } else {
+      this.advanceBtn.setVisible(false);
+      this.hideMarket();
+    }
+
+    // Status
+    if (gs.phase === 'choose_action' && gs.currentPlayer === 0) {
+      const adv = Math.min(p2.timePosition + 1 - p1.timePosition, 52 - p1.timePosition);
+      this.statusText.setText(`Advance: +${Math.max(1, adv)} buttons | Or pick a patch below`);
+    }
   }
-  // Drag ended — position is set, user can tap Place or double-tap
-}
 
-/* ── Market ─────────────────────────────────────────── */
-function buildMarket() {
-  const available=getAvailablePatches(game);
-  const availSet=new Set(available.map(a=>a.marketIndex));
-  const player=game.players[game.currentPlayer];
-  const len=game.patches.length;
+  renderBoard(cells, board, playerIdx) {
+    for (let r = 0; r < BOARD_SIZE; r++) {
+      for (let c = 0; c < BOARD_SIZE; c++) {
+        if (board[r][c]) {
+          cells[r][c].setFillStyle(playerIdx === 0 ? COLORS.cellFilled : COLORS.accent2, 1);
+          cells[r][c].setStrokeStyle(1, 0x445566);
+        } else {
+          cells[r][c].setFillStyle(COLORS.cellEmpty, 1);
+          cells[r][c].setStrokeStyle(1, 0x223355);
+        }
+      }
+    }
+  }
 
-  const row=h('div',{cls:'market-row'});
-  const show=Math.min(len,12);
+  // ── Market ──────────────────────────────────────────────
+  showMarket() {
+    this.hideMarket();
+    const gs = this.game_state;
+    const avail = getAvailablePatches(gs);
+    const player = gs.players[0];
+    const W = this.scale.width;
+    const cardW = Math.floor((W - 50) / 3);
+    const startX = Math.floor((W - (cardW * 3 + 20)) / 2);
 
-  for (let off=0;off<show;off++) {
-    const idx=(game.pawnIndex+off)%len;
-    const patch=game.patches[idx];
-    const isAv=availSet.has(idx);
-    const isPawn=off===0;
-    const afford=player.buttons>=patch.buttonCost;
-    const fits=isAv&&afford?findValidPlacements(player.board,patch.shape).length>0:false;
-    const col=pColor(patch.id);
+    for (let i = 0; i < avail.length; i++) {
+      const { patch, marketIndex } = avail[i];
+      const canAfford = player.buttons >= patch.buttonCost;
+      const placements = canAfford ? findValidPlacements(player.board, patch.shape) : [];
+      const canBuy = placements.length > 0;
 
-    let cls='mp';
-    if (isAv) { cls+=' avail'; if (!afford||!fits) cls+=' cant'; }
+      const cx = startX + i * (cardW + 10) + cardW/2;
+      const cy = this.marketY + 40;
+      const container = this.add.container(cx, cy);
 
-    const cols2=patch.shape[0].length;
-    const sg=h('div',{cls:'mshape',style:{gridTemplateColumns:`repeat(${cols2},12px)`}});
-    for (const r of patch.shape) {
-      for (const v of r) {
-        if (v===0) sg.append(h('div',{cls:'ms off'}));
-        else {
-          const mc=h('div',{cls:'ms',style:{background:v===2?darken(col,20):col}});
-          sg.append(mc);
+      // Card background
+      const bg = this.add.rectangle(0, 0, cardW, 78, canBuy ? COLORS.panelLight : 0x111133, 0.9)
+        .setStrokeStyle(1.5, canBuy ? COLORS.accent : 0x333355);
+
+      // Patch shape preview
+      const shape = patch.shape;
+      const previewSize = Math.min(8, Math.floor((cardW - 16) / Math.max(shape[0].length, shape.length)));
+      const shapeW = shape[0].length * previewSize;
+      const shapeH = shape.length * previewSize;
+      const shapeContainer = this.add.container(-shapeW/2, -28);
+      for (let r = 0; r < shape.length; r++) {
+        for (let c = 0; c < shape[0].length; c++) {
+          if (shape[r][c] >= 1) {
+            const fill = shape[r][c] === 2 ? COLORS.income : PATCH_FILLS[patch.id % PATCH_FILLS.length];
+            const cell = this.add.rectangle(
+              c * previewSize + previewSize/2,
+              r * previewSize + previewSize/2,
+              previewSize - 1, previewSize - 1, fill
+            );
+            shapeContainer.add(cell);
+          }
+        }
+      }
+
+      // Cost labels
+      const costTxt = this.add.text(0, 16, `${patch.buttonCost}btn ${patch.timeCost}t`, {
+        fontSize: '10px', fontFamily: 'system-ui', color: canBuy ? '#aabbcc' : '#556677'
+      }).setOrigin(0.5);
+      const incomeTxt = this.add.text(0, 28, patch.buttonIncome > 0 ? `+${patch.buttonIncome}/income` : '', {
+        fontSize: '9px', fontFamily: 'system-ui', color: '#f39c12'
+      }).setOrigin(0.5);
+
+      container.add([bg, shapeContainer, costTxt, incomeTxt]);
+
+      if (canBuy) {
+        bg.setInteractive({ useHandCursor: true });
+        bg.on('pointerdown', () => this.onSelectPatch(marketIndex, patch, i));
+      }
+
+      this.marketCards.push(container);
+    }
+  }
+
+  hideMarket() {
+    for (const c of this.marketCards) c.destroy();
+    this.marketCards = [];
+  }
+
+  // ── Patch Selection & Placement ─────────────────────────
+  onSelectPatch(marketIndex, patch, displayIdx) {
+    const gs = this.game_state;
+    const buyResult = actionBuyPatch(gs, marketIndex);
+    if (buyResult.error) {
+      this.statusText.setText(buyResult.error);
+      return;
+    }
+
+    this.selectedPatchIndex = marketIndex;
+    this.orientations = getOrientations(patch.shape);
+    this.currentOrientation = 0;
+    this.patchColor = PATCH_FILLS[patch.id % PATCH_FILLS.length];
+
+    this.hideMarket();
+    this.advanceBtn.setVisible(false);
+    this.rotateBtn.setVisible(true);
+    this.placeBtn.setVisible(false);
+    this.statusText.setText('Drag to position, tap ROTATE, then PLACE');
+
+    this.startPlacement();
+  }
+
+  startPlacement() {
+    const shape = this.orientations[this.currentOrientation];
+    this.snapRow = 0;
+    this.snapCol = 0;
+
+    // Find first valid position
+    const gs = this.game_state;
+    const player = gs.players[gs.currentPlayer];
+    for (let r = 0; r <= BOARD_SIZE - shape.length; r++) {
+      for (let c = 0; c <= BOARD_SIZE - shape[0].length; c++) {
+        if (canPlace(player.board, shape, r, c)) {
+          this.snapRow = r;
+          this.snapCol = c;
+          this.showPreview(shape, r, c);
+          return;
+        }
+      }
+    }
+    this.showPreview(shape, 0, 0);
+  }
+
+  showPreview(shape, row, col) {
+    // Clear previous
+    this.previewContainer.removeAll(true);
+    this.previewCells = [];
+
+    const cs = this.cellSize;
+    const gap = this.cellGap;
+    const gs = this.game_state;
+    const player = gs.players[gs.currentPlayer];
+    const valid = canPlace(player.board, shape, row, col);
+
+    for (let r = 0; r < shape.length; r++) {
+      for (let c = 0; c < shape[0].length; c++) {
+        if (shape[r][c] >= 1) {
+          const x = this.boardX + (col + c) * (cs + gap) + cs/2;
+          const y = this.boardY + (row + r) * (cs + gap) + cs/2;
+          const color = valid ? this.patchColor : COLORS.cellInvalid;
+          const cell = this.add.rectangle(x, y, cs - 1, cs - 1, color, 0.7)
+            .setStrokeStyle(2, valid ? 0xffffff : 0xff4444);
+          this.previewContainer.add(cell);
+          this.previewCells.push(cell);
         }
       }
     }
 
-    const info=h('div',{cls:'mp-cost'},`${patch.buttonCost}b  ${patch.timeCost}t`);
-    const mp=h('div',{cls},sg,info);
-    if (patch.buttonIncome>0) mp.append(h('div',{cls:'mp-income'},`+${patch.buttonIncome}`));
-    if (isPawn) mp.append(h('div',{cls:'pawn-pip'}));
+    this.previewContainer.setVisible(true);
+    this.placeBtn.setVisible(valid);
 
-    if (isAv&&afford&&fits) {
-      mp.onclick=()=>{
-        if (game.phase!=='choose_action') return;
-        if (gameMode==='vs-ai'&&game.currentPlayer===1) return;
-        doBuyPatch(idx);
-      };
+    // Make board cells interactive for dragging
+    this.enableBoardDrag(shape);
+  }
+
+  enableBoardDrag(shape) {
+    // Remove old listeners
+    if (this._boardDragZone) {
+      this._boardDragZone.destroy();
     }
-    row.append(mp);
+
+    const cs = this.cellSize;
+    const gap = this.cellGap;
+    const boardPx = cs * BOARD_SIZE + gap * (BOARD_SIZE - 1);
+
+    const zone = this.add.zone(this.boardX + boardPx/2, this.boardY + boardPx/2, boardPx + 40, boardPx + 40)
+      .setInteractive({ draggable: true })
+      .setDepth(50);
+
+    this._boardDragZone = zone;
+
+    zone.on('drag', (pointer, dragX, dragY) => {
+      const col = Math.floor((pointer.x - this.boardX) / (cs + gap));
+      const row = Math.floor((pointer.y - this.boardY) / (cs + gap));
+      const maxR = BOARD_SIZE - shape.length;
+      const maxC = BOARD_SIZE - shape[0].length;
+      const clampedR = Phaser.Math.Clamp(row, 0, Math.max(0, maxR));
+      const clampedC = Phaser.Math.Clamp(col, 0, Math.max(0, maxC));
+
+      if (clampedR !== this.snapRow || clampedC !== this.snapCol) {
+        this.snapRow = clampedR;
+        this.snapCol = clampedC;
+        this.showPreview(shape, clampedR, clampedC);
+      }
+    });
+
+    // Tap on board = alternate way to position
+    zone.on('pointerdown', (pointer) => {
+      const col = Math.floor((pointer.x - this.boardX) / (cs + gap));
+      const row = Math.floor((pointer.y - this.boardY) / (cs + gap));
+      const maxR = BOARD_SIZE - shape.length;
+      const maxC = BOARD_SIZE - shape[0].length;
+      const clampedR = Phaser.Math.Clamp(row, 0, Math.max(0, maxR));
+      const clampedC = Phaser.Math.Clamp(col, 0, Math.max(0, maxC));
+      this.snapRow = clampedR;
+      this.snapCol = clampedC;
+      this.showPreview(shape, clampedR, clampedC);
+    });
   }
 
-  return h('div',{cls:'market-wrap'},
-    h('div',{cls:'market-head'},
-      h('span',{cls:'market-title'},'Patches'),
-      h('span',{cls:'market-count'},`${len} left`)),
-    row);
-}
-
-function darken(hex,n) {
-  const v=parseInt(hex.slice(1),16);
-  const r=Math.max(0,((v>>16)&255)-n);
-  const g=Math.max(0,((v>>8)&255)-n);
-  const b=Math.max(0,(v&255)-n);
-  return `rgb(${r},${g},${b})`;
-}
-
-/* ── Actions ────────────────────────────────────────── */
-function buildActions() {
-  const act=game.currentPlayer;
-  const isAI=gameMode==='vs-ai'&&act===1;
-  const nm=isAI?'AI':`Player ${act+1}`;
-
-  const bar=h('div',{cls:'actions'});
-
-  if (game.phase==='game_over') {
-    bar.append(h('div',{cls:'msg'},'Game over!'));
-    return bar;
+  onRotate() {
+    this.currentOrientation = (this.currentOrientation + 1) % this.orientations.length;
+    const shape = this.orientations[this.currentOrientation];
+    // Clamp snap position for new shape dimensions
+    const maxR = BOARD_SIZE - shape.length;
+    const maxC = BOARD_SIZE - shape[0].length;
+    this.snapRow = Phaser.Math.Clamp(this.snapRow, 0, Math.max(0, maxR));
+    this.snapCol = Phaser.Math.Clamp(this.snapCol, 0, Math.max(0, maxC));
+    this.showPreview(shape, this.snapRow, this.snapCol);
   }
 
-  if (game.phase==='place_special') {
-    bar.append(h('div',{cls:'msg'},isAI?'AI placing bonus patch...':'Tap an empty cell for your free patch'));
-    return bar;
+  onConfirmPlace() {
+    const gs = this.game_state;
+    const shape = this.orientations[this.currentOrientation];
+    const result = confirmPlacement(gs, shape, this.snapRow, this.snapCol);
+
+    if (result.error) {
+      this.statusText.setText(result.error);
+      return;
+    }
+
+    this.cleanupPlacement();
+    this.handlePostTurn(result);
   }
 
-  if (game.phase==='place_patch') {
-    bar.append(h('div',{cls:'msg'},'Drag to move. Tap to rotate.'));
-
-    const rb=h('button',{cls:'pill pill-gray pill-sm'},'Rotate');
-    rb.onclick=doRotate;
-    const fb=h('button',{cls:'pill pill-gray pill-sm'},'Flip');
-    fb.onclick=doFlip;
-    const cb=h('button',{cls:'pill pill-blue pill-sm'},'Place');
-    cb.onclick=doConfirm;
-    if (!plValid) cb.disabled=true;
-
-    bar.append(rb,fb,cb);
-    bar.append(h('div',{cls:'hint'},'or double-tap'));
-    return bar;
-  }
-
-  if (isAI) {
-    bar.append(h('div',{cls:'msg'},'AI thinking...'));
-    return bar;
-  }
-
-  const opp=game.players[1-act];
-  const me=game.players[act];
-  const adv=Math.max(1,Math.min(opp.timePosition+1,52)-me.timePosition);
-
-  bar.append(h('div',{cls:'msg'},'Buy a patch or'));
-  const ab=h('button',{cls:'pill pill-blue'},`Advance +${adv}`);
-  ab.onclick=doAdvance;
-  bar.append(ab);
-  return bar;
-}
-
-/* ── Game Over ──────────────────────────────────────── */
-function buildGameOver() {
-  const s0=getScoreBreakdown(game.players[0]);
-  const s1=getScoreBreakdown(game.players[1]);
-  const n0='Player 1', n1=gameMode==='vs-ai'?'AI':'Player 2';
-  const winner=game.winner===0?n0:n1;
-
-  const grid=h('div',{cls:'score-grid'},
-    h('div'),h('div',{style:{fontWeight:'700'}},n0),h('div',{style:{fontWeight:'700'}},n1),
-    h('div',{cls:'lbl'},'Buttons'),h('div',null,String(s0.buttons)),h('div',null,String(s1.buttons)),
-    h('div',{cls:'lbl'},'7x7 Bonus'),h('div',null,`+${s0.specialTileBonus}`),h('div',null,`+${s1.specialTileBonus}`),
-    h('div',{cls:'lbl'},'Penalty'),h('div',null,`-${s0.emptyPenalty}`),h('div',null,`-${s1.emptyPenalty}`),
-    h('div',{cls:'lbl total'},'Score'),h('div',{cls:'total'},String(s0.total)),h('div',{cls:'total'},String(s1.total)));
-
-  const btn=h('button',{cls:'pill pill-blue',style:{width:'100%',justifyContent:'center',marginTop:'4px',padding:'14px',fontSize:'17px'}},'Play Again');
-  btn.onclick=startGame;
-
-  return h('div',{cls:'overlay'},
-    h('div',{cls:'over-card'},
-      h('h2',null,`${winner} Wins!`),
-      h('div',{cls:'over-sub'},'Final Scores'),
-      grid,btn));
-}
-
-/* ── Game Actions ─────────────────────────────────────── */
-function doAdvance() {
-  if (game.phase!=='choose_action') return;
-  actionAdvance(game);
-  afterTurn();
-}
-
-function doBuyPatch(marketIndex) {
-  if (game.phase!=='choose_action') return;
-  const player=game.players[game.currentPlayer];
-  const patch=game.patches[marketIndex];
-  if (player.buttons<patch.buttonCost) return;
-  if (findValidPlacements(player.board,patch.shape).length===0) return;
-
-  const result=actionBuyPatch(game,marketIndex);
-  if (result.error) return;
-
-  plPatch=result.patch;
-  plOrients=getOrientations(result.patch.shape);
-  plOi=0;
-  plShape=plOrients[0];
-  // Start centered
-  plRow=Math.floor((9-plShape.length)/2);
-  plCol=Math.floor((9-plShape[0].length)/2);
-  plValid=canPlace(player.board,plShape,plRow,plCol);
-  lastTapTime=0;
-  render();
-}
-
-function doRotate() {
-  if (!plOrients.length) return;
-  plOi=(plOi+1)%plOrients.length;
-  plShape=plOrients[plOi];
-  // Clamp position
-  plRow=Math.min(plRow,9-plShape.length);
-  plCol=Math.min(plCol,9-plShape[0].length);
-  plValid=canPlace(game.players[game.currentPlayer].board,plShape,plRow,plCol);
-  render();
-}
-
-function doFlip() {
-  const f=flipShape(plShape);
-  const key=JSON.stringify(f);
-  const idx=plOrients.findIndex(o=>JSON.stringify(o)===key);
-  if (idx>=0){plOi=idx;plShape=plOrients[idx];}
-  else{plOi=(plOi+4)%plOrients.length;plShape=plOrients[plOi];}
-  plRow=Math.min(plRow,9-plShape.length);
-  plCol=Math.min(plCol,9-plShape[0].length);
-  plValid=canPlace(game.players[game.currentPlayer].board,plShape,plRow,plCol);
-  render();
-}
-
-function doConfirm() {
-  if (!plValid||!plPatch) return;
-  const pi=game.currentPlayer;
-  const col=pColor(plPatch.id);
-  for (let r=0;r<plShape.length;r++)
-    for (let c=0;c<plShape[0].length;c++)
-      if (plShape[r][c]>=1)
-        colorBoards[pi][plRow+r][plCol+c]=plShape[r][c]===2?col+'!':col;
-
-  confirmPlacement(game,plShape,plRow,plCol);
-  plPatch=null; plShape=null;
-  afterTurn();
-}
-
-function doPlaceSpecial(r,c) {
-  const pi=game.currentPlayer;
-  const result=placeSpecialPatch(game,r,c);
-  if (result.error) return;
-  colorBoards[pi][r][c]=SP_COLOR;
-  afterTurn();
-}
-
-function afterTurn() {
-  if (game.phase==='place_special'&&gameMode==='vs-ai'&&game.currentPlayer===1) {
-    while(game.pendingSpecials&&game.pendingSpecials.length>0) {
-      const pos=aiPlaceSpecialPatch(game);
-      colorBoards[1][pos.row][pos.col]=SP_COLOR;
-      placeSpecialPatch(game,pos.row,pos.col);
+  cleanupPlacement() {
+    this.previewContainer.setVisible(false);
+    this.previewContainer.removeAll(true);
+    this.rotateBtn.setVisible(false);
+    this.placeBtn.setVisible(false);
+    if (this._boardDragZone) {
+      this._boardDragZone.destroy();
+      this._boardDragZone = null;
     }
   }
-  render();
-}
 
-function doAITurn() {
-  if (game.phase==='game_over') return;
-  if (game.phase==='place_special') {
-    while(game.pendingSpecials&&game.pendingSpecials.length>0) {
-      const pos=aiPlaceSpecialPatch(game);
-      colorBoards[1][pos.row][pos.col]=SP_COLOR;
-      placeSpecialPatch(game,pos.row,pos.col);
-    }
-    render();
-    if (game.currentPlayer===1&&game.phase==='choose_action') setTimeout(doAITurn,450);
-    return;
+  // ── Actions ─────────────────────────────────────────────
+  onAdvance() {
+    const gs = this.game_state;
+    if (gs.phase !== 'choose_action' || gs.currentPlayer !== 0) return;
+    const result = actionAdvance(gs);
+    this.handlePostTurn(result);
   }
-  if (game.phase!=='choose_action'||game.currentPlayer!==1) return;
 
-  const before=game.players[1].board.map(r=>[...r]);
-  const {move}=executeAIMove(game,aiDiff);
+  handlePostTurn(result) {
+    const gs = this.game_state;
 
-  if (move.action==='buy'&&move.placement) {
-    for (let r=0;r<9;r++)
-      for (let c=0;c<9;c++)
-        if (game.players[1].board[r][c]&&!before[r][c]) {
-          const sr=r-move.placement.row, sc=c-move.placement.col;
-          let isInc=false;
-          if (sr>=0&&sr<move.placement.shape.length&&sc>=0&&sc<move.placement.shape[0].length)
-            isInc=move.placement.shape[sr][sc]===2;
-          const ac=FC[(game.patches.length+r+c)%FC.length];
-          colorBoards[1][r][c]=isInc?ac+'!':ac;
+    // Handle special patches
+    if (gs.phase === 'place_special') {
+      this.handleSpecialPatches();
+      return;
+    }
+
+    this.updateDisplay();
+
+    // AI turn
+    if (gs.phase === 'choose_action' && gs.currentPlayer === 1) {
+      this.time.delayedCall(500, () => this.doAITurn());
+    }
+  }
+
+  handleSpecialPatches() {
+    const gs = this.game_state;
+    if (gs.currentPlayer === 0) {
+      // Player needs to place special patch
+      this.statusText.setText('Tap an empty cell to place your bonus 1x1 patch');
+      this.advanceBtn.setVisible(false);
+      this.hideMarket();
+      this.enableSpecialPatchPlacement();
+    } else {
+      // AI places special
+      while (gs.pendingSpecials && gs.pendingSpecials.length > 0) {
+        const pos = aiPlaceSpecialPatch(gs);
+        placeSpecialPatch(gs, pos.row, pos.col);
+      }
+      this.updateDisplay();
+      if (gs.phase === 'choose_action' && gs.currentPlayer === 1) {
+        this.time.delayedCall(500, () => this.doAITurn());
+      }
+    }
+  }
+
+  enableSpecialPatchPlacement() {
+    const cs = this.cellSize;
+    const gap = this.cellGap;
+    const gs = this.game_state;
+    const player = gs.players[0];
+
+    if (this._specialZones) {
+      for (const z of this._specialZones) z.destroy();
+    }
+    this._specialZones = [];
+
+    for (let r = 0; r < BOARD_SIZE; r++) {
+      for (let c = 0; c < BOARD_SIZE; c++) {
+        if (!player.board[r][c]) {
+          const x = this.boardX + c * (cs + gap) + cs/2;
+          const y = this.boardY + r * (cs + gap) + cs/2;
+          const highlight = this.add.rectangle(x, y, cs - 1, cs - 1, COLORS.special, 0.4)
+            .setStrokeStyle(1, COLORS.special)
+            .setInteractive({ useHandCursor: true })
+            .setDepth(50);
+          highlight.on('pointerdown', () => {
+            placeSpecialPatch(gs, r, c);
+            for (const z of this._specialZones) z.destroy();
+            this._specialZones = [];
+            // More specials?
+            if (gs.pendingSpecials && gs.pendingSpecials.length > 0) {
+              this.enableSpecialPatchPlacement();
+              this.updateDisplay();
+            } else {
+              this.updateDisplay();
+              if (gs.phase === 'choose_action' && gs.currentPlayer === 1) {
+                this.time.delayedCall(500, () => this.doAITurn());
+              }
+            }
+          });
+          this._specialZones.push(highlight);
         }
-  }
-
-  if (game.phase==='place_special') {
-    while(game.pendingSpecials&&game.pendingSpecials.length>0) {
-      const pos=aiPlaceSpecialPatch(game);
-      colorBoards[1][pos.row][pos.col]=SP_COLOR;
-      placeSpecialPatch(game,pos.row,pos.col);
+      }
     }
   }
-  render();
-  if (game.currentPlayer===1&&game.phase==='choose_action') setTimeout(doAITurn,450);
+
+  // ── AI ──────────────────────────────────────────────────
+  doAITurn() {
+    const gs = this.game_state;
+    if (gs.phase !== 'choose_action' || gs.currentPlayer !== 1) return;
+
+    const { move, result } = executeAIMove(gs, this.aiDifficulty);
+
+    // Handle AI special patches
+    if (gs.phase === 'place_special') {
+      while (gs.pendingSpecials && gs.pendingSpecials.length > 0) {
+        const pos = aiPlaceSpecialPatch(gs);
+        placeSpecialPatch(gs, pos.row, pos.col);
+      }
+    }
+
+    this.updateDisplay();
+
+    // AI might go again (further behind on track)
+    if (gs.phase === 'choose_action' && gs.currentPlayer === 1) {
+      this.time.delayedCall(600, () => this.doAITurn());
+    }
+  }
 }
 
-/* ── Keyboard ──────────────────────────────────────── */
-document.addEventListener('keydown',e=>{
-  if (appMode!=='playing'||game.phase!=='place_patch') return;
-  const cellPx=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--cell'));
-  const gapPx=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
-  switch(e.key.toLowerCase()) {
-    case 'r': doRotate(); break;
-    case 'f': doFlip(); break;
-    case 'enter': doConfirm(); break;
-    case 'arrowleft': e.preventDefault(); plCol=Math.max(0,plCol-1); plValid=canPlace(game.players[game.currentPlayer].board,plShape,plRow,plCol); render(); break;
-    case 'arrowright': e.preventDefault(); plCol=Math.min(9-plShape[0].length,plCol+1); plValid=canPlace(game.players[game.currentPlayer].board,plShape,plRow,plCol); render(); break;
-    case 'arrowup': e.preventDefault(); plRow=Math.max(0,plRow-1); plValid=canPlace(game.players[game.currentPlayer].board,plShape,plRow,plCol); render(); break;
-    case 'arrowdown': e.preventDefault(); plRow=Math.min(9-plShape.length,plRow+1); plValid=canPlace(game.players[game.currentPlayer].board,plShape,plRow,plCol); render(); break;
-  }
-});
+// ── Phaser Config ──────────────────────────────────────────
+const config = {
+  type: Phaser.AUTO,
+  width: Math.min(window.innerWidth, 430),
+  height: window.innerHeight,
+  backgroundColor: COLORS.bg,
+  parent: document.body,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  scene: [GameScene],
+};
 
-/* ── Init ──────────────────────────────────────────── */
-render();
+new Phaser.Game(config);
 </script>
 </body>
 </html>
